@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Business and Finance Career Assessments</title>
+<style>
+:root{--bg:#f3f6f9;--card:#ffffff;--ink:#16202a;--muted:#4f5b66;--line:#dbe2e8;--accent:#0b4f8a;--accent-2:#083b67;--head-ink:#ffffff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+.container{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:24px 8px}
+header{background:var(--accent-2);color:var(--head-ink);padding:28px 24px;border-radius:12px;margin-bottom:32px}
+header h1{margin:0 0 6px;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.2;text-wrap:balance}
+.tagline{margin:0 0 8px;font-size:1.05rem;font-weight:600}
+.intro-text{margin:0;max-width:62ch;opacity:.92;font-size:.95rem}
+.field-section{margin-bottom:32px}
+.field-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid}
+.field-icon{width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.1rem}
+.field-title{margin:0;font-size:1.25rem;flex:1;text-wrap:balance;filter:saturate(1.1)}
+.career-count{font-size:.85rem;color:var(--muted);white-space:nowrap}
+.careers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.career-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.career-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.career-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.career-title{font-weight:700;font-size:1.05rem;margin-bottom:4px;color:var(--accent)}
+.career-description{font-size:.92rem;color:var(--muted);line-height:1.5}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;border-top:1px solid var(--line);margin-top:16px}
+@media (prefers-reduced-motion:reduce){.career-card{transition:none}.career-card:hover{transform:none}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .field-title{filter:brightness(1.6)}}
+:root[data-theme="dark"] .field-title{filter:brightness(1.6)}
+
+.back-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:12px;color:var(--accent);font-weight:600;text-decoration:none}
+.back-link:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.howto{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:18px 20px;margin:-12px 0 32px}
+.howto h2{margin:0 0 8px;font-size:1.15rem;color:var(--ink)}
+.howto p{margin:0;font-size:1.02rem}
+.howto ol{margin:6px 0 0;padding-left:1.4em;display:grid;gap:4px}
+.howto strong{color:var(--accent)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px}
+.area{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.area:hover{border-color:var(--accent);transform:translateY(-1px)}
+.area:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.area h3{margin:0;font-size:1.3rem;color:var(--accent)}
+.area .n{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.area p{margin:0;color:var(--muted);font-size:.95rem}
+.area .go{margin-top:6px;font-weight:700;color:var(--accent)}
+.area.soon{border-style:dashed;opacity:.72;cursor:default}
+.area.soon:hover{border-color:var(--line);transform:none}
+.area.soon h3{color:var(--muted)}
+.area.soon .go{color:var(--muted);font-weight:700}
+.soon-head{margin:28px 0 12px;font-size:1.05rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
+@media (forced-colors:active){.area.soon{opacity:1}}
+@media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <a class="back-link" href="../index.html">&larr; All career areas</a>
+        <header>
+            <h1>Business and Finance Career Assessments</h1>
+            <p class="tagline">Explore 23 In-Demand Business and Finance Careers in North Dakota</p>
+            <p class="intro-text">Discover what these jobs involve, the training and credentials you need in North Dakota, what they pay, and where they lead.</p>
+        </header>
+<section class="howto" aria-labelledby="howto-h">
+  <h2 id="howto-h">How to use this page</h2>
+  <p><strong>Tap a career below</strong> to learn what the job is like in North Dakota: the work, training, pay and job outlook.</p>
+  <p style="margin-top:6px">At the end of each career, answer a few short questions to see if it could be a good fit for you.</p>
+</section>
+
+        <section class="howto-box" aria-labelledby="howto-h">
+            <h2 id="howto-h">How to use this page</h2>
+            <p><strong>Tap any career below</strong> to learn what the job is really like in North Dakota: the work, the training, the pay and the job outlook.</p>
+            <p>At the end of each career, answer a few short questions to see if it could be a good fit for you.</p>
+        </section>
+
+                <div class="field-section">
+            <div class="field-header" style="border-color: #1f6f4a;">
+                <div class="field-icon" style="background-color: #1f6f4a;">📊</div>
+                <h2 class="field-title" style="color: #1f6f4a;">Accounting and Taxes</h2>
+                <span class="career-count">3 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="accountants-and-auditors.html">
+                    <div class="career-title">Accountants and Auditors</div>
+                    <div class="career-description">Keeping the books right and checking that they are</div>
+                </a>
+                <a class="career-card" href="budget-analysts.html">
+                    <div class="career-title">Budget Analysts</div>
+                    <div class="career-description">Planning how an organization spends its money</div>
+                </a>
+                <a class="career-card" href="tax-preparers.html">
+                    <div class="career-title">Tax Preparers</div>
+                    <div class="career-description">Helping people and businesses file their taxes</div>
+                </a>
+            </div>
+        </div>
+        <div class="field-section">
+            <div class="field-header" style="border-color: #0b4f8a;">
+                <div class="field-icon" style="background-color: #0b4f8a;">🏦</div>
+                <h2 class="field-title" style="color: #0b4f8a;">Banking, Lending and Investing</h2>
+                <span class="career-count">6 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="loan-officers.html">
+                    <div class="career-title">Loan Officers</div>
+                    <div class="career-description">Helping people and businesses borrow money</div>
+                </a>
+                <a class="career-card" href="credit-analysts.html">
+                    <div class="career-title">Credit Analysts</div>
+                    <div class="career-description">Deciding whether a loan is a good risk</div>
+                </a>
+                <a class="career-card" href="financial-and-investment-analysts.html">
+                    <div class="career-title">Financial and Investment Analysts</div>
+                    <div class="career-description">Studying investments and where money should go</div>
+                </a>
+                <a class="career-card" href="financial-risk-specialists.html">
+                    <div class="career-title">Financial Risk Specialists</div>
+                    <div class="career-description">Finding what could go wrong before it does</div>
+                </a>
+                <a class="career-card" href="personal-financial-advisors.html">
+                    <div class="career-title">Personal Financial Advisors</div>
+                    <div class="career-description">Helping families plan for retirement and big goals</div>
+                </a>
+                <a class="career-card" href="financial-examiners.html">
+                    <div class="career-title">Financial Examiners</div>
+                    <div class="career-description">Making sure banks follow the rules</div>
+                </a>
+            </div>
+        </div>
+        <div class="field-section">
+            <div class="field-header" style="border-color: #8a4a9c;">
+                <div class="field-icon" style="background-color: #8a4a9c;">🤝</div>
+                <h2 class="field-title" style="color: #8a4a9c;">People and Workplaces</h2>
+                <span class="career-count">4 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="human-resources-specialists.html">
+                    <div class="career-title">Human Resources Specialists</div>
+                    <div class="career-description">Hiring people and supporting them at work</div>
+                </a>
+                <a class="career-card" href="compensation-and-benefits-specialists.html">
+                    <div class="career-title">Compensation and Benefits Specialists</div>
+                    <div class="career-description">Setting fair pay and building benefit packages</div>
+                </a>
+                <a class="career-card" href="labor-relations-specialists.html">
+                    <div class="career-title">Labor Relations Specialists</div>
+                    <div class="career-description">Working between employees and management</div>
+                </a>
+                <a class="career-card" href="training-and-development-specialists.html">
+                    <div class="career-title">Training and Development Specialists</div>
+                    <div class="career-description">Teaching adults the skills their job needs</div>
+                </a>
+            </div>
+        </div>
+        <div class="field-section">
+            <div class="field-header" style="border-color: #b35c00;">
+                <div class="field-icon" style="background-color: #b35c00;">📦</div>
+                <h2 class="field-title" style="color: #b35c00;">Operations, Supply and Projects</h2>
+                <span class="career-count">4 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="buyers-and-purchasing-agents.html">
+                    <div class="career-title">Buyers and Purchasing Agents</div>
+                    <div class="career-description">Buying what an organization needs to run</div>
+                </a>
+                <a class="career-card" href="logisticians.html">
+                    <div class="career-title">Logisticians</div>
+                    <div class="career-description">Moving goods and materials where they need to be</div>
+                </a>
+                <a class="career-card" href="cost-estimators.html">
+                    <div class="career-title">Cost Estimators</div>
+                    <div class="career-description">Working out what a job will really cost</div>
+                </a>
+                <a class="career-card" href="project-management-specialists.html">
+                    <div class="career-title">Project Management Specialists</div>
+                    <div class="career-description">Keeping projects on time and on budget</div>
+                </a>
+            </div>
+        </div>
+        <div class="field-section">
+            <div class="field-header" style="border-color: #0b6b74;">
+                <div class="field-icon" style="background-color: #0b6b74;">🔍</div>
+                <h2 class="field-title" style="color: #0b6b74;">Business, Compliance and Property</h2>
+                <span class="career-count">6 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="management-analysts.html">
+                    <div class="career-title">Management Analysts</div>
+                    <div class="career-description">Finding better ways for organizations to work</div>
+                </a>
+                <a class="career-card" href="compliance-officers.html">
+                    <div class="career-title">Compliance Officers</div>
+                    <div class="career-description">Making sure the rules are actually followed</div>
+                </a>
+                <a class="career-card" href="market-research-analysts.html">
+                    <div class="career-title">Market Research Analysts</div>
+                    <div class="career-description">Finding out what customers want and why</div>
+                </a>
+                <a class="career-card" href="property-appraisers-and-assessors.html">
+                    <div class="career-title">Property Appraisers and Assessors</div>
+                    <div class="career-description">Deciding what land and buildings are worth</div>
+                </a>
+                <a class="career-card" href="business-operations-specialists.html">
+                    <div class="career-title">Business Operations Specialists</div>
+                    <div class="career-description">A catch-all title covering many kinds of business jobs</div>
+                </a>
+                <a class="career-card" href="financial-specialists-all-other.html">
+                    <div class="career-title">Financial Specialists, All Other</div>
+                    <div class="career-description">A catch-all title covering other finance jobs</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>In-Demand Business and Finance Career Assessments</strong> — North Dakota</p>
+    </footer>
+</main>
+</body>
+</html>

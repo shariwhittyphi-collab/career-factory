@@ -1,0 +1,125 @@
+ND IN-DEMAND CAREER ASSESSMENTS - BUILD KIT
+Updated: September 29, 2026
+
+WHAT THIS IS
+171 interactive HTML career assessments covering the entire North Dakota
+In-Demand Occupations list, in 11 areas:
+  Healthcare 30 | Skilled Trades 31 | Business and Finance 23 | Tech 18
+  Architecture and Engineering 16 | Education 15 | Management 14
+  Social Services 8 | Science 7 | Transportation 5 | Arts, Legal and Sales 4
+
+TWO DELIVERY FORMATS
+  1. Hub  - one self-contained .html per area. Assessments are base64 inside
+           ASSESSMENTS_DATA and open in an iframe.
+  2. Web  - a folder per area: index.html plus one page per career.
+           Plus a landing index that links all 11 areas.
+
+HOW TO BUILD
+  python3 bk/tech/build.py <which>     # which = tech|health|health2|health3|
+                                       # trades|trades2|it2|soc|trans|fin|eng|
+                                       # edu|mgmt|sci|als|back
+  python3 buildall.py <cat>            # cat = health|trades|tech|soc|trans|fin|
+                                       #       eng|edu|mgmt|sci|als
+  python3 combine.py                   # builds the full site/ folder
+
+PIPELINE FOR ANY NEW ASSESSMENT - run these passes in this order:
+  1. bk/hub/scrub.py        scrub_text(s)      removes DVR/VR wording
+  2. bk/hub/a11y.py         add_a11y(s)        skip link, text size, dark toggle
+  3. bk/hub/tools.py        add_tools(s)       per-section Listen + Print this part
+  4. bk/hub/reportlisten.py add_report_listen(s)  Listen to my results
+  5. bk/hub/darkfix.py      add_darkfix(s) + add_printfix(s)
+  6. bk/hub/printfix2.py    add_printfix2(s, filename)   <-- NEW Sept 29
+  7. bk/hub/sources.py      add_sources(s, name, soc)    <-- NEW Sept 29
+  then build the hub. Every pass is idempotent - safe to re-run.
+
+  For hub SHELL templates (*_tpl.html) only:
+  bk/hub/hubprintfix.py     add_hubprintfix(s)           <-- NEW Sept 29
+
+WHAT printfix2 AND hubprintfix DO (added Sept 29, 2026)
+  Problem found in testing: Ctrl+P did not reliably print the report.
+  Three different print behaviours existed across the templates, and in the
+  hub the iframe clipped the report to a single page.
+
+  printfix2 (per assessment page):
+    - report generated  -> printing prints the report only, on every template
+    - report not yet generated -> printing prints the page you are reading,
+      never a blank sheet
+    - forces white background and black text in print, dark mode included
+    - adds a print-only heading at the top of the report:
+      "<Career> - Career Assessment Report" plus the date
+    - names the career in the on-screen report heading where it was anonymous
+      (RN, CNA and LPN said only "Your Assessment Report")
+
+  hubprintfix (hub shell):
+    - hides the hub menu and viewer chrome when printing
+    - reflows the iframe to the printed page width, measures the report at
+      that width, and expands the frame so nothing is cut off
+
+  Verified: all 171 careers, standalone and inside the hub, light and dark.
+  Every printed report is 2-3 pages, carries the career-name heading, and
+  ends where the report ends.
+
+WHAT sources.py DOES (added Sept 29, 2026)
+  Adds a "Sources & Learn More" block so people can see where the information
+  came from. Four rows: four occupation-specific O*NET links and a general
+  RUReady career-planning link:
+    Career information        -> onetonline.org/link/summary/<soc>
+    Pay and employment data   -> .../localwages/<soc>?st=ND   (BLS OEWS May 2025)
+                                 .../localtrends/<soc>?st=ND  (Projections
+                                 Central, 2024-2034)
+    Education and training    -> .../localtraining/<soc>?st=ND
+                                 real ND colleges and programs for that job,
+                                 from the U.S. Dept of Labor using IPEDS data
+    More career exploration   -> secure.ruready.nd.gov/Career_Planning/_default.aspx
+
+  It is a standing block at the bottom of the page, NOT a numbered section.
+  Three different section-navigation schemes exist across the templates, so a
+  twelfth step would mean editing three sets of counters. The block carries its
+  own Listen and Print this part buttons and prints together with the report.
+
+  Occupation codes live in careers_soc.json, keyed by output filename.
+  All 171 were checked against O*NET; GIS Technologist had been pointed at the
+  generic "Computer Occupations, All Other" catch-all and was corrected to
+  15-1299.02.
+
+  STILL TO DO: Shari wants named ND programs ("BSC Civil Engineering
+  Technology AAS") linked directly in the Education row, alongside the
+  O*NET training lookup that is there now.
+
+HARD RULES - DO NOT BREAK THESE
+  * Never permanently delete anything. Recycle Bin only, and only with Shari's OK.
+  * No "DVR" or "VR" anywhere in an assessment. Use "career counselor".
+  * Every career needs at least 2 embedded images before it goes into a hub.
+  * No text, letters, numbers or logos inside generated images.
+  * Keep all the information. Do not cut content for length.
+  * Spell her name Shari, not Sheri.
+  * People in images: fictional adults, a real mix of backgrounds including
+    Native American plus white, Black and Middle Eastern, varied ages and
+    genders, ordinary work clothes doing ordinary work. No regalia, no costume,
+    no cultural signalling. Spread across the batch.
+  * FUNDING: financial aid, scholarships, grants and employer help come FIRST.
+    VR is left out entirely. WIOA may be named but is never the first source.
+    State no eligibility rules on client-facing pages.
+  * bls.gov is blocked. Never fetch it and never work around the block.
+    Wage and outlook data comes from O*NET OnLine localwages / localtrends.
+
+TESTING
+  python3 test_all.py        all 11 hubs and all 11 web folders
+  Test at phone width (390x844) as well as desktop.
+  Print testing: complete an assessment, view results, then print - check
+  light AND dark, standalone AND inside the hub.
+
+GITHUB BASELINE HANDOFF
+  Human-led by Shari Whitmire; AI assistance from Claude and ChatGPT.
+  See ../BASELINE-NOTES.txt for independently inspected inventory, exclusions,
+  secret-scan scope, and the distinction between reported prior browser testing
+  and static baseline checks. Historical Healthcare Sources files are retained
+  in the original local folder and excluded from production version control.
+  The ZIP is preserved as delivered; this external START HERE includes these
+  additional handoff notes. Named program links and image edits remain deferred.
+
+Build portability: the archived build/test scripts reference Claude's original
+Linux scratchpad and input folders. Rebuilding requires remapping those paths
+and supplying the referenced inputs; a clean-machine rebuild was not verified.
+The shipped HTML works independently of that build environment. The archive is
+preserved unchanged for provenance, rather than silently rewritten tonight.

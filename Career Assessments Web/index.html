@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ND Career Assessments</title>
+<style>
+:root{--bg:#f3f6f9;--card:#ffffff;--ink:#16202a;--muted:#4f5b66;--line:#dbe2e8;--accent:#0b4f8a;--accent-2:#083b67;--head-ink:#ffffff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+.container{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:24px 8px}
+header{background:var(--accent-2);color:var(--head-ink);padding:28px 24px;border-radius:12px;margin-bottom:32px}
+header h1{margin:0 0 6px;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.2;text-wrap:balance}
+.tagline{margin:0 0 8px;font-size:1.05rem;font-weight:600}
+.intro-text{margin:0;max-width:62ch;opacity:.92;font-size:.95rem}
+.field-section{margin-bottom:32px}
+.field-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid}
+.field-icon{width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.1rem}
+.field-title{margin:0;font-size:1.25rem;flex:1;text-wrap:balance;filter:saturate(1.1)}
+.career-count{font-size:.85rem;color:var(--muted);white-space:nowrap}
+.careers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.career-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.career-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.career-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.career-title{font-weight:700;font-size:1.05rem;margin-bottom:4px;color:var(--accent)}
+.career-description{font-size:.92rem;color:var(--muted);line-height:1.5}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;border-top:1px solid var(--line);margin-top:16px}
+@media (prefers-reduced-motion:reduce){.career-card{transition:none}.career-card:hover{transform:none}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .field-title{filter:brightness(1.6)}}
+:root[data-theme="dark"] .field-title{filter:brightness(1.6)}
+
+.back-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:12px;color:var(--accent);font-weight:600;text-decoration:none}
+.back-link:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.howto{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:18px 20px;margin:-12px 0 32px}
+.howto h2{margin:0 0 8px;font-size:1.15rem;color:var(--ink)}
+.howto p{margin:0;font-size:1.02rem}
+.howto ol{margin:6px 0 0;padding-left:1.4em;display:grid;gap:4px}
+.howto strong{color:var(--accent)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px}
+.area{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.area:hover{border-color:var(--accent);transform:translateY(-1px)}
+.area:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.area h3{margin:0;font-size:1.3rem;color:var(--accent)}
+.area .n{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.area p{margin:0;color:var(--muted);font-size:.95rem}
+.area .go{margin-top:6px;font-weight:700;color:var(--accent)}
+.area.soon{border-style:dashed;opacity:.72;cursor:default}
+.area.soon:hover{border-color:var(--line);transform:none}
+.area.soon h3{color:var(--muted)}
+.area.soon .go{color:var(--muted);font-weight:700}
+.soon-head{margin:28px 0 12px;font-size:1.05rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
+@media (forced-colors:active){.area.soon{opacity:1}}
+@media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="container">
+    <header>
+      <h1>North Dakota In-Demand Career Assessments</h1>
+      <p class="tagline">Explore all 171 careers on North Dakota's In-Demand Occupations list</p>
+      <p class="intro-text">Find out what each job is really like, how to get trained in North Dakota, what it pays, and whether it could be a good fit for you.</p>
+    </header>
+    <section class="howto" aria-labelledby="howto-h">
+      <h2 id="howto-h">How it works</h2>
+      <ol>
+        <li><strong>Pick a career area</strong> below.</li>
+        <li><strong>Tap a career</strong> to learn about it.</li>
+        <li>Read about the job, then <strong>answer a few short questions</strong>.</li>
+        <li><strong>See your results</strong> and your next steps.</li>
+      </ol>
+    </section>
+    <section aria-label="Career areas" class="areas">
+      <a class="area" href="healthcare/index.html">
+        <span class="n">30 careers</span>
+        <h3>Healthcare</h3>
+        <p>Nurses, lab and imaging techs, therapists, dental, EMS and more.</p>
+        <span class="go">See healthcare careers &rarr;</span>
+      </a>
+      <a class="area" href="skilled-trades/index.html">
+        <span class="n">31 careers</span>
+        <h3>Skilled Trades</h3>
+        <p>Construction, mechanics, electricians, welders, energy and personal-service trades.</p>
+        <span class="go">See skilled trades careers &rarr;</span>
+      </a>
+      <a class="area" href="tech/index.html">
+        <span class="n">18 careers</span>
+        <h3>Tech</h3>
+        <p>Help desk, networks, cybersecurity, software, data and more.</p>
+        <span class="go">See tech careers &rarr;</span>
+      </a>
+      <a class="area" href="social-services/index.html">
+        <span class="n">8 careers</span>
+        <h3>Social Services</h3>
+        <p>Social workers, probation, health education, firefighters, police and childcare.</p>
+        <span class="go">See social services careers &rarr;</span>
+      </a>
+      <a class="area" href="transportation/index.html">
+        <span class="n">5 careers</span>
+        <h3>Transportation</h3>
+        <p>Truck and school bus drivers, commercial pilots and air traffic controllers.</p>
+        <span class="go">See transportation careers &rarr;</span>
+      </a>
+      <a class="area" href="business-finance/index.html">
+        <span class="n">23 careers</span>
+        <h3>Business and Finance</h3>
+        <p>Accounting, HR, lending, insurance, logistics, marketing and project management.</p>
+        <span class="go">See business and finance careers &rarr;</span>
+      </a>
+      <a class="area" href="architecture-engineering/index.html">
+        <span class="n">16 careers</span>
+        <h3>Architecture and Engineering</h3>
+        <p>Engineers, architects, surveyors, drafters and engineering technicians.</p>
+        <span class="go">See architecture and engineering careers &rarr;</span>
+      </a>
+      <a class="area" href="education/index.html">
+        <span class="n">15 careers</span>
+        <h3>Education</h3>
+        <p>Teachers from preschool through high school, special education, career classes and adult learning.</p>
+        <span class="go">See education careers &rarr;</span>
+      </a>
+      <a class="area" href="management/index.html">
+        <span class="n">14 careers</span>
+        <h3>Management</h3>
+        <p>Supervisors and managers in business, plants, healthcare, engineering and community programs.</p>
+        <span class="go">See management careers &rarr;</span>
+      </a>
+      <a class="area" href="science/index.html">
+        <span class="n">7 careers</span>
+        <h3>Science</h3>
+        <p>Agriculture, chemistry, environmental science, workplace safety and city planning.</p>
+        <span class="go">See science careers &rarr;</span>
+      </a>
+      <a class="area" href="arts-legal-sales/index.html">
+        <span class="n">4 careers</span>
+        <h3>Arts, Legal and Sales</h3>
+        <p>Industrial design, public relations, paralegal work and technical sales.</p>
+        <span class="go">See arts, legal and sales careers &rarr;</span>
+      </a>
+    </section>
+    <footer><p><strong>In-Demand Career Assessments</strong> &mdash; North Dakota</p></footer>
+  </div>
+</main>
+</body>
+</html>

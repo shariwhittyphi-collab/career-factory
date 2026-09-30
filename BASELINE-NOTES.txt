@@ -1,0 +1,48 @@
+CAREER FACTORY - GITHUB BASELINE
+Prepared September 29, 2026
+
+Source: Shari's final local Career Hubs folder.
+Production inventory inspected directly: 11 standalone hub HTML files;
+183 web HTML files (171 assessments, 11 area indexes, one landing index);
+Build Kit ZIP and finished START HERE; README.
+
+NON-DESTRUCTIVE EXCLUSION
+The original Healthcare Sources folder contains 28 historical assessment
+copies and one text file. It remains untouched in the original local folder.
+It is deliberately omitted from this baseline and ignored by .gitignore.
+Current healthcare assessments are the 30 pages in Career Assessments
+Web/healthcare and their counterparts in Healthcare_Career_Assessments.html.
+The excluded folder is not backed up by this repository.
+
+CONTENT AND HISTORY
+Production HTML and the Build Kit ZIP are copied without modification.
+README and the external START HERE receive documentation clarifications.
+There was no Git repository in the original Career Hubs directory. Preserve
+the GitHub initialization commit and append the baseline; do not force-push.
+
+VERIFICATION SCOPE
+The handoff reports completed browser/print testing of all 171 careers in
+light/dark mode, standalone and hub contexts. That report is prior testing,
+not a claim that the complete browser test matrix was repeated at handoff.
+The baseline inspection checks inventory, print/source markers, decoded hub
+payloads, and local navigation targets. See baseline-checks.json for results.
+No fresh external-link availability, wage-data, psychometric validation,
+reading-level certification, or formal accessibility conformance audit is
+claimed. Browser read-aloud voices and offline support vary by device.
+
+SECRET SCAN
+Pattern scan covers production text, decoded base64 assessment payloads,
+and all Build Kit archive members. It checks private-key headers, common
+provider token formats, credential assignments, and credential-bearing URLs.
+No matches found in the initial scan; rerun after documentation changes.
+This is a bounded pattern scan, not a guarantee against every possible secret.
+
+DEFERRED WORK
+Demographic image edits and named ND education-program-link expansion remain
+future work. No assessment features are added in this baseline.
+
+Build portability: the archived build/test scripts reference Claude's original
+Linux scratchpad and input folders. Rebuilding requires remapping those paths
+and supplying the referenced inputs; a clean-machine rebuild was not verified.
+The shipped HTML works independently of that build environment. The archive is
+preserved unchanged for provenance, rather than silently rewritten tonight.

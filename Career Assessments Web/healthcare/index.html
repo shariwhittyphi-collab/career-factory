@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Healthcare Career Assessments</title>
+<style>
+:root{--bg:#f3f6f9;--card:#ffffff;--ink:#16202a;--muted:#4f5b66;--line:#dbe2e8;--accent:#0b4f8a;--accent-2:#083b67;--head-ink:#ffffff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+.container{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:24px 8px}
+header{background:var(--accent-2);color:var(--head-ink);padding:28px 24px;border-radius:12px;margin-bottom:32px}
+header h1{margin:0 0 6px;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.2;text-wrap:balance}
+.tagline{margin:0 0 8px;font-size:1.05rem;font-weight:600}
+.intro-text{margin:0;max-width:62ch;opacity:.92;font-size:.95rem}
+.field-section{margin-bottom:32px}
+.field-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid}
+.field-icon{width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.1rem}
+.field-title{margin:0;font-size:1.25rem;flex:1;text-wrap:balance;filter:saturate(1.1)}
+.career-count{font-size:.85rem;color:var(--muted);white-space:nowrap}
+.careers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.career-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.career-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.career-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.career-title{font-weight:700;font-size:1.05rem;margin-bottom:4px;color:var(--accent)}
+.career-description{font-size:.92rem;color:var(--muted);line-height:1.5}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;border-top:1px solid var(--line);margin-top:16px}
+@media (prefers-reduced-motion:reduce){.career-card{transition:none}.career-card:hover{transform:none}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .field-title{filter:brightness(1.6)}}
+:root[data-theme="dark"] .field-title{filter:brightness(1.6)}
+
+.back-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:12px;color:var(--accent);font-weight:600;text-decoration:none}
+.back-link:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.howto{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:18px 20px;margin:-12px 0 32px}
+.howto h2{margin:0 0 8px;font-size:1.15rem;color:var(--ink)}
+.howto p{margin:0;font-size:1.02rem}
+.howto ol{margin:6px 0 0;padding-left:1.4em;display:grid;gap:4px}
+.howto strong{color:var(--accent)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px}
+.area{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.area:hover{border-color:var(--accent);transform:translateY(-1px)}
+.area:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.area h3{margin:0;font-size:1.3rem;color:var(--accent)}
+.area .n{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.area p{margin:0;color:var(--muted);font-size:.95rem}
+.area .go{margin-top:6px;font-weight:700;color:var(--accent)}
+.area.soon{border-style:dashed;opacity:.72;cursor:default}
+.area.soon:hover{border-color:var(--line);transform:none}
+.area.soon h3{color:var(--muted)}
+.area.soon .go{color:var(--muted);font-weight:700}
+.soon-head{margin:28px 0 12px;font-size:1.05rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
+@media (forced-colors:active){.area.soon{opacity:1}}
+@media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <a class="back-link" href="../index.html">&larr; All career areas</a>
+        <header>
+            <h1>Healthcare Career Assessments</h1>
+            <p class="tagline">Explore 28 In-Demand Healthcare Careers in North Dakota</p>
+            <p class="intro-text">Discover what different healthcare roles involve, training requirements, earning potential, and career pathways.</p>
+        </header>
+<section class="howto" aria-labelledby="howto-h">
+  <h2 id="howto-h">How to use this page</h2>
+  <p><strong>Tap a career below</strong> to learn what the job is like in North Dakota: the work, training, pay and job outlook.</p>
+  <p style="margin-top:6px">At the end of each career, answer a few short questions to see if it could be a good fit for you.</p>
+</section>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #0a7d7d;">
+                <div class="field-icon" style="background-color: #0a7d7d;">👩‍⚕️</div>
+                <h2 class="field-title" style="color: #0a7d7d;">Nursing</h2>
+                <span class="career-count">4 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="cna.html">
+                    <div class="career-title">Certified Nurse Aide</div>
+                    <div class="career-description">Provide direct patient care, assist with daily activities, and support nursing staff</div>
+                </a>
+                <a class="career-card" href="lpn.html">
+                    <div class="career-title">Licensed Practical Nurse</div>
+                    <div class="career-description">Perform patient care, administer medications, and support nursing teams</div>
+                </a>
+                <a class="career-card" href="rn.html">
+                    <div class="career-title">Registered Nurse</div>
+                    <div class="career-description">Coordinate patient care, administer medications, and lead healthcare teams</div>
+                </a>
+                <a class="career-card" href="midwife.html">
+                    <div class="career-title">Nurse-Midwife</div>
+                    <div class="career-description">Care for families through pregnancy, birth, and after (advanced practice nursing)</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #6b4d9e;">
+                <div class="field-icon" style="background-color: #6b4d9e;">🔬</div>
+                <h2 class="field-title" style="color: #6b4d9e;">Diagnostic Technology & Imaging</h2>
+                <span class="career-count">8 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="radiographic-technology.html">
+                    <div class="career-title">Radiographic Technologist</div>
+                    <div class="career-description">Operate X-ray equipment to create diagnostic images</div>
+                </a>
+                <a class="career-card" href="diagnostic-medical-sonographer.html">
+                    <div class="career-title">Diagnostic Medical Sonographer</div>
+                    <div class="career-description">Use ultrasound equipment to create diagnostic images</div>
+                </a>
+                <a class="career-card" href="mri-technologist.html">
+                    <div class="career-title">MRI Technologist</div>
+                    <div class="career-description">Operate magnetic resonance imaging equipment</div>
+                </a>
+                <a class="career-card" href="nuclear-medicine-technologist.html">
+                    <div class="career-title">Nuclear Medicine Technologist</div>
+                    <div class="career-description">Administer radioactive substances and operate imaging equipment</div>
+                </a>
+                <a class="career-card" href="cardiovascular-technologist.html">
+                    <div class="career-title">Cardiovascular Technologist</div>
+                    <div class="career-description">Run heart tests, heart ultrasounds, and assist in the cath lab</div>
+                </a>
+                <a class="career-card" href="neurodiagnostic-technologist.html">
+                    <div class="career-title">Neurodiagnostic Technologist</div>
+                    <div class="career-description">Record brain and nerve activity (EEG) to help diagnose seizures and more</div>
+                </a>
+                <a class="career-card" href="clinical-laboratory-technologist.html">
+                    <div class="career-title">Clinical Laboratory Technologist</div>
+                    <div class="career-description">Test blood and tissue samples to help diagnose disease</div>
+                </a>
+                <a class="career-card" href="phlebotomy.html">
+                    <div class="career-title">Phlebotomy Technician</div>
+                    <div class="career-description">Collect blood samples for laboratory testing</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #c41e3a;">
+                <div class="field-icon" style="background-color: #c41e3a;">🚑</div>
+                <h2 class="field-title" style="color: #c41e3a;">Emergency, Surgery & Acute Care</h2>
+                <span class="career-count">3 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="emergency-medical-technician.html">
+                    <div class="career-title">Emergency Medical Technician</div>
+                    <div class="career-description">Respond to medical emergencies and provide emergency care</div>
+                </a>
+                <a class="career-card" href="paramedic.html">
+                    <div class="career-title">Paramedic</div>
+                    <div class="career-description">Provide advanced emergency medical services</div>
+                </a>
+                <a class="career-card" href="surgical-technologist.html">
+                    <div class="career-title">Surgical Technologist</div>
+                    <div class="career-description">Prepare the operating room and assist surgeons during procedures</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #4a7c59;">
+                <div class="field-icon" style="background-color: #4a7c59;">💪</div>
+                <h2 class="field-title" style="color: #4a7c59;">Therapy & Rehabilitation</h2>
+                <span class="career-count">6 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="physical-therapist-assistant.html">
+                    <div class="career-title">Physical Therapist Assistant</div>
+                    <div class="career-description">Help patients recover physical function through therapeutic exercises</div>
+                </a>
+                <a class="career-card" href="occupational-therapy-assistant.html">
+                    <div class="career-title">Occupational Therapy Assistant</div>
+                    <div class="career-description">Help patients develop skills for daily living and work</div>
+                </a>
+                <a class="career-card" href="respiratory-therapist.html">
+                    <div class="career-title">Respiratory Therapist</div>
+                    <div class="career-description">Help patients with breathing and respiratory conditions</div>
+                </a>
+                <a class="career-card" href="athletic-trainer.html">
+                    <div class="career-title">Athletic Trainer</div>
+                    <div class="career-description">Prevent, treat, and rehab injuries for athletes and active people</div>
+                </a>
+                <a class="career-card" href="massage-therapist.html">
+                    <div class="career-title">Massage Therapist</div>
+                    <div class="career-description">Use hands-on care to relieve pain and stress</div>
+                </a>
+                <a class="career-card" href="dietitian-and-nutritionist.html">
+                    <div class="career-title">Dietitian and Nutritionist</div>
+                    <div class="career-description">Use food and nutrition to help people manage health</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #d89b6d;">
+                <div class="field-icon" style="background-color: #d89b6d;">🦷</div>
+                <h2 class="field-title" style="color: #d89b6d;">Oral Health</h2>
+                <span class="career-count">3 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="dental-hygienist.html">
+                    <div class="career-title">Dental Hygienist</div>
+                    <div class="career-description">Provide preventive dental care and patient education</div>
+                </a>
+                <a class="career-card" href="dental-assistant.html">
+                    <div class="career-title">Dental Assistant</div>
+                    <div class="career-description">Assist dentists with patient care and office operations</div>
+                </a>
+                <a class="career-card" href="ophthalmic-medical-technician.html">
+                    <div class="career-title">Ophthalmic Medical Technician</div>
+                    <div class="career-description">Assist eye care professionals with patient exams</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #556b8a;">
+                <div class="field-icon" style="background-color: #556b8a;">🤝</div>
+                <h2 class="field-title" style="color: #556b8a;">Support Services</h2>
+                <span class="career-count">4 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="medical-assistant.html">
+                    <div class="career-title">Medical Assistant</div>
+                    <div class="career-description">Provide patient care and support clinical operations</div>
+                </a>
+                <a class="career-card" href="medical-records-specialist.html">
+                    <div class="career-title">Medical Records Specialist</div>
+                    <div class="career-description">Code health records for billing and insurance (often remote)</div>
+                </a>
+                <a class="career-card" href="health-information-technologist.html">
+                    <div class="career-title">Health Information Technologist & Registrar</div>
+                    <div class="career-description">Manage health data, records systems, and disease registries</div>
+                </a>
+                <a class="career-card" href="veterinary-technologist.html">
+                    <div class="career-title">Veterinary Technologist</div>
+                    <div class="career-description">Assist veterinarians with animal care</div>
+                </a>
+                <a class="career-card" href="healthcare-practitioners-all-other.html">
+                    <div class="career-title">Healthcare Practitioners, All Other</div>
+                    <div class="career-description">A catch-all title covering other healthcare practitioner jobs</div>
+                </a>
+                <a class="career-card" href="health-technologists-all-other.html">
+                    <div class="career-title">Health Technologists, All Other</div>
+                    <div class="career-description">A catch-all title covering other health technologist jobs</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>In-Demand Healthcare Career Assessments</strong> — North Dakota</p>
+    </footer>
+</main>
+</body>
+</html>

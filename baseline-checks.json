@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "web_files": 183,
+    "assessments": 171,
+    "hubs": 11,
+    "missing_print_fix": [],
+    "missing_sources": [],
+    "missing_five_source_links": [],
+    "embedded_assessments": 171,
+    "hub_print_checks": {
+      "Architecture_and_Engineering_Career_Assessments.html": true,
+      "Arts_Legal_and_Sales_Career_Assessments.html": true,
+      "Business_and_Finance_Career_Assessments.html": true,
+      "Education_Career_Assessments.html": true,
+      "Healthcare_Career_Assessments.html": true,
+      "Management_Career_Assessments.html": true,
+      "Science_Career_Assessments.html": true,
+      "Skilled_Trades_Career_Assessments.html": true,
+      "Social_Services_Career_Assessments.html": true,
+      "Tech_Career_Assessments.html": true,
+      "Transportation_Career_Assessments.html": true
+    },
+    "hub_web_mismatches": [],
+    "missing_local_navigation_targets": [],
+    "hub_web_comparison": "Identical after removing web-only navigation and localStorage compatibility wrapper, and normalizing line endings."
+  },
+  "secret_scan": {
+    "scanned_files_and_payloads": 451,
+    "rules": [
+      "private-key",
+      "github-token",
+      "api-token",
+      "credential-assignment",
+      "url-credential"
+    ],
+    "findings": [],
+    "result": "No matches; pattern scan, not a guarantee."
+  },
+  "testing_status": "Static baseline checks; prior complete print testing is reported in START HERE and was not repeated.",
+  "build_portability": "Original Linux paths and external inputs must be mapped before rebuild; not verified on a clean machine."
+}

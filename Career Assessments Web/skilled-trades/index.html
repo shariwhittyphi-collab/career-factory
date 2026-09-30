@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Skilled Trades Career Assessments</title>
+<style>
+:root{--bg:#f3f6f9;--card:#ffffff;--ink:#16202a;--muted:#4f5b66;--line:#dbe2e8;--accent:#0b4f8a;--accent-2:#083b67;--head-ink:#ffffff;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
+.container{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:24px 8px}
+header{background:var(--accent-2);color:var(--head-ink);padding:28px 24px;border-radius:12px;margin-bottom:32px}
+header h1{margin:0 0 6px;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.2;text-wrap:balance}
+.tagline{margin:0 0 8px;font-size:1.05rem;font-weight:600}
+.intro-text{margin:0;max-width:62ch;opacity:.92;font-size:.95rem}
+.field-section{margin-bottom:32px}
+.field-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid}
+.field-icon{width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.1rem}
+.field-title{margin:0;font-size:1.25rem;flex:1;text-wrap:balance;filter:saturate(1.1)}
+.career-count{font-size:.85rem;color:var(--muted);white-space:nowrap}
+.careers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.career-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.career-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.career-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.career-title{font-weight:700;font-size:1.05rem;margin-bottom:4px;color:var(--accent)}
+.career-description{font-size:.92rem;color:var(--muted);line-height:1.5}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;border-top:1px solid var(--line);margin-top:16px}
+@media (prefers-reduced-motion:reduce){.career-card{transition:none}.career-card:hover{transform:none}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .field-title{filter:brightness(1.6)}}
+:root[data-theme="dark"] .field-title{filter:brightness(1.6)}
+
+.back-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:12px;color:var(--accent);font-weight:600;text-decoration:none}
+.back-link:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.howto{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:18px 20px;margin:-12px 0 32px}
+.howto h2{margin:0 0 8px;font-size:1.15rem;color:var(--ink)}
+.howto p{margin:0;font-size:1.02rem}
+.howto ol{margin:6px 0 0;padding-left:1.4em;display:grid;gap:4px}
+.howto strong{color:var(--accent)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px}
+.area{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.area:hover{border-color:var(--accent);transform:translateY(-1px)}
+.area:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.area h3{margin:0;font-size:1.3rem;color:var(--accent)}
+.area .n{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.area p{margin:0;color:var(--muted);font-size:.95rem}
+.area .go{margin-top:6px;font-weight:700;color:var(--accent)}
+.area.soon{border-style:dashed;opacity:.72;cursor:default}
+.area.soon:hover{border-color:var(--line);transform:none}
+.area.soon h3{color:var(--muted)}
+.area.soon .go{color:var(--muted);font-weight:700}
+.soon-head{margin:28px 0 12px;font-size:1.05rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
+@media (forced-colors:active){.area.soon{opacity:1}}
+@media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <a class="back-link" href="../index.html">&larr; All career areas</a>
+        <header>
+            <h1>Skilled Trades Career Assessments</h1>
+            <p class="tagline">Explore 31 In-Demand Skilled Trades Careers in North Dakota</p>
+            <p class="intro-text">Discover what different skilled trades involve, training requirements, earning potential, and career pathways.</p>
+        </header>
+<section class="howto" aria-labelledby="howto-h">
+  <h2 id="howto-h">How to use this page</h2>
+  <p><strong>Tap a career below</strong> to learn what the job is like in North Dakota: the work, training, pay and job outlook.</p>
+  <p style="margin-top:6px">At the end of each career, answer a few short questions to see if it could be a good fit for you.</p>
+</section>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #8a5a2b;">
+                <div class="field-icon" style="background-color: #8a5a2b;">🚜</div>
+                <h2 class="field-title" style="color: #8a5a2b;">Vehicles & Equipment</h2>
+                <span class="career-count">6 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="aircraft-mechanic.html">
+                    <div class="career-title">Aircraft Mechanic</div>
+                    <div class="career-description">Keeping airplanes safe to fly</div>
+                </a>
+                <a class="career-card" href="automotive-service-technician.html">
+                    <div class="career-title">Automotive Service Technician</div>
+                    <div class="career-description">Fixing and maintaining cars and light trucks</div>
+                </a>
+                <a class="career-card" href="diesel-technician.html">
+                    <div class="career-title">Diesel Technician</div>
+                    <div class="career-description">Fixing trucks, buses, and diesel engines</div>
+                </a>
+                <a class="career-card" href="farm-equipment-mechanic.html">
+                    <div class="career-title">Farm Equipment Mechanic</div>
+                    <div class="career-description">Keeping tractors and combines running</div>
+                </a>
+                <a class="career-card" href="heavy-equipment-mechanic.html">
+                    <div class="career-title">Heavy Equipment Mechanic</div>
+                    <div class="career-description">Repairing bulldozers, loaders, and construction equipment</div>
+                </a>
+                <a class="career-card" href="rv-service-technician.html">
+                    <div class="career-title">RV Service Technician</div>
+                    <div class="career-description">Fixing campers, trailers, and motorhomes</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #b8860b;">
+                <div class="field-icon" style="background-color: #b8860b;">🔧</div>
+                <h2 class="field-title" style="color: #b8860b;">Construction Trades</h2>
+                <span class="career-count">9 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="electrician.html">
+                    <div class="career-title">Electrician</div>
+                    <div class="career-description">Wiring homes, businesses, and industry</div>
+                </a>
+                <a class="career-card" href="plumber-pipefitter-and-steamfitter.html">
+                    <div class="career-title">Plumber, Pipefitter, and Steamfitter</div>
+                    <div class="career-description">Water, gas, and piping systems</div>
+                </a>
+                <a class="career-card" href="hvac-technician.html">
+                    <div class="career-title">HVAC Technician</div>
+                    <div class="career-description">Heating, cooling, and refrigeration</div>
+                </a>
+                <a class="career-card" href="welder.html">
+                    <div class="career-title">Welder</div>
+                    <div class="career-description">Joining and cutting metal</div>
+                </a>
+                <a class="career-card" href="carpenter.html">
+                    <div class="career-title">Carpenter</div>
+                    <div class="career-description">Framing and building homes and businesses</div>
+                </a>
+                <a class="career-card" href="brick-mason.html">
+                    <div class="career-title">Brick Mason</div>
+                    <div class="career-description">Building with brick, block, and stone</div>
+                </a>
+                <a class="career-card" href="structural-iron-and-steel-worker.html">
+                    <div class="career-title">Structural Iron and Steel Worker</div>
+                    <div class="career-description">Raising the steel frames of buildings</div>
+                </a>
+                <a class="career-card" href="insulation-worker.html">
+                    <div class="career-title">Insulation Worker</div>
+                    <div class="career-description">Insulating pipes and ducts in plants</div>
+                </a>
+                <a class="career-card" href="construction-manager.html">
+                    <div class="career-title">Construction Manager</div>
+                    <div class="career-description">Leading building projects from plan to finish</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #1f6fb2;">
+                <div class="field-icon" style="background-color: #1f6fb2;">⚙️</div>
+                <h2 class="field-title" style="color: #1f6fb2;">Industrial & Electrical Repair</h2>
+                <span class="career-count">7 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="industrial-machinery-mechanic.html">
+                    <div class="career-title">Industrial Machinery Mechanic</div>
+                    <div class="career-description">Keeping factory and plant machines running</div>
+                </a>
+                <a class="career-card" href="industrial-electrical-and-electronics-repairer.html">
+                    <div class="career-title">Industrial Electrical and Electronics Repairer</div>
+                    <div class="career-description">Repairing electrical equipment in plants and factories</div>
+                </a>
+                <a class="career-card" href="substation-and-relay-technician.html">
+                    <div class="career-title">Substation and Relay Technician</div>
+                    <div class="career-description">Maintaining the power grid</div>
+                </a>
+                <a class="career-card" href="telecommunications-technician.html">
+                    <div class="career-title">Telecommunications Technician</div>
+                    <div class="career-description">Installing internet, phone, and network equipment</div>
+                </a>
+                <a class="career-card" href="medical-equipment-repairer.html">
+                    <div class="career-title">Medical Equipment Repairer</div>
+                    <div class="career-description">Fixing the equipment hospitals depend on</div>
+                </a>
+                <a class="career-card" href="machinist.html">
+                    <div class="career-title">Machinist</div>
+                    <div class="career-description">Making precise metal parts</div>
+                </a>
+                <a class="career-card" href="millwright.html">
+                    <div class="career-title">Millwright</div>
+                    <div class="career-description">Installing and aligning heavy machines</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #2f7d4f;">
+                <div class="field-icon" style="background-color: #2f7d4f;">⚡</div>
+                <h2 class="field-title" style="color: #2f7d4f;">Energy</h2>
+                <span class="career-count">6 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="wind-turbine-technician.html">
+                    <div class="career-title">Wind Turbine Technician</div>
+                    <div class="career-description">Maintaining wind turbines high above the prairie</div>
+                </a>
+                <a class="career-card" href="power-plant-and-gas-plant-operator.html">
+                    <div class="career-title">Power Plant and Gas Plant Operator</div>
+                    <div class="career-description">Running power stations and gas processing plants</div>
+                </a>
+                <a class="career-card" href="power-distributor-and-dispatcher.html">
+                    <div class="career-title">Power Distributor and Dispatcher</div>
+                    <div class="career-description">Controlling the flow of electricity on the grid</div>
+                </a>
+                <a class="career-card" href="oil-and-gas-service-unit-operator.html">
+                    <div class="career-title">Oil and Gas Service Unit Operator</div>
+                    <div class="career-description">Servicing oil and gas wells in the Bakken</div>
+                </a>
+                <a class="career-card" href="power-line-installer.html">
+                    <div class="career-title">Power-Line Installer</div>
+                    <div class="career-description">Building and fixing the power lines</div>
+                </a>
+                <a class="career-card" href="stationary-engineer-and-boiler-operator.html">
+                    <div class="career-title">Stationary Engineer and Boiler Operator</div>
+                    <div class="career-description">Running boilers and building systems</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="field-section">
+            <div class="field-header" style="border-color: #7b3f8c;">
+                <div class="field-icon" style="background-color: #7b3f8c;">✂️</div>
+                <h2 class="field-title" style="color: #7b3f8c;">Personal & Funeral Services</h2>
+                <span class="career-count">3 careers</span>
+            </div>
+            <div class="careers-grid">
+                <a class="career-card" href="barber.html">
+                    <div class="career-title">Barber</div>
+                    <div class="career-description">Cutting, styling, and shaving</div>
+                </a>
+                <a class="career-card" href="hairstylist-and-cosmetologist.html">
+                    <div class="career-title">Hairstylist and Cosmetologist</div>
+                    <div class="career-description">Hair, color, and beauty services</div>
+                </a>
+                <a class="career-card" href="mortician-and-funeral-director.html">
+                    <div class="career-title">Mortician and Funeral Director</div>
+                    <div class="career-description">Caring for families after a death</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>In-Demand Skilled Trades Career Assessments</strong> — North Dakota</p>
+    </footer>
+</main>
+</body>
+</html>

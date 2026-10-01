@@ -1,7 +1,7 @@
 # North Dakota In-Demand Career Assessments
 
 Interactive career assessments for every occupation on the North Dakota
-In-Demand Occupations list. **171 careers across 11 areas.**
+In-Demand Occupations list. **193 careers across 12 areas.**
 
 Built by Shari Whitmire through human-led, AI-assisted design and development
 with Claude and ChatGPT. Shari directed requirements, career-assessment subject
@@ -42,11 +42,12 @@ being sold a career.
 | Science | 7 |
 | Transportation | 5 |
 | Arts, Legal and Sales | 4 |
-| **Total** | **171** |
+| Jobs You Can Start Now | 22 |
+| **Total** | **193** |
 
 ### Two formats, same content
 
-**[Career Assessments Web/](Career%20Assessments%20Web/index.html)** — a website. A landing page links 11 area pages,
+**[Career Assessments Web/](Career%20Assessments%20Web/index.html)** — a website. A landing page links 12 area pages,
 each listing its careers, one HTML file per career. Open `index.html` to start.
 This is the format to host or to browse locally.
 
@@ -224,3 +225,8 @@ Linux scratchpad and input folders. Rebuilding requires remapping those paths
 and supplying the referenced inputs; a clean-machine rebuild was not verified.
 The shipped HTML works independently of that build environment. The archive is
 preserved unchanged for provenance, rather than silently rewritten tonight.
+
+
+## October 1 career expansion
+
+Added 22 supplied assessments under Jobs You Can Start Now, with a matching self-contained hub and updated search index. The redesigned homepage is preserved. Original 171 assessment pages are unchanged. Private Investigator readiness validation, score, and feedback now include all nine questions, using the existing proportional thresholds. The supplied package does not include the previously discussed site-wide O*NET attribution revision; that remains a separate follow-up.

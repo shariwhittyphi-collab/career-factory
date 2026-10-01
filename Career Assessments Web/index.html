@@ -1,147 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ND Career Assessments</title>
-<style>
-:root{--bg:#f3f6f9;--card:#ffffff;--ink:#16202a;--muted:#4f5b66;--line:#dbe2e8;--accent:#0b4f8a;--accent-2:#083b67;--head-ink:#ffffff;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#11161b;--card:#1b232b;--ink:#e6ecf1;--muted:#a7b3bd;--line:#2c3742;--accent:#6fb1ec;--accent-2:#0b4f8a;--head-ink:#ffffff;color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif}
-.container{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:24px 8px}
-header{background:var(--accent-2);color:var(--head-ink);padding:28px 24px;border-radius:12px;margin-bottom:32px}
-header h1{margin:0 0 6px;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.2;text-wrap:balance}
-.tagline{margin:0 0 8px;font-size:1.05rem;font-weight:600}
-.intro-text{margin:0;max-width:62ch;opacity:.92;font-size:.95rem}
-.field-section{margin-bottom:32px}
-.field-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid}
-.field-icon{width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.1rem}
-.field-title{margin:0;font-size:1.25rem;flex:1;text-wrap:balance;filter:saturate(1.1)}
-.career-count{font-size:.85rem;color:var(--muted);white-space:nowrap}
-.careers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-.career-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
-.career-card:hover{border-color:var(--accent);transform:translateY(-1px)}
-.career-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.career-title{font-weight:700;font-size:1.05rem;margin-bottom:4px;color:var(--accent)}
-.career-description{font-size:.92rem;color:var(--muted);line-height:1.5}
-footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;border-top:1px solid var(--line);margin-top:16px}
-@media (prefers-reduced-motion:reduce){.career-card{transition:none}.career-card:hover{transform:none}}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .field-title{filter:brightness(1.6)}}
-:root[data-theme="dark"] .field-title{filter:brightness(1.6)}
-
-.back-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:12px;color:var(--accent);font-weight:600;text-decoration:none}
-.back-link:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
-.howto{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:18px 20px;margin:-12px 0 32px}
-.howto h2{margin:0 0 8px;font-size:1.15rem;color:var(--ink)}
-.howto p{margin:0;font-size:1.02rem}
-.howto ol{margin:6px 0 0;padding-left:1.4em;display:grid;gap:4px}
-.howto strong{color:var(--accent)}
-.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px}
-.area{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
-.area:hover{border-color:var(--accent);transform:translateY(-1px)}
-.area:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.area h3{margin:0;font-size:1.3rem;color:var(--accent)}
-.area .n{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
-.area p{margin:0;color:var(--muted);font-size:.95rem}
-.area .go{margin-top:6px;font-weight:700;color:var(--accent)}
-.area.soon{border-style:dashed;opacity:.72;cursor:default}
-.area.soon:hover{border-color:var(--line);transform:none}
-.area.soon h3{color:var(--muted)}
-.area.soon .go{color:var(--muted);font-weight:700}
-.soon-head{margin:28px 0 12px;font-size:1.05rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
-@media (forced-colors:active){.area.soon{opacity:1}}
-@media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
-</style>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Career Factory — Let’s find your fit.</title><meta name="description" content="Explore North Dakota careers and find your fit."><link rel="stylesheet" href="home.css"><script src="home.js" defer></script></head>
 <body>
-<main>
-  <div class="container">
-    <header>
-      <h1>North Dakota In-Demand Career Assessments</h1>
-      <p class="tagline">Explore all 171 careers on North Dakota's In-Demand Occupations list</p>
-      <p class="intro-text">Find out what each job is really like, how to get trained in North Dakota, what it pays, and whether it could be a good fit for you.</p>
-    </header>
-    <section class="howto" aria-labelledby="howto-h">
-      <h2 id="howto-h">How it works</h2>
-      <ol>
-        <li><strong>Pick a career area</strong> below.</li>
-        <li><strong>Tap a career</strong> to learn about it.</li>
-        <li>Read about the job, then <strong>answer a few short questions</strong>.</li>
-        <li><strong>See your results</strong> and your next steps.</li>
-      </ol>
-    </section>
-    <section aria-label="Career areas" class="areas">
-      <a class="area" href="healthcare/index.html">
-        <span class="n">30 careers</span>
-        <h3>Healthcare</h3>
-        <p>Nurses, lab and imaging techs, therapists, dental, EMS and more.</p>
-        <span class="go">See healthcare careers &rarr;</span>
-      </a>
-      <a class="area" href="skilled-trades/index.html">
-        <span class="n">31 careers</span>
-        <h3>Skilled Trades</h3>
-        <p>Construction, mechanics, electricians, welders, energy and personal-service trades.</p>
-        <span class="go">See skilled trades careers &rarr;</span>
-      </a>
-      <a class="area" href="tech/index.html">
-        <span class="n">18 careers</span>
-        <h3>Tech</h3>
-        <p>Help desk, networks, cybersecurity, software, data and more.</p>
-        <span class="go">See tech careers &rarr;</span>
-      </a>
-      <a class="area" href="social-services/index.html">
-        <span class="n">8 careers</span>
-        <h3>Social Services</h3>
-        <p>Social workers, probation, health education, firefighters, police and childcare.</p>
-        <span class="go">See social services careers &rarr;</span>
-      </a>
-      <a class="area" href="transportation/index.html">
-        <span class="n">5 careers</span>
-        <h3>Transportation</h3>
-        <p>Truck and school bus drivers, commercial pilots and air traffic controllers.</p>
-        <span class="go">See transportation careers &rarr;</span>
-      </a>
-      <a class="area" href="business-finance/index.html">
-        <span class="n">23 careers</span>
-        <h3>Business and Finance</h3>
-        <p>Accounting, HR, lending, insurance, logistics, marketing and project management.</p>
-        <span class="go">See business and finance careers &rarr;</span>
-      </a>
-      <a class="area" href="architecture-engineering/index.html">
-        <span class="n">16 careers</span>
-        <h3>Architecture and Engineering</h3>
-        <p>Engineers, architects, surveyors, drafters and engineering technicians.</p>
-        <span class="go">See architecture and engineering careers &rarr;</span>
-      </a>
-      <a class="area" href="education/index.html">
-        <span class="n">15 careers</span>
-        <h3>Education</h3>
-        <p>Teachers from preschool through high school, special education, career classes and adult learning.</p>
-        <span class="go">See education careers &rarr;</span>
-      </a>
-      <a class="area" href="management/index.html">
-        <span class="n">14 careers</span>
-        <h3>Management</h3>
-        <p>Supervisors and managers in business, plants, healthcare, engineering and community programs.</p>
-        <span class="go">See management careers &rarr;</span>
-      </a>
-      <a class="area" href="science/index.html">
-        <span class="n">7 careers</span>
-        <h3>Science</h3>
-        <p>Agriculture, chemistry, environmental science, workplace safety and city planning.</p>
-        <span class="go">See science careers &rarr;</span>
-      </a>
-      <a class="area" href="arts-legal-sales/index.html">
-        <span class="n">4 careers</span>
-        <h3>Arts, Legal and Sales</h3>
-        <p>Industrial design, public relations, paralegal work and technical sales.</p>
-        <span class="go">See arts, legal and sales careers &rarr;</span>
-      </a>
-    </section>
-    <footer><p><strong>In-Demand Career Assessments</strong> &mdash; North Dakota</p></footer>
-  </div>
-</main>
-</body>
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="index.html" aria-label="Career Factory home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M12 5h16l-4 11h-8zM16 19h8l7 24-11 7L9 43z" fill="currentColor"/><path d="m14 30 13 7M16 23l9 5" stroke="#eac980" stroke-width="3"/></svg></span><span>Career Factory<small>BUILT FOR YOUR NEXT CHAPTER</small></span></a><nav aria-label="Main navigation"><a href="#explore">Explore careers</a><a href="#areas">Browse areas</a><a href="#how">How it works ↗</a></nav></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow"><span class="dot"></span>NORTH DAKOTA. REAL WORK, REAL OPTIONS.</p><h1 id="hero-title">Let’s find<br>your <em>fit.</em><span class="spark" aria-hidden="true">✳</span></h1><p class="hero-description">A good career starts with knowing your options. Discover the work, the training, and the honest details—then see what feels right for you.</p><a class="button primary" href="#explore">Find a career to explore <span aria-hidden="true">↗</span></a><p class="hero-note">Free to explore. No account needed. Go at your pace.</p></div><div class="hero-art"><div class="art-background" aria-hidden="true"><div class="orbit"></div><div class="orbit orbit-two"></div></div><span class="art-label">YOUR FUTURE ISN’T ONE-SIZE-FITS-ALL.</span><div class="tie-card"><span class="clip" aria-hidden="true"></span><span class="tiny-label">A LITTLE PERSONALITY.<br>A LOT OF POSSIBILITY.</span><svg class="big-tie" viewBox="0 0 160 245" role="img" aria-label="A cheerful striped clip-on tie"><defs><pattern id="stripe" width="45" height="45" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="45" height="45" fill="#db6b43"/><rect width="13" height="45" fill="#efbd77"/><rect x="18" width="3" height="45" fill="#f8e1ac"/></pattern></defs><path d="M48 8h64l-17 49H65zM65 67h30l31 137-46 32-46-32z" fill="url(#stripe)"/></svg></div><span class="tie-caption">The dress code? <strong>Be you.</strong></span><div class="art-stamp">MORE THAN<br>ONE WAY<br><em>forward.</em></div><img class="work-boots" src="work-boots.svg" alt="A pair of sturdy golden-brown work boots" width="230" height="175"><img class="student-sneakers" src="student-sneakers.svg" alt="A pair of everyday teal canvas sneakers for students" width="240" height="145"></div></section>
+<div class="facts wrap"><div><strong data-total>171</strong><span>careers to discover</span></div><div><strong data-areas>11</strong><span>areas to explore</span></div><div><strong>One you.</strong><span>Let’s start there.</span></div><p>Real work. Real possibilities.<br><b>Right here in North Dakota.</b></p></div>
+<section id="explore" class="explore wrap" aria-labelledby="explore-title"><div class="section-heading"><div><p class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</p><h2 id="explore-title">What could your next chapter be?</h2></div><span class="section-number">01 / EXPLORE</span></div><p class="section-description">Have a job in mind? Search for it. Still figuring it out? Choose a career area or explore the possibilities below.</p>
+<div class="search-panel"><label class="search-label" for="search">Search careers</label><div class="search-box"><svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m15 15 5 5" stroke="currentColor" stroke-width="1.7"/></svg><input id="search" type="search" placeholder="Try nursing, computers, construction…" autocomplete="off"><span class="search-hint">Your next chapter starts here</span></div><div class="filters"><label>Career area<select id="area"><option value="">All career areas</option></select></label><label>Typical pay<select id="pay"><option value="">Any pay</option><option value="under-20">Under $20 / hour</option><option value="20-to-30">$20–under $30 / hour</option><option value="30-plus">$30+ / hour</option><option value="annual">Annual-contract pay</option></select></label><label>ND job growth<select id="growth"><option value="">Any outlook</option><option value="growing-fast">Growing 10% or more</option><option value="steady">Growing 5%–under 10%</option><option value="flat">Growing 0%–under 5%</option><option value="declining">Declining</option><option value="unknown">No ND growth figure</option></select></label><button class="reset" id="reset" type="button">Reset filters ↺</button></div></div>
+<div class="results-heading"><p id="result-count" role="status" aria-live="polite">Loading careers…</p><label class="sort-label">Sort by<select id="sort"><option value="discovery">A mix to explore</option><option value="az">Career name A–Z</option><option value="za">Career name Z–A</option></select></label></div><div id="results" class="career-grid" aria-label="Career search results"></div><div id="empty" class="empty" hidden><h3>No careers match just yet.</h3><p>Try a broader word or clear a filter to see more possibilities.</p><button class="button secondary" id="empty-reset" type="button">Show all careers</button></div><div class="more-row"><button id="more" class="button secondary" type="button" hidden>Show more careers ↓</button><p id="shown"></p></div><p class="data-note">Pay shown is the median, not a starting wage or a guarantee. Annual-contract roles stay in yearly amounts. Figures come from the existing assessments; open a career for its sources and details.</p><noscript><p>Search needs JavaScript. You can still <a href="#areas">browse every career area below</a>.</p></noscript></section>
+<section id="areas" class="areas-section" aria-labelledby="areas-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">FOLLOW WHAT INTERESTS YOU</p><h2 id="areas-title">Big possibilities. Different paths.</h2></div><span class="section-number">02 / BROWSE</span></div><p class="section-description">Explore North Dakota’s in-demand careers, one area at a time.</p><div class="area-grid">
+<a href="healthcare/index.html" data-area="healthcare"><span class="area-icon" aria-hidden="true">＋</span><h3>Healthcare</h3><span class="area-count">30 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="skilled-trades/index.html" data-area="skilled-trades"><span class="area-icon" aria-hidden="true">⌁</span><h3>Skilled Trades</h3><span class="area-count">31 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="tech/index.html" data-area="tech"><span class="area-icon mono" aria-hidden="true">&lt;/&gt;</span><h3>Tech</h3><span class="area-count">18 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="social-services/index.html" data-area="social-services"><span class="area-icon" aria-hidden="true">◎</span><h3>Social Services</h3><span class="area-count">8 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="transportation/index.html" data-area="transportation"><span class="area-icon" aria-hidden="true">➝</span><h3>Transportation</h3><span class="area-count">5 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="business-finance/index.html" data-area="business-finance"><span class="area-icon" aria-hidden="true">▥</span><h3>Business &amp; Finance</h3><span class="area-count">23 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="architecture-engineering/index.html" data-area="architecture-engineering"><span class="area-icon" aria-hidden="true">△</span><h3>Architecture &amp; Engineering</h3><span class="area-count">16 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="education/index.html" data-area="education"><span class="area-icon" aria-hidden="true">▤</span><h3>Education</h3><span class="area-count">15 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="management/index.html" data-area="management"><span class="area-icon" aria-hidden="true">⋈</span><h3>Management</h3><span class="area-count">14 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="science/index.html" data-area="science"><span class="area-icon" aria-hidden="true">✳</span><h3>Science</h3><span class="area-count">7 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<a href="arts-legal-sales/index.html" data-area="arts-legal-sales"><span class="area-icon" aria-hidden="true">◇</span><h3>Arts, Legal &amp; Sales</h3><span class="area-count">4 careers</span><span class="area-arrow" aria-hidden="true">↗</span></a>
+<div class="area-note"><span aria-hidden="true">✦</span><h3>You don’t have to have it all figured out.</h3><p>Pick something that makes you curious. That’s enough to start.</p></div>
+</div></div></section>
+<section id="how" class="how wrap" aria-labelledby="how-title"><div class="how-intro"><p class="eyebrow">SMALL STEPS. A CLEARER PICTURE.</p><h2 id="how-title">A little exploring.<br>A lot to learn<br>about yourself.</h2><p>No perfect answers required.<br>Just a bit of curiosity and honesty.</p></div><ol class="steps"><li><span>01</span><div><h3>Find something that interests you.</h3><p>Browse a career area or search for a job you’ve wondered about.</p></div></li><li><span>02</span><div><h3>Get the real picture.</h3><p>Learn about the day-to-day work, training in North Dakota, pay, and the hard parts, too.</p></div></li><li><span>03</span><div><h3>See how it fits you.</h3><p>Answer the assessment questions, then see your results and next steps. Bring them to a career counselor if you’d like.</p></div></li></ol></section>
+<section class="closing wrap"><p>There’s more than one way to build a future.</p><a href="#explore">Let’s find yours. ↗</a><span class="closing-star" aria-hidden="true">✳</span></section>
+</main><footer class="footer wrap"><div><strong>Career Factory</strong><p>Human-led. AI-assisted. Built with care by Shari Whitmire.</p></div><p>Made for North Dakota.<br>Made for your next chapter.</p><a href="#main">Back to top ↑</a></footer>
+</body></html>
+

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 145" fill="none">
+<title>A pair of everyday teal canvas sneakers</title>
+<ellipse cx="120" cy="130" rx="109" ry="9" fill="#203b35" opacity=".12"/>
+<g transform="translate(39 -12) rotate(10 100 85)">
+<path d="M20 55q12 13 30 8l32-27 30 44 61 16q17 5 19 21H20Z" fill="#689c95" stroke="#2d5b55" stroke-width="3" stroke-linejoin="round"/>
+<path d="m53 64 29-27 14 20-25 23Z" fill="#c8dbcf"/>
+<path d="m137 90 37 9q16 4 17 19h-55q8-11 1-28Z" fill="#f3e9d4" stroke="#2d5b55" stroke-width="2"/>
+<path d="M19 114h173v13H20Z" fill="#f3e9d4" stroke="#2d5b55" stroke-width="3" stroke-linejoin="round"/>
+<path d="m70 55 20 5m-12 5 20 5m-12 5 20 5" stroke="#fff7e7" stroke-width="4" stroke-linecap="round"/>
+<path d="m28 73 2 31h45" stroke="#c8dbcf" stroke-width="2" stroke-dasharray="4 3"/>
+</g>
+<g transform="translate(1 8) rotate(-7 100 85)">
+<path d="M20 55q12 13 30 8l32-27 30 44 61 16q17 5 19 21H20Z" fill="#387a73" stroke="#244d43" stroke-width="3" stroke-linejoin="round"/>
+<path d="m53 64 29-27 14 20-25 23Z" fill="#a4c6b8"/>
+<path d="m137 90 37 9q16 4 17 19h-55q8-11 1-28Z" fill="#fff1d7" stroke="#244d43" stroke-width="2"/>
+<path d="M19 114h173v13H20Z" fill="#fff1d7" stroke="#244d43" stroke-width="3" stroke-linejoin="round"/>
+<path d="M24 121h163" stroke="#bd9b6e" stroke-width="1.5"/>
+<path d="m70 55 20 5m-12 5 20 5m-12 5 20 5" stroke="#fff7e7" stroke-width="4" stroke-linecap="round"/>
+<path d="m98 83 10 6m-10-6 4-9m-4 9-9 4" stroke="#fff7e7" stroke-width="3" stroke-linecap="round"/>
+<path d="m28 73 2 31h45" stroke="#a4c6b8" stroke-width="2" stroke-dasharray="4 3"/>
+</g></svg>

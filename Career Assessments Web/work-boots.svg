@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 175" fill="none">
+  <title>A pair of sturdy golden-brown work boots</title>
+  <ellipse cx="116" cy="161" rx="105" ry="10" fill="#203b35" opacity=".12"/>
+  <g transform="translate(62 -2) rotate(8 70 90)">
+    <path d="M24 29 79 25 84 80 102 103 139 113Q155 116 156 138L150 146H22L16 135 19 84Z" fill="#a66a34" stroke="#68472f" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m23 30 55-4 2 14-58 5Z" fill="#4b4b36"/>
+    <path d="m29 48 27-2 7 50-36 12Z" fill="#c48a46"/>
+    <path d="m81 81 21 23 36 11q14 4 15 19h-52q-17-25-34-29" fill="#be8344" stroke="#68472f" stroke-width="2"/>
+    <path d="M19 134h135v12H21Z" fill="#35453a"/>
+    <path d="M28 146v5m18-5v5m18-5v5m18-5v5m18-5v5m18-5v5m18-5v5" stroke="#35453a" stroke-width="7"/>
+    <path d="m61 48 15 5m-14 5 15 6m-13 4 14 6m-12 4 14 6" stroke="#f0d5a0" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(-1 15) rotate(-6 80 90)">
+    <path d="M24 29 79 25 84 80 102 103 139 113Q155 116 156 138L150 146H22L16 135 19 84Z" fill="#ce934f" stroke="#775131" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m23 30 55-4 2 14-58 5Z" fill="#435044"/>
+    <path d="m28 49 26-3 7 50-34 13Z" fill="#e1ad67"/>
+    <path d="m81 81 21 23 36 11q14 4 15 19h-52q-17-25-34-29" fill="#dca665" stroke="#775131" stroke-width="2"/>
+    <path d="m29 53-4 66 32-5 10-13" stroke="#f4d89f" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M19 134h135v12H21Z" fill="#35453a"/>
+    <path d="M28 146v5m18-5v5m18-5v5m18-5v5m18-5v5m18-5v5m18-5v5" stroke="#35453a" stroke-width="7"/>
+    <path d="m61 48 15 5m-14 5 15 6m-13 4 14 6m-12 4 14 6" stroke="#fff0cf" stroke-width="4" stroke-linecap="round"/>
+    <path d="m58 87 15-3-3 12m3-12 10 9" stroke="#fff0cf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M23 43 17 44 16 29 24 29" stroke="#775131" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+</svg>

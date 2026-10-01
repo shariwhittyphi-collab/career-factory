@@ -1,7 +1,7 @@
 {
  "note": "Generated at build time by mkindex.py. Do not hand-edit.",
  "totalCareers": 193,
- "publishedCareers": 171,
+ "publishedCareers": 193,
  "areas": [
   {
    "slug": "healthcare",
@@ -73,7 +73,7 @@
    "slug": "jobs-you-can-start-now",
    "name": "Jobs You Can Start Now",
    "count": 22,
-   "published": false
+   "published": true
   }
  ],
  "careers": [
@@ -2168,7 +2168,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Customer Service Representative",
@@ -2192,7 +2192,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Dishwasher",
@@ -2216,7 +2216,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Fast Food and Counter Worker",
@@ -2240,7 +2240,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Food Preparation Worker",
@@ -2264,7 +2264,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Freight and Material Mover",
@@ -2288,7 +2288,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Hand Packer and Packager",
@@ -2312,7 +2312,7 @@
     "few-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Home Health and Personal Care Aide",
@@ -2336,7 +2336,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Hotel Front Desk Clerk",
@@ -2360,7 +2360,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Housekeeping Cleaner",
@@ -2384,7 +2384,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Janitor and Cleaner",
@@ -2408,7 +2408,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Landscaping and Groundskeeping Worker",
@@ -2432,7 +2432,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Laundry and Dry-Cleaning Worker",
@@ -2456,7 +2456,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Light Truck Driver",
@@ -2480,7 +2480,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Private Investigator",
@@ -2494,16 +2494,15 @@
    "payBasis": "hourly",
    "entryHourly": 15.73,
    "topHourly": 29.48,
-   "ndGrowthPct": 7.0,
+   "ndGrowthPct": null,
    "ndOpeningsPerYear": null,
-   "ndEmployment": 60,
-   "ndProjectionStatus": "ok",
+   "ndEmployment": null,
+   "ndProjectionStatus": "page carries a national figure only",
    "facets": [
-    "20-to-30",
-    "steady"
+    "20-to-30"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Receptionist and Information Clerk",
@@ -2527,7 +2526,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Restaurant Cook",
@@ -2551,7 +2550,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Retail Salesperson",
@@ -2575,7 +2574,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Security Guard",
@@ -2599,7 +2598,7 @@
     "some-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Stocker and Order Filler",
@@ -2623,7 +2622,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Team Assembler",
@@ -2647,7 +2646,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Waiter or Waitress",
@@ -2671,7 +2670,7 @@
     "many-openings"
    ],
    "tags": [],
-   "published": false
+   "published": true
   },
   {
    "name": "Administrative Services Manager",

@@ -170,8 +170,9 @@
   @media print {
     *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
     header,#progress-wrap,.nav-row,.btn{display:none !important;}
-    .section{display:block !important;}
-    #s0,#s1,#s2,#s3,#s4,#s5,#s6,#s7{display:none !important;}
+    /* Print the visible step, including the report; never reveal hidden answers. */
+    .section{display:none !important;animation:none !important;}
+    .section.active{display:block !important;}
     body{background:white !important;color:#000 !important;font-size:11pt;}
     main{padding:0;max-width:100%;}
     .results-hero{background:#1A1A1A !important;color:white !important;border-radius:8px;padding:20px 24px;margin-bottom:16px;}
@@ -179,7 +180,8 @@
     .results-code-full{color:#DDD !important;}
     .results-grid{gap:8px;margin-bottom:16px;}
     .type-card{border:2px solid #333 !important;border-radius:6px;padding:12px 14px;}
-    .type-card-letter,.type-card-name,.type-card-rank,.type-card-score{color:white !important;}
+    .type-card{background:white !important;}
+    .type-card-letter,.type-card-name,.type-card-rank,.type-card-score{color:#111 !important;}
     .narrative-box{background:#F4F4F4 !important;border:2px solid #888 !important;color:#111 !important;padding:14px 16px;border-radius:6px;}
     .careers-section{background:white !important;border:2px solid #555 !important;border-radius:6px;padding:14px 16px;margin-bottom:12px;break-inside:avoid;}
     .careers-section h3{color:#111 !important;border-bottom:2px solid #888 !important;font-size:11pt;}
@@ -894,5 +896,6 @@ function syncChoiceStates(){document.querySelectorAll('.rating-btn,.value-card,.
 document.addEventListener('click',syncChoiceStates);
 document.addEventListener('DOMContentLoaded',syncChoiceStates);
 </script>
+<script src="your-path-forward-listen.js" defer></script>
 </body>
 </html>

@@ -28,4 +28,8 @@ body.path-forward, body.path-forward.text-large, body.path-forward.text-xl { fon
  header { padding:24px 18px; }
  main { padding-inline:16px; }
 }
-@media print { .path-nav { display:none; } }
+.listen-button { display:inline-flex; align-items:center; min-height:44px; margin:6px 8px; padding:6px 10px; border:2px solid currentColor; border-radius:8px; background:var(--card); color:var(--ink); font-family:inherit; font-size:.9rem; font-weight:600; line-height:1.4; cursor:pointer; }
+.listen-button[aria-pressed="true"] { outline:3px double currentColor; outline-offset:2px; }
+.listen-status { max-width:900px; margin:4px auto; padding:0 20px; color:var(--ink); }
+.listen-status:empty { display:none; }
+@media print { .path-nav,.listen-button,.listen-status { display:none!important; } }

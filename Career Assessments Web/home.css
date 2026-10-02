@@ -4,6 +4,7 @@
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.career-card:hover{transform:none}}
 .work-boots{position:absolute;left:7px;bottom:32px;width:153px;height:auto;filter:drop-shadow(0 5px 3px #203b3510)}.hero-art .tie-card{margin-left:27px;margin-top:0}.hero-art .tie-caption{font-size:0.5rem}@media(max-width:1000px){.work-boots{width:132px;left:1px;bottom:29px}}@media(max-width:700px){.work-boots{width:126px;left:8px;bottom:25px}.hero-art .tie-card{margin-left:23px;margin-top:0}}
+.path-invite{display:flex;align-items:center;gap:32px;padding-block:32px;border-bottom:1px solid var(--line)}.path-invite>div{flex:1}.path-invite h2{font-size:2rem;margin:0 0 12px}.path-invite p{color:var(--muted);max-width:65ch}.path-invite>a{flex-shrink:0}@media(max-width:700px){.path-invite{flex-direction:column;align-items:flex-start;gap:16px}}
 /* Clip only the decorative backdrop, never the illustration's real text. */
 .hero-art{overflow:visible;background:transparent;border-radius:0;--art-bg:#e7ecdf}
 .art-background{position:absolute;inset:0;overflow:hidden;border-radius:48% 48% 10px 10px;background:var(--art-bg);z-index:-1;display:grid;place-items:center}

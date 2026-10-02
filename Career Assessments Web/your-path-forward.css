@@ -1,0 +1,31 @@
+:root { --ink:#203b35; --muted:#596961; --card:#fffefa; --orange:#b74e2a; --navy:#244d43; --blue:#244d43; --teal:#24554c; }
+body.path-forward, body.path-forward.text-large, body.path-forward.text-xl { font-size:1.125rem; }
+.path-forward .a11y-bar { font-size:1rem; padding:12px 20px; }
+.path-nav { max-width:900px; margin:auto; padding:12px 20px; }
+.path-nav a { color:var(--ink); }
+.value-card,.toggle-chip,.spark-chip,.jz-card { font:inherit; text-align:left; cursor:pointer; }
+.value-card,.jz-card { width:100%; }
+.rating-btn[aria-pressed="true"],.value-card[aria-pressed="true"],.style-opt[aria-pressed="true"],.toggle-chip[aria-pressed="true"],.spark-chip[aria-pressed="true"],.jz-card[aria-pressed="true"] { outline:3px solid var(--navy); outline-offset:2px; }
+:focus-visible { outline:3px solid #9c421f; outline-offset:3px; }
+.privacy-note { border:2px solid var(--navy); border-radius:8px; padding:12px; }
+@media screen {
+ :root[data-theme="dark"] { color-scheme:dark; --ink:#eeeede; --muted:#b4c2b6; --card:#22362d; --cream:#182923; --navy:#d0e4d5; --text:#eeeede; }
+ :root[data-theme="dark"] header { background:#244d43; }
+ :root[data-theme="dark"] main :is(div,p,h2,h3,h4,span,a,button,textarea) { color:var(--ink)!important; background-color:var(--card)!important; background-image:none!important; border-color:var(--muted)!important; }
+ :root[data-theme="dark"] main .selected { outline:3px solid var(--ink); }
+ :root[data-theme="dark"] #progress-wrap { background:var(--card); color:var(--ink); }
+ :root[data-theme="dark"] #progress-label { color:var(--ink); }
+ :root[data-theme="dark"] .a11y-bar button[aria-pressed="true"] { background:var(--ink); color:var(--card); }
+ :root[data-theme="dark"] :focus-visible { outline-color:#f09b73; }
+}
+@media(forced-colors:active) {
+ main [aria-pressed="true"] { border:3px double Highlight!important; outline:2px solid Highlight; }
+}
+@media(max-width:600px) {
+ .question-card,.career-item { flex-wrap:wrap; }
+ .q-ratings { flex-wrap:wrap; }
+ .welcome-card { padding:24px 18px; }
+ header { padding:24px 18px; }
+ main { padding-inline:16px; }
+}
+@media print { .path-nav { display:none; } }

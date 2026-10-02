@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Path Forward — Student Career Exploration</title>
+<!-- Fonts are not fetched from Google: that sends the student's IP and
+     referrer to a third party on every load. Named faces are used if the
+     device already has them, otherwise a system stack. -->
+<style>
+  :root {
+    --navy:   #1A3A6B;
+    --blue:   #2563C0;
+    --teal:   #0E7C7B;
+    --gold:   #D4860A;
+    --amber:  #F5A623;
+    --sky:    #E8F3FF;
+    --mint:   #E2F5F4;
+    --cream:  #FEFCF7;
+    --text:   #0D1B2A;
+    --R:#7B2D00;--I:#1A4480;--A:#4A1070;--S:#1A5C0A;--E:#7A5200;--C:#2A2A5A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--cream);color:var(--text);min-height:100vh;font-size:18px;line-height:1.6;}
+
+  header{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 60%,var(--teal) 100%);color:white;padding:28px 40px 24px;}
+  header h1{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2.2rem;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,0.3);}
+  header p{font-size:1rem;margin-top:6px;opacity:0.9;}
+  .header-badge{display:inline-block;background:rgba(255,255,255,0.2);border:1.5px solid rgba(255,255,255,0.5);border-radius:20px;padding:3px 14px;font-size:0.82rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+
+  #progress-wrap{background:#D6E8FF;padding:12px 40px;border-bottom:2px solid #94B8E8;display:flex;align-items:center;gap:16px;}
+  #progress-bar-bg{flex:1;height:12px;background:#A8C8F0;border-radius:6px;overflow:hidden;border:1px solid #7AA8DC;}
+  #progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:6px;transition:width 0.5s ease;width:0%;}
+  #progress-label{font-size:1rem;color:var(--navy);font-weight:900;white-space:nowrap;}
+
+  main{max-width:860px;margin:0 auto;padding:36px 24px 60px;}
+  .section{display:none;}
+  .section.active{display:block;animation:fadeIn 0.4s ease;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+  .section-header{margin-bottom:28px;}
+  .section-badge{display:inline-block;background:var(--navy);color:white;font-size:0.82rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:10px;}
+  .section-title{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.9rem;color:var(--navy);margin-bottom:8px;font-weight:700;}
+  .section-desc{font-size:1rem;color:#1A2A3A;line-height:1.65;max-width:680px;}
+
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  .form-row.single{grid-template-columns:1fr;}
+  label{display:block;font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:6px;}
+  input[type=text],input[type=date],select,textarea{width:100%;padding:13px 16px;border:2.5px solid #6A9ADA;border-radius:8px;font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:1rem;background:white;color:var(--text);transition:border-color 0.2s;}
+  input:focus,select:focus,textarea:focus{outline:3px solid var(--blue);outline-offset:2px;border-color:var(--navy);}
+
+  .survey-intro{background:var(--sky);border-left:6px solid var(--blue);padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:24px;font-size:1rem;line-height:1.6;color:#0D1B2A;}
+  .fun-note{background:#FFF8E8;border-left:5px solid var(--amber);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:20px;font-size:0.95rem;color:#4A2800;}
+
+  .question-card{background:white;border:2px solid #6A9ADA;border-radius:10px;padding:18px 20px;margin-bottom:14px;display:flex;align-items:center;gap:18px;}
+  .question-card:hover{box-shadow:0 2px 12px rgba(37,99,192,0.15);}
+  .q-num{font-size:0.9rem;font-weight:900;color:var(--blue);min-width:32px;text-align:right;}
+  .q-text{flex:1;font-size:1rem;line-height:1.5;color:var(--text);}
+  .q-ratings{display:flex;gap:8px;}
+  .rating-btn{width:44px;height:44px;border-radius:50%;border:2.5px solid #6A9ADA;background:white;font-size:1rem;font-weight:900;color:var(--navy);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;}
+  .rating-btn:hover{border-color:var(--navy);background:var(--sky);transform:scale(1.1);}
+  .rating-btn.selected{background:var(--navy);border-color:var(--navy);color:white;}
+
+  .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
+  .value-card{background:white;border:2.5px solid #6A9ADA;border-radius:10px;padding:16px 18px;cursor:pointer;transition:all 0.2s;display:flex;align-items:flex-start;gap:12px;}
+  .value-card:hover{border-color:var(--navy);box-shadow:0 2px 10px rgba(37,99,192,0.15);}
+  .value-card.selected{border-color:var(--teal);background:var(--mint);border-width:3px;}
+  .value-icon{font-size:1.6rem;min-width:34px;}
+  .value-title{font-weight:900;font-size:1rem;color:var(--text);}
+  .value-desc{font-size:0.88rem;color:#1A2A3A;margin-top:3px;line-height:1.4;}
+  .value-check{margin-left:auto;font-size:1.3rem;opacity:0;transition:opacity 0.2s;}
+  .value-card.selected .value-check{opacity:1;}
+
+  .style-question{background:white;border:2px solid #6A9ADA;border-radius:10px;padding:20px 22px;margin-bottom:16px;}
+  .style-q-text{font-weight:900;font-size:1.05rem;margin-bottom:14px;color:var(--navy);}
+  .style-options{display:flex;flex-wrap:wrap;gap:10px;}
+  .style-opt{padding:10px 18px;border:2.5px solid #6A9ADA;border-radius:24px;font-size:0.95rem;cursor:pointer;transition:all 0.15s;background:white;color:#0D1B2A;font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:700;min-height:44px;}
+  .style-opt:hover{border-color:var(--navy);background:var(--sky);}
+  .style-opt.selected{background:var(--navy);border-color:var(--navy);color:white;}
+
+  .toggle-group{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .toggle-chip{padding:9px 16px;border:2px solid #6A9ADA;border-radius:20px;font-size:0.92rem;cursor:pointer;background:white;color:#0D1B2A;font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:700;transition:all 0.15s;min-height:44px;display:flex;align-items:center;}
+  .toggle-chip:hover{border-color:var(--navy);background:var(--sky);}
+  .toggle-chip.selected{background:var(--navy);border-color:var(--navy);color:white;}
+
+  .spark-box{background:linear-gradient(135deg,#E8F3FF,#E2F5F4);border:2px solid #6A9ADA;border-radius:12px;padding:20px 22px;margin-bottom:16px;}
+  .spark-title{font-weight:900;font-size:1rem;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .spark-options{display:flex;flex-wrap:wrap;gap:8px;}
+  .spark-chip{padding:8px 16px;border:2px solid #94B8E8;border-radius:20px;font-size:0.9rem;cursor:pointer;background:white;color:#0D1B2A;font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:700;transition:all 0.15s;}
+  .spark-chip:hover{border-color:var(--blue);background:var(--sky);}
+  .spark-chip.selected{background:var(--blue);border-color:var(--blue);color:white;}
+
+  .iep-section{background:#FFF8E8;border:2px solid #D4860A;border-radius:10px;padding:20px 22px;margin-bottom:16px;}
+  .iep-title{font-weight:900;font-size:1rem;color:#7A4A00;margin-bottom:6px;}
+  .iep-desc{font-size:0.9rem;color:#4A2800;margin-bottom:14px;line-height:1.5;}
+
+  .results-hero{background:linear-gradient(135deg,var(--navy),var(--blue));color:white;border-radius:14px;padding:30px 34px;margin-bottom:28px;}
+  .results-name{font-size:0.95rem;margin-bottom:4px;font-weight:700;}
+  .results-code{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:3.2rem;font-weight:700;letter-spacing:8px;margin-bottom:6px;}
+  .results-code-full{font-size:1.05rem;font-weight:400;}
+
+  .results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:28px;}
+  .type-card{border-radius:10px;padding:18px;color:white;}
+  .type-card-rank{font-size:0.78rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;}
+  .type-card-letter{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2.4rem;font-weight:700;line-height:1;}
+  .type-card-name{font-size:0.92rem;font-weight:900;margin-top:2px;}
+  .type-card-score{font-size:0.85rem;margin-top:6px;}
+  .type-card-bar{margin-top:8px;height:6px;background:rgba(255,255,255,0.3);border-radius:3px;overflow:hidden;}
+  .type-card-bar-fill{height:100%;background:rgba(255,255,255,0.9);border-radius:3px;}
+
+  .careers-section{background:white;border:2px solid #6A9ADA;border-radius:12px;padding:24px 26px;margin-bottom:20px;}
+  .careers-section h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.2rem;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #94B8E8;}
+  .career-item{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #D6E8FF;}
+  .career-item:last-child{border-bottom:none;}
+  .career-info{flex:1;}
+  .career-title{font-weight:900;font-size:1rem;color:var(--text);}
+  .career-soc{font-size:0.88rem;color:#2A3A4A;margin-top:2px;}
+  .career-pathway{font-size:0.82rem;color:var(--teal);margin-top:3px;font-weight:700;}
+  .career-link{font-size:0.88rem;color:var(--blue);text-decoration:none;font-weight:900;white-space:nowrap;padding:6px 12px;border:2px solid var(--blue);border-radius:6px;transition:all 0.15s;min-height:44px;display:flex;align-items:center;}
+  .career-link:hover{background:var(--blue);color:white;}
+
+  .flag-green{color:#1A5C0A;font-weight:900;font-size:0.88rem;background:#E2F5F4;border:1.5px solid #2E7D32;border-radius:6px;padding:3px 10px;white-space:nowrap;}
+  .flag-red{color:#7B0000;font-weight:900;font-size:0.88rem;background:#FFEBEE;border:1.5px solid #C62828;border-radius:6px;padding:3px 10px;white-space:nowrap;}
+  .flag-yellow{color:#6A4A00;font-weight:900;font-size:0.88rem;background:#FFF8E0;border:1.5px solid #F57F17;border-radius:6px;padding:3px 10px;white-space:nowrap;}
+  .career-flags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+
+  .values-summary{background:var(--mint);border:2px solid #2E7D32;border-radius:10px;padding:18px 22px;margin-bottom:16px;}
+  .values-summary h4{font-size:0.92rem;font-weight:900;color:var(--teal);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.8px;}
+  .values-tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .values-tag{background:white;border:2px solid #2E7D32;border-radius:16px;padding:5px 14px;font-size:0.88rem;color:var(--teal);font-weight:900;}
+
+  .narrative-box{background:var(--sky);border:2px solid #6A9ADA;border-radius:10px;padding:22px 24px;margin-bottom:20px;font-size:1rem;line-height:1.75;color:#0D1B2A;font-style:italic;}
+  .next-steps-box{background:#FFF8E8;border:2px solid var(--amber);border-radius:10px;padding:20px 22px;margin-bottom:20px;}
+  .next-steps-box h4{font-weight:900;color:#7A4A00;margin-bottom:12px;font-size:1rem;}
+  .next-step{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start;}
+  .next-step-num{background:var(--navy);color:white;width:26px;height:26px;border-radius:50%;font-size:0.82rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+  .job-zone-selector{display:flex;flex-direction:column;gap:12px;margin:16px 0;}
+  .jz-card{background:white;border:2.5px solid #6A9ADA;border-radius:10px;padding:16px 20px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:16px;}
+  .jz-card:hover{border-color:var(--navy);box-shadow:0 2px 10px rgba(37,99,192,0.2);}
+  .jz-card.selected{border-color:var(--teal);background:var(--mint);border-width:3px;}
+  .jz-badge{font-size:1.5rem;font-weight:900;color:white;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .jz-info{flex:1;}
+  .jz-title{font-weight:900;font-size:1rem;color:var(--text);}
+  .jz-desc{font-size:0.88rem;color:#1A2A3A;margin-top:2px;line-height:1.4;}
+  .jz-check{font-size:1.3rem;opacity:0;transition:opacity 0.2s;margin-left:auto;}
+  .jz-card.selected .jz-check{opacity:1;}
+
+  .nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:32px;padding-top:20px;border-top:2px solid #94B8E8;}
+  .btn{padding:14px 30px;border-radius:8px;font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:1rem;font-weight:900;cursor:pointer;border:none;transition:all 0.2s;min-height:50px;}
+  .btn-primary{background:var(--navy);color:white;box-shadow:0 3px 12px rgba(26,58,107,0.35);}
+  .btn-primary:hover{background:#0D1B3A;transform:translateY(-1px);}
+  .btn-secondary{background:white;color:var(--navy);border:3px solid var(--blue);}
+  .btn-secondary:hover{background:var(--sky);}
+  .btn-print{background:var(--teal);color:white;}
+  .btn-print:hover{background:#095A5A;}
+  .btn-new{background:var(--blue);color:white;}
+  .btn-new:hover{background:#1A4A9A;}
+
+  .error-msg{color:#8B0000;font-size:1rem;font-weight:700;margin-top:10px;display:none;background:#FFEBEE;padding:10px 14px;border-radius:6px;border:2px solid #C62828;}
+
+  .welcome-card{background:white;border-radius:14px;padding:40px 44px;border:2px solid #6A9ADA;text-align:center;box-shadow:0 4px 24px rgba(26,58,107,0.12);}
+  .welcome-icon{font-size:4rem;margin-bottom:18px;}
+  .welcome-card h2{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2rem;color:var(--navy);margin-bottom:14px;}
+  .welcome-card p{font-size:1.05rem;color:#0D1B2A;line-height:1.7;margin-bottom:12px;max-width:560px;margin-left:auto;margin-right:auto;}
+  .steps-row{display:flex;justify-content:center;gap:10px;margin:24px 0;flex-wrap:wrap;}
+  .step-pill{background:var(--sky);border:2px solid #6A9ADA;border-radius:20px;padding:8px 16px;font-size:0.88rem;font-weight:900;color:var(--navy);display:flex;align-items:center;gap:6px;}
+  .step-num{background:var(--navy);color:white;width:24px;height:24px;border-radius:50%;font-size:0.78rem;font-weight:900;display:flex;align-items:center;justify-content:center;}
+
+  @media print {
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    header,#progress-wrap,.nav-row,.btn{display:none !important;}
+    .section{display:block !important;}
+    #s0,#s1,#s2,#s3,#s4,#s5,#s6,#s7{display:none !important;}
+    body{background:white !important;color:#000 !important;font-size:11pt;}
+    main{padding:0;max-width:100%;}
+    .results-hero{background:#1A1A1A !important;color:white !important;border-radius:8px;padding:20px 24px;margin-bottom:16px;}
+    .results-code{color:white !important;font-size:2rem;letter-spacing:5px;}
+    .results-code-full{color:#DDD !important;}
+    .results-grid{gap:8px;margin-bottom:16px;}
+    .type-card{border:2px solid #333 !important;border-radius:6px;padding:12px 14px;}
+    .type-card-letter,.type-card-name,.type-card-rank,.type-card-score{color:white !important;}
+    .narrative-box{background:#F4F4F4 !important;border:2px solid #888 !important;color:#111 !important;padding:14px 16px;border-radius:6px;}
+    .careers-section{background:white !important;border:2px solid #555 !important;border-radius:6px;padding:14px 16px;margin-bottom:12px;break-inside:avoid;}
+    .careers-section h3{color:#111 !important;border-bottom:2px solid #888 !important;font-size:11pt;}
+    .career-item{border-bottom:1px solid #CCC !important;padding:8px 0;}
+    .career-title{color:#000 !important;font-size:10pt;}
+    .career-soc,.career-pathway{color:#444 !important;font-size:8pt;}
+    .career-link{display:none !important;}
+    .flag-green{background:#E8F5E8 !important;border:1.5px solid #2E7D32 !important;color:#1B5E20 !important;font-size:7.5pt;padding:2px 7px;}
+    .flag-red{background:#FFEBEE !important;border:1.5px solid #C62828 !important;color:#B71C1C !important;font-size:7.5pt;padding:2px 7px;}
+    .flag-yellow{background:#FFFDE7 !important;border:1.5px solid #F57F17 !important;color:#E65100 !important;font-size:7.5pt;padding:2px 7px;}
+    .values-summary{background:#F4F4F4 !important;border:2px solid #666 !important;color:#111 !important;padding:12px 14px;break-inside:avoid;border-radius:6px;}
+    .values-summary h4,.values-tag{color:#111 !important;}
+    .values-tag{background:white !important;border:1.5px solid #555 !important;font-size:8pt;}
+    .next-steps-box{background:#FAFAFA !important;border:2px solid #888 !important;break-inside:avoid;}
+    .next-steps-box h4{color:#111 !important;}
+    @page{margin:0.75in 0.65in;size:letter portrait;}
+  }
+  @media(max-width:600px){
+    .values-grid,.results-grid,.form-row{grid-template-columns:1fr;}
+    main{padding:20px 16px 40px;}
+    header{padding:24px 20px;}
+    header h1{font-size:1.6rem;}
+    .q-ratings{flex-wrap:wrap;}
+  }
+
+        /* ---- Accessibility pass ---- */
+
+        /* Reader-chosen text size. Same class names and the same scale as the
+           193 career pages, and the same localStorage key, so a student's
+           choice carries across the whole site instead of resetting here. */
+        body.text-large { font-size: 118%; }
+        body.text-xl    { font-size: 136%; }
+
+        /* A visible keyboard focus ring everywhere. The file had one outline
+           rule; a student navigating by keyboard needs to see where they are
+           on every control. */
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+            outline: 3px solid #D4860A;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Reader controls bar. */
+        .a11y-bar { display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+            max-width:900px; margin:0 auto; padding:10px 20px 0; font-size:.85rem; }
+        .a11y-bar .a11y-label { font-weight:700; color:var(--navy); }
+        .a11y-bar button { min-height:44px; min-width:44px; padding:6px 14px;
+            background:#fff; color:var(--text); border:2px solid var(--navy);
+            border-radius:8px; font:inherit; font-weight:600; cursor:pointer; }
+        .a11y-bar button:hover { background:var(--sky); }
+        .a11y-bar button[aria-pressed="true"] { background:var(--navy); color:#fff; }
+
+        /* Windows High Contrast ignores background colour, so a pressed button
+           would look identical to an unpressed one without a border change. */
+        @media (forced-colors: active) {
+            .a11y-bar button { border:1px solid ButtonText; }
+            .a11y-bar button[aria-pressed="true"] { border:3px solid Highlight; }
+            a:focus-visible, button:focus-visible, input:focus-visible,
+            select:focus-visible, textarea:focus-visible { outline:3px solid Highlight; }
+        }
+
+        /* Motion can trigger nausea, migraine and vestibular symptoms. The file
+           had 12 transitions, 8 transforms and a keyframe animation with no
+           escape hatch. */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .001ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        @media print { .a11y-bar { display:none !important; } }
+    
+        /* ---- Job Accommodation Network note ---- */
+        .jan-box { background:#F2F8F4; border:2px solid #0E7C7B; border-left:6px solid #0E7C7B;
+            border-radius:12px; padding:20px 24px; margin:26px 0 8px; }
+        .jan-box h4 { margin:0 0 10px; font-size:1.05rem; color:#0A5C5B; font-weight:900; }
+        .jan-box p { margin:0 0 10px; font-size:0.95rem; line-height:1.6; color:#13302E; }
+        .jan-box p:last-child { margin-bottom:0; }
+        .jan-box .jan-contact { font-size:1rem; }
+        .jan-box .jan-contact a { color:#0A5C5B; font-weight:700; }
+        .jan-box .jan-close { font-style:italic; color:#1A4A48; }
+        @media print {
+            .jan-box { background:#fff !important; border:1.5px solid #555 !important;
+                border-left:4px solid #0E7C7B !important; page-break-inside:avoid; }
+        }
+    </style>
+<link rel="stylesheet" href="a11y-controls.css"><link rel="stylesheet" href="your-path-forward.css"><script src="a11y-controls.js" defer></script></head>
+<body class="path-forward">
+<a class="reader-skip" href="#main">Skip to exploration</a>
+<nav class="path-nav" aria-label="Career Factory"><a href="index.html">← Career Factory home</a></nav>
+<div class="a11y-bar" role="group" aria-label="Reading options">
+  <span class="a11y-label">Text size</span>
+  <button type="button" id="sizeNormal" data-text-size="normal" aria-pressed="true">Normal</button>
+  <button type="button" id="sizeLarge" data-text-size="large" aria-pressed="false">Large</button>
+  <button type="button" id="sizeXL" data-text-size="xl" aria-pressed="false">Largest</button>
+  <button type="button" id="themeBtn" aria-pressed="false">Dark mode</button>
+</div>
+
+
+<header>
+  <div class="header-badge">🎓 Student Edition</div>
+  <h1>Your Path Forward</h1>
+  <p>Career Exploration for High School Students</p>
+</header>
+
+<div id="progress-wrap">
+  <div id="progress-bar-bg"><div id="progress-bar-fill"></div></div>
+  <div id="progress-label">Step 1 of 7</div>
+</div>
+
+<main id="main" tabindex="-1">
+
+<!-- SECTION: Welcome -->
+<div class="section active" id="s0">
+  <div class="welcome-card">
+    <div class="welcome-icon">🚀</div>
+    <h2>Let's Explore Your Future!</h2><p class="privacy-note">No name or account needed. Your answers stay in this open page and are not saved or sent by this tool. Reloading or closing the page clears them. Only reading preferences are remembered. Leave identifying details out of the optional notes.</p><p>This is an exploration activity, not a validated test or a decision about what work you can do.</p>
+    <p>This tool will help you discover careers that match <em>who you are</em> — your interests, your strengths, and how you like to work. There are no right or wrong answers.</p>
+    <p>It takes about 20–30 minutes. You can do it on your own, or with someone you trust.</p>
+    <div class="steps-row">
+      <div class="step-pill"><div class="step-num">1</div> Interest Survey</div>
+      <div class="step-pill"><div class="step-num">2</div> What Matters to You</div>
+      <div class="step-pill"><div class="step-num">3</div> How You Work</div>
+      <div class="step-pill"><div class="step-num">4</div> School & Activities</div>
+      <div class="step-pill"><div class="step-num">5</div> Skills & Tech</div>
+      <div class="step-pill"><div class="step-num">6</div> Career Zone</div>
+      <div class="step-pill"><div class="step-num">7</div> Your Results</div>
+    </div>
+    <button class="btn btn-primary" onclick="goTo(1)">Let's Get Started →</button>
+  </div>
+</div>
+
+<!-- SECTION: About You -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <span class="section-badge">Step 1 of 7</span>
+    <h2 class="section-title">Interest Survey</h2>
+    <div class="section-desc">Rate how much you would enjoy each activity. Don't think too hard — go with your gut!</div>
+  </div>
+  <div class="survey-intro">
+    <strong>How to rate:</strong> &nbsp;1 = Not for me &nbsp;·&nbsp; 2 = Maybe &nbsp;·&nbsp; 3 = Sounds okay &nbsp;·&nbsp; 4 = I'd like that &nbsp;·&nbsp; 5 = Yes, absolutely!
+  </div>
+  <div id="survey-questions"></div>
+  <div id="err2" class="error-msg" role="alert" tabindex="-1">Please rate all activities before continuing.</div>
+  <div class="nav-row">
+    <button class="btn btn-secondary" onclick="goTo(0)">← Back</button>
+    <button class="btn btn-primary" onclick="validateAndGo(1,2)">Next →</button>
+  </div>
+</div>
+
+<!-- SECTION: What Matters to You -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <span class="section-badge">Step 2 of 7</span>
+    <h2 class="section-title">What Matters to You?</h2>
+    <div class="section-desc">Pick up to 5 things that are most important to you in a future job or career.</div>
+  </div>
+  <div class="values-grid" id="values-grid"></div>
+  <div class="nav-row">
+    <button class="btn btn-secondary" onclick="goTo(1)">← Back</button>
+    <button class="btn btn-primary" onclick="goTo(3)">Next →</button>
+  </div>
+</div>
+
+<!-- SECTION: How You Like to Work -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <span class="section-badge">Step 3 of 7</span>
+    <h2 class="section-title">How Do You Like to Work?</h2>
+    <div class="section-desc">Pick the answer that feels most like you for each question.</div>
+  </div>
+  <div class="fun-note">💡 Think about times you've done group projects, activities, or chores — what did you prefer?</div>
+  <div id="style-questions"></div>
+  <div class="nav-row">
+    <button class="btn btn-secondary" onclick="goTo(2)">← Back</button>
+    <button class="btn btn-primary" onclick="goTo(4)">Next →</button>
+  </div>
+</div>
+
+<!-- SECTION: School & Activities (Spark Questions) -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <span class="section-badge">Step 4 of 7</span>
+    <h2 class="section-title">School, Activities & Sparks ✨</h2>
+    <div class="section-desc">Tell us about what you enjoy in school and outside of it. Select everything that applies — you might discover something new!</div>
+  </div>
+
+  <div class="spark-box">
+    <div class="spark-title">📚 Favorite Subjects or Classes</div>
+    <div class="spark-options" id="subjects-options"></div>
+  </div>
+
+  <div class="spark-box">
+    <div class="spark-title">🎯 What Do You Do for Fun or After School?</div>
+    <div class="spark-options" id="activities-options"></div>
+  </div>
+
+  <div class="spark-box">
+    <div class="spark-title">💭 "Have You Ever Thought About..." — Pick Any That Interest You</div>
+    <div class="fun-note" style="margin-bottom:12px;">These are just sparks — ideas you might not have connected to a career yet. No pressure!</div>
+    <div class="spark-options" id="sparks-options"></div>
+  </div>
+
+  <div class="style-question">
+    <div class="style-q-text">Anything else you want to remember about your interests or goals?</div>
+    <textarea id="studentNotes" aria-label="Your own notes (optional)" rows="3" placeholder="Optional — write anything here..."></textarea>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn btn-secondary" onclick="goTo(3)">← Back</button>
+    <button class="btn btn-primary" onclick="goTo(5)">Next →</button>
+  </div>
+</div>
+
+<!-- SECTION: Skills & Technology -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <span class="section-badge">Step 5 of 7</span>
+    <h2 class="section-title">Skills & Technology</h2>
+    <div class="section-desc">Select any skills you already have or are learning — even if you're just starting out!</div>
+  </div>
+  <div class="style-question">
+    <div class="style-q-text">Skills I Have or Am Learning</div>
+    <div class="toggle-group" id="skills-options"></div>
+  </div>
+  <div class="style-question" style="margin-top:16px;">
+    <div class="style-q-text">Technology I've Used</div>
+    <div class="toggle-group" id="tech-options"></div>
+  </div>
+  <div class="style-question" style="margin-top:16px;">
+    <div class="style-q-text">Are there any skills or training you'd like to gain? (Select all that apply)</div>
+    <div class="toggle-group" id="goals-options"></div>
+  </div>
+  <div class="nav-row">
+    <button class="btn btn-secondary" onclick="goTo(4)">← Back</button>
+    <button class="btn btn-primary" onclick="goTo(6)">Next →</button>
+  </div>
+</div>
+
+<!-- SECTION: Career Zone -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <span class="section-badge">Step 6 of 7</span>
+    <h2 class="section-title">Career Zone</h2>
+    <div class="section-desc">Career zones describe how much education or training a job usually needs. You can pick any zone — this is about exploring, not limiting yourself!</div>
+  </div>
+  <div class="fun-note">💡 Remember: Zone 1 doesn't mean "less than." Many Zone 1 and 2 jobs are great starting points that lead to Zone 3, 4, and 5 careers over time. You can always change zones!</div>
+  <div class="style-question">
+    <div class="style-q-text">Which zone would you like to explore? (You can skip this and see all zones)</div>
+    <div class="job-zone-selector" id="jz-selector"></div>
+  </div>
+  <div class="nav-row">
+    <button class="btn btn-secondary" onclick="goTo(5)">← Back</button>
+    <button class="btn btn-primary" onclick="goTo(7)">See My Results →</button>
+  </div>
+</div>
+
+<!-- SECTION: Results -->
+<div class="section" id="s7">
+  <div id="results-content"></div>
+  <div class="nav-row">
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print My Report</button>
+    <button class="btn btn-new" onclick="startOver()">Start New Assessment</button>
+  </div>
+</div>
+
+</main>
+
+<script>
+const TOTAL_SECTIONS = 7;
+
+// Holland Code questions — student-friendly language
+const QUESTIONS = [
+  // Realistic
+  {q:"Build or fix something with your hands (furniture, electronics, a car engine)",t:'R'},
+  {q:"Work outside — gardening, landscaping, or taking care of animals",t:'R'},
+  {q:"Use tools, machines, or equipment to make or repair things",t:'R'},
+  {q:"Do physical work that keeps you moving and active",t:'R'},
+  {q:"Follow step-by-step instructions to create something",t:'R'},
+  // Investigative
+  {q:"Figure out why something isn't working and solve the problem",t:'I'},
+  {q:"Do a science experiment or research project",t:'I'},
+  {q:"Read about how things work — the human body, technology, the universe",t:'I'},
+  {q:"Analyze data or information to find patterns",t:'I'},
+  {q:"Ask questions and dig deeper to find the real answer",t:'I'},
+  // Artistic
+  {q:"Create art, music, videos, or write stories",t:'A'},
+  {q:"Design something — a logo, a room, a website, an outfit",t:'A'},
+  {q:"Perform — act, sing, dance, or play an instrument",t:'A'},
+  {q:"Come up with new, creative ideas and try something different",t:'A'},
+  {q:"Express yourself through photography, drawing, or crafting",t:'A'},
+  // Social
+  {q:"Help a friend work through a problem or tough time",t:'S'},
+  {q:"Teach someone how to do something or explain an idea",t:'S'},
+  {q:"Volunteer in your community or help people who need it",t:'S'},
+  {q:"Work in a team and make sure everyone gets along",t:'S'},
+  {q:"Listen carefully and give advice to someone who needs support",t:'S'},
+  // Enterprising
+  {q:"Start a project, club, or small business of your own",t:'E'},
+  {q:"Lead a group and motivate others to reach a goal",t:'E'},
+  {q:"Persuade or convince others — sell an idea, product, or point of view",t:'E'},
+  {q:"Compete and push yourself to be the best at something",t:'E'},
+  {q:"Take charge when no one else is stepping up",t:'E'},
+  // Conventional
+  {q:"Organize information, files, or a schedule so everything runs smoothly",t:'C'},
+  {q:"Work with numbers — budgets, spreadsheets, or math problems",t:'C'},
+  {q:"Follow clear rules and procedures to get a task done right",t:'C'},
+  {q:"Check your work carefully and make sure every detail is correct",t:'C'},
+  {q:"Keep records, track progress, or manage a system",t:'C'},
+];
+
+const VALUES_LIST = [
+  {icon:'💰',title:'Good Pay',desc:'A job that lets me afford the things I want'},
+  {icon:'🔒',title:'Job Stability',desc:'I want to know my job will still be there'},
+  {icon:'🌱',title:'Growth & Advancement',desc:'Chances to move up and learn new things'},
+  {icon:'🤝',title:'Helping People',desc:'Making a real difference in someone\'s life'},
+  {icon:'🎨',title:'Being Creative',desc:'Using my imagination and original ideas'},
+  {icon:'🧘',title:'Work-Life Balance',desc:'Time for school, family, friends, and myself'},
+  {icon:'🏆',title:'Recognition',desc:'Being noticed and appreciated for my work'},
+  {icon:'🌍',title:'Variety & Travel',desc:'Different tasks, places, or new experiences'},
+  {icon:'🤖',title:'Working with Technology',desc:'Using computers, gadgets, or cool equipment'},
+  {icon:'👥',title:'Teamwork',desc:'Working closely with others toward a goal'},
+  {icon:'🦅',title:'Independence',desc:'Having freedom to do things my way'},
+  {icon:'📚',title:'Learning New Things',desc:'Always growing and being challenged'},
+  {icon:'🌿',title:'Outdoors & Active',desc:'Working outside or staying on the move'},
+  {icon:'🏥',title:'Health & Caring for Others',desc:'Working in healthcare or human services'},
+  {icon:'✍️',title:'Writing & Communicating',desc:'Sharing ideas through words or speaking'},
+  {icon:'🔢',title:'Numbers & Data',desc:'Working with math, stats, or information'},
+];
+
+const STYLE_QS = [
+  {q:'Where do you prefer to work?',opts:['Indoors — office, classroom, lab','Outdoors — nature, construction, sports','From home / remote work','A mix of all of these']},
+  {q:'Who do you want to work with most?',opts:['People — clients, patients, students, customers','Data and information','Objects, tools, or machines','A mix of people and tasks']},
+  {q:'How do you like to work with others?',opts:['One-on-one with individuals','In a team or group','On my own most of the time','Leading or managing a team']},
+  {q:'What kind of activity level do you prefer?',opts:['Mostly sitting / desk work','Mostly standing or moving around','Physically active / hands-on','A mix of sitting and moving']},
+  {q:'What kind of schedule sounds best?',opts:['Regular day hours (9–5 type)','Evening, night, or weekend shifts','Part-time or flexible hours','Seasonal or project-based work']},
+  {q:'When you solve problems, you prefer to:',opts:['Follow clear steps and rules','Get creative and think outside the box','Use data and logic to figure it out','Ask someone more experienced']},
+  {q:'In school projects, I usually prefer to:',opts:['Do the research and planning','Do the hands-on or building part','Be the one presenting to the class','Make sure everything looks good / is organized']},
+  {q:'Which sounds most exciting to you?',opts:['Building or creating something physical','Discovering or inventing something new','Helping or connecting with people','Running or organizing a project or business']},
+];
+
+const SUBJECTS_LIST = ['Math','Science / Biology','Chemistry / Physics','English / Writing','History / Social Studies','Art / Drawing','Music','Drama / Theater','Computer Science / Tech','Physical Education / Health','Business / Marketing','Shop / Vocational Trades','Foreign Language','Psychology / Sociology','Environmental Science','None in particular'];
+const ACTIVITIES_LIST = ['Sports / Athletics','Music — playing or singing','Art / Drawing / Crafting','Gaming / eSports','Cooking / Baking','Volunteering / Community service','Hunting / Fishing / Outdoors','Working on cars or machines','Social media / Content creation','Reading / Writing stories','Building / DIY projects','Taking care of animals','Photography / Filmmaking','Faith / youth group activities','Dance / Theater / Performance','Part-time job or babysitting'];
+const SPARKS_LIST = [
+  '🏥 Working in a hospital or clinic','👩‍💻 Building apps or websites','🎬 Making movies or YouTube videos',
+  '🌿 Taking care of the environment','🐾 Working with animals','👮 Working in law enforcement or the military',
+  '✈️ Flying or working in aviation','🍳 Running a restaurant or food business','🏗️ Building or designing buildings',
+  '🧬 Doing scientific research','📖 Teaching or coaching others','🎵 Making music professionally',
+  '💼 Starting my own business','📊 Working in finance or investing','🎨 Working in fashion or design',
+  '🌍 Traveling for work or helping people abroad','⚡ Working with electricity or solar energy','🧠 Understanding how people think',
+  '🚒 Emergency services — fire, EMS, rescue','🎮 Designing video games','📱 Working in social media or marketing',
+  '🔬 Working in a lab','👩‍⚖️ Working in law or government','🏋️ Working in fitness or sports medicine',
+];
+
+const SKILLS_LIST = ['Communication / Talking with people','Writing clearly','Basic math','Customer service','Cooking / Food prep','Childcare or babysitting','Animal care','Cleaning / organizing','Driving (or learning to drive)','Leadership / taking charge','Art or design','Music or performance','Coding / programming','Sales or persuading others','Research and fact-finding','First aid / CPR'];
+const TECH_LIST = ['Email and basic internet','Google Docs / Microsoft Word','Spreadsheets (Excel / Google Sheets)','Presentations (PowerPoint / Slides)','Social media platforms','Smartphone apps','Video editing software','Photo editing (Photoshop, Canva)','Coding (HTML, Python, etc.)','Point of Sale (POS) systems','No computer experience yet'];
+const GOALS_LIST = ['Get a part-time job while in school','Learn a trade (welding, electrical, plumbing, etc.)','Get a certification (CNA, CPR, cosmetology, etc.)','Go to a 2-year (community) college','Go to a 4-year college or university','Join the military','Apprenticeship or on-the-job training','Work right after high school','Start my own business someday','Get a driver\'s license or CDL'];
+
+
+
+
+
+
+// Full career map — same structure as adult tool: [title, SOC, zone, phys, cog, social, flags]
+const CAREER_MAP_ZONES = {
+  RIA:[['Carpenter Helper','47-3012.00',1,'H','L','L','P'],['Painter Helper','47-3014.00',1,'H','L','L','P'],['Grounds Maintenance Worker','37-3011.00',1,'H','L','L','P'],['Model Maker / Craft Worker','51-9071.00',2,'H','M','L','P'],['Cabinetmaker','51-7011.00',2,'H','M','L','P'],['Tile / Stone Setter','47-2044.00',2,'H','M','L','P'],['Drafter (CAD Technician)','17-3013.00',3,'L','H','L','C'],['Interior Design Assistant','27-1025.00',3,'L','M','M','C'],['Architectural Drafter','17-3011.00',3,'L','H','L','CS'],['Surveying Technician','17-3031.00',3,'H','M','L','PS'],['Industrial Designer','27-1021.00',4,'L','H','M','C'],['Architect','17-1011.00',4,'L','H','M','C'],['Landscape Architect','17-1012.00',4,'M','H','M','P'],['Naval Architect','17-2121.00',4,'L','H','M','C'],['Civil Engineer','17-2051.00',4,'L','H','M','C'],['Environmental Engineer','17-2081.00',4,'L','H','M','C'],['Urban Planner','19-3051.00',4,'L','H','M','C'],['Mechanical Engineer','17-2141.00',4,'L','H','M','C'],['Biomedical Engineer','17-2031.00',5,'L','H','M','C'],['Aerospace Engineer','17-2011.00',5,'L','H','M','C']],
+  RIS:[['Animal Caretaker','39-2021.00',1,'H','L','M','P'],['Farmworker','45-2092.00',1,'H','L','L','P'],['Fishing Worker','45-3011.00',1,'H','L','L','P'],['Veterinary Assistant','31-9096.00',2,'H','M','M','P'],['Forest & Conservation Worker','45-4011.00',2,'H','M','L','P'],['Wildlife Warden Aide','33-3031.00',2,'H','M','M','P'],['Forest Ranger Technician','19-1031.01',3,'H','M','M','P'],['Veterinary Technician','29-2056.00',3,'M','M','H','PS'],['Environmental Science Tech','19-4091.00',3,'H','M','L','P'],['Geological Technician','19-4044.00',3,'H','M','L','P'],['Agricultural Technician','19-4011.01',3,'M','M','L','P'],['Zoologist / Wildlife Biologist','19-1023.00',4,'M','H','M','P'],['Agricultural Engineer','17-2021.00',4,'M','H','M','PC'],['Environmental Scientist','19-2041.00',4,'L','H','M',''],['Marine Biologist','19-1013.00',4,'H','H','M','P'],['Soil / Water Conservationist','19-1031.00',4,'M','H','M','P'],['Veterinarian','29-1131.00',5,'M','H','H','CS'],['Ecologist','19-1012.00',5,'L','H','M',''],['Microbiologist','19-1022.00',5,'L','H','L','C'],['Biochemist','19-1021.00',5,'L','H','L','C']],
+  RIE:[['Construction Laborer','47-2061.00',1,'H','L','L','P'],['Operating Engineer Helper','47-3099.00',1,'H','L','L','P'],['Roofer','47-2181.00',2,'H','L','L','P'],['Heavy Equipment Operator','53-7041.00',2,'H','M','L','PS'],['Construction Equipment Operator','47-2073.00',2,'H','M','L','P'],['Structural Iron Worker','47-2221.00',2,'H','M','L','P'],['Surveyor','17-1022.00',3,'H','H','M','PS'],['Construction Supervisor','47-1011.00',3,'H','M','H','PM'],['Building Inspector','47-4011.00',3,'M','H','M','P'],['Civil Engineering Technician','17-3022.00',3,'M','H','M','C'],['Construction Manager','11-9021.00',4,'H','H','H','PM'],['Civil Engineer','17-2051.00',4,'L','H','M','C'],['Project Manager','11-9021.00',4,'M','H','H','CM'],['Transportation Engineer','17-2051.01',4,'L','H','M','C'],['Mining Engineer','17-2151.00',4,'H','H','M','PC'],['Petroleum Engineer','17-2171.00',4,'M','H','M','C'],['Structural Engineer','17-2051.02',5,'L','H','M','C'],['Geotechnical Engineer','17-2051.03',5,'L','H','M','C'],['Environmental Engineer','17-2081.00',5,'L','H','M','C'],['Construction Executive','11-9021.01',5,'L','H','H','CM']],
+  RIC:[['Stock Clerk','43-5081.03',1,'H','L','L','P'],['Assembler','51-2090.00',1,'H','L','L','P'],['Production Worker','51-9199.00',1,'H','L','L','P'],['Electrical Helper','47-3013.00',2,'H','M','L','P'],['Quality Inspector','51-9061.00',2,'M','M','L','PS'],['Computer Repair Technician','49-2011.00',2,'M','M','L','PS'],['Electronics Technician','17-3023.00',3,'M','H','L','CS'],['Electrician','47-2111.00',3,'H','M','L','P'],['Industrial Machinery Mechanic','49-9041.00',3,'H','M','L','P'],['Calibration Technician','17-3023.01',3,'M','H','L','CS'],['Network Installer','49-9052.00',3,'M','M','L','P'],['IT Support Technician','15-1232.00',3,'L','M','M','C'],['Computer Hardware Engineer','17-2061.00',4,'L','H','L','C'],['Electrical Engineer','17-2071.00',4,'L','H','M','C'],['Network Engineer','15-1241.00',4,'L','H','L','C'],['Systems Administrator','15-1244.00',4,'L','H','L','C'],['Quality Control Engineer','17-2112.00',4,'L','H','M','C'],['Software Engineer','15-1252.00',4,'L','H','L','C'],['Computer Systems Engineer','15-1299.08',5,'L','H','L','C'],['Robotics Engineer','17-2199.08',5,'L','H','M','C']],
+  RAS:[['Floral Arranger','27-1023.00',1,'M','L','M',''],['Food Preparation Worker','35-2021.00',1,'H','L','M','P'],['Baker Assistant','51-3011.00',1,'H','L','L','P'],['Cook / Line Cook','35-2014.00',2,'H','M','M','PM'],['Chef','35-1011.00',2,'H','M','M','PM'],['Cosmetologist','39-5012.00',2,'M','M','H','S'],['Baker','51-3011.00',2,'H','M','L','P'],['Makeup Artist','39-5091.00',2,'M','M','H','S'],['Tattoo Artist','39-5099.00',2,'M','M','H',''],['Landscape Designer','37-3012.00',3,'M','M','M','P'],['Set Designer (Theater)','27-1027.00',3,'H','M','M',''],['Executive Chef','35-1011.01',3,'H','H','H','PM'],['Art Therapist','29-1122.00',4,'L','H','H',''],['Landscape Architect','17-1012.00',4,'M','H','M','P'],['Interior Designer','27-1025.00',4,'L','H','M','C'],['Horticulturist','19-1031.02',4,'H','H','M','P'],['Food Scientist','19-1012.00',4,'L','H','M',''],['Culinary Arts Professor','25-1194.00',4,'L','H','H','M'],['Nutritionist / Dietitian','29-1031.00',4,'L','H','H','M'],['Food & Beverage Director','11-9051.00',4,'H','H','H','PM']],
+  RAE:[['Athletic Equipment Manager','39-3091.00',1,'H','L','M','P'],['Stagehand / Crew','27-4099.00',1,'H','L','L','P'],['Recreation Aide','39-9032.00',1,'H','L','H','P'],['Fitness Trainer','39-9031.00',2,'H','M','H','P'],['Firefighter','33-2011.00',2,'H','M','H','PM'],['Recreation Worker','39-9032.00',2,'H','M','H','P'],['EMT / Paramedic','29-2040.00',2,'H','M','H','PM'],['Sports Coach','27-2022.00',3,'H','M','H','PM'],['Athletic Trainer','29-9091.00',3,'H','H','H','P'],['Physical Education Teacher','25-2032.00',3,'H','M','H','PM'],['Occupational Therapy Asst','31-2011.00',3,'H','M','H','P'],['Commercial Pilot','53-2011.00',4,'M','H','M','CS'],['Fire Captain / Chief','33-1021.00',4,'H','H','H','PM'],['Kinesiologist','29-9091.01',4,'M','H','H','P'],['Physical Therapist','29-1123.00',4,'H','H','H','P'],['Exercise Physiologist','29-9089.01',4,'M','H','H','P'],['Director of Athletics','11-9179.00',4,'L','H','H','CM'],['Sports Medicine Physician','29-1229.01',5,'M','H','H','PM'],['Veterinarian (Large Animal)','29-1131.01',5,'M','H','M','PS'],['Physician (Sports Medicine)','29-1229.00',5,'M','H','H','CM']],
+  RSE:[['Security Guard','33-9032.00',1,'M','L','H','PM'],['Crossing Guard','33-9091.00',1,'M','L','H','P'],['Recreation Attendant','39-3091.00',1,'H','L','H','P'],['EMT / First Responder','29-2040.00',2,'H','M','H','PM'],['Correctional Officer','33-3012.00',2,'H','M','H','PM'],['Bus Driver','53-3052.00',2,'M','M','M','PS'],['Firefighter','33-2011.00',2,'H','M','H','PM'],['Medical / Dental Assistant','31-9092.00',2,'M','M','H','P'],['Childcare Worker','39-9011.00',2,'M','M','H',''],['Police Officer','33-3051.00',3,'H','M','H','PM'],['Physical Therapy Aide','31-2022.00',3,'M','M','H','P'],['Physical Therapist Asst','31-2021.00',3,'H','M','H','P'],['Substance Abuse Counselor','21-1011.00',3,'L','M','H','M'],['Community Health Worker','21-1094.00',3,'M','M','H',''],['Social & Human Services Asst','21-1093.00',3,'L','M','H','M'],['Recreational Therapist','29-1125.00',4,'H','H','H','P'],['School Counselor','21-1012.00',4,'L','H','H','M'],['Probation Officer','21-1092.00',4,'L','H','H','M'],['Physical Therapist','29-1123.00',4,'H','H','H','P'],['Police Detective','33-3021.00',4,'M','H','H','PM']],
+  RSC:[['General Maintenance Worker','49-9071.00',1,'H','L','L','P'],['Janitor / Custodian','37-2011.00',1,'H','L','L','P'],['Grounds Maintenance','37-3011.00',1,'H','L','L','P'],['Electrician Helper','47-3013.00',2,'H','M','L','P'],['Plumber Helper','47-3015.00',2,'H','M','L','P'],['HVAC Helper','49-9098.00',2,'H','M','L','P'],['Electrician','47-2111.00',3,'H','M','L','P'],['Plumber','47-2152.00',3,'H','M','L','P'],['HVAC Technician','49-9021.00',3,'H','M','L','P'],['Boilermaker','47-2011.00',3,'H','M','L','P'],['Welder','51-4121.00',3,'H','M','L','PS'],['Millwright','49-9044.00',3,'H','M','L','P'],['Industrial Machinery Mechanic','49-9041.00',3,'H','M','L','P'],['Building Inspector','47-4011.00',4,'M','H','M','P'],['Electrical Contractor','47-2111.01',4,'H','M','M','P'],['Facilities Manager','11-3013.00',4,'M','H','M','PM'],['Safety Inspector','47-4011.01',4,'M','H','M','P'],['Environmental Compliance Officer','13-1041.01',4,'L','H','M','C'],['Industrial Engineer','17-2112.00',4,'L','H','M','C'],['Construction & Building Inspector','47-4011.02',4,'M','H','M','P']],
+  IAS:[['Library Assistant','43-4121.00',2,'L','M','M','C'],['Research Assistant','19-4099.00',2,'L','M','L','C'],['Museum / Gallery Assistant','25-4013.00',2,'L','M','M','C'],['Graphic Design Assistant','27-1024.00',2,'L','M','M','C'],['Art Instructor (Community)','25-3011.00',2,'L','M','H',''],['Photographer','27-4021.00',3,'M','M','M','CS'],['Graphic Designer','27-1024.00',3,'L','H','M','C'],['Art Director (Entry)','27-1011.00',3,'L','H','M','C'],['Social Science Research Asst','19-4061.00',3,'L','H','M','C'],['Archival Technician','25-4013.01',3,'L','M','L','C'],['Librarian','25-4022.00',4,'L','H','M','C'],['Art Director','27-1011.00',4,'L','H','M','C'],['Anthropologist','19-3091.01',4,'L','H','M',''],['Archaeologist','19-3091.02',4,'H','H','M','P'],['Sociologist','19-3041.00',4,'L','H','M',''],['Psychologist','19-3031.00',5,'L','H','H','M'],['Art Therapist','29-1122.00',4,'L','H','H',''],['Clinical Psychologist','19-3031.01',5,'L','H','H','M'],['Neuropsychologist','19-3031.02',5,'L','H','H','M'],['Human Factors Psychologist','19-3032.00',5,'L','H','M','C']],
+  IAE:[['Market Research Interviewer','19-4061.00',2,'L','M','H','M'],['Survey Researcher','19-3022.00',3,'L','H','M','C'],['Paralegal','23-2011.00',3,'L','H','M','CM'],['Research Analyst','19-3022.00',3,'L','H','M','C'],['Policy Analyst','13-1199.05',3,'L','H','M','C'],['Business Analyst','13-1111.00',4,'L','H','H','CM'],['Market Research Analyst','13-1161.00',4,'L','H','M','C'],['Urban Planner','19-3051.00',4,'L','H','M','C'],['Political Scientist','19-3094.00',4,'L','H','M','C'],['Economist','19-3011.00',4,'L','H','M','C'],['Historian','19-3093.00',4,'L','H','M',''],['Intelligence Analyst','19-4099.02',4,'L','H','M','CM'],['Management Consultant','13-1111.01',4,'L','H','H','CM'],['Attorney','23-1011.00',5,'L','H','H','M'],['Judge','23-1023.00',5,'L','H','H','M'],['Political Campaign Manager','11-2021.00',4,'L','H','H','M'],['University Professor','25-1000.00',5,'L','H','H','M'],['Forensic Accountant','13-2011.01',5,'L','H','M','CM'],['Policy Director','11-1011.00',5,'L','H','H','CM'],['Chief Research Officer','11-9121.00',5,'L','H','H','CM']],
+  ISA:[['Childcare Worker','39-9011.00',2,'M','M','H',''],['Home Health Aide','31-1121.00',2,'H','M','H','P'],['Nursing Assistant / CNA','31-1131.00',2,'H','M','H','PM'],['Community Health Worker','21-1094.00',2,'M','M','H',''],['Medical / Dental Assistant','31-9092.00',2,'M','M','H','P'],['Phlebotomist','31-9097.00',3,'M','M','M','PS'],['Licensed Practical Nurse','29-2061.00',3,'M','H','H','PM'],['Psychiatric Technician','29-2053.00',3,'M','M','H','M'],['Substance Abuse Counselor','21-1011.00',3,'L','M','H','M'],['Social & Human Services Asst','21-1093.00',3,'L','M','H','M'],['Radiologic Technologist','29-2034.00',3,'M','M','M','PS'],['Respiratory Therapist','29-1126.00',3,'M','H','H','P'],['Registered Nurse','29-1141.00',4,'H','H','H','PM'],['School Counselor','21-1012.00',4,'L','H','H','M'],['Social Worker','21-1029.00',4,'L','H','H','M'],['Dietitian / Nutritionist','29-1031.00',4,'L','H','H','M'],['Audiologist','29-1181.00',5,'L','H','H','CS'],['Physician','29-1216.00',5,'M','H','H','CM'],['Nurse Practitioner','29-1171.00',5,'M','H','H','PM'],['Psychiatrist','29-1223.00',5,'L','H','H','M']],
+  ISE:[['Pharmacy Technician','29-2052.00',2,'L','M','H','C'],['Medical Receptionist','43-4171.00',2,'L','M','H','S'],['Home Health Aide','31-1121.00',2,'H','M','H','P'],['Licensed Practical Nurse','29-2061.00',3,'M','H','H','PM'],['Dental Hygienist','29-2021.00',3,'M','H','M','PS'],['Medical Records Tech','29-2072.00',3,'L','H','L','C'],['Surgical Technologist','29-2055.00',3,'H','H','M','PS'],['Diagnostic Sonographer','29-2032.00',3,'M','H','M','CS'],['Physical Therapy Asst','31-2021.00',3,'H','M','H','P'],['Health Education Specialist','21-1091.00',4,'L','H','H','M'],['Nurse Educator','25-1072.00',4,'L','H','H','M'],['Occupational Therapist','29-1122.00',4,'M','H','H','P'],['Chiropractor','29-1011.00',4,'M','H','H','P'],['Speech-Language Pathologist','29-1127.00',5,'L','H','H','M'],['Optometrist','29-1041.00',5,'L','H','M','CM'],['Pharmacist','29-1051.00',5,'L','H','H','CM'],['Dentist','29-1021.00',5,'M','H','M','PM'],['Physician Assistant','29-1071.00',5,'M','H','H','PM'],['Veterinarian','29-1131.00',5,'M','H','H','CS'],['Podiatrist','29-1081.01',5,'M','H','M','PM']],
+  ISC:[['Medical Records Clerk','43-4171.00',2,'L','M','M','C'],['Lab Assistant','19-4099.00',2,'M','M','L','C'],['Phlebotomist','31-9097.00',3,'M','M','M','PS'],['Medical Lab Technician','29-2011.00',3,'L','H','L','CS'],['Radiologic Technologist','29-2034.00',3,'M','H','M','CS'],['Health Information Tech','29-2072.00',3,'L','H','L','C'],['Medical Coder','29-2072.01',3,'L','H','L','C'],['EEG Technologist','29-2027.00',3,'M','M','M','CS'],['Nuclear Medicine Tech','29-2033.00',3,'M','H','M','CS'],['Surgical Technologist','29-2055.00',3,'H','H','M','PS'],['Database Administrator','15-1242.00',4,'L','H','L','C'],['Epidemiologist','19-1041.00',4,'L','H','M','C'],['Forensic Scientist','19-4092.00',4,'L','H','L','CS'],['Health Informatics Specialist','15-1299.01',4,'L','H','M','C'],['Clinical Data Manager','15-1299.09',4,'L','H','M','C'],['Pharmacist','29-1051.00',5,'L','H','H','CM'],['Pathologist','29-1222.00',5,'L','H','M','C'],['Actuary','15-2011.00',5,'L','H','L','CM'],['Biostatistician','15-2041.01',5,'L','H','L','C'],['Medical Scientist','19-1042.00',5,'L','H','L','C']],
+  IEC:[['Data Entry Clerk','43-9021.00',1,'L','M','L','C'],['Billing Clerk','43-3021.00',2,'L','M','M','C'],['Accounting Clerk','43-3031.00',2,'L','M','M','C'],['Loan Processing Clerk','43-4131.00',2,'L','M','M','C'],['Bookkeeper','43-3031.00',3,'L','M','M','C'],['Financial Analyst (Entry)','13-2051.00',3,'L','H','M','CM'],['Business Analyst (Entry)','13-1111.00',3,'L','H','M','C'],['Budget Analyst','13-2031.00',4,'L','H','M','CM'],['Financial Analyst','13-2051.00',4,'L','H','M','CM'],['Operations Research Analyst','15-2031.00',4,'L','H','M','C'],['Management Analyst','13-1111.00',4,'L','H','H','CM'],['Economist','19-3011.00',4,'L','H','M','C'],['Statistician','15-2041.00',4,'L','H','M','C'],['Data Scientist','15-2051.00',4,'L','H','M','C'],['Financial Manager','11-3031.00',4,'L','H','H','CM'],['Chief Financial Officer','11-3031.01',5,'L','H','H','CM'],['Investment Banker','13-2051.01',5,'L','H','H','CM'],['Actuary','15-2011.00',5,'L','H','L','CM'],['Quantitative Analyst','15-2031.01',5,'L','H','M','C'],['Financial Controller','13-2011.03',5,'L','H','H','CM']],
+  ASE:[['Childcare Aide','39-9011.00',1,'M','L','H',''],['Community Center Aide','39-9032.00',1,'M','L','H',''],['Preschool Aide','25-9041.00',2,'M','M','H',''],['Hairstylist / Cosmetologist','39-5012.00',2,'M','M','H','S'],['Customer Service Rep','43-4051.00',2,'L','M','H','S'],['Photographer','27-4021.00',3,'M','M','M','CS'],['Graphic Designer','27-1024.00',3,'L','H','M','C'],['Social Media Coordinator','27-3031.01',3,'L','M','H','C'],['Event Coordinator','13-1121.00',3,'M','M','H','M'],['Public Relations Specialist','27-3031.00',4,'L','H','H','M'],['Event Planner','13-1121.00',4,'M','H','H','PM'],['Fashion Designer','27-1022.00',4,'L','H','M','C'],['Marketing Manager','11-2021.00',4,'L','H','H','CM'],['Art Director','27-1011.00',4,'L','H','M','C'],['Communications Director','27-3031.02',4,'L','H','H','M'],['Brand Strategist','13-1161.01',4,'L','H','H','M'],['UX Designer','15-1255.00',4,'L','H','M','C'],['Creative Director','27-1011.01',5,'L','H','H','CM'],['Advertising Executive','11-2011.01',5,'L','H','H','CM'],['Chief Marketing Officer','11-2021.01',5,'L','H','H','CM']],
+  ASI:[['Library Page','43-4121.00',1,'M','L','M','C'],['Bookstore Worker','41-2031.00',1,'L','L','M',''],['Library Technician','25-4031.00',2,'L','M','M','C'],['Media Aide','27-4099.00',2,'L','M','M','C'],['Records Clerk','43-4071.00',2,'L','M','L','C'],['Technical Writer (Entry)','27-3042.00',3,'L','H','M','C'],['Museum Educator','25-4013.02',3,'L','M','H',''],['Translator / Interpreter','27-3091.00',3,'L','H','H','CS'],['Technical Writer','27-3042.00',4,'L','H','M','C'],['Librarian','25-4022.00',4,'L','H','M','C'],['Curator','25-4012.00',4,'L','H','M','C'],['Instructional Designer','25-9031.00',4,'L','H','M','C'],['Archivist','25-4011.00',4,'L','H','L','C'],['Content Strategist','27-3043.00',4,'L','H','M','C'],['Digital Media Librarian','25-4022.01',4,'L','H','M','C'],['Documentary Filmmaker','27-2012.01',4,'M','H','M','C'],['University Librarian','25-4022.02',5,'L','H','M','C'],['Research Director','19-3099.00',5,'L','H','H','CM'],['Archivist (Senior)','25-4011.01',5,'L','H','L','C'],['Information Scientist','15-1299.06',5,'L','H','M','C']],
+  ASC:[['Print Shop Worker','51-5111.00',1,'M','L','L','P'],['Art Supply Clerk','41-2031.00',1,'L','L','M',''],['Photo Lab Technician','51-9131.00',1,'M','L','L','C'],['Graphic Design Asst','27-1024.00',2,'L','M','M','C'],['Photography Assistant','27-4021.00',2,'M','M','M','CS'],['Graphic Designer','27-1024.00',3,'L','H','M','C'],['Photographer','27-4021.00',3,'M','M','M','CS'],['Web Designer','15-1255.00',3,'L','H','M','C'],['Multimedia Artist','27-1014.00',3,'L','H','M','C'],['Video Editor','27-4032.00',3,'L','H','M','C'],['Motion Graphics Designer','27-1014.01',4,'L','H','M','C'],['UI / UX Designer','15-1255.00',4,'L','H','M','C'],['Art Director','27-1011.00',4,'L','H','M','C'],['3D Animator','27-1014.02',4,'L','H','M','C'],['Illustrator','27-1013.00',4,'L','H','M','C'],['Brand Identity Designer','27-1024.01',4,'L','H','M','C'],['Game Designer','15-1255.01',4,'L','H','M','CM'],['Creative Director','27-1011.01',5,'L','H','H','CM'],['Visual Effects Supervisor','27-1014.03',5,'L','H','H','CM'],['UX Research Director','15-1255.02',5,'L','H','H','CM']],
+  AEI:[['Box Office Worker','41-2011.00',1,'L','L','H','S'],['DJ / Sound Board Operator','27-4012.00',2,'M','M','M','CS'],['Social Media Assistant','27-3031.01',2,'L','M','H','C'],['Actor / Performer','27-2011.00',2,'M','M','H','M'],['Copywriter','27-3043.00',3,'L','H','M','C'],['Video Producer (Entry)','27-2012.00',3,'M','H','M','C'],['Marketing Coordinator','13-1161.01',3,'L','M','H','M'],['Public Relations Asst','27-3031.00',3,'L','H','H','M'],['Advertising Manager','11-2011.00',4,'L','H','H','CM'],['Film Producer','27-2012.00',4,'M','H','H','M'],['Creative Director','27-1011.00',4,'L','H','H','CM'],['Digital Marketing Manager','11-2021.01',4,'L','H','H','M'],['Talent Agent','13-1011.00',4,'L','H','H','M'],['Music Director','27-2041.00',4,'L','H','H','M'],['Media Director','11-2021.02',5,'L','H','H','CM'],['Chief Creative Officer','11-2011.01',5,'L','H','H','CM'],['Entertainment Lawyer','23-1011.01',5,'L','H','H','M'],['Game Designer / Director','15-1255.01',4,'L','H','M','CM'],['Music Producer','27-2012.02',3,'L','M','M','C'],['Brand Manager','11-2021.03',4,'L','H','H','CM']],
+  SEC:[['Cashier','41-2011.00',1,'L','L','H','S'],['Customer Service Rep','43-4051.00',2,'L','M','H','S'],['Home Health Aide','31-1121.00',2,'H','M','H','P'],['Medical Receptionist','43-4171.00',2,'L','M','H','S'],['Medical Assistant','31-9092.00',2,'M','M','H','P'],['Nursing Assistant','31-1131.00',2,'H','M','H','PM'],['HR Assistant','43-4161.00',3,'L','M','H','CM'],['Patient Services Coordinator','43-4171.01',3,'L','M','H','C'],['Social & Human Services Asst','21-1093.00',3,'L','M','H','M'],['Human Resources Specialist','13-1071.00',4,'L','H','H','CM'],['Social Worker','21-1029.00',4,'L','H','H','M'],['Training & Development Spec','13-1151.00',4,'L','H','H','M'],['Healthcare Administrator','11-9111.00',4,'L','H','H','CM'],['HR Manager','11-3121.00',4,'L','H','H','CM'],['Nonprofit Director','11-9031.00',4,'L','H','H','CM'],['Community Health Director','11-9111.01',5,'L','H','H','CM'],['HR Director','11-3121.01',5,'L','H','H','CM'],['Chief People Officer','11-1011.01',5,'L','H','H','CM'],['Benefits Manager','11-3111.00',4,'L','H','H','CM'],['Employee Relations Manager','11-3121.02',4,'L','H','H','CM']],
+  SEA:[['Childcare Aide','39-9011.00',1,'M','L','H',''],['Recreation Aide','39-9032.00',1,'H','L','H','P'],['Teaching Assistant','25-9041.00',2,'M','M','H',''],['Preschool Teacher','25-2011.00',3,'M','M','H',''],['Community Outreach Worker','21-1094.00',2,'M','M','H',''],['Youth Program Leader','39-9032.01',2,'H','M','H','P'],['Recreation Worker','39-9032.00',2,'H','M','H','P'],['Art / Music Instructor (Studio)','25-3021.00',3,'L','M','H',''],['Music Therapist Aide','29-1125.01',3,'L','M','H',''],['Recreation Therapist','29-1125.00',4,'H','H','H','P'],['Teacher (K-12)','25-2021.00',4,'M','H','H','M'],['Drama / Art Therapist','29-1122.00',4,'L','H','H',''],['Music Therapist','29-1125.01',4,'L','H','H','M'],['Counselor (School/Community)','21-1012.00',4,'L','H','H','M'],['Early Childhood Specialist','25-2011.01',4,'M','H','H',''],['Speech-Language Pathologist','29-1127.00',5,'L','H','H','M'],['School Psychologist','19-3034.00',5,'L','H','H','M'],['Educational Psychologist','19-3033.00',5,'L','H','H','M'],['University Professor (Arts)','25-1121.00',5,'L','H','H','M'],['Child Life Specialist','29-9099.01',4,'M','H','H','']],
+  SEI:[['Nursing Assistant','31-1131.00',2,'H','M','H','PM'],['Community Health Aide','21-1094.00',2,'M','M','H',''],['Home Health Aide','31-1121.00',2,'H','M','H','P'],['Mental Health Technician','29-2053.00',3,'M','M','H','M'],['Substance Abuse Counselor','21-1011.00',3,'L','M','H','M'],['Licensed Practical Nurse','29-2061.00',3,'M','H','H','PM'],['Psychiatric Technician','29-2053.00',3,'M','M','H','M'],['Health Educator','21-1091.00',3,'L','M','H','M'],['Patient Advocate','21-1093.01',3,'L','M','H','M'],['Occupational Therapist','29-1122.00',4,'M','H','H','P'],['Counselor','21-1019.00',4,'L','H','H','M'],['Clinical Social Worker','21-1029.01',4,'L','H','H','M'],['Registered Nurse','29-1141.00',4,'H','H','H','PM'],['Healthcare Administrator','11-9111.00',4,'L','H','H','CM'],['Nurse Practitioner','29-1171.00',5,'M','H','H','PM'],['Psychologist','19-3031.00',5,'L','H','H','M'],['Physician','29-1216.00',5,'M','H','H','CM'],['Psychiatrist','29-1223.00',5,'L','H','H','M'],['Public Health Director','11-9111.01',5,'L','H','H','CM'],['Child Psychiatrist','29-1223.01',5,'L','H','H','M']],
+  SER:[['Personal Care Aide','39-9021.00',1,'H','M','H','P'],['Recreation Aide','39-9032.00',1,'H','L','H','P'],['Nursing Assistant / CNA','31-1131.00',2,'H','M','H','PM'],['Home Health Aide','31-1121.00',2,'H','M','H','P'],['Childcare Worker','39-9011.00',2,'M','M','H',''],['EMT / First Responder','29-2040.00',2,'H','M','H','PM'],['Fitness Trainer','39-9031.00',2,'H','M','H','P'],['Physical Therapy Aide','31-2022.00',3,'M','M','H','P'],['Massage Therapist','31-9011.00',3,'H','M','H','P'],['Dental Assistant','31-9091.00',3,'M','M','H','PS'],['Physical Therapist Asst','31-2021.00',3,'H','M','H','P'],['Occupational Therapy Asst','31-2011.00',3,'H','M','H','P'],['Athletic Trainer','29-9091.00',4,'H','H','H','P'],['Physical Therapist','29-1123.00',4,'H','H','H','P'],['Registered Nurse','29-1141.00',4,'H','H','H','PM'],['Occupational Therapist','29-1122.00',4,'M','H','H','P'],['Physician Assistant','29-1071.00',5,'M','H','H','PM'],['Orthopedic Surgeon','29-1242.00',5,'H','H','H','PM'],['Sports Medicine Physician','29-1229.01',5,'M','H','H','PM'],['Kinesiologist','29-9091.01',4,'M','H','H','P']],
+  ECS:[['Cashier','41-2011.00',1,'L','L','H','S'],['Office Clerk','43-9061.00',1,'L','L','M','C'],['Customer Service Rep','43-4051.00',2,'L','M','H','S'],['Sales Associate','41-2031.00',2,'M','L','H','S'],['Receptionist','43-4171.00',2,'L','M','H','S'],['Administrative Assistant','43-6014.00',2,'L','M','M','C'],['Office Supervisor','43-1011.00',3,'L','M','H','CM'],['Insurance Sales Agent','41-3021.00',3,'L','M','H','M'],['Office Manager','11-1021.00',4,'L','H','H','CM'],['Sales Manager','11-2022.00',4,'L','H','H','M'],['Loan Officer','13-2072.00',4,'L','H','H','CM'],['Branch Manager (Bank)','11-3031.02',4,'L','H','H','CM'],['Operations Manager','11-1021.01',4,'L','H','H','CM'],['Human Resources Manager','11-3121.00',4,'L','H','H','CM'],['District Sales Manager','11-2022.01',5,'L','H','H','CM'],['VP of Operations','11-1021.02',5,'L','H','H','CM'],['Chief Operating Officer','11-1011.02',5,'L','H','H','CM'],['General Manager','11-1021.03',5,'L','H','H','CM'],['Director of Sales','11-2022.02',5,'L','H','H','CM'],['Retail Director','11-1011.04',5,'L','H','H','CM']],
+  ECI:[['Data Entry Clerk','43-9021.00',1,'L','M','L','C'],['Billing Clerk','43-3021.00',2,'L','M','M','C'],['Accounting Clerk','43-3031.00',2,'L','M','M','C'],['Payroll Clerk','43-3051.00',3,'L','M','M','C'],['Bookkeeper','43-3031.00',3,'L','M','M','C'],['Tax Preparer','13-2082.00',3,'L','M','M','C'],['Budget Analyst (Entry)','13-2031.00',3,'L','H','M','CM'],['Accountant','13-2011.00',4,'L','H','M','CM'],['Auditor','13-2011.02',4,'L','H','M','CM'],['Financial Analyst','13-2051.00',4,'L','H','M','CM'],['Tax Examiner','13-2081.00',4,'L','H','M','CM'],['Insurance Underwriter','13-2053.00',4,'L','H','M','CM'],['Controller','13-2011.03',4,'L','H','M','CM'],['CPA','13-2011.01',4,'L','H','M','CM'],['Chief Financial Officer','11-3031.01',5,'L','H','H','CM'],['Financial Manager','11-3031.00',5,'L','H','H','CM'],['Investment Portfolio Manager','13-2052.00',5,'L','H','H','CM'],['Forensic Accountant','13-2011.01',5,'L','H','M','CM'],['Financial Controller','13-2011.03',5,'L','H','H','CM'],['Treasury Analyst','13-2099.01',4,'L','H','H','CM']],
+  ECA:[['Cashier','41-2011.00',1,'L','L','H','S'],['Sales Associate','41-2031.00',2,'M','L','H','S'],['Leasing Agent (Entry)','41-9021.00',2,'L','M','H','M'],['Retail Supervisor','41-1012.00',3,'M','M','H','M'],['Retail Manager','41-1011.00',3,'M','M','H','PM'],['Insurance Agent','41-3021.00',3,'L','M','H','M'],['Real Estate Agent','41-9022.00',4,'L','M','H','M'],['Sales Representative','41-4012.00',4,'L','M','H','M'],['Marketing Specialist','13-1161.00',4,'L','H','H','CM'],['Franchise Owner','11-1011.03',4,'M','H','H','PM'],['Commercial Real Estate Agent','41-9022.01',4,'L','M','H','M'],['Regional Sales Manager','11-2022.01',4,'L','H','H','M'],['Real Estate Broker','41-9021.00',5,'L','H','H','M'],['Marketing Director','11-2021.00',5,'L','H','H','CM'],['Chief Sales Officer','11-2022.02',5,'L','H','H','CM'],['Entrepreneur / Business Owner','11-1011.04',4,'M','H','H','CM'],['Director of Business Development','11-1011.05',5,'L','H','H','CM'],['VP of Marketing','11-2021.01',5,'L','H','H','CM'],['Brand Director','11-2021.02',5,'L','H','H','CM'],['E-Commerce Manager','11-2021.03',4,'L','H','H','CM']],
+  CSE:[['File Clerk','43-4071.00',1,'L','L','L','C'],['Office Clerk','43-9061.00',1,'L','L','M','C'],['Data Entry Clerk','43-9021.00',1,'L','M','L','C'],['Receptionist','43-4171.00',2,'L','M','H','S'],['Customer Service Rep','43-4051.00',2,'L','M','H','S'],['Administrative Assistant','43-6014.00',2,'L','M','M','C'],['Medical Receptionist','43-4171.01',2,'L','M','H','S'],['Payroll Clerk','43-3051.00',3,'L','M','M','C'],['Bookkeeper','43-3031.00',3,'L','M','M','C'],['Office Supervisor','43-1011.00',3,'L','M','H','CM'],['Legal Secretary','43-6012.00',3,'L','H','M','C'],['Court Reporter','27-3092.00',4,'L','H','L','CS'],['Executive Assistant','43-6011.00',4,'L','H','H','CM'],['Office Manager','11-1021.00',4,'L','H','H','CM'],['HR Coordinator','13-1071.01',4,'L','H','H','CM'],['Medical Records Manager','11-9111.02',4,'L','H','M','C'],['Administrative Services Manager','11-3011.00',4,'L','H','H','CM'],['City Clerk','43-4031.01',4,'L','H','H','CM'],['Chief Administrative Officer','11-1011.05',5,'L','H','H','CM'],['Court Clerk (Senior)','43-4031.00',3,'L','M','M','C']],
+  CSI:[['Data Entry Clerk','43-9021.00',1,'L','M','L','C'],['File Clerk','43-4071.00',1,'L','L','L','C'],['Lab Assistant','19-4099.00',2,'M','M','L','C'],['Medical Records Clerk','43-4171.00',2,'L','M','M','C'],['Pharmacy Technician','29-2052.00',2,'L','M','H','C'],['Medical Coder (Entry)','29-2072.01',3,'L','H','L','C'],['Health Information Tech','29-2072.00',3,'L','H','L','C'],['Billing & Coding Specialist','29-2072.02',3,'L','H','L','C'],['Court Clerk','43-4031.00',3,'L','M','M','C'],['Paralegal','23-2011.00',4,'L','H','M','CM'],['Legal Secretary','43-6012.00',3,'L','H','M','C'],['Health Informatics Specialist','15-1299.01',4,'L','H','M','C'],['Clinical Data Manager','15-1299.09',4,'L','H','M','C'],['Database Administrator','15-1242.00',4,'L','H','L','C'],['Medical Records Manager','11-9111.02',4,'L','H','M','C'],['Forensic Accountant','13-2011.01',5,'L','H','M','CM'],['Health Information Manager','11-9111.03',5,'L','H','M','CM'],['Clinical Research Coordinator','29-9021.00',4,'L','H','M','C'],['Medical Coder / Auditor','29-2072.03',4,'L','H','L','C'],['Veterinary Technician','29-2056.00',3,'M','M','H','PS']],
+  CIE:[['Data Entry Clerk','43-9021.00',1,'L','M','L','C'],['File Clerk','43-4071.00',1,'L','L','L','C'],['Billing Clerk','43-3021.00',2,'L','M','M','C'],['Accounting Clerk','43-3031.00',2,'L','M','M','C'],['Procurement Clerk','43-3061.00',2,'L','M','M','C'],['Tax Preparer','13-2082.00',3,'L','M','M','C'],['Bookkeeper','43-3031.00',3,'L','M','M','C'],['Payroll Specialist','43-3051.01',3,'L','M','M','C'],['Insurance Claims Clerk','43-9041.00',2,'L','M','M','C'],['Cost Estimator','13-1051.00',4,'L','H','M','C'],['Purchasing Agent','13-1023.00',4,'L','H','M','C'],['Supply Chain Analyst','13-1199.04',4,'L','H','M','C'],['Compliance Officer','13-1041.00',4,'L','H','M','C'],['Financial Manager','11-3031.00',4,'L','H','H','CM'],['Budget Director','13-2031.01',5,'L','H','H','CM'],['Procurement Director','11-3061.00',5,'L','H','H','CM'],['Chief Financial Officer','11-3031.01',5,'L','H','H','CM'],['Financial Controller','13-2011.03',5,'L','H','H','CM'],['Treasury Analyst / Director','13-2099.01',5,'L','H','H','CM'],['Logistics Manager','11-3071.00',4,'L','H','M','CM']],
+};
+
+const RIASEC_NAMES = {R:'Realistic',I:'Investigative',A:'Artistic',S:'Social',E:'Enterprising',C:'Conventional'};
+const RIASEC_COLORS = {R:'#7B2D00',I:'#1A4480',A:'#4A1070',S:'#1A5C0A',E:'#7A5200',C:'#2A2A5A'};
+const RIASEC_DESC = {
+  R:'You like working with tools, machines, or your hands. You enjoy building, fixing, or being physically active.',
+  I:'You love learning, solving problems, and asking "why?" You enjoy science, research, and figuring things out.',
+  A:'You\'re creative and expressive. Art, music, design, writing, and performance light you up.',
+  S:'You care deeply about people. You want to teach, help, support, and connect with others.',
+  E:'You\'re a natural leader. You like persuading, competing, leading projects, and building things.',
+  C:'You\'re organized and detail-oriented. You like clear systems, data, numbers, and getting things right.',
+};
+
+const JOB_ZONES = [
+  {zone:1,label:'Zone 1 — Start Right Away',color:'#2E7D32',desc:'Little or no training needed. You learn on the job. Great entry-level starting points.'},
+  {zone:2,label:'Zone 2 — Some Training',color:'#1565C0',desc:'High school diploma or short-term training. Many certifications and trade programs are here.'},
+  {zone:3,label:'Zone 3 — Certificate or Associate Degree',color:'#6A1070',desc:'Vocational program, 2-year degree, or a couple years of experience.'},
+  {zone:4,label:'Zone 4 — Four-Year Degree',color:'#7A5200',desc:'Bachelor\'s degree or significant experience. Teachers, nurses, engineers, social workers.'},
+  {zone:5,label:'Zone 5 — Advanced Degree',color:'#4A2800',desc:'Graduate or professional degree. Doctors, lawyers, psychologists, researchers.'},
+];
+const PATHWAYS = {1:'Start right away — on-the-job training',2:'High school diploma + short training or certification',3:'Vocational certificate or 2-year degree',4:'4-year college degree',5:'Graduate or professional degree'};
+
+let currentSection=0, ratings={}, selectedValues=new Set(), styleSelections={},
+    selectedSubjects=new Set(), selectedActivities=new Set(), selectedSparks=new Set(),
+    selectedSkills=new Set(), selectedTech=new Set(), selectedGoals=new Set(),
+    selectedJobZone=null;
+
+function updateProgress(n){
+  const pct=Math.round((n/TOTAL_SECTIONS)*100);
+  document.getElementById('progress-bar-fill').style.width=pct+'%';
+  document.getElementById('progress-label').textContent=n===0?"Welcome":n===TOTAL_SECTIONS?"Complete!":`Step ${n} of ${TOTAL_SECTIONS}`;
+}
+
+function goTo(n){
+  if(n===7) buildResults();
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('s'+n).classList.add('active');
+  currentSection=n;
+  updateProgress(n);
+  const heading=document.querySelector('#s'+n+' h2, #s'+n+' h3'); if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
+  window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
+
+function validateAndGo(from,to){
+  
+  if(from===1){
+    const rated=Object.keys(ratings).length;
+    if(rated<QUESTIONS.length){
+      document.getElementById('err2').style.display='block'; document.getElementById('err2').focus(); return;
+    }
+    document.getElementById('err2').style.display='none';
+  }
+  goTo(to);
+}
+
+function buildSurvey(){
+  const c=document.getElementById('survey-questions');
+  c.innerHTML='';
+  QUESTIONS.forEach((q,i)=>{
+    const d=document.createElement('div');
+    d.className='question-card';
+    let btns='';
+    for(let r=1;r<=5;r++) btns+=`<button aria-label="${q.q} — ${r} of 5" class="rating-btn${ratings[i]===r?' selected':''}" onclick="setRating(${i},'${q.t}',${r},this)">${r}</button>`;
+    d.innerHTML=`<div class="q-num">${i+1}</div><div class="q-text">${q.q}</div><div class="q-ratings">${btns}</div>`;
+    c.appendChild(d);
+  });
+}
+
+function setRating(i,t,r,btn){
+  ratings[i]=r;
+  btn.closest('.q-ratings').querySelectorAll('.rating-btn').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function buildValues(){
+  const c=document.getElementById('values-grid');
+  c.innerHTML='';
+  VALUES_LIST.forEach((v,i)=>{
+    const d=document.createElement('button');d.type='button';
+    d.className='value-card'+(selectedValues.has(i)?' selected':'');
+    d.innerHTML=`<div class="value-icon">${v.icon}</div><div><div class="value-title">${v.title}</div><div class="value-desc">${v.desc}</div></div><span class="value-check">✅</span>`;
+    d.onclick=()=>{
+      if(selectedValues.has(i)){selectedValues.delete(i);d.classList.remove('selected');}
+      else if(selectedValues.size<5){selectedValues.add(i);d.classList.add('selected');}
+    };
+    c.appendChild(d);
+  });
+}
+
+function buildStyleQuestions(){
+  const c=document.getElementById('style-questions');
+  c.innerHTML='';
+  STYLE_QS.forEach((q,qi)=>{
+    const d=document.createElement('div');
+    d.className='style-question';
+    let opts=q.opts.map(o=>`<button class="style-opt${styleSelections[qi]===o?' selected':''}" onclick="setStyle(${qi},'${o.replace(/'/g,"\\'")}',this)">${o}</button>`).join('');
+    d.innerHTML=`<div class="style-q-text">${q.q}</div><div class="style-options">${opts}</div>`;
+    c.appendChild(d);
+  });
+}
+
+function setStyle(qi,val,btn){
+  styleSelections[qi]=val;
+  btn.closest('.style-options').querySelectorAll('.style-opt').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function buildChips(containerId, list, selectedSet){
+  const c=document.getElementById(containerId);
+  if(!c)return;
+  c.innerHTML='';
+  list.forEach((item,i)=>{
+    const d=document.createElement('button');d.type='button';
+    d.className='toggle-chip'+(selectedSet.has(i)?' selected':'');
+    d.textContent=item;
+    d.onclick=()=>{
+      if(selectedSet.has(i)){selectedSet.delete(i);d.classList.remove('selected');}
+      else{selectedSet.add(i);d.classList.add('selected');}
+    };
+    c.appendChild(d);
+  });
+}
+
+function buildSparkChips(containerId, list, selectedSet){
+  const c=document.getElementById(containerId);
+  if(!c)return;
+  c.innerHTML='';
+  list.forEach((item,i)=>{
+    const d=document.createElement('button');d.type='button';
+    d.className='spark-chip'+(selectedSet.has(i)?' selected':'');
+    d.textContent=item;
+    d.onclick=()=>{
+      if(selectedSet.has(i)){selectedSet.delete(i);d.classList.remove('selected');}
+      else{selectedSet.add(i);d.classList.add('selected');}
+    };
+    c.appendChild(d);
+  });
+}
+
+
+
+function buildJobZoneSelector(){
+  const c=document.getElementById('jz-selector');
+  if(!c)return;
+  c.innerHTML='';
+  JOB_ZONES.forEach(jz=>{
+    const d=document.createElement('button');d.type='button';
+    d.className='jz-card'+(selectedJobZone===jz.zone?' selected':'');
+    d.innerHTML=`<div class="jz-badge" style="background:${jz.color}">${jz.zone}</div><div class="jz-info"><div class="jz-title">${jz.label}</div><div class="jz-desc">${jz.desc}</div></div><span class="jz-check">✅</span>`;
+    d.onclick=()=>{
+      selectedJobZone=jz.zone;
+      document.querySelectorAll('.jz-card').forEach(x=>x.classList.remove('selected'));
+      d.classList.add('selected');
+    };
+    c.appendChild(d);
+  });
+}
+
+function scoreHolland(){
+  const scores={R:0,I:0,A:0,S:0,E:0,C:0},counts={R:0,I:0,A:0,S:0,E:0,C:0};
+  QUESTIONS.forEach((q,i)=>{if(ratings[i]){scores[q.t]+=ratings[i];counts[q.t]++;}});
+  return Object.entries(scores).map(([k,v])=>({t:k,score:v,avg:counts[k]?v/counts[k]:0})).sort((a,b)=>b.score-a.score);
+}
+
+
+
+function findCareers(ranked){
+  const t=ranked.slice(0,3).map(x=>x.t),perms=[];
+  for(let i=0;i<3;i++)for(let j=0;j<3;j++)for(let k=0;k<3;k++){if(i!==j&&j!==k&&i!==k)perms.push(t[i]+t[j]+t[k]);}
+  let careers=null,code=t.join('');
+  for(const p of perms){if(CAREER_MAP_ZONES[p]){careers=[...CAREER_MAP_ZONES[p]];code=p;break;}}
+  if(!careers){const t2=t.slice(0,2).join('');for(const key of Object.keys(CAREER_MAP_ZONES)){if(key.startsWith(t2)){careers=[...CAREER_MAP_ZONES[key]];code=key;break;}}}
+  if(!careers)careers=[['School Counselor','21-1012.00',4,'L','H','H','M'],['Social Worker','21-1029.00',4,'L','H','H','M'],['HR Specialist','13-1071.00',4,'L','H','H','CM']];
+  if(selectedJobZone){careers=careers.filter(c=>c[2]<=selectedJobZone);}
+  return{code,careers:careers.sort((a,b)=>a[2]-b[2]).slice(0,20)};
+}
+
+function escapeNotes(value){return String(value).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function buildResults(){
+  const ranked=scoreHolland();
+  const maxScore=ranked[0]?.score||1;
+  const {code,careers}=findCareers(ranked);
+  
+  
+  
+  
+  
+  
+  const today=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+
+  
+  
+  
+  const selSubj=[...selectedSubjects].map(i=>SUBJECTS_LIST[i]);
+  const selAct=[...selectedActivities].map(i=>ACTIVITIES_LIST[i]);
+  const selSpark=[...selectedSparks].map(i=>SPARKS_LIST[i].replace(/^.\s/,''));
+  const selVals=[...selectedValues].map(i=>VALUES_LIST[i].title);
+  const selGoals=[...selectedGoals].map(i=>GOALS_LIST[i]);
+
+  const top3=ranked.slice(0,3);
+  const typecards=top3.map((r,i)=>{
+    const labels=['Primary','Secondary','Third'];
+    const pct=Math.round((r.score/maxScore)*100);
+    return`<div class="type-card" style="background:${RIASEC_COLORS[r.t]}"><div class="type-card-rank">${labels[i]} Type</div><div class="type-card-letter">${r.t}</div><div class="type-card-name">${RIASEC_NAMES[r.t]}</div><div class="type-card-score">${r.score} pts</div><div class="type-card-bar"><div class="type-card-bar-fill" style="width:${pct}%"></div></div></div>`;
+  }).join('');
+
+  const narrative=`You show the strongest interest in <strong>${RIASEC_NAMES[top3[0].t]}</strong> activities — ${RIASEC_DESC[top3[0].t]} This is paired with <strong>${RIASEC_NAMES[top3[1].t]}</strong> (${RIASEC_DESC[top3[1].t]}) and <strong>${RIASEC_NAMES[top3[2].t]}</strong> (${RIASEC_DESC[top3[2].t]}) This combination points toward careers that blend these strengths in meaningful ways.`;
+
+  const careerItems=careers.map(c=>{
+    const zoneColor=JOB_ZONES[c[2]-1]?.color||'#555';
+    const flagHTML='';
+    const pathway=PATHWAYS[c[2]]||'';
+    return`<div class="career-item"><div style="background:${zoneColor};color:white;font-size:0.75rem;font-weight:900;padding:4px 9px;border-radius:12px;white-space:nowrap;flex-shrink:0;">Zone ${c[2]}</div><div class="career-info"><div class="career-title">${c[0]}</div><div class="career-soc">SOC: ${c[1]}</div><div class="career-pathway">📚 ${pathway}</div>${flagHTML}</div><a class="career-link" href="https://www.onetonline.org/link/summary/${c[1]}" target="_blank" rel="noopener">O*NET →</a></div>`;
+  }).join('');
+
+  
+  
+
+  const nextSteps=selGoals.map((g,i)=>`<div class="next-step"><div class="next-step-num">${i+1}</div><div>${g}</div></div>`).join('');
+
+  document.getElementById('results-content').innerHTML=`
+  <div style="text-align:center;margin-bottom:20px;">
+    <div style="font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.5rem;color:var(--navy);font-weight:700;">Your Path Forward — Student Career Exploration Report</div>
+    <div style="font-size:0.9rem;color:#2A3A4A;margin-top:4px;">${today}</div>
+  </div>
+
+  <div class="results-hero">
+    <div class="results-name">\ud83c\udf93 Your Results</div>
+    <div class="results-code">${code}</div>
+    <div class="results-code-full">Holland Code — ${code.split('').map(l=>RIASEC_NAMES[l]).join(' · ')}</div>
+  </div>
+
+  <div class="results-grid">${typecards}</div>
+
+  <div class="narrative-box">${narrative}</div>
+
+  ${selVals.length?`<div class="values-summary"><h4>✨ What Matters to You</h4><div class="values-tags">${selVals.map(v=>`<span class="values-tag">${v}</span>`).join('')}</div></div>`:''}
+
+  ${selSubj.length||selAct.length||selSpark.length?`<div class="values-summary" style="background:#E8F3FF;border-color:#6A9ADA;"><h4 style="color:var(--navy);">📚 Interests & Sparks</h4><div class="values-tags">${[...selSubj,...selAct,...selSpark].map(v=>`<span class="values-tag" style="border-color:#6A9ADA;color:var(--navy);">${v}</span>`).join('')}</div></div>`:''}
+
+  <div class="careers-section">
+    <h3>🎯 Career Matches — ${code} Profile${selectedJobZone?` · Zone ${selectedJobZone} & Below`:' · All Zones'}</h3>
+    ${careerItems}
+    
+  </div>
+
+  ${selGoals.length?`<div class="next-steps-box"><h4>🚀 Next Steps You Want to Take</h4>${nextSteps}</div>`:''}
+
+  ${document.getElementById('studentNotes').value?`<div class="narrative-box" style="font-style:normal;"><strong>Student Notes:</strong> ${escapeNotes(document.getElementById('studentNotes').value)}</div>`:''}
+
+  <div class="jan-box">
+    <h4>&#128161; If something about a job might get in your way</h4>
+    <p>Plenty of people do the work they want with an adjustment to how it gets done
+       &mdash; different hours, different equipment, a change to a task, or a tool that
+       makes one part easier. That is called an <strong>accommodation</strong>, and asking
+       for one is an ordinary thing adults do at work.</p>
+    <p>The <strong>Job Accommodation Network (JAN)</strong> exists to help you work out what
+       that could look like. They are free, confidential, and funded by the U.S. Department
+       of Labor. You do not need a diagnosis on paper, a case, or anyone&rsquo;s permission to
+       contact them, and you do not have to tell them your name.</p>
+    <p class="jan-what"><strong>What they can help with:</strong> ideas for accommodations in a
+       specific job, what the ADA actually says about your rights at work, how to ask an
+       employer, and what to do if a job seems out of reach because of how it is currently set up.</p>
+    <p class="jan-contact">
+      <a href="https://askjan.org/" target="_blank" rel="noopener">askjan.org</a>
+      &nbsp;&middot;&nbsp; <strong>(800) 526-7234</strong>
+    </p>
+    <p class="jan-close">None of this is about what you cannot do. It is about finding the
+       way through, so you can.</p>
+  </div>
+
+
+  <div style="margin-top:24px;padding-top:16px;border-top:2px solid #94B8E8;text-align:center;font-size:0.88rem;color:#2A3A4A;">
+    Your Path Forward — Student Career Exploration &nbsp;·&nbsp; Generated ${today}<br>
+    <span style="font-size:0.82rem;">Career data powered by O*NET OnLine — U.S. Department of Labor</span>
+  </div>`;
+}
+
+function startOver(){
+  ratings={};selectedValues=new Set();styleSelections={};selectedSubjects=new Set();selectedActivities=new Set();selectedSparks=new Set();selectedSkills=new Set();selectedTech=new Set();selectedGoals=new Set();selectedJobZone=null;
+  
+  
+  
+  document.getElementById('studentNotes').value='';
+  goTo(0);
+  buildSurvey();buildValues();buildStyleQuestions();
+  buildChips('subjects-options',SUBJECTS_LIST,selectedSubjects);
+  buildChips('activities-options',ACTIVITIES_LIST,selectedActivities);
+  buildSparkChips('sparks-options',SPARKS_LIST,selectedSparks);
+  buildChips('skills-options',SKILLS_LIST,selectedSkills);
+  buildChips('tech-options',TECH_LIST,selectedTech);
+  buildChips('goals-options',GOALS_LIST,selectedGoals);
+  
+  buildJobZoneSelector();
+}
+
+// Initialize all dynamic content on load
+document.addEventListener('DOMContentLoaded', function() {
+  buildSurvey();buildValues();buildStyleQuestions();
+  buildChips('subjects-options',SUBJECTS_LIST,selectedSubjects);
+  buildChips('activities-options',ACTIVITIES_LIST,selectedActivities);
+  buildSparkChips('sparks-options',SPARKS_LIST,selectedSparks);
+  buildChips('skills-options',SKILLS_LIST,selectedSkills);
+  buildChips('tech-options',TECH_LIST,selectedTech);
+  buildChips('goals-options',GOALS_LIST,selectedGoals);
+  
+  buildJobZoneSelector();
+  updateProgress(0);
+});
+</script>
+
+
+<script>
+function syncChoiceStates(){document.querySelectorAll('.rating-btn,.value-card,.style-opt,.toggle-chip,.spark-chip,.jz-card').forEach(b=>b.setAttribute('aria-pressed',String(b.classList.contains('selected'))));}
+document.addEventListener('click',syncChoiceStates);
+document.addEventListener('DOMContentLoaded',syncChoiceStates);
+</script>
+</body>
+</html>

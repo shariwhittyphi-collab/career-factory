@@ -1,0 +1,17 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert/strict');
+const html=fs.readFileSync(path.resolve(__dirname,'../../Career Assessments Web/your-path-forward.html'),'utf8');
+const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const elements={err2:{style:{},focus(){this.focused=true;}}};
+const context={document:{addEventListener(){},getElementById:id=>elements[id]}};
+vm.createContext(context);scripts.forEach(s=>vm.runInContext(s,context));
+vm.runInContext('var navigated=null;goTo=n=>navigated=n;validateAndGo(1,2);',context);
+assert.equal(context.navigated,null);assert(elements.err2.focused);
+vm.runInContext('QUESTIONS.forEach((q,i)=>ratings[i]=3);validateAndGo(1,2);',context);
+assert.equal(context.navigated,2);
+assert.equal(context.escapeNotes('<img onerror="alert(1)">'),'&lt;img onerror=&quot;alert(1)&quot;&gt;');
+const result=vm.runInContext('selectedJobZone=3;findCareers(scoreHolland())',context);
+assert(result.careers.length>0);assert(result.careers.every(c=>c[2]<=3));
+assert(!/id="(?:firstName|lastName|counselorName|sessionDate|physical-options|mental-options)"/.test(html));
+assert(!/\b(?:fetch|XMLHttpRequest|sendBeacon)\b/.test(scripts.join('\n')));
+assert.equal((html.match(/<textarea\b/g)||[]).length,1);
+console.log('PASS: required survey, completed navigation, safe notes, zone filtering, no identifying fields or answer-transmission code.');

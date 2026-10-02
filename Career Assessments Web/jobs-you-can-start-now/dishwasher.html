@@ -533,6 +533,29 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+
+        /* ---- Site attribution ---- */
+        .site-attrib { max-width: 900px; margin: 18px auto 28px; padding: 14px 18px;
+            border-top: 1px solid #c7d9ea; font-size: .82rem; line-height: 1.55;
+            color: #3a4a57; }
+        html[data-theme="dark"] .site-attrib { border-top-color: #2d4a68; color: #9fb3c4; }
+        .site-attrib strong { color: #0b4f8a; }
+        html[data-theme="dark"] .site-attrib strong { color: #8cc4ff; }
+        .site-attrib a { color: #0b4f8a; }
+        html[data-theme="dark"] .site-attrib a { color: #8cc4ff; }
+        .site-attrib a:focus-visible { outline: 3px solid #0b4f8a; outline-offset: 2px; }
+        .site-attrib p { margin: 0 0 6px; }
+        .site-attrib p:last-child { margin-bottom: 0; }
+        @media print {
+            /* Must survive the full-report print, so a printed page carries its
+               authorship and its data vintage. Hidden when printing one section. */
+            body.print-report:not(.print-one) .site-attrib {
+                display: block !important; color: #000 !important;
+                border-top: 1px solid #999 !important; page-break-inside: avoid; }
+            body.print-report:not(.print-one) .site-attrib a {
+                color: #000 !important; text-decoration: none; }
+            body.print-one .site-attrib { display: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -1153,5 +1176,19 @@
         <p class="src-note">Pay and outlook figures on this page were taken from the sources above in September 2026. Occupation code: 35-9021.00. Numbers are updated by the agencies over time, so check the links for the newest figures.</p>
     </div>
 
-    </body>
+        <!-- Site attribution (attribution.py) -->
+    <aside class="site-attrib" aria-label="About this site and where its information comes from">
+      <p><strong>Career Factory</strong> &middot; Human-led. AI-assisted. Built with care by Sheri Whitmire.</p>
+      <p>An independent project. Not affiliated with, produced by, or endorsed by any state agency.</p>
+      <p>Career information from <a href="https://www.onetonline.org/">O*NET OnLine</a>
+         by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA),
+         used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 licence</a>.
+         O*NET&reg; is a trademark of USDOL/ETA.
+         North Dakota wages: U.S. Bureau of Labor Statistics Occupational Employment and Wage Statistics, May 2025.
+         Employment projections: Projections Central, 2024&ndash;2034.
+         Figures are the vintage shown and are not updated continuously &mdash;
+         the source links above always show current data.</p>
+    </aside>
+
+</body>
 </html>

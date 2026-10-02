@@ -54,9 +54,17 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;b
 @media (forced-colors:active){.area.soon{opacity:1}}
 @media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
 </style>
-</head>
+<link rel="stylesheet" href="../a11y-controls.css"><script src="../a11y-controls.js" defer></script></head>
 <body>
-<main>
+<a class="reader-skip" href="#main">Skip to careers</a>
+<div class="a11y-bar" role="group" aria-label="Reading options">
+  <span class="a11y-label">Text size</span>
+  <button type="button" id="sizeNormal" data-text-size="normal" aria-pressed="true">Normal</button>
+  <button type="button" id="sizeLarge" data-text-size="large" aria-pressed="false">Large</button>
+  <button type="button" id="sizeXL" data-text-size="xl" aria-pressed="false">Largest</button>
+  <button type="button" id="themeBtn" aria-pressed="false">Dark mode</button>
+</div>
+<main id="main" tabindex="-1">
     <div class="container">
         <a class="back-link" href="../index.html">&larr; All career areas</a>
         <header>

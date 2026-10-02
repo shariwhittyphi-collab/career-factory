@@ -646,8 +646,8 @@
         /* ---- Site attribution ---- */
         .site-attrib { max-width: 900px; margin: 18px auto 28px; padding: 14px 18px;
             border-top: 1px solid #c7d9ea; font-size: .82rem; line-height: 1.55;
-            color: #3a4a57; }
-        html[data-theme="dark"] .site-attrib { border-top-color: #2d4a68; color: #9fb3c4; }
+            color: #3a4a57; background: #fff; }
+        html[data-theme="dark"] .site-attrib { border-top-color: #2d4a68; color: #9fb3c4; background: #14283e; }
         .site-attrib strong { color: #0b4f8a; }
         html[data-theme="dark"] .site-attrib strong { color: #8cc4ff; }
         .site-attrib a { color: #0b4f8a; }
@@ -659,7 +659,7 @@
             /* Must survive the full-report print, so a printed page carries its
                authorship and its data vintage. Hidden when printing one section. */
             body.print-report:not(.print-one) .site-attrib {
-                display: block !important; color: #000 !important;
+                display: block !important; color: #000 !important; background: #fff !important;
                 border-top: 1px solid #999 !important; page-break-inside: avoid; }
             body.print-report:not(.print-one) .site-attrib a {
                 color: #000 !important; text-decoration: none; }

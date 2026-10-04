@@ -3,7 +3,7 @@ const byId = id => document.getElementById(id);
 const controls = ['search', 'area', 'pay', 'growth', 'sort'].map(byId);
 const PAGE_SIZE = 6;
 let careers = [], visibleCount = PAGE_SIZE;
-const preferred = ['Electrician', 'Registered Nurse', 'Software Developer', 'Welder', 'Dental Hygienist', 'Heavy and Tractor-Trailer Truck Driver'];
+const preferred = ['Electrician', 'Registered Nurse', 'Farm Equipment Mechanic', 'Software Developer', 'Dental Hygienist', 'Heavy and Tractor-Trailer Truck Driver'];
 const currency = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', maximumFractionDigits:0});
 const hourly = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', minimumFractionDigits:2, maximumFractionDigits:2});
 const decode = value => {const el = document.createElement('textarea'); el.innerHTML = String(value); return el.value;};
@@ -27,6 +27,7 @@ function growthMatches(c, value) {
 function card(c) {
   const item = element('article', 'career-card'); item.dataset.area = c.area;
   item.append(element('div', 'career-category', c.areaName));
+  if (c.ndInDemand) item.append(element('span', 'career-badge', 'ND In-Demand'));
   const heading = element('h3'), link = element('a', '', c.name); link.href = c.url; heading.append(link); item.append(heading, element('p', '', c.subtitle));
   const meta = element('div', 'career-meta'), pay = element('div');
   const isAnnual = c.payBasis === 'annual-contract' || c.medianHourly == null;
@@ -61,9 +62,18 @@ async function start() {
   try {
     const response = await fetch('search-index.json'); if (!response.ok) throw new Error('Index unavailable');
     const data = await response.json();
+    // A missing classification must never hide careers or imply list membership.
+    let inDemandUrls = new Set();
+    try {
+      const membership = await fetch('nd-in-demand.json');
+      if (membership.ok) {
+        const list = await membership.json();
+        inDemandUrls = new Set(list.careers.map(c => c.url));
+      }
+    } catch (error) { /* Career browsing remains available without markers. */ }
     careers = data.careers.filter(c => c.published === true && /^[a-z0-9-]+\/[a-z0-9-]+\.html$/.test(c.url)).map(c => {
       const name = decode(c.name), subtitle = decode(c.subtitle), areaName = decode(c.areaName), i = preferred.indexOf(name);
-      return {...c, name, subtitle, areaName, rank:i < 0 ? preferred.length : i, searchText:normalized([name, subtitle, areaName, ...(c.tags || [])].join(' '))};
+      return {...c, ndInDemand:inDemandUrls.has(c.url), name, subtitle, areaName, rank:i < 0 ? preferred.length : i, searchText:normalized([name, subtitle, areaName, ...(c.tags || [])].join(' '))};
     });
     const areas = data.areas.filter(a => careers.some(c => c.area === a.slug));
     areas.forEach(a => {const option = element('option','',decode(a.name)); option.value = a.slug; byId('area').append(option); const count = careers.filter(c=>c.area === a.slug).length; const label = document.querySelector(`[data-area="${a.slug}"] .area-count`); if(label) label.textContent = `${count} careers`;});

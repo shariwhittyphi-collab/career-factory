@@ -30,3 +30,12 @@
 @media(prefers-color-scheme:dark){:root:not([data-theme]){color-scheme:dark;--paper:#182923;--ink:#eeeede;--muted:#b4c2b6;--green:#315b4c;--orange:#f09b73;--line:#42564a;--card:#22362d;--wash:#1d3027}:root:not([data-theme]) .hero-art{background:transparent;color:#203b35}:root:not([data-theme]) .primary{background:#e5c782;color:#203b35;border-color:#e5c782}:root:not([data-theme]) .primary:hover{background:#f0d89f}:root:not([data-theme]) .tie-card,:root:not([data-theme]) .art-stamp{color:#203b35}:root:not([data-theme]) .search-box input::placeholder{color:var(--muted)}:root:not([data-theme]) .career-category{color:#becfac}:root:not([data-theme]) .closing{color:#203b35}:root:not([data-theme]) .preview-strip{background:#294b3d}:root:not([data-theme]) .career-card:hover{box-shadow:none}
 :root:not([data-theme]) .hero-art{--art-bg:#cfdbc3}
 }
+
+/* Exploration copy fits the existing layout at every reader-controlled size. */
+.hero h1{font-size:clamp(2.5rem,5.5vw,4.7rem);letter-spacing:-.035em;line-height:1.08}
+.hero h1 .spark{font-size:.5em;margin: .2em 0 0 .2em}
+.hero-description strong{display:block;color:var(--ink);margin-bottom:.5rem}
+.collection-note{font-size:.875rem;color:var(--muted);max-width:75ch;margin:0 0 20px;line-height:1.7}
+.career-badge{display:inline-block;align-self:flex-start;background:var(--wash);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:3px 8px;font-size:.75rem;font-weight:700;line-height:1.5}
+.career-card>.career-badge{margin-top:10px}
+@media(max-width:700px){.hero h1{font-size:clamp(2rem,9vw,3.5rem)}}

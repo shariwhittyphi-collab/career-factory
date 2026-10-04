@@ -25,8 +25,8 @@ for (const os of [false,true]) {
   const system=boot({},os);system.media.matches=!os;system.mediaEvents.change();assert.equal(system.root.dataset.theme,os?'light':'dark');
 }
 const denied=boot({},false,true);denied.dark.events.click();denied.sizes[1].events.click();assert.equal(denied.root.dataset.textSize,'large');
-const pages=['index.html',...fs.readdirSync(site,{withFileTypes:true}).filter(d=>d.isDirectory()&&fs.existsSync(path.join(site,d.name,'index.html'))).map(d=>d.name+'/index.html')];
-assert.equal(pages.length,13);
+const pages=['index.html','student-opportunities.html',...fs.readdirSync(site,{withFileTypes:true}).filter(d=>d.isDirectory()&&fs.existsSync(path.join(site,d.name,'index.html'))).map(d=>d.name+'/index.html')];
+assert.equal(pages.length,14);
 for(const p of pages){const h=fs.readFileSync(path.join(site,p),'utf8');for(const id of ['sizeNormal','sizeLarge','sizeXL','themeBtn'])assert.equal(h.split('id="'+id+'"').length-1,1,p);assert(h.includes('a11y-controls.js')&&h.includes('a11y-controls.css'),p);}
 assert(!/font(?:-size)?:[^;}]*\dpx/.test(fs.readFileSync(path.join(site,'home.css'),'utf8')));
-console.log('PASS: system theme, explicit overrides, persisted sizes, back-navigation refresh, blocked storage, and all 13 front-end pages.');
+console.log('PASS: system theme, explicit overrides, persisted sizes, back-navigation refresh, blocked storage, and all 14 front-end pages.');

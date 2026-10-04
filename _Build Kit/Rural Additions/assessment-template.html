@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>(function(){try{var t="__t";localStorage.setItem(t,t);localStorage.removeItem(t);}catch(e){var m={};try{Object.defineProperty(window,"localStorage",{configurable:true,value:{getItem:function(k){return k in m?m[k]:null},setItem:function(k,v){m[k]=String(v)},removeItem:function(k){delete m[k]},clear:function(){m={}}}});}catch(_){}}})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{NAME}} Career Assessment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-bg: #f8f9fa;
+            --header-bg: #ffffff;
+            --accent-blue: #0066cc;
+            --accent-light: #e6f2ff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --border-color: #dddddd;
+            --light-gray: #f5f5f5;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-bg: #1a1a1a;
+                --header-bg: #2d2d2d;
+                --accent-light: #003d99;
+                --text-dark: #e0e0e0;
+                --text-light: #b0b0b0;
+                --border-color: #444444;
+                --light-gray: #333333;
+            }
+        }
+        
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        header {
+            background-color: var(--header-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 6px solid var(--accent-blue);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: var(--accent-blue);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .section {
+            background-color: var(--header-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .section.active { display: block; }
+        
+        .section h2 {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section p, .section li {
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+        
+        .section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li { margin-bottom: 0.5rem; }
+        .section strong { color: var(--accent-blue); }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            border: 2px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover { background-color: var(--border-color); }
+        
+        .assessment-question {
+            background-color: var(--accent-light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .assessment-question p {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            background-color: var(--header-bg);
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .radio-option:hover {
+            border-color: var(--accent-blue);
+            background-color: var(--accent-light);
+        }
+        
+        input[type="radio"] {
+            margin-right: 0.75rem;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text-dark);
+            background-color: var(--header-bg);
+            margin-bottom: 1rem;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+        
+        .report {
+            background: linear-gradient(135deg, var(--accent-light) 0%, #f0f8ff 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--accent-blue);
+        }
+        
+        .report h3 {
+            color: var(--accent-blue);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        
+        .score-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0 1rem 0;
+        }
+        
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-blue), #0052a3);
+        }
+        
+        .progress-indicator {
+            background-color: var(--light-gray);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .section-number {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+        
+        @media print {
+            .button-group { display: none; }
+            .progress-indicator { display: none; }
+        }
+        
+        @media (max-width: 600px) {
+            .container { padding: 1rem 0.5rem; }
+            h1 { font-size: 1.5rem; }
+            .button-group { flex-direction: column; }
+            button { width: 100%; }
+        }
+    
+        /* Additions for the Tech series */
+        @media (prefers-color-scheme: dark) {
+            :root { --accent-blue: #6cb4ff; }
+            .report { background: #1f2f45 !important; }
+            .btn-primary, .section-number { background-color: #0066cc; }
+            .alert { background: #3d2a00; color: #ffd699; }
+            .radio-option:hover { background-color: #0a2a55; }
+        }
+        .section h2:focus { outline: none; }
+        .section h2:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 4px; }
+        .radio-option:focus-within { border-color: var(--accent-blue); }
+        .alert { display: none; background: #fff4e5; color: #663c00; border-left: 5px solid #e68a00;
+                 padding: 0.75rem 1rem; border-radius: 4px; margin-top: 1rem; font-weight: 600; }
+        .alert.show { display: block; }
+        .source-note { font-size: 0.85rem; color: var(--text-light) !important; margin-top: 1rem; }
+        .img-slot { margin: 1.25rem 0; }
+        .img-slot img { max-width: 100%; height: auto; border-radius: 8px; }
+        fieldset { border: none; }
+        legend { font-weight: 600; margin-bottom: 1rem; color: var(--text-dark); }
+        @media print {
+            body.print-report .section { display: none !important; }
+            body.print-report #report { display: block !important; box-shadow: none; }
+            header { box-shadow: none; }
+        }
+    
+        /* ---- Reader accessibility controls ---- */
+        .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100;
+            background: var(--accent-blue); color: #fff; padding: 0.75rem 1.25rem;
+            border-radius: 0 0 6px 0; font-weight: 700; text-decoration: none; }
+        .skip-link:focus { left: 0; }
+        .a11y-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+            margin-bottom: 1rem; padding: 0.6rem 0.75rem; background: var(--header-bg);
+            border: 1px solid var(--border-color); border-radius: 8px; }
+        .a11y-bar .a11y-label { font-size: 0.9rem; font-weight: 600; color: var(--text-light); margin-right: 0.25rem; }
+        .a11y-bar button { width: auto !important; flex: 0 0 auto; min-height: 44px; min-width: 44px; padding: 0.4rem 0.8rem; cursor: pointer; font-size: 0.95rem;
+            background: var(--primary-bg); color: var(--text-dark); border: 2px solid var(--border-color);
+            border-radius: 6px; font-family: inherit; font-weight: 600; }
+        .a11y-bar button:hover { border-color: var(--accent-blue); }
+        .a11y-bar button[aria-pressed="true"] { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+        .a11y-bar button:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 2px; }
+        .a11y-bar .a11y-gap { flex: 1 1 0; min-width: 0; }
+        .a11y-bar .a11y-label { flex: 0 0 auto; }
+        body.text-large { font-size: 1.15rem; }
+        body.text-xl { font-size: 1.35rem; }
+        body.text-large .subtitle, body.text-xl .subtitle { font-size: 1.05em; }
+        @media print { .a11y-bar, .skip-link { display: none !important; } }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+        }
+
+        html[data-theme="dark"] {
+            --primary-bg: #1a1a1a; --header-bg: #2d2d2d; --accent-light: #003d99;
+            --text-dark: #e0e0e0; --text-light: #b0b0b0; --border-color: #444444;
+            --light-gray: #333333; --accent-blue: #6cb4ff; color-scheme: dark;
+        }
+        html[data-theme="light"] {
+            --primary-bg: #f8f9fa; --header-bg: #ffffff; --accent-light: #e6f2ff;
+            --text-dark: #1a1a1a; --text-light: #666666; --border-color: #dddddd;
+            --light-gray: #f5f5f5; --accent-blue: #0066cc; color-scheme: light;
+        }
+    
+        /* ---- Listen and print controls ---- */
+        .tool-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.2rem; }
+        .tool-btn { width: auto !important; flex: 0 0 auto; min-height: 44px; padding: 0.4rem 0.9rem;
+            cursor: pointer; font-size: 0.95rem; background: var(--light-gray); color: var(--text-dark);
+            border: 2px solid var(--border-color); border-radius: 6px; font-family: inherit; font-weight: 600; }
+        .tool-btn:hover { border-color: var(--accent-blue); }
+        .tool-btn.speaking { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+        .tool-btn:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 2px; }
+        @media print {
+            .tool-row { display: none !important; }
+            body.print-one .section { display: none !important; }
+            body.print-one .section.print-me { display: block !important; box-shadow: none; }
+            body.print-one #report, body.print-one #reportSection { display: none !important; }
+        }
+    
+        /* ---- Report colors for the manual light/dark toggle ---- */
+        html[data-theme="dark"] .report,
+        html[data-theme="dark"] .report-section {
+            background: #1f2f45 !important;
+            background-image: none !important;
+            color: #e8eef5 !important;
+        }
+        html[data-theme="dark"] .report *,
+        html[data-theme="dark"] .report-section * { color: inherit; }
+        html[data-theme="dark"] .report h1, html[data-theme="dark"] .report h2,
+        html[data-theme="dark"] .report h3, html[data-theme="dark"] .report h4,
+        html[data-theme="dark"] .report strong,
+        html[data-theme="dark"] .report-section h1, html[data-theme="dark"] .report-section h2,
+        html[data-theme="dark"] .report-section h3, html[data-theme="dark"] .report-section h4,
+        html[data-theme="dark"] .report-section strong { color: #8cc4ff !important; }
+        html[data-theme="dark"] .report em, html[data-theme="dark"] .report-section em { color: #cfe0f0 !important; }
+        html[data-theme="dark"] .alert { background: #3d2a00 !important; color: #ffd699 !important; }
+        html[data-theme="dark"] .alert strong { color: #ffd699 !important; }
+        html[data-theme="dark"] .radio-option:hover { background-color: #0a2a55 !important; }
+
+        html[data-theme="light"] .report,
+        html[data-theme="light"] .report-section {
+            background: #eef5ff !important;
+            background-image: none !important;
+            color: #1a1a1a !important;
+        }
+        html[data-theme="light"] .report *,
+        html[data-theme="light"] .report-section * { color: inherit; }
+        html[data-theme="light"] .report h1, html[data-theme="light"] .report h2,
+        html[data-theme="light"] .report h3, html[data-theme="light"] .report h4,
+        html[data-theme="light"] .report strong,
+        html[data-theme="light"] .report-section h1, html[data-theme="light"] .report-section h2,
+        html[data-theme="light"] .report-section h3, html[data-theme="light"] .report-section h4,
+        html[data-theme="light"] .report-section strong { color: #0b4f8a !important; }
+        html[data-theme="light"] .alert { background: #fff8e1 !important; color: #5d4037 !important; }
+        html[data-theme="light"] .alert strong { color: #5d4037 !important; }
+    
+        /* ---- Print always on white, whatever theme is on screen ---- */
+        @media print {
+            html, body, .container, header, .section, .report, .report-section { background: #fff !important; background-image: none !important; color: #000 !important; }
+            html[data-theme="dark"] body, html[data-theme="dark"] .container, html[data-theme="dark"] header, html[data-theme="dark"] .section, html[data-theme="dark"] .report, html[data-theme="dark"] .report-section { background: #fff !important; background-image: none !important; color: #000 !important; }
+            html[data-theme="light"] body, html[data-theme="light"] .container, html[data-theme="light"] header, html[data-theme="light"] .section, html[data-theme="light"] .report, html[data-theme="light"] .report-section { background: #fff !important; background-image: none !important; color: #000 !important; }
+            .report *,
+            .report-section *,
+            .section * { color: #000 !important; }
+            html[data-theme="dark"] .report *,
+            html[data-theme="dark"] .report-section *,
+            html[data-theme="dark"] .section * { color: #000 !important; }
+            html[data-theme="light"] .report *,
+            html[data-theme="light"] .report-section *,
+            html[data-theme="light"] .section * { color: #000 !important; }
+            .report h1,
+            .report h2,
+            .report h3,
+            .report h4,
+            .report strong,
+            .report-section h1,
+            .report-section h2,
+            .report-section h3,
+            .report-section h4,
+            .report-section strong,
+            .section h1,
+            .section h2,
+            .section h3,
+            .section h4 { color: #0b4f8a !important; }
+            html[data-theme="dark"] .report h1,
+            html[data-theme="dark"] .report h2,
+            html[data-theme="dark"] .report h3,
+            html[data-theme="dark"] .report h4,
+            html[data-theme="dark"] .report strong,
+            html[data-theme="dark"] .report-section h1,
+            html[data-theme="dark"] .report-section h2,
+            html[data-theme="dark"] .report-section h3,
+            html[data-theme="dark"] .report-section h4,
+            html[data-theme="dark"] .report-section strong,
+            html[data-theme="dark"] .section h1,
+            html[data-theme="dark"] .section h2,
+            html[data-theme="dark"] .section h3,
+            html[data-theme="dark"] .section h4 { color: #0b4f8a !important; }
+            html[data-theme="light"] .report h1,
+            html[data-theme="light"] .report h2,
+            html[data-theme="light"] .report h3,
+            html[data-theme="light"] .report h4,
+            html[data-theme="light"] .report strong,
+            html[data-theme="light"] .report-section h1,
+            html[data-theme="light"] .report-section h2,
+            html[data-theme="light"] .report-section h3,
+            html[data-theme="light"] .report-section h4,
+            html[data-theme="light"] .report-section strong,
+            html[data-theme="light"] .section h1,
+            html[data-theme="light"] .section h2,
+            html[data-theme="light"] .section h3,
+            html[data-theme="light"] .section h4 { color: #0b4f8a !important; }
+            .report,
+            .report-section { border-left: 4px solid #0b4f8a !important; }
+            html[data-theme="dark"] .report,
+            html[data-theme="dark"] .report-section { border-left: 4px solid #0b4f8a !important; }
+            html[data-theme="light"] .report,
+            html[data-theme="light"] .report-section { border-left: 4px solid #0b4f8a !important; }
+            .score-bar { background: #ddd !important; border: 1px solid #999 !important; }
+            html[data-theme="dark"] .score-bar { background: #ddd !important; border: 1px solid #999 !important; }
+            html[data-theme="light"] .score-bar { background: #ddd !important; border: 1px solid #999 !important; }
+            .score-fill { background: #555 !important; background-image: none !important; }
+            html[data-theme="dark"] .score-fill { background: #555 !important; background-image: none !important; }
+            html[data-theme="light"] .score-fill { background: #555 !important; background-image: none !important; }
+            .alert { background: #fff !important; color: #000 !important; border: 1px solid #999 !important; }
+            html[data-theme="dark"] .alert { background: #fff !important; color: #000 !important; border: 1px solid #999 !important; }
+            html[data-theme="light"] .alert { background: #fff !important; color: #000 !important; border: 1px solid #999 !important; }
+            img { max-width: 100% !important; }
+            html[data-theme="dark"] .report em, html[data-theme="dark"] .report i,
+            html[data-theme="dark"] .report-section em, html[data-theme="dark"] .report-section i,
+            html[data-theme="light"] .report em, html[data-theme="light"] .report i,
+            html[data-theme="light"] .report-section em, html[data-theme="light"] .report-section i,
+            .report em, .report i, .report-section em, .report-section i { color: #000 !important; }
+            :root, html[data-theme="dark"], html[data-theme="light"] { background: #fff !important; color: #000 !important; }
+            html[data-theme="dark"] body, html[data-theme="light"] body { background: #fff !important; color: #000 !important; }
+
+        }
+    
+        /* ---- Listen button inside the results button group ---- */
+        .button-group .tool-btn { flex: 0 1 auto; padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 6px; }
+        @media (max-width: 600px) { .button-group .tool-btn { width: 100% !important; flex: 1 1 100%; } }
+    
+    /* ---- Unified print behavior (printfix2) ---- */
+    .print-title { display: none; }
+    @media print {
+        body.print-report:not(.print-one) .section { display: none !important; }
+        body.print-report:not(.print-one) #report,
+        body.print-report:not(.print-one) #reportSection {
+            display: block !important; box-shadow: none !important; }
+        body.print-report:not(.print-one) #report .section,
+        body.print-report:not(.print-one) #reportSection .section { display: block !important; }
+        body.print-report:not(.print-one) .print-title { display: block !important; }
+        html, body, .container, header, .section, .report, .report-section,
+        html[data-theme="dark"] html, html[data-theme="dark"] body,
+        html[data-theme="dark"] .container, html[data-theme="dark"] header,
+        html[data-theme="dark"] .section, html[data-theme="dark"] .report,
+        html[data-theme="dark"] .report-section {
+            background: #fff !important; background-color: #fff !important;
+            background-image: none !important; color: #000 !important; }
+        .print-title h2 { color: #0b4f8a !important; margin: 0 0 4px; font-size: 20px; }
+        .print-title p { color: #000 !important; margin: 0 0 14px; font-size: 13px; }
+        .print-title { border-bottom: 2px solid #0b4f8a; padding-bottom: 8px; margin-bottom: 14px; }
+    }
+    
+        /* ---- Sources & Learn More ---- */
+        .srcsec { display: block !important; background: #f4f8fc; border: 1px solid #c7d9ea;
+            border-left: 5px solid #0b4f8a; border-radius: 10px; padding: 18px 20px;
+            margin: 28px auto 8px; max-width: 900px; color: #1a1a1a; }
+        html[data-theme="dark"] .srcsec { background: #14293f; border-color: #2d4a68;
+            border-left-color: #6fb1ec; color: #e6ecf1; }
+        .srcsec h2 { margin: 0 0 6px; font-size: 1.2rem; color: #0b4f8a; }
+        html[data-theme="dark"] .srcsec h2 { color: #8cc4ff; }
+        .srcsec .src-intro { margin: 0 0 12px; font-size: .95rem; }
+        .srcsec dl { margin: 0; display: grid; gap: 10px; }
+        .srcsec dt { font-weight: 700; font-size: .95rem; }
+        .srcsec dd { margin: 2px 0 0; font-size: .95rem; line-height: 1.55; }
+        .srcsec a { color: #0b4f8a; font-weight: 600; }
+        html[data-theme="dark"] .srcsec a { color: #8cc4ff; }
+        .srcsec a:focus-visible { outline: 3px solid #0b4f8a; outline-offset: 2px; }
+        .srcsec .src-note { margin: 14px 0 0; font-size: .85rem; opacity: .85; }
+        @media print {
+            body.print-report:not(.print-one) .srcsec {
+                display: block !important; background: #fff !important;
+                border: 1px solid #999 !important; border-left: 4px solid #0b4f8a !important;
+                page-break-inside: avoid; }
+            body.print-report:not(.print-one) .srcsec h2 { color: #0b4f8a !important; }
+            body.print-report:not(.print-one) .srcsec a { color: #000 !important;
+                text-decoration: none; }
+            body.print-one .srcsec { display: none !important; }
+            body.print-one .srcsec.print-me { display: block !important;
+                background: #fff !important; border: 1px solid #999 !important;
+                border-left: 4px solid #0b4f8a !important; }
+            body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
+            body.print-one .srcsec.print-me a { color: #000 !important; }
+        }
+    </style>
+<style>
+.dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.dvr-nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;background:rgba(255,255,255,.14);min-height:40px;display:inline-flex;align-items:center}
+.dvr-nav a:focus-visible{outline:3px solid #ffd54f;outline-offset:2px}
+.dvr-nav .dvr-sp{flex:1}
+.dvr-nav .dvr-count{font-weight:500;opacity:.9;font-variant-numeric:tabular-nums}
+.dvr-nav .dvr-off{opacity:.35;pointer-events:none}
+@media print{.dvr-nav{display:none}}
+
+        /* ---- Site attribution ---- */
+        .site-attrib { max-width: 900px; margin: 18px auto 28px; padding: 14px 18px;
+            border-top: 1px solid #c7d9ea; font-size: .82rem; line-height: 1.55;
+            color: #3a4a57; background: #fff; }
+        html[data-theme="dark"] .site-attrib { border-top-color: #2d4a68; color: #9fb3c4; background: #14283e; }
+        .site-attrib strong { color: #0b4f8a; }
+        html[data-theme="dark"] .site-attrib strong { color: #8cc4ff; }
+        .site-attrib a { color: #0b4f8a; }
+        html[data-theme="dark"] .site-attrib a { color: #8cc4ff; }
+        .site-attrib a:focus-visible { outline: 3px solid #0b4f8a; outline-offset: 2px; }
+        .site-attrib p { margin: 0 0 6px; }
+        .site-attrib p:last-child { margin-bottom: 0; }
+        @media print {
+            /* Must survive the full-report print, so a printed page carries its
+               authorship and its data vintage. Hidden when printing one section. */
+            body.print-report:not(.print-one) .site-attrib {
+                display: block !important; color: #000 !important; background: #fff !important;
+                border-top: 1px solid #999 !important; page-break-inside: avoid; }
+            body.print-report:not(.print-one) .site-attrib a {
+                color: #000 !important; text-decoration: none; }
+            body.print-one .site-attrib { display: none !important; }
+        }
+    </style></head>
+<body>{{NAVIGATION}}
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="container">
+        <div class="a11y-bar" role="group" aria-label="Display settings">
+            <span class="a11y-label">Text size</span>
+            <button type="button" id="sizeNormal" onclick="setTextSize('normal')" aria-pressed="true">Normal</button>
+            <button type="button" id="sizeLarge" onclick="setTextSize('large')" aria-pressed="false">Large</button>
+            <button type="button" id="sizeXL" onclick="setTextSize('xl')" aria-pressed="false">Largest</button>
+            <span class="a11y-gap"></span>
+            <button type="button" id="themeBtn" onclick="toggleTheme()" aria-pressed="false">&#9790; Dark mode</button>
+        </div>
+        <header>
+            <h1>{{NAME}} Career Assessment</h1>
+            <p class="subtitle">{{SUBTITLE}}</p>
+        </header>
+
+        <div id="main-content" tabindex="-1"></div>
+        <div class="progress-indicator" aria-live="polite">
+            <span id="progress">Section 1 of 11</span>
+        </div>
+
+        {{SECTIONS}}
+        <div class="section" id="report">
+            <h2 tabindex="-1">Your {{NAME}} Reflections</h2>
+            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p><div class="report" id="reportContent"></div>
+            <div class="button-group">
+                <button type="button" class="btn-secondary tool-btn" data-label="&#128266; Listen to my results" aria-pressed="false" onclick="listenReport(this)">&#128266; Listen to my results</button>
+                <button class="btn-secondary" onclick="printPage()">Print Report</button>
+                <button class="btn-secondary" onclick="location.reload()">Start Over</button>
+            </div>
+        </div>
+        <div class="alert" id="alertBox" role="alert"></div>
+    </div>
+
+    <script>
+        // ---- Reader accessibility controls ----
+        function a11yGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+        function a11ySet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+        function setTextSize(size) {
+            document.body.classList.remove('text-large', 'text-xl');
+            if (size === 'large') document.body.classList.add('text-large');
+            if (size === 'xl') document.body.classList.add('text-xl');
+            var ids = { normal: 'sizeNormal', large: 'sizeLarge', xl: 'sizeXL' };
+            for (var k in ids) {
+                var b = document.getElementById(ids[k]);
+                if (b) b.setAttribute('aria-pressed', String(k === size));
+            }
+            a11ySet('textSize', size);
+        }
+        function applyTheme(mode) {
+            var btn = document.getElementById('themeBtn');
+            if (mode === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                if (btn) { btn.innerHTML = '\u2600 Light mode'; btn.setAttribute('aria-pressed', 'true'); }
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                if (btn) { btn.innerHTML = '\u263D Dark mode'; btn.setAttribute('aria-pressed', 'false'); }
+            }
+            a11ySet('theme', mode);
+        }
+        function toggleTheme() {
+            var now = document.documentElement.getAttribute('data-theme');
+            applyTheme(now === 'dark' ? 'light' : 'dark');
+        }
+        (function () {
+            var t = a11yGet('theme');
+            if (t === 'dark' || t === 'light') applyTheme(t);
+            var s = a11yGet('textSize');
+            if (s === 'large' || s === 'xl') setTextSize(s);
+        })();
+
+        const DATA = {{DATA}};
+        let currentSection = 1;
+
+        function show(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            const el = document.getElementById(id);
+            el.classList.add('active');
+            hideAlert();
+            window.scrollTo(0, 0);
+            const h = el.querySelector('h2');
+            if (h) h.focus({preventScroll: true});
+        }
+
+        function hideAlert() { document.getElementById('alertBox').classList.remove('show'); }
+        function alertMsg(msg) {
+            const a = document.getElementById('alertBox');
+            a.textContent = msg;
+            const sec = document.getElementById('section' + currentSection);
+            sec.querySelector('.button-group').before(a);
+            a.classList.add('show');
+        }
+
+        function checked(name) {
+            const el = document.querySelector('input[name="' + name + '"]:checked');
+            return el ? el.value : null;
+        }
+
+        function nextSection() {
+            if (currentSection === 9 && !checked('motivation')) {
+                alertMsg('Please pick the answer that fits you best before you continue.');
+                return;
+            }
+            if (currentSection === 10) {
+                const missing = [];
+                for (let i = 1; i <= 8; i++) if (!checked('readiness' + i)) missing.push(i);
+                if (missing.length) {
+                    alertMsg('Please answer question' + (missing.length > 1 ? 's ' : ' ') + missing.join(', ') + ' before you continue.');
+                    return;
+                }
+            }
+            currentSection++;
+            show('section' + currentSection);
+            updateProgress();
+        }
+
+        function prevSection() {
+            currentSection--;
+            show('section' + currentSection);
+            updateProgress();
+        }
+
+        function updateProgress() {
+            document.getElementById('progress').textContent = 'Section ' + currentSection + ' of 11';
+        }
+
+        function esc(s) {
+            return s.replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[ch]);
+        }
+
+        function generateReport() {
+            const future = checked('future');
+            if (!future) { alertMsg('Please pick your plan before you get your results.'); return; }
+            const motivation = checked('motivation');
+            const readiness = [];
+            for (let i = 1; i <= 8; i++) readiness.push(checked('readiness' + i));
+            const comments = document.getElementById('comments').value.trim();
+
+            const readinessScore = readiness.filter(r => r === 'yes').length;
+            const motivationScore = DATA.scores[motivation];
+
+
+
+            let recommendation;
+            if (motivationScore >= 8 && readinessScore >= 7) recommendation = DATA.recs[0];
+            else if (motivationScore >= 8 && readinessScore >= 6) recommendation = DATA.recs[1];
+            else if (motivationScore >= 7 && readinessScore >= 5) recommendation = DATA.recs[2];
+            else if (motivationScore >= 5) recommendation = DATA.recs[3];
+            else recommendation = DATA.recs[4];
+
+            const toWork = [];
+            readiness.forEach((r, i) => { if (r !== 'yes') toWork.push(DATA.readinessItems[i] + (r === 'unsure' ? ' (you said: unsure)' : ' (you said: no)')); });
+
+            const html = `
+                <h3>What interests you</h3>
+                <p>You said: <em>${esc(DATA.motLabels[motivation])}</em></p>
+                <p>${motivationScore >= 8 ? 'This part of the work interests you.' : motivationScore >= 6 ? 'There is something here you may want to explore.' : 'It is fine to be curious without knowing yet.'}</p>
+                
+
+                <h3>Activities that sound comfortable: ${readinessScore} / 8</h3>
+                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you. A visit can help you learn more.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>
+                <div class="score-bar"><div class="score-fill" style="width: ${readinessScore * 12.5}%"></div></div>
+                ${toWork.length ? '<p><strong>Things to ask about or try:</strong></p><ul style="margin-left: 1.5rem;">' + toWork.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>' : ''}
+
+                <h3>Something to explore</h3>
+                <p><strong>${recommendation}</strong></p>
+
+                <h3>Your Plan</h3>
+                <p><em>${esc(DATA.futureLabels[future])}</em></p>
+                ${comments ? '<p><strong>Your thoughts:</strong> "' + esc(comments) + '"</p>' : ''}
+
+                <h3>Next Steps</h3>
+                <ul style="margin-left: 1.5rem;">${(DATA.futureSteps[future] || DATA.nextSteps).map(s => '<li>' + s + '</li>').join('')}</ul>
+
+                <h3>Final Words</h3>
+                <p>${DATA.finalWords}</p>
+            `;
+
+            document.getElementById('reportContent').innerHTML = html;
+            show('report');
+            document.getElementById('progress').textContent = 'Results';
+        }
+
+        function printPage() { window.print(); }
+    
+        // ---- Listen (read aloud) and print-one-section ----
+        var ttsBtn = null;
+        function ttsSupported() { return typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined'; }
+        function ttsReset() {
+            if (ttsBtn) {
+                ttsBtn.classList.remove('speaking');
+                ttsBtn.innerHTML = ttsBtn.getAttribute('data-label');
+                ttsBtn.setAttribute('aria-pressed', 'false');
+                ttsBtn = null;
+            }
+        }
+        function stopSpeech() { try { if (ttsSupported()) window.speechSynthesis.cancel(); } catch (e) {} ttsReset(); }
+        function sectionText(sec) {
+            var c = sec.cloneNode(true);
+            var drop = c.querySelectorAll('.tool-row, .button-group, script, .img-slot, .section-number');
+            for (var i = 0; i < drop.length; i++) { drop[i].parentNode.removeChild(drop[i]); }
+            return (c.innerText || c.textContent || '').replace(/\s+/g, ' ').trim();
+        }
+        function listenSection(btn, id) {
+            if (!ttsSupported()) return;
+            var wasThis = (ttsBtn === btn);
+            stopSpeech();
+            if (wasThis) return;
+            var sec = document.getElementById(id);
+            if (!sec) return;
+            var txt = sectionText(sec);
+            if (!txt) return;
+            var u = new SpeechSynthesisUtterance(txt);
+            u.rate = 0.95;
+            u.onend = ttsReset;
+            u.onerror = ttsReset;
+            ttsBtn = btn;
+            btn.classList.add('speaking');
+            btn.innerHTML = '\u25A0 Stop';
+            btn.setAttribute('aria-pressed', 'true');
+            try { window.speechSynthesis.speak(u); } catch (e) { ttsReset(); }
+        }
+        function printSection(id) {
+            var sec = document.getElementById(id);
+            if (!sec) return;
+            stopSpeech();
+            var old = document.querySelectorAll('.print-me');
+            for (var i = 0; i < old.length; i++) { old[i].classList.remove('print-me'); }
+            sec.classList.add('print-me');
+            document.body.classList.add('print-one');
+            try { window.print(); } catch (e) {}
+            setTimeout(function () {
+                document.body.classList.remove('print-one');
+                sec.classList.remove('print-me');
+            }, 800);
+        }
+        (function () {
+            if (!ttsSupported()) {
+                var b = document.querySelectorAll('.tool-btn[data-label]');
+                for (var i = 0; i < b.length; i++) { b[i].style.display = 'none'; }
+            }
+            window.addEventListener('beforeunload', stopSpeech);
+            var names = ['nextSection', 'prevSection', 'goToSection', 'showSection', 'generateReport'];
+            for (var j = 0; j < names.length; j++) {
+                (function (n) {
+                    if (typeof window[n] === 'function') {
+                        var orig = window[n];
+                        window[n] = function () { stopSpeech(); return orig.apply(this, arguments); };
+                    }
+                })(names[j]);
+            }
+        })();
+
+        // ---- Listen to the results report ----
+        function listenReport(btn) {
+            if (!ttsSupported()) return;
+            var wasThis = (ttsBtn === btn);
+            stopSpeech();
+            if (wasThis) return;
+            var sec = document.getElementById('report') || document.getElementById('reportSection');
+            if (!sec) return;
+            var txt = sectionText(sec);
+            if (!txt) return;
+            var u = new SpeechSynthesisUtterance(txt);
+            u.rate = 0.95;
+            u.onend = ttsReset;
+            u.onerror = ttsReset;
+            ttsBtn = btn;
+            btn.classList.add('speaking');
+            btn.innerHTML = '\u25A0 Stop';
+            btn.setAttribute('aria-pressed', 'true');
+            try { window.speechSynthesis.speak(u); } catch (e) { ttsReset(); }
+        }
+
+        /* ---- Unified print behavior (printfix2) ---- */
+        (function () {
+            var CAREER = "{{NAME}}";
+            function reportEl() {
+                return document.getElementById('report') || document.getElementById('reportSection');
+            }
+            function ensureTitle(r) {
+                if (!r || r.querySelector('.print-title')) return;
+                var d = document.createElement('div');
+                d.className = 'print-title';
+                var h = document.createElement('h2');
+                h.textContent = CAREER + ' \u2014 Career Assessment Report';
+                var p = document.createElement('p');
+                var now = new Date();
+                p.textContent = 'Printed ' + now.toLocaleDateString();
+                d.appendChild(h); d.appendChild(p);
+                r.insertBefore(d, r.firstChild);
+            }
+            function check() {
+                var r = reportEl();
+                var on = !!(r && r.offsetHeight > 0 && !document.body.classList.contains('print-one'));
+                if (on) { ensureTitle(r); document.body.classList.add('print-report'); }
+                else if (!document.body.classList.contains('print-one')) {
+                    document.body.classList.remove('print-report');
+                }
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', check);
+            } else { check(); }
+            setInterval(check, 400);
+            window.addEventListener('beforeprint', check);
+        })();
+</script>
+
+    {{SOURCES}}
+        <!-- Site attribution (attribution.py) -->
+    <aside class="site-attrib" aria-label="About this site and where its information comes from">
+      <p><strong>Career Factory</strong> &middot; Human-led. AI-assisted. Built with care by Sheri Whitmire.</p>
+      <p>An independent project. Not affiliated with, produced by, or endorsed by any state agency.</p>
+      <p>Career information from <a href="https://www.onetonline.org/">O*NET OnLine</a>
+         by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA),
+         used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 licence</a>.
+         O*NET&reg; is a trademark of USDOL/ETA.
+         North Dakota wages: U.S. Bureau of Labor Statistics Occupational Employment and Wage Statistics, May 2025.
+         Employment projections: Projections Central, 2024&ndash;2034.
+         Figures are the vintage shown and are not updated continuously &mdash;
+         the source links above always show current data.</p>
+    </aside>
+
+</body>
+</html>

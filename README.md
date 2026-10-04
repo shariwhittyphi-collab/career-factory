@@ -1,7 +1,9 @@
-# North Dakota In-Demand Career Assessments
+# Career Factory — Careers to Explore
 
-Interactive career assessments for every occupation on the North Dakota
-In-Demand Occupations list. **193 careers across 12 areas.**
+Explore real careers at your own pace, including North Dakota in-demand occupations
+and other careers worth learning about. **195 careers across 12 areas.**
+The homepage marks verified members of the July 2026 ND list with an ND In-Demand badge.
+Unmarked careers remain available to explore.
 
 Built by Shari Whitmire through human-led, AI-assisted design and development
 with Claude and ChatGPT. Shari directed requirements, career-assessment subject
@@ -39,11 +41,11 @@ being sold a career.
 | Education | 15 |
 | Management | 14 |
 | Social Services | 8 |
-| Science | 7 |
+| Science | 8 |
 | Transportation | 5 |
 | Arts, Legal and Sales | 4 |
-| Jobs You Can Start Now | 22 |
-| **Total** | **193** |
+| Jobs You Can Start Now | 23 |
+| **Total** | **195** |
 
 ### Two formats, same content
 
@@ -230,3 +232,28 @@ preserved unchanged for provenance, rather than silently rewritten tonight.
 ## October 1 career expansion
 
 Added 22 supplied assessments under Jobs You Can Start Now, with a matching self-contained hub and updated search index. The redesigned homepage is preserved. Original 171 assessment pages are unchanged. Private Investigator readiness validation, score, and feedback now include all nine questions, using the existing proportional thresholds. The supplied package does not include the previously discussed site-wide O*NET attribution revision; that remains a separate follow-up.
+
+## Rural careers and student opportunities (October 4, 2026)
+
+Precision Ag Technician and Parts Counter Salesperson use the existing eleven-section
+format, reading controls, section Listen/Print tools, and reflection reports.
+The original 193 assessments are preserved. New original reflection wording makes
+clear that scores are not a validated aptitude test or a prediction.
+
+`student-opportunities.html` links official Gooseneck, RDO, Titan, Butler, and Plains Ag
+program pages. It distinguishes high school experience from post-high-school
+college/employment routes and dates employer claims. Local placement, pay, scheduling,
+and current requirements must be confirmed with the employer. It collects no applications.
+
+The two additions are not automatically marked ND In-Demand: the precision-ag specialty
+is not separately named on the supplied list, and parts sales is not on it.
+Precision-ag wages and projections are explicitly labelled as the broader agricultural
+technician group. New figures were checked October 4, 2026 (BLS May 2025 / Projections
+Central 2024–2034). This supplements the original September research.
+
+Portable source: `_Build Kit/Rural Additions/` contains the shared template, career data,
+images and a Python 3 builder. Run `python "_Build Kit/Rural Additions/build.py"` to rebuild
+both new web pages, their matching portable hub content, menus, and search entries.
+It preserves original embedded assessments. If regenerating the original index from
+its archived builder, run this rural builder afterward. Program copy in the student page
+is intentionally simple static HTML; recheck official employer links when updating it.

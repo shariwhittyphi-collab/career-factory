@@ -34,9 +34,9 @@ function card(c) {
   const amount = isAnnual ? c.medianAnnual : c.medianHourly;
   const value = element('span', 'pay-amount', amount == null ? 'Not listed' : (isAnnual ? currency : hourly).format(amount));
   if (amount != null) value.append(element('span', 'pay-unit', isAnnual ? ' / year' : ' / hour'));
-  pay.append(value, element('span', 'pay-label', isAnnual && c.payBasis === 'annual-contract' ? 'Median pay · annual contract' : 'Median pay · North Dakota'));
+  pay.append(value, element('span', 'pay-label', c.payLabel || (isAnnual && c.payBasis === 'annual-contract' ? 'Median pay · annual contract' : 'Median pay · North Dakota')));
   const arrow = element('span', 'card-arrow', '↗'); arrow.setAttribute('aria-hidden', 'true'); meta.append(pay, arrow); item.append(meta);
-  const growth = c.ndGrowthPct == null ? 'No ND growth figure in this assessment' : `${c.ndGrowthPct > 0 ? '+' : ''}${c.ndGrowthPct}% projected ND growth`;
+  const growth = c.growthLabel || (c.ndGrowthPct == null ? 'No ND growth figure in this assessment' : `${c.ndGrowthPct > 0 ? '+' : ''}${c.ndGrowthPct}% projected ND growth`);
   item.append(element('div', 'growth-note', growth)); return item;
 }
 function filtered() {

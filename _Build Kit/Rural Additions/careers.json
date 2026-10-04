@@ -1,0 +1,275 @@
+[
+  {
+    "name": "Precision Ag Technician",
+    "slug": "precision-ag-technician",
+    "area": "science",
+    "areaName": "Science",
+    "soc": "19-4012.01",
+    "subtitle": "Farm equipment, field maps, and technology that helps growers",
+    "images": [
+      0,
+      1
+    ],
+    "alts": [
+      "A technician uses a field-map screen in a parked tractor cab.",
+      "A technician checks a sensor connection on parked farm equipment with a farmer."
+    ],
+    "motivation": [
+      "I am curious about how farm technology works.",
+      "I like solving computer and equipment problems.",
+      "I would like to help farmers in a rural community."
+    ],
+    "readiness": [
+      "I would like to learn how GPS helps farm equipment.",
+      "I can take my time and check details.",
+      "I would try new computer software with help.",
+      "I can explain a problem or ask a question.",
+      "I would like a mix of office, shop, and field work.",
+      "I can follow safety directions around equipment.",
+      "I would ask about travel and busy-season hours.",
+      "I would compare a certificate, a two-year program, and employer training."
+    ],
+    "future": [
+      [
+        "a",
+        "Ask for a tour or a job shadow."
+      ],
+      [
+        "b",
+        "Compare a short certificate and a two-year program."
+      ],
+      [
+        "c",
+        "Ask about a college precision-ag internship."
+      ],
+      [
+        "research",
+        "Learn more about the job first."
+      ],
+      [
+        "undecided",
+        "Keep exploring. I do not have a plan yet."
+      ]
+    ],
+    "nextSteps": [
+      "Ask a dealership technician to explain one GPS or field-mapping task.",
+      "Look at the student-opportunities page with a counselor or someone you trust.",
+      "Compare Lake Region State College’s certificate with the NDSCS associate degree.",
+      "Ask about paid internships, travel, busy-season hours, and support while learning."
+    ],
+    "futureSteps": {
+      "a": [
+        "Use the student-opportunities page to ask about a tour or job shadow.",
+        "Ask to see both the precision-ag department and the service shop.",
+        "Write down one thing you liked and one question you still have."
+      ],
+      "b": [
+        "Compare the 15-credit Lake Region certificate with the 62-credit NDSCS associate degree.",
+        "Ask each school how long your own course plan would take.",
+        "Ask employers which training they accept and what they teach on the job.",
+        "Compare financial aid, scholarships, employer help, and total costs before enrolling."
+      ],
+      "c": [
+        "Check the current Gooseneck precision-ag internship requirements. It is a college-student route.",
+        "Ask your program adviser about internship credit, placement, and travel.",
+        "Ask the employer about pay, supervision, and the schedule."
+      ]
+    },
+    "recs": [
+      "Several parts of this work interest you. A job shadow could help you see them in real life.",
+      "This is worth a closer look. Compare a short training route with a two-year option.",
+      "You may enjoy parts of this work. Talk with a technician about a normal day.",
+      "You do not need to decide yet. Try a tour and compare this with parts or farm equipment repair.",
+      "Curiosity is enough to start. You can browse another career or ask one question about this one."
+    ],
+    "final": "Rural careers can involve technology, people, and hands-on work together. You do not have to own a farm or already know every machine to begin exploring. Find out what the work feels like, what training an employer asks for, and whether it interests you.",
+    "medianHourly": 22.58,
+    "medianAnnual": 46960,
+    "entryHourly": 17.62,
+    "topHourly": 30.9,
+    "ndGrowthPct": 12,
+    "ndOpeningsPerYear": 20,
+    "ndEmployment": 140,
+    "payLabel": "ND agricultural technicians · broader group",
+    "growthLabel": "+12% projected ND growth · broader agricultural-technician group",
+    "tags": [
+      "rural",
+      "agriculture",
+      "GPS",
+      "precision agriculture",
+      "farm technology",
+      "Gooseneck",
+      "maps",
+      "sensors"
+    ],
+    "sections": [
+      [
+        "Welcome",
+        "<p>GPS can guide a tractor. A field map can show where a crop did well. A precision ag technician helps people get useful results from those tools.</p><p>Explore the work, the training options, and what a day might feel like. You do not have to choose this career.</p><p><strong>Go at your pace.</strong> Read what interests you and try the short questions at the end. There are no right or wrong answers.</p>"
+      ],
+      [
+        "What is a Precision Ag Technician?",
+        "<p>You help growers use technology on farm equipment and understand field information. Work may include setting up guidance equipment, checking sensors, making maps, and helping a customer solve a problem. Some positions focus more on equipment; others focus more on crop information or customer support.</p>{{IMAGE0}}<ul><li>Help set up or check GPS guidance and connected equipment.</li><li>Work with field maps and records of planting or harvest.</li><li>Find out why a screen, sensor, or connection is not working as expected.</li><li>Show a grower how to use a tool and explain the next step.</li><li>Keep notes and work with the service shop and sales team.</li></ul><p><strong>The real picture:</strong> This is more than driving a tractor. It includes patient troubleshooting, computer work, and explaining things. Job titles and duties vary by employer.</p>"
+      ],
+      [
+        "A Day in the Life",
+        "{{IMAGE1}}<p><strong>One possible day:</strong> This is an example, not a schedule every employer follows.</p><ul><li>Morning: Check messages and talk with the shop about a customer’s guidance problem.</li><li>Later: Review a field map and prepare a short demonstration.</li><li>Midday: Travel to a farm with a coworker and check a connection on parked equipment.</li><li>Afternoon: Help the grower understand the settings, document the fix, and ask a specialist about a problem you cannot solve yet.</li><li>Before leaving: Confirm the next visit and update the service record.</li></ul><p>Planting and harvest may bring longer days and urgent calls. Other days may include training, preparing equipment, and quieter office work. Ask about the actual hours, travel area, and time away from home.</p>"
+      ],
+      [
+        "Training in North Dakota",
+        "<p><strong>There is more than one learning route.</strong> An employer may want an associate degree, a bachelor’s degree, technical experience, or a combination. Compare real job requirements before paying for training.</p><ul><li><a href=\"https://www.lrsc.edu/programs/precision-agriculture-certificate\" target=\"_blank\" rel=\"noopener\">Lake Region State College — Precision Agriculture Certificate</a>: 15 credits in GPS, precision systems, electronic devices, and field operations. A shorter option that can lead toward its agriculture associate degree. Ask about the course schedule and how it fits the job you want.</li><li><a href=\"https://catalog.ndscs.edu/agriculture/associate-in-applied-science/precision-agriculture-technician\" target=\"_blank\" rel=\"noopener\">NDSCS in Wahpeton — Precision Agriculture Technician, AAS</a>: 62 credits over the first and second year, with practical GPS, data, electrical, and hydraulic work. The program includes a 400-hour paid summer internship. A personal course plan may take longer.</li><li><a href=\"https://www.ndsu.edu/agricultural-biosystems-engineering/agricultural-technology\" target=\"_blank\" rel=\"noopener\">NDSU — Agricultural Technology</a>: a university route with a Precision Agriculture emphasis. Ask the adviser about the current degree plan and transfer options.</li></ul><p><strong>Try something first:</strong> A dealership visit, high school co-op, or job shadow lets you see the work before choosing a program. See <a href=\"../student-opportunities.html\">Student opportunities near home</a>. Gooseneck’s precision-ag internship is for students already pursuing a relevant college degree; it is different from its high school co-op.</p><p><strong>Helpful school subjects:</strong> Agriculture, computers, math, science, shop, and communication. If your school does not offer an ag class, ask a counselor about another way to get exposure.</p><p><strong>Paying for training:</strong> Start with financial aid, scholarships, grants, and employer help. Ask the school and employer for the full cost, including tools, travel, a computer, and housing. Then ask your career counselor about other help, including WIOA. Ask before you enroll. Employer tuition help may come with a work commitment; read the terms first.</p>"
+      ],
+      [
+        "Training and Employer Requirements",
+        "<p>Ask each employer what you need before starting and what you will learn after you are hired. A school certificate, an employer training course, and a state license mean different things.</p><ul><li>Equipment and software training may be provided by the dealership or manufacturer.</li><li>Field roles may require a driver’s license, travel, and safe work around large machines.</li><li>Ask how new workers learn equipment safety, when they have supervision, and how physical tasks are shared.</li><li>Drones, chemical application, or other specialist work may bring extra rules and credentials. Those duties are not part of every precision-ag job.</li></ul><p><strong>Before accepting a role:</strong> Ask about required credentials, training costs, testing, and whether any course must be renewed. Do not assume a short certificate meets every employer’s requirements.</p><p>You can ask about accessible equipment, written instructions, extra practice, or other support while learning.</p>"
+      ],
+      [
+        "Pay and Job Outlook",
+        "<p><strong>The published numbers cover a broader group.</strong> O*NET reports pay and outlook for all agricultural technicians, not precision-ag technicians alone. Do not read these as a Gooseneck wage offer.</p><ul><li>North Dakota middle pay (May 2025): <strong>$22.58 an hour / $46,960 a year</strong>. Half earned more and half earned less.</li><li>Lower 10th–25th percentiles: $17.62–$21.19 an hour. Upper 75th–90th percentiles: $28.64–$30.90 an hour. These are pay distributions, not guaranteed starting or experienced rates.</li><li>For the broader group, ND employment is projected from 140 in 2024 to 160 in 2034: 12% growth and about 20 openings a year, including replacements.</li></ul><p><strong>Where people work:</strong> Equipment dealerships, agricultural service businesses, and farm-related organizations. Gooseneck had precision-ag technician openings in Bowman, Dickinson, and Williston when checked on October 4, 2026. A listing can close; check the employer’s current board.</p><p><strong>Work setting:</strong> A mix of office, shop, customer visits, and field work. Some jobs involve driving, standing, climbing equipment steps, working outside, or handling components. Ask about the actual tasks and available support.</p><p><strong>Compare an offer:</strong> Ask about hourly or salary pay, overtime, seasonal hours, travel, benefits, tools, and training. Local pay may differ from the broader statewide figures.</p>"
+      ],
+      [
+        "Where This Can Lead",
+        "<ul><li><strong>Precision-ag support:</strong> Help customers with settings, maps, and equipment questions.</li><li><strong>Field specialist:</strong> Work on more difficult setup and troubleshooting tasks as you gain experience.</li><li><strong>Training or sales:</strong> Demonstrate tools and help customers compare options.</li><li><strong>A related direction:</strong> Farm equipment repair, agricultural technology, crop services, or data and mapping work. Additional training may be needed.</li></ul><p>These are possibilities to explore, not automatic promotions. Ask someone doing the work how they reached their role.</p>"
+      ],
+      [
+        "The Real Talk",
+        "<p><strong>Things you might like:</strong></p><ul><li>Work connected to rural communities.</li><li>A mix of computers, equipment, and people.</li><li>Seeing a customer use something you helped set up.</li><li>Learning new technology over time.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Busy seasons and after-hours calls.</li><li>Travel distances and overnight trips.</li><li>Frustrating problems that take several attempts.</li><li>Training time and physical tasks at a particular location.</li></ul><p><strong>A question for yourself:</strong> Would you enjoy helping someone solve a technology problem when you do not know the answer yet? You can explore the answer with a short visit.</p>"
+      ]
+    ]
+  },
+  {
+    "name": "Parts Counter Salesperson",
+    "slug": "parts-counter-salesperson",
+    "area": "jobs-you-can-start-now",
+    "areaName": "Jobs You Can Start Now",
+    "soc": "41-2022.00",
+    "subtitle": "Finding the right part and helping keep customers moving",
+    "images": [
+      2,
+      3
+    ],
+    "alts": [
+      "A parts salesperson compares a replacement bearing with a farmer’s worn sample.",
+      "A parts salesperson checks a component in an agricultural parts storeroom."
+    ],
+    "motivation": [
+      "I like helping people find what they need.",
+      "I am curious about equipment and how parts fit together.",
+      "I want to explore a rural job with people, computers, and hands-on tasks."
+    ],
+    "readiness": [
+      "I can listen and ask a question when something is unclear.",
+      "I would learn to look up parts in a computer catalog.",
+      "I can check numbers and details carefully.",
+      "I can stay patient when a customer is frustrated.",
+      "I would practice basic money and quantity math.",
+      "I can follow directions for safe lifting and moving parts.",
+      "I would ask about standing, the schedule, and any delivery duties.",
+      "I would like to learn from an experienced coworker."
+    ],
+    "future": [
+      [
+        "a",
+        "Ask to shadow someone at a parts counter."
+      ],
+      [
+        "b",
+        "Ask about a high school co-op or internship."
+      ],
+      [
+        "c",
+        "Compare entry-level parts jobs and their training."
+      ],
+      [
+        "research",
+        "Learn more before applying."
+      ],
+      [
+        "undecided",
+        "Keep exploring. I do not have a plan yet."
+      ]
+    ],
+    "nextSteps": [
+      "Ask a local dealership or parts store what a normal day looks like.",
+      "Use the student-opportunities page to find a tour, shadow, or student-work route.",
+      "Compare current job ads and ask which experience is required.",
+      "Ask about training, pay, schedule, lifting, delivery tasks, and support while learning."
+    ],
+    "futureSteps": {
+      "a": [
+        "Ask a local dealership if you can observe the parts department.",
+        "Watch how a worker checks a machine model and part number.",
+        "Notice whether you like the customer contact and the detail work."
+      ],
+      "b": [
+        "Compare Gooseneck, RDO, Titan, and Butler student routes on the opportunities page.",
+        "Work with your school counselor on the schedule, transport, and any school credit.",
+        "Ask whether the local placement includes parts-department experience."
+      ],
+      "c": [
+        "Compare a farm-equipment dealership with an auto or truck parts store.",
+        "Ask which jobs teach beginners and which require experience.",
+        "Compare pay, hours, standing, lifting, and any driving duties before applying."
+      ]
+    },
+    "recs": [
+      "Several parts of this work interest you. Shadowing a parts worker is a useful next step.",
+      "This could be worth a closer look. Ask how the store trains someone new.",
+      "You may like some parts of the work. A short visit can help you compare them.",
+      "You can explore this alongside customer service or stockroom work. No decision is needed yet.",
+      "You do not need a clear plan to be curious. Browse another career or ask one question about this one."
+    ],
+    "final": "The parts department helps farms, shops, and drivers keep moving. You can explore it through a visit or student placement before deciding on a job. Learning the right questions and checking details matters more than already knowing every part.",
+    "medianHourly": 23.37,
+    "medianAnnual": 48600,
+    "entryHourly": 16.77,
+    "topHourly": 33.0,
+    "ndGrowthPct": 5,
+    "ndOpeningsPerYear": 190,
+    "ndEmployment": 1670,
+    "tags": [
+      "rural",
+      "parts",
+      "agriculture",
+      "dealership",
+      "farm equipment",
+      "sales",
+      "customer service",
+      "Gooseneck"
+    ],
+    "sections": [
+      [
+        "Welcome",
+        "<p>A farmer needs a part. A mechanic is waiting to finish a repair. The parts counter salesperson helps find the right item and keeps track of the order.</p><p>This career can combine customer service, computer work, and hands-on tasks. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+      ],
+      [
+        "What is a Parts Counter Salesperson?",
+        "<p>You help customers and shop workers find replacement parts. You ask which machine or vehicle they have, check a catalog, find the part, and explain price and availability. A farm-equipment dealership is one setting; auto and truck parts stores are others.</p>{{IMAGE0}}<ul><li>Listen to the customer and confirm the machine model or part details.</li><li>Use a computer catalog to match the right item.</li><li>Check stock, prices, orders, and delivery information.</li><li>Bring smaller items to the counter and arrange help for larger ones.</li><li>Record sales, orders, or returns carefully.</li><li>Keep parts organized and work with the service shop.</li></ul><p><strong>The real picture:</strong> You do not need to memorize every part. You need to learn how to find accurate information and when to ask for help. Some openings are for beginners; others require experience.</p>"
+      ],
+      [
+        "A Day in the Life",
+        "{{IMAGE1}}<p><strong>One possible day:</strong> The schedule changes with the store and the season.</p><ul><li>Morning: Check a shipment and put parts in the right bins.</li><li>Later: A customer brings a worn part. Ask about the machine, check the catalog, and compare the replacement.</li><li>Midday: Take a phone order and tell the shop when a back-ordered item is expected.</li><li>Afternoon: Help several customers, handle a return, and check the stock count.</li><li>Before leaving: Record unfinished orders and pass important details to the next coworker.</li></ul><p>Planting, harvest, or shop deadlines can make the counter busy. Some jobs include Saturdays, early hours, or delivery work. Ask about the schedule at the location you are considering.</p>"
+      ],
+      [
+        "How You Learn the Job",
+        "<p><strong>A four-year degree is not the usual entry route.</strong> Many parts workers learn through employer training. A store may ask for a diploma, related experience, computer skills, or knowledge of equipment. Read the actual job ad.</p><ul><li><strong>Start with a visit:</strong> Observe a parts department and see how workers use the catalog and talk with customers.</li><li><strong>Student experience:</strong> A high school co-op or internship may let you explore parts along with other departments. The local placement and duties need to be confirmed.</li><li><strong>On-the-job training:</strong> Learn the store’s catalog, order system, products, stockroom, and customer-service process from coworkers.</li><li><strong>Optional education:</strong> Business, automotive, agriculture, or technical courses can build useful skills. Compare cost and relevance before choosing a program.</li></ul><p>See <a href=\"../student-opportunities.html\">Student opportunities near home</a> for Gooseneck, RDO, Titan, and Butler routes. Being in a student program does not guarantee a permanent parts job.</p><p><strong>Helpful practice:</strong> Read model numbers, compare similar items, use a spreadsheet, practice clear phone messages, and check simple prices and quantities. You can learn these skills gradually.</p><p><strong>Paying for training:</strong> Start with financial aid, scholarships, grants, and employer help. Ask the school and employer for the full cost, including tools, travel, a computer, and housing. Then ask your career counselor about other help, including WIOA. Ask before you enroll. Employer tuition help may come with a work commitment; read the terms first.</p>"
+      ],
+      [
+        "Training and Employer Requirements",
+        "<p>A parts-sales job is different from a licensed mechanic role. Requirements depend on the store and the work assigned. Ask the employer what you need to start.</p><ul><li>Training in the catalog, sales system, and equipment brands.</li><li>Safe lifting and moving procedures for the actual stockroom.</li><li>Extra training and authorization if the role uses powered handling equipment.</li><li>A driver’s license or other driving requirements if deliveries are part of the job.</li><li>Product or professional training if the employer uses it; ask whether it is required or optional.</li></ul><p><strong>Before you begin:</strong> Ask who provides training, whether there is a cost, and how beginners get help. Do not pay for a credential just because it sounds useful.</p><p>Ask about written instructions, an accessible workstation, lifting help, extra practice, or other support that helps you learn and work safely.</p>"
+      ],
+      [
+        "Pay and Job Outlook",
+        "<p><strong>North Dakota parts-sales pay — May 2025:</strong> These figures include parts sellers in several industries, not only farm-equipment dealerships.</p><ul><li>Middle pay: <strong>$23.37 an hour / $48,600 a year</strong>. Half earned more and half earned less.</li><li>Lower 10th–25th percentiles: $16.77–$20.23 an hour. Upper 75th–90th percentiles: $28.52–$33.00 an hour. These are pay distributions, not promises about starting or experienced pay.</li><li>ND employment is projected from 1,670 in 2024 to 1,750 in 2034: 5% growth and about 190 openings a year, including replacements.</li></ul><p><strong>Where people work:</strong> Farm-equipment, truck, and auto dealerships; parts stores; and equipment businesses. Gooseneck had a Parts Counter Salesperson opening in Dickinson and a Shop Parts Counterperson opening in Harvey when checked on October 4, 2026.</p><p><strong>Work setting:</strong> A counter, desk, and stockroom. The role may include standing, walking, reaching, handling parts, and phone or computer work. Ask about actual lifting tasks, equipment, and available support.</p><p><strong>Compare an offer:</strong> Ask about base pay, commissions or bonuses if any, hours, benefits, training, and delivery tasks. A student placement may have different pay and duties from a full-time job.</p>"
+      ],
+      [
+        "Where This Can Lead",
+        "<ul><li><strong>Experienced parts worker:</strong> Handle more difficult catalog and customer questions.</li><li><strong>Inventory or ordering:</strong> Focus on stock counts, purchasing, or keeping the shop supplied.</li><li><strong>Parts department leadership:</strong> Guide coworkers and manage the department as experience grows.</li><li><strong>A related direction:</strong> Customer service, sales, service scheduling, or equipment repair. Moving into repair may require technical training.</li></ul><p>You can enjoy the parts counter as a career without aiming to manage a department. Ask people in the store what paths are actually available.</p>"
+      ],
+      [
+        "The Real Talk",
+        "<p><strong>Things you might like:</strong></p><ul><li>Helping someone get back to work.</li><li>Learning about equipment without doing every repair yourself.</li><li>A mix of people, computers, and hands-on tasks.</li><li>Possible work in a nearby rural dealership or parts store.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Busy counters, phone calls, and several requests at once.</li><li>Customers who are frustrated about a breakdown or delay.</li><li>Similar-looking parts that require careful checking.</li><li>Standing, lifting, seasonal hours, and delivery duties.</li></ul><p><strong>A question for yourself:</strong> Do you like helping people while checking details carefully? A short job shadow can help you find out.</p>"
+      ]
+    ]
+  }
+]

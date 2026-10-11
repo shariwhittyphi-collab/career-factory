@@ -1,0 +1,1952 @@
+{
+ "cna": [
+  [
+   "<h2>Your CNA Assessment Report</h2>",
+   "<h2>Your CNA Assessment Report</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "<h3>Your Motivation Score</h3>",
+   "<h3>What interests you</h3>"
+  ],
+  [
+   "<h3>Your Readiness Score</h3>",
+   "<h3>Activities that sound comfortable</h3>"
+  ],
+  [
+   "<h3>Your Next Step</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "var motivationScore, motivationText;",
+   "var motivationText;"
+  ],
+  [
+   "motivationScore = 'Strong (8-10/10)';\n                ",
+   ""
+  ],
+  [
+   "motivationScore = 'Moderate (6-7/10)';\n                ",
+   ""
+  ],
+  [
+   "motivationScore = 'Low (3-5/10)';\n                ",
+   ""
+  ],
+  [
+   "var readinessScore, readinessText;",
+   "var readinessText;"
+  ],
+  [
+   "readinessScore = 'High (8-10/10)';\n                ",
+   ""
+  ],
+  [
+   "readinessScore = 'Moderate (6-7/10)';\n                ",
+   ""
+  ],
+  [
+   "readinessScore = 'Low (3-5/10)';\n                ",
+   ""
+  ],
+  [
+   "document.getElementById('motivationScore').textContent = 'Score: ' + motivationScore;",
+   "document.getElementById('motivationScore').textContent = 'You picked: ' + document.querySelector('label[for=\"' + motivation.id + '\"]').textContent.replace(/^[A-F]\\. /, '');"
+  ],
+  [
+   "document.getElementById('readinessScore').textContent = 'Score: ' + readinessScore;",
+   "document.getElementById('readinessScore').textContent = yesCount + ' / ' + readinessQuestions.length;"
+  ],
+  [
+   "'You have a genuine reason for wanting this job. This is great! People who care about helping others are happier as CNAs.'",
+   "'This part of the work interests you. Many people who like helping others are happy as CNAs.'"
+  ],
+  [
+   "'You are thinking about your future, which is good. But make sure you actually want to help people. CNA is only a stepping stone if you like the work.'",
+   "'There is something here you may want to explore. You are thinking about your future. Many people use CNA work as a step toward nursing, so look at the daily work of helping people, too.'"
+  ],
+  [
+   "'You mainly want this job for money. That is okay, but CNA is hard work. Make sure you understand what you are getting into before you start.'",
+   "'Pay matters. Look at the whole job too, including the hard parts. CNA work is hard work, so learn what a shift is really like before you start.'"
+  ],
+  [
+   "'You understand the hard parts of CNA work and you think you can handle it. That is a good sign.'",
+   "'Many of these activities sound comfortable to you. You know about the hard parts of CNA work.'"
+  ],
+  [
+   "'You answered yes to most questions. But think about the ones you said no to. Are those things you can learn to handle?'",
+   "'Some activities sound comfortable; others may need a closer look. Think about the ones you said no to. Are those things you could learn or get support with?'"
+  ],
+  [
+   "'You said no to many hard parts of CNA work. This might not be the right job for you. Maybe talk to a working CNA first.'",
+   "'You have things to learn about. That is a normal part of exploring. Talking to a working CNA can show you what the hard parts are really like.'"
+  ],
+  [
+   "var recommendations = '';\n\n            if (motValue === 'money' && yesCount < 5) {\n                recommendations = '<div class=\"list-item\">This might not be the best job for you. Think about your real goals.</div><div class=\"list-item\">Talk to a working CNA about what the job is really like.</div><div class=\"list-item\">Maybe explore other jobs that also pay well but are easier.</div>';\n            } else if (motValue === 'money' && yesCount >= 7) {\n                recommendations = '<div class=\"list-item\">You want this job for money, but you think you can do the work. That is okay.</div><div class=\"list-item\">Remember: the money is only good if you can stay in the job.</div><div class=\"list-item\">Start training soon if you decide to go for it.</div>';\n            } else if (motValue === 'strong' || motValue === 'family') {\n                recommendations = '<div class=\"list-item\">You have good reasons for this choice.</div><div class=\"list-item\">Your motivation will help you finish training and stay in the job.</div>';\n                if (yesCount >= 7) {\n                    recommendations += '<div class=\"list-item\">You are ready. Look for a training program near you.</div><div class=\"list-item\">You can start in any CNA setting that appeals to you — hospitals, clinics, home health, assisted living. Your first job does not lock you in. Try different settings to see what fits.</div>';\n                } else {\n                    recommendations += '<div class=\"list-item\">But think about the hard parts you said no to. Can you handle them?</div>';\n                }\n            } else {\n                recommendations = '<div class=\"list-item\">You are still exploring, which is smart.</div><div class=\"list-item\">Talk to working CNAs and nurses.</div><div class=\"list-item\">Shadow someone for a day if you can.</div><div class=\"list-item\">Then decide if this is really for you.</div>';\n            }\n\n            ",
+   "var recommendations = '';\n\n            if (motValue === 'money') {\n                recommendations = '<div class=\"list-item\">Pay matters. Look at the whole job too, including the hard parts.</div><div class=\"list-item\">Remember: the pay adds up most when it is a job you can keep doing.</div>';\n            } else if (motValue === 'strong' || motValue === 'family') {\n                recommendations = '<div class=\"list-item\">You picked a reason that matters to you.</div><div class=\"list-item\">Reasons like this can help people finish training and stay in the job.</div>';\n            } else if (motValue === 'pathway') {\n                recommendations = '<div class=\"list-item\">Many people use CNA work as a first step toward nursing.</div>';\n            } else {\n                recommendations = '<div class=\"list-item\">You are still exploring. That is a normal place to be.</div>';\n            }\n\n            if (yesCount >= 7) {\n                recommendations += '<div class=\"list-item\">One possible route: look for a training program near you.</div><div class=\"list-item\">You can start in any CNA setting that appeals to you — hospitals, clinics, home health, assisted living. Your first job does not lock you in. Try different settings to see what fits.</div>';\n            } else if (yesCount >= 5) {\n                recommendations += '<div class=\"list-item\">Think about the hard parts you said no to. Ask a working CNA how people learn to handle them.</div><div class=\"list-item\">Shadow someone for a day if you can.</div>';\n            } else {\n                recommendations += '<div class=\"list-item\">Talk to a working CNA about what the job is really like.</div><div class=\"list-item\">Talk to working CNAs and nurses.</div><div class=\"list-item\">Shadow someone for a day if you can.</div><div class=\"list-item\">You can also look at other jobs, and compare what you learned.</div>';\n            }\n\n            "
+  ],
+  [
+   "var nextStep = '';\n            var futValue = future.value;\n\n            if (motValue === 'money' && yesCount < 5) {\n                nextStep = '<div class=\"report-content\">This might not be the right first step. Explore other jobs.</div>';\n            } else if (yesCount >= 7) {\n                nextStep = '<div class=\"report-content\"><strong>YES - CNA could be right for you.</strong> You have the motivation and readiness. Look for a training program now.</div>';\n            } else if (yesCount >= 5 && motValue !== 'money') {\n                nextStep = '<div class=\"report-content\"><strong>MAYBE - Talk to people first.</strong> You seem interested, but have some questions. Interview a working CNA before you decide.</div>';\n            } else {\n                nextStep = '<div class=\"report-content\"><strong>THINK ABOUT IT - This might not be the right job.</strong> You said no to many hard parts. Maybe explore other careers first.</div>';\n            }\n\n            ",
+   "var nextStep = '';\n            var futValue = future.value;\n\n            if (yesCount >= 7) {\n                nextStep = '<div class=\"report-content\">Many parts of CNA work appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route: look for a training program near you.</div>';\n            } else if (yesCount >= 5) {\n                nextStep = '<div class=\"report-content\">Some parts of this work interest you, and you may have some questions. Interview a working CNA before you decide.</div>';\n            } else {\n                nextStep = '<div class=\"report-content\">Some of the hard parts did not sound comfortable, and that is good to know. You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too.</div>';\n            }\n\n            "
+  ],
+  [
+   "This tool will help you decide if becoming a Certified Nursing Assistant is the right choice for you.",
+   "This tool will help you explore what Certified Nursing Assistant work is like."
+  ],
+  [
+   "<h3>CNA is a good choice if:</h3>",
+   "<h3>CNA may be worth exploring if:</h3>"
+  ],
+  [
+   "<h3>Think twice if:</h3>",
+   "<h3>Look closer if:</h3>"
+  ],
+  [
+   "<li>You only want this job because you need money fast</li>",
+   "<li>You need a job fast and have not yet looked at the hard parts</li>"
+  ],
+  [
+   "This will help you decide if being a CNA is right for you.",
+   "This will help you explore what CNA work is like."
+  ],
+  [
+   "If you picked A or C, you may be happier in this job. If you picked D, think about whether you can handle hard work. If you picked E, that is okay! Explore more before you decide.",
+   "Every reason on this list is a real reason people choose this work. If you are not sure yet, that is okay! Explore more before you decide."
+  ]
+ ],
+ "dental-assistant": [
+  [
+   "<h2>Your Dental Assistant Assessment Results</h2>",
+   "<h2>Your Dental Assistant Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            \n            if (readinessScore >= 7) readinessLevel = 'High Readiness';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate Readiness';\n            else readinessLevel = 'Low Readiness';\n            \n",
+   ""
+  ],
+  [
+   "'You look ready to pursue dental assisting. This could be a great fit for you. Start researching programs in your area and schedule visits to dental offices to talk to assistants.'",
+   "'Many parts of dental assisting appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route: start researching programs in your area and schedule visits to dental offices to talk to assistants.'"
+  ],
+  [
+   "'You could be successful as a dental assistant, but think through the challenges first. The physical demands and patient interaction are real. Shadow a dental assistant for a day to see if it still appeals to you.'",
+   "'Dental assisting could be worth a closer look. Think through the challenges too. The physical demands and patient interaction are real. One possible route: shadow a dental assistant for a day to see if it still appeals to you.'"
+  ],
+  [
+   "'Dental assisting might work, but you have some uncertainties. That\\'s okay. Explore other healthcare careers too. Get clear on whether you really want to do this before committing time and money to training.'",
+   "'Some parts of this work interest you, and you may have some questions. That\\'s okay. You can also look at other healthcare careers. Get clear on what you want before committing time and money to training.'"
+  ],
+  [
+   "'Based on your answers, dental assisting may not be your best path right now. That doesn\\'t mean never — but explore other options. Healthcare has many entry points. Find one that excites you.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too. Healthcare has many entry points. Find one that excites you.'"
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You picked: ${document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim()}</p>"
+  ],
+  [
+   "                <div class=\"score-bar\">\n                    <div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div>\n                </div>\n",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel}: ${readinessScore} / 8 Questions</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "'You\\'re ready for the challenges.' : readinessScore >= 5 ? 'You have most of what it takes, but some areas need thought.' : 'Some significant concerns that need addressing first.'",
+   "'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'"
+  ],
+  [
+   "<h3>Your Next Steps</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "But it's not for everyone. Be honest with yourself about",
+   "Every job has hard parts. Be honest with yourself about"
+  ],
+  [
+   "A good fit means you'll stay longer, advance faster, and actually enjoy your work.",
+   "Work that interests you can help you stay longer, advance faster, and actually enjoy your work."
+  ],
+  [
+   "let motivationScore = 0;\n            if (motivation === 'passion') motivationScore = 10;\n            else if (motivation === 'interest') motivationScore = 8;\n            else if (motivation === 'stability') motivationScore = 6;\n            else if (motivation === 'schedule') motivationScore = 5;\n            else if (motivation === 'money') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 6 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5 && readinessScore >= 3) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation. You understand why you want this.' : motivationScore >= 6 ? 'Good motivation. You have solid reasons.' : 'Mixed motivation. Be clear before you commit.'}</p>",
+   "<p>${({passion: 'This part of the work interests you.', interest: 'There is something here you may want to explore.', stability: 'Pay and job security matter. Look at the whole job too, including the hard parts.', schedule: 'A daytime schedule matters. Look at the whole job too, including the hard parts.', money: 'Someone suggested it, and that is a fine place to start. Pay matters. Look at the whole job too, including the hard parts.', unsure: 'It is fine to be curious without knowing yet.'})[motivation] || 'It is fine to be curious without knowing yet.'}</p>"
+  ],
+  [
+   "<p class=\"subtitle\">Explore whether this career path is right for you</p>",
+   "<p class=\"subtitle\">Explore what this career path involves</p>"
+  ],
+  [
+   "This assessment will help you decide if dental assisting is a good fit for you.",
+   "This assessment will help you explore what dental assisting is like."
+  ]
+ ],
+ "dental-hygienist": [
+  [
+   "<h2>Your Dental Hygienist Assessment Results</h2>",
+   "<h2>Your Dental Hygienist Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "'You\\'re an excellent candidate for dental hygiene school. Apply now. You have the motivation, readiness, and likely the support system. Talk to practicing hygienists first, but then commit.'",
+   "'Many parts of dental hygiene appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route: talk to practicing hygienists, then decide with your counselor whether to apply.'"
+  ],
+  [
+   "'You\\'re ready. Dental hygiene could be a great fit. Make sure you\\'ve got the financing figured out, and then apply. The investment pays off.'",
+   "'Dental hygiene could be worth a closer look. One possible route: get the financing figured out, then decide with your counselor whether to apply. The investment can pay off.'"
+  ],
+  [
+   "'You could succeed, but some uncertainties need addressing. Make sure you understand the time and financial commitment.",
+   "'Some parts of this work interest you, and you may have some questions. Make sure you understand the time and financial commitment."
+  ],
+  [
+   "'You might want dental hygiene, but think harder about your motivation and readiness first. The school years will be hard if you\\'re not committed. Maybe start as a dental assistant and reconsider.'",
+   "'Some parts of this work interest you. The school years take real time and effort, so learn what they are like first. You can also start as a dental assistant and look at hygiene again later.'"
+  ],
+  [
+   "'Dental hygiene doesn\\'t seem like the right fit right now based on your answers. That\\'s okay. Explore other careers. Come back to this if your motivation changes.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too. You can come back to this later.'"
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You picked: ${document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim()}</p>"
+  ],
+  [
+   "                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>\n",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "'You\\'re ready for the demands.' : readinessScore >= 5 ? 'You have most of what you need, but address the gaps.' : 'Some significant barriers to address first.'",
+   "'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "<li>Make a decision: Are you all-in? If yes, apply by the deadline.</li>",
+   "<li>Decide with your counselor whether to apply. If you do, apply by the deadline.</li>"
+  ],
+  [
+   "But don\\'t do it for money alone. Do it because you care about prevention and you want to be part of a healthcare profession. That\\'s what makes it worth it.",
+   "Pay matters. Look at the whole job too, including the hard parts. Many hygienists say caring about prevention and being part of a healthcare profession is what makes it worth it."
+  ],
+  [
+   "let motivationScore = 0;\n            if (motivation === 'passion') motivationScore = 10;\n            else if (motivation === 'upgrade') motivationScore = 9;\n            else if (motivation === 'interest') motivationScore = 7;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'parent') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 6 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation. You have clear reasons.' : motivationScore >= 6 ? 'Good motivation, but think about your deeper \"why.\"' : 'Uncertain motivation. Be clear before committing 2-4 years.'}</p>",
+   "<p>${({passion: 'This part of the work interests you.', interest: 'There is something here you may want to explore. Think about your deeper \"why.\"', salary: 'Pay matters. Look at the whole job too, including the hard parts.', upgrade: 'Moving up from dental assisting is a common path into hygiene.', parent: 'Someone recommended it, and that is a fine place to start. Learn more before committing 2-4 years.', unsure: 'It is fine to be curious without knowing yet. Learn more before committing 2-4 years.'})[motivation] || 'It is fine to be curious without knowing yet.'}</p>"
+  ],
+  [
+   "<p class=\"subtitle\">Is this advanced dental role right for your future?</p>",
+   "<p class=\"subtitle\">Explore what this advanced dental role involves</p>"
+  ],
+  [
+   "This assessment will help you explore whether becoming a dental hygienist is a good fit for you.",
+   "This assessment will help you explore what becoming a dental hygienist involves."
+  ]
+ ],
+ "diagnostic-medical-sonographer": [
+  [
+   "<h2>Your Diagnostic Medical Sonographer Assessment Results</h2>",
+   "<h2>Your Diagnostic Medical Sonographer Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${document.querySelector('input[name=\"motivation\"]:checked').parentElement.textContent.replace(/\\s+/g, ' ').trim()}</em></p>"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Decent motivation, but clarify your reasons.' : 'Uncertain motivation. Be clear before committing.'}</p>",
+   "<p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "<p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most of what you need.' : 'Some gaps to address.'}</p>",
+   "<p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Bottom Line</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'tech') motivationScore = 10;\n            else if (motivation === 'healthcare') motivationScore = 9;\n            else if (motivation === 'career') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'suggest') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "if (motivationScore >= 7 && readinessScore >= 6) {",
+   "if (readinessScore >= 6) {"
+  ],
+  [
+   "if (motivationScore >= 6 && readinessScore >= 5) {",
+   "if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "// comments are escaped inside generateReport with cfEsc"
+  ],
+  [
+   "'You\\'re an excellent fit for diagnostic medical sonography. Apply to a program. You have the technical mind, commitment, and interest.'",
+   "'Many parts of diagnostic medical sonography appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. You can also start looking at sonography programs.'"
+  ],
+  [
+   "'You\\'re well-positioned for this career. The education is manageable. The career is solid. Apply.'",
+   "'Diagnostic medical sonography could be worth a closer look. One possible route: look into sonography programs. The education is manageable, and the career is solid.'"
+  ],
+  [
+   "'You could succeed, but clarify your motivation first. Is it really about the technology and helping patients? Or just the paycheck? Make sure you\\'re committed before enrolling.'",
+   "'Some parts of this work interest you. Think about what draws you most: the technology, helping patients, or the pay. All of these matter. Talking with a sonographer before enrolling can help you decide.'"
+  ],
+  [
+   "'This might work for you, but explore other imaging careers (X-ray, MRI, CT) first. Find what excites you most.'",
+   "'Some parts of this work interest you. You can also look at other imaging careers (X-ray, MRI, CT) and compare what interests you most.'"
+  ],
+  [
+   "'Diagnostic medical sonography doesn\\'t seem to be your best fit right now. Explore other technical or healthcare careers instead.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other technical or healthcare careers too.'"
+  ],
+  [
+   "<li>Make a decision. Apply if this is right for you.</li>",
+   "<li>Decide with your counselor whether to apply.</li>"
+  ],
+  [
+   "It\\'s not for everyone. But if you love technology AND care about people AND can stay focused under pressure, this is a great career.",
+   "The work asks you to use technology, care about people, and stay focused under pressure."
+  ],
+  [
+   "the training required, and whether this career fits your goals.",
+   "the training required, and what parts of this work interest you."
+  ]
+ ],
+ "emergency-medical-technician": [
+  [
+   "<h2>Your EMT Assessment Results</h2>",
+   "<h2>Your EMT Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${document.querySelector('input[name=\"motivation\"]:checked').parentElement.textContent.replace(/\\s+/g, ' ').trim()}</em></p>"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong calling.' : motivationScore >= 6 ? 'Good interest, clarify your motivation.' : 'Uncertain. Be clear before starting.'}</p>",
+   "<p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "<p>${readinessScore >= 7 ? 'You\\'re ready for the challenges.' : readinessScore >= 5 ? 'You have most of what you need.' : 'Some significant gaps.'}</p>",
+   "<p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'calling') motivationScore = 10;\n            else if (motivation === 'healthcare') motivationScore = 8;\n            else if (motivation === 'career') motivationScore = 7;\n            else if (motivation === 'salary') motivationScore = 5;\n            else if (motivation === 'suggest') motivationScore = 4;\n            else motivationScore = 2;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 6) {",
+   "if (readinessScore >= 6) {"
+  ],
+  [
+   "if (motivationScore >= 6 && readinessScore >= 5) {",
+   "if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "// comments are escaped inside generateReport with cfEsc"
+  ],
+  [
+   "'You\\'re an excellent candidate for EMT work. You have the calling and the readiness. Apply to a program. This is your path.'",
+   "'Many parts of EMT work appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. You can also start looking at EMT training programs.'"
+  ],
+  [
+   "'You can do EMT work. You have the motivation and readiness. But think about the emotional toll. Make sure you have support systems in place.'",
+   "'EMT work could be worth a closer look. One possible route: talk with working EMTs and look at training programs. Think about the emotional toll of the work, and plan the support systems you would lean on.'"
+  ],
+  [
+   "'You could be an EMT, but some concerns exist. Address the gaps. Consider ride-alongs first. Be sure about this before committing.'",
+   "'Some parts of this work interest you. A ride-along is a good way to see the job up close. Look back at the activities you were unsure about and learn more about them before committing.'"
+  ],
+  [
+   "'EMT work might not be your best fit. The mental demands are high. You need genuine motivation or you\\'ll burn out. Explore other healthcare careers.'",
+   "'Some parts of this work interest you. The mental demands of EMT work are high, so ask working EMTs how they avoid burnout. You can also look at other healthcare careers.'"
+  ],
+  [
+   "'This doesn\\'t seem right for you at this time. The trauma and stress are real. Find a career that excites you more.'",
+   "'You do not need a clear answer yet. The trauma and stress in this work are real. Look back at the parts that interested you, and compare a few other careers too.'"
+  ],
+  [
+   "<li>Apply if you\\'re committed</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "But it takes a toll. Make sure you\\'re ready. Make sure you have support. Make sure you understand what you\\'re signing up for. If you do, and you\\'re still in — welcome to EMS. We need good people.",
+   "But it takes a toll. Learn what the job really asks of you, and think about the support you would have. EMS needs good people."
+  ],
+  [
+   "and whether this high-stakes career is right for you.",
+   "and what this high-stakes career is like day to day."
+  ]
+ ],
+ "lpn": [
+  [
+   "<h2>Your LPN Assessment Report</h2>",
+   "<h2>Your LPN Assessment Report</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "<h3>Your Motivation Score</h3>",
+   "<h3>What interests you</h3>"
+  ],
+  [
+   "<h3>Your Readiness Score</h3>",
+   "<h3>Activities that sound comfortable</h3>"
+  ],
+  [
+   "<h3>Your Next Step</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "var motivationScore, motivationText;",
+   "var motivationText;"
+  ],
+  [
+   "motivationScore = 'Strong (8-10/10)';\n                ",
+   ""
+  ],
+  [
+   "motivationScore = 'Moderate (6-7/10)';\n                ",
+   ""
+  ],
+  [
+   "motivationScore = 'Low (3-5/10)';\n                ",
+   ""
+  ],
+  [
+   "var readinessScore, readinessText;",
+   "var readinessText;"
+  ],
+  [
+   "readinessScore = 'High (8-10/10)';\n                ",
+   ""
+  ],
+  [
+   "readinessScore = 'Moderate (6-7/10)';\n                ",
+   ""
+  ],
+  [
+   "readinessScore = 'Low (3-5/10)';\n                ",
+   ""
+  ],
+  [
+   "document.getElementById('motivationScore').textContent = 'Score: ' + motivationScore;",
+   "document.getElementById('motivationScore').textContent = 'You picked: ' + document.querySelector('label[for=\"' + motivation.id + '\"]').textContent.replace(/^[A-F]\\. /, '');"
+  ],
+  [
+   "document.getElementById('readinessScore').textContent = 'Score: ' + readinessScore;",
+   "document.getElementById('readinessScore').textContent = yesCount + ' / ' + readinessQuestions.length;"
+  ],
+  [
+   "'You have genuine reasons for pursuing LPN. This strong motivation will help you complete the program and succeed in the role.'",
+   "'This part of the work interests you. Reasons that matter to you can help you finish the program.'"
+  ],
+  [
+   "'Your motivation is solid. You are thinking strategically about your career path. Make sure you are ready for the time commitment.'",
+   "'There is something here you may want to explore. You are thinking about your career path. Look at the time LPN school takes, too.'"
+  ],
+  [
+   "'Money alone may not sustain you through a year of training. LPN school requires dedication to coursework and clinical rotations. Consider whether healthcare is truly right for you.'",
+   "'Pay matters. Look at the whole job too, including the hard parts. LPN school takes about a year of coursework and clinical rotations, so learn what that year is like.'"
+  ],
+  [
+   "'You understand the demands of LPN training and work, and you feel ready. You are a strong candidate for an LPN program.'",
+   "'Many of these activities sound comfortable to you. You know about the demands of LPN training and work.'"
+  ],
+  [
+   "'You have some concerns about specific aspects of LPN training or work. Think about the areas where you answered \"no.\" Can you work around them?'",
+   "'Some activities sound comfortable; others may need a closer look. Think about the areas where you answered \"no.\" Ask how people work around them or get support.'"
+  ],
+  [
+   "'You have serious doubts about your readiness for LPN work or training. Consider talking to working LPNs or starting as a CNA first.'",
+   "'You have things to learn about. That is a normal part of exploring. Talking to working LPNs, or starting as a CNA first, can help you learn more.'"
+  ],
+  [
+   "var recommendations = '';\n\n            if (motValue === 'money' && yesCount < 5) {\n                recommendations = '<div class=\"list-item\">LPN might not be the best fit right now.</div><div class=\"list-item\">Consider starting as a CNA to explore healthcare first.</div><div class=\"list-item\">Talk to working LPNs about the day-to-day reality.</div>';\n            } else if (motValue === 'strong' || motValue === 'family') {\n                recommendations = '<div class=\"list-item\">You have strong motivation for nursing.</div>';\n                if (yesCount >= 7) {\n                    recommendations += '<div class=\"list-item\">You are ready. Look at LPN programs near you.</div><div class=\"list-item\">Ask about scholarships and tuition help from healthcare employers.</div><div class=\"list-item\">Consider starting within the next 6-12 months.</div>';\n                } else {\n                    recommendations += '<div class=\"list-item\">Think carefully about the areas where you have concerns.</div><div class=\"list-item\">Talk to LPNs about whether these are real barriers or manageable challenges.</div>';\n                }\n            } else if (motValue === 'pathway') {\n                recommendations = '<div class=\"list-item\">LPN is a smart stepping stone to RN.</div><div class=\"list-item\">Ask LPN programs if they have bridge agreements with RN programs.</div><div class=\"list-item\">Work as an LPN while building your academic skills for RN.</div><div class=\"list-item\">Many employers pay for LPN-to-RN education.</div>';\n            } else {\n                recommendations = '<div class=\"list-item\">You are still exploring, which is smart.</div><div class=\"list-item\">Work as a CNA or medical assistant for 6-12 months first.</div><div class=\"list-item\">Shadowing an LPN can help you decide if this is right for you.</div><div class=\"list-item\">Then commit to the LPN program when you are sure.</div>';\n            }\n\n            ",
+   "var recommendations = '';\n\n            if (motValue === 'money') {\n                recommendations = '<div class=\"list-item\">Pay matters. Look at the whole job too, including the hard parts.</div><div class=\"list-item\">Talk to working LPNs about the day-to-day reality.</div>';\n            } else if (motValue === 'strong' || motValue === 'family') {\n                recommendations = '<div class=\"list-item\">Nursing work interests you.</div>';\n            } else if (motValue === 'pathway') {\n                recommendations = '<div class=\"list-item\">Many people use LPN as a stepping stone to RN.</div><div class=\"list-item\">Ask LPN programs if they have bridge agreements with RN programs.</div><div class=\"list-item\">Work as an LPN while building your academic skills for RN.</div><div class=\"list-item\">Many employers pay for LPN-to-RN education.</div>';\n            } else {\n                recommendations = '<div class=\"list-item\">You are still exploring. That is a normal place to be.</div><div class=\"list-item\">Shadowing an LPN can help you learn what the work is like.</div>';\n            }\n\n            if (yesCount >= 7) {\n                recommendations += '<div class=\"list-item\">One possible route: look at LPN programs near you.</div><div class=\"list-item\">Ask about scholarships and tuition help from healthcare employers.</div><div class=\"list-item\">Consider starting within the next 6-12 months.</div>';\n            } else if (yesCount >= 5) {\n                recommendations += '<div class=\"list-item\">Think about the areas where you said no.</div><div class=\"list-item\">Talk to LPNs about whether these are real barriers or manageable challenges.</div>';\n            } else {\n                recommendations += '<div class=\"list-item\">Consider working as a CNA or medical assistant for 6-12 months to explore healthcare first.</div><div class=\"list-item\">Talk to working LPNs about the day-to-day reality.</div><div class=\"list-item\">Then think about the LPN program when you feel sure.</div>';\n            }\n\n            "
+  ],
+  [
+   "var nextStep = '';\n\n            if (motValue === 'money' && yesCount < 5) {\n                nextStep = '<div class=\"report-content\">Start with a different career path. Nursing might not align with your goals or values.</div>';\n            } else if (yesCount >= 7) {\n                nextStep = '<div class=\"report-content\"><strong>YES - You are ready for LPN training.</strong> You have the motivation and readiness. Start researching programs now.</div>';\n            } else if (yesCount >= 5 && motValue !== 'money') {\n                nextStep = '<div class=\"report-content\"><strong>MAYBE - You have potential.</strong> Address your concerns first. Talk to working LPNs. Then apply to programs.</div>';\n            } else {\n                nextStep = '<div class=\"report-content\"><strong>THINK ABOUT IT - Start with CNA first.</strong> Get healthcare experience before committing to about a year of LPN training.</div>';\n            }\n\n            ",
+   "var nextStep = '';\n\n            if (yesCount >= 7) {\n                nextStep = '<div class=\"report-content\">Many parts of LPN work appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route: start researching programs now.</div>';\n            } else if (yesCount >= 5) {\n                nextStep = '<div class=\"report-content\">LPN work could be worth a closer look. One possible route: ask about your questions first. Talk to working LPNs. Then decide with your counselor whether to apply to programs.</div>';\n            } else {\n                nextStep = '<div class=\"report-content\">Some parts of this work interest you. One possible route: start with CNA work first. Get healthcare experience before committing to about a year of LPN training.</div>';\n            }\n\n            "
+  ],
+  [
+   "This tool will help you decide if becoming a Licensed Practical Nurse is the right choice for you.",
+   "This tool will help you explore what Licensed Practical Nurse work is like."
+  ],
+  [
+   "<h3>LPN is a good choice if:</h3>",
+   "<h3>LPN may be worth exploring if:</h3>"
+  ],
+  [
+   "<li>You are ready for about a year of focused study and training</li>",
+   "<li>You are open to about a year of focused study and training</li>"
+  ],
+  [
+   "<h3>Think twice if:</h3>",
+   "<h3>Look closer if:</h3>"
+  ],
+  [
+   "Then decide what's right for you.",
+   "Then decide what you want to do next."
+  ],
+  [
+   "This will help you decide if becoming an LPN is right for you.",
+   "This will help you explore what LPN work is like."
+  ]
+ ],
+ "medical-assistant": [
+  [
+   "<h2>Your Medical Assistant Assessment Results</h2>",
+   "<h2>Your Medical Assistant Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${document.querySelector('input[name=\"motivation\"]:checked').parentElement.textContent.replace(/\\s+/g, ' ').trim()}</em></p>"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, but clarify.' : 'Uncertain. Be clear first.'}</p>",
+   "<p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "<p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Bottom Line</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'patient') motivationScore = 10;\n            else if (motivation === 'entry') motivationScore = 9;\n            else if (motivation === 'variety') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'suggest') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "if (motivationScore >= 7 && readinessScore >= 6) {",
+   "if (readinessScore >= 6) {"
+  ],
+  [
+   "if (motivationScore >= 6 && readinessScore >= 5) {",
+   "if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "// comments are escaped inside generateReport with cfEsc"
+  ],
+  [
+   "'You\\'re well-suited for medical assisting. Apply to a program or start looking for MA positions. You have the motivation and readiness.'",
+   "'Many parts of medical assisting appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. You can also look at training programs or MA job postings.'"
+  ],
+  [
+   "'Medical assisting could work for you. The variety and patient contact appeal to you. Make sure you can handle the pace and stand all day.'",
+   "'Medical assisting could be worth a closer look. One possible route: shadow an MA to see the variety and patient contact up close. Notice how the fast pace and standing all day feel to you.'"
+  ],
+  [
+   "'You could do this work. Some uncertainties exist. Consider shadowing an MA or starting on-the-job. See if you still want it after observing.'",
+   "'Some parts of this work interest you. Consider shadowing an MA or starting on-the-job. See how you feel after watching the work up close.'"
+  ],
+  [
+   "'Medical assisting might not be your best fit. Your motivation is mixed. Explore other healthcare entry points before committing.'",
+   "'Some parts of this work interest you. You can also look at other healthcare entry points and compare them before committing.'"
+  ],
+  [
+   "'This role doesn\\'t seem right for you based on your answers. Look for different healthcare or non-healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too, in healthcare or outside it.'"
+  ],
+  [
+   "Make sure you\\'re ready for that before you commit. If you are, you\\'ll do great.",
+   "Think about how that kind of day would feel to you before you commit."
+  ],
+  [
+   "what it takes to succeed, and whether it's right for you.",
+   "what it takes to succeed, and what parts of the work interest you."
+  ]
+ ],
+ "mri-technologist": [
+  [
+   "<h2>Your MRI Technologist Assessment Results</h2>",
+   "<h2>Your MRI Technologist Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${document.querySelector('input[name=\"motivation\"]:checked').parentElement.textContent.replace(/\\s+/g, ' ').trim()}</em></p>"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Be clear first.'}</p>",
+   "<p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "<p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'tech') motivationScore = 10;\n            else if (motivation === 'specialty') motivationScore = 9;\n            else if (motivation === 'healthcare') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 7;\n            else if (motivation === 'suggest') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 6) {",
+   "if (readinessScore >= 6) {"
+  ],
+  [
+   "if (motivationScore >= 7 && readinessScore >= 5) {",
+   "if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "// comments are escaped inside generateReport with cfEsc"
+  ],
+  [
+   "'You\\'re an excellent fit for MRI technology. You have the technical mind and the readiness. Apply to a program. This is your path.'",
+   "'Many parts of MRI technology appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. You can also start looking at training programs.'"
+  ],
+  [
+   "'MRI technology is a strong option for you. You have the skills and interest. Pursue this.'",
+   "'MRI technology could be worth a closer look. One possible route: talk with MRI technologists and look into training programs.'"
+  ],
+  [
+   "'You could succeed in MRI technology. Some readiness gaps exist. Shadow an MRI tech first to confirm.'",
+   "'Some parts of this work interest you. Shadow an MRI tech to see the work up close, and look back at the activities you were unsure about.'"
+  ],
+  [
+   "'MRI might work, but explore other imaging careers (X-ray, ultrasound, CT). Find what excites you most.'",
+   "'Some parts of this work interest you. You can also look at other imaging careers (X-ray, ultrasound, CT) and compare what interests you most.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other technical or healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other technical or healthcare careers too.'"
+  ],
+  [
+   "<li>Apply if this is right for you</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "But it requires technical precision, attention to safety, and patience with patients. Make sure this is genuinely what you want. If it is, you\\'ll have a solid, respected career.",
+   "The work asks for technical precision, attention to safety, and patience with patients. It can be a solid, respected career."
+  ],
+  [
+   "the training required, and whether it's right for you.",
+   "the training required, and what parts of this work interest you."
+  ]
+ ],
+ "nuclear-medicine-technologist": [
+  [
+   "<h2>Your Nuclear Medicine Technologist Assessment Results</h2>",
+   "<h2>Your Nuclear Medicine Technologist Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${document.querySelector('input[name=\"motivation\"]:checked').parentElement.textContent.replace(/\\s+/g, ' ').trim()}</em></p>"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Explore more.'}</p>",
+   "<p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "<p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'science') motivationScore = 10;\n            else if (motivation === 'tech') motivationScore = 9;\n            else if (motivation === 'diagnosis') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 7;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 6) {",
+   "if (readinessScore >= 6) {"
+  ],
+  [
+   "if (motivationScore >= 7 && readinessScore >= 5) {",
+   "if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "// comments are escaped inside generateReport with cfEsc"
+  ],
+  [
+   "'You\\'re an excellent fit for nuclear medicine. Your technical interest and safety-first mindset are perfect. Pursue this.'",
+   "'Many parts of nuclear medicine appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step.'"
+  ],
+  [
+   "'Nuclear medicine is a strong choice for you. You have the motivation and readiness. Go for it.'",
+   "'Nuclear medicine could be worth a closer look. One possible route: talk with nuclear medicine technologists and look into programs in nearby states.'"
+  ],
+  [
+   "'You could succeed in nuclear medicine. Some gaps remain. Shadow a nuclear med tech to be sure.'",
+   "'Some parts of this work interest you. Shadow a nuclear med tech to see the work up close.'"
+  ],
+  [
+   "'Nuclear medicine might work, but explore other imaging careers too. Find your best fit.'",
+   "'Some parts of this work interest you. You can also look at other imaging careers and compare them.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other healthcare or technical careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare or technical careers too.'"
+  ],
+  [
+   "But it's not for everyone. Make sure you're genuinely interested in the science and the responsibility before committing. If you are, you\\'ll have a fulfilling, secure career.",
+   "Think about how you feel about the science and the responsibility before committing. It can be a fulfilling, secure career."
+  ],
+  [
+   "and whether you're suited for this work.",
+   "and what parts of this work interest you."
+  ]
+ ],
+ "occupational-therapy-assistant": [
+  [
+   "<h2>Your Occupational Therapy Assistant Assessment Results</h2>",
+   "<h2>Your Occupational Therapy Assistant Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${document.querySelector('input[name=\"motivation\"]:checked').parentElement.textContent.replace(/\\s+/g, ' ').trim()}</em></p>"
+  ],
+  [
+   "<p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Explore more.'}</p>",
+   "<p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   ""
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>"
+  ],
+  [
+   "<p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'meaningful') motivationScore = 10;\n            else if (motivation === 'help') motivationScore = 10;\n            else if (motivation === 'rehabilitation') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 6) {",
+   "if (readinessScore >= 6) {"
+  ],
+  [
+   "if (motivationScore >= 7 && readinessScore >= 5) {",
+   "if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "// comments are escaped inside generateReport with cfEsc"
+  ],
+  [
+   "'You\\'re an excellent fit for occupational therapy. Purpose + readiness + compassion. Apply to a program.'",
+   "'Many parts of occupational therapy appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. You can also look at OTA programs, like the one at NDSCS.'"
+  ],
+  [
+   "'Occupational therapy is a strong option. You have genuine motivation and good readiness factors.'",
+   "'Occupational therapy could be worth a closer look. One possible route: shadow an OTA and learn about OTA training programs.'"
+  ],
+  [
+   "'You could succeed in OTA work. Volunteer first to experience the daily reality.'",
+   "'Some parts of this work interest you. Volunteer first to experience the daily reality.'"
+  ],
+  [
+   "'This might work, but explore other therapy careers too. Make sure your motivation is genuine.'",
+   "'Some parts of this work interest you. You can also look at other therapy careers and compare them.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other healthcare paths.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare careers too.'"
+  ],
+  [
+   "<li>Apply if you\\'re confident in your passion</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "If helping others regain independence deeply motivates you, this could be your ideal career.",
+   "If helping others regain independence matters to you, this work is worth exploring."
+  ],
+  [
+   "and whether it fits your values and skills.",
+   "and how it connects to your values and skills."
+  ]
+ ],
+ "ophthalmic-medical-technician": [
+  [
+   "<h2>Your Ophthalmic Medical Technician Assessment Results</h2>",
+   "<h2>Your Ophthalmic Medical Technician Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'patient') motivationScore = 10;\n            else if (motivation === 'eyes') motivationScore = 9;\n            else if (motivation === 'office') motivationScore = 8;\n            else if (motivation === 'quick') motivationScore = 7;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>\n                <p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Explore more.'}</p>\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${cfEsc(document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim())}</em></p>\n                <p>${motivation === 'recommend' ? 'Ideas from other people can be a good place to start. Notice which parts interest you.' : motivation === 'explore' ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "'You\\'re an excellent fit for ophthalmic technology. Strong patient focus and readiness. Talk with eye clinics about training now.'",
+   "'Many parts of ophthalmic technology appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. Eye clinics can also tell you about training.'"
+  ],
+  [
+   "'Ophthalmic technology is a strong option for you. You have the skills and interest to succeed.'",
+   "'Ophthalmic technology could be worth a closer look. One possible route: ask local eye clinics about on-the-job training.'"
+  ],
+  [
+   "'You could do well in this field. Some areas need strengthening. Shadow an eye clinic to confirm.'",
+   "'Some parts of this work interest you. Shadow at an eye clinic to see the work up close.'"
+  ],
+  [
+   "'This might work, but explore other patient care roles too. Find what truly fits.'",
+   "'You can also look at other patient care roles. Comparing a few careers can help you learn what you like.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare careers too.'"
+  ],
+  [
+   "<li>Apply if this feels right</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "this could be your perfect fit.",
+   "this work may be worth a closer look."
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 8 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        \n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "            if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "            // Comments are escaped inside generateReport with cfEsc."
+  ],
+  [
+   "<h2><span class=\"section-number\">10</span>Part 2: Are You Ready?</h2>",
+   "<h2><span class=\"section-number\">10</span>Part 2: Things You Could Try</h2>"
+  ],
+  [
+   "and whether it's right for you.</p>",
+   "and which parts of it interest you.</p>"
+  ]
+ ],
+ "paramedic": [
+  [
+   "<h2>Your Paramedic Assessment Results</h2>",
+   "<h2>Your Paramedic Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'help') motivationScore = 9;\n            else if (motivation === 'action') motivationScore = 9;\n            else if (motivation === 'first') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>\n                <p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Explore more.'}</p>\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${cfEsc(document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim())}</em></p>\n                <p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : motivation === 'recommend' ? 'Ideas from other people can be a good place to start. Notice which parts interest you.' : motivation === 'explore' ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "'You\\'re an excellent fit for paramedicine. You have the drive, the physical readiness, and mental toughness. Pursue this.'",
+   "'Many parts of paramedicine appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step.'"
+  ],
+  [
+   "'Paramedicine is a strong option. You have the motivation and most readiness factors. Start with EMT training.'",
+   "'Paramedicine could be worth a closer look. One possible route: start with EMT training.'"
+  ],
+  [
+   "'You could succeed in paramedicine. Ride along first. See if the reality matches your expectations.'",
+   "'Some parts of this work interest you. Ride along first. See how the real work compares with what you expect.'"
+  ],
+  [
+   "'This might work, but explore other emergency careers. Make sure you\\'re genuinely ready for this level of intensity.'",
+   "'You can also look at other emergency careers. A ride-along can show you how intense this work can be.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare careers too.'"
+  ],
+  [
+   "<li>Apply if you\\'re truly ready for this challenge</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "Paramedicine is not for everyone.",
+   "Paramedicine is hard work."
+  ],
+  [
+   "But you must be honest about whether you can handle the trauma and death that come with it.",
+   "It also means facing trauma and death. Think about how you would handle that, and talk it over with people who do this work."
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 8 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        \n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "            if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "            // Comments are escaped inside generateReport with cfEsc."
+  ],
+  [
+   "<h2><span class=\"section-number\">10</span>Part 2: Are You Ready?</h2>",
+   "<h2><span class=\"section-number\">10</span>Part 2: Things You Could Try</h2>"
+  ],
+  [
+   "and whether you have what it takes.</p>",
+   "and which parts of it interest you.</p>"
+  ]
+ ],
+ "phlebotomy": [
+  [
+   "<p>Personalized Results & Recommendations</p>",
+   "<p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "<h3>Your Motivation Score</h3>",
+   "<h3>What interests you</h3>"
+  ],
+  [
+   "<h3>Your Readiness Score</h3>",
+   "<h3>Activities that sound comfortable</h3>"
+  ],
+  [
+   "<h3>Your Overall Fit for Phlebotomy</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "<strong>Motivation Score: ${motivationScore}/10 (${motivationLevel})</strong><br>",
+   "<strong>You picked:</strong> ${document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim()}<br>"
+  ],
+  [
+   "\"You show strong, genuine interest in healthcare work and helping patients. This is the best foundation for a sustainable career in phlebotomy. Your passion for the work itself will carry you through challenging days.\"",
+   "\"This part of the work interests you. Caring about the work itself can help on hard days.\""
+  ],
+  [
+   "\"You see phlebotomy as a strategic step toward another healthcare goal (nursing, etc.). This is excellent—phlebotomy provides real healthcare experience while you prepare for your next level.\"",
+   "\"There is something here you may want to explore. You see phlebotomy as a step toward another healthcare goal (nursing, etc.). Phlebotomy gives real healthcare experience while you prepare for your next level.\""
+  ],
+  [
+   "\"You're looking for stable employment with good pay. That's a practical approach. Make sure you're also genuinely interested in the work itself—pure money motivation can lead to burnout in healthcare.\"",
+   "\"Pay matters. Look at the whole job too, including the hard parts. Learn what the daily work is like, too. Healthcare work can be tiring, so it helps to know the hard parts ahead of time.\""
+  ],
+  [
+   "\"Family influence has sparked your interest. That's a good connection, but make sure YOU genuinely want this career, not just that it's familiar to your family.\"",
+   "\"There is something here you may want to explore. Family sparked your interest. Think about which parts of the work interest you, too.\""
+  ],
+  [
+   "\"You're testing whether healthcare is right for you. That's smart—phlebotomy is a great way to explore healthcare work before committing to longer training like nursing.\"",
+   "\"It is fine to be curious without knowing yet. Phlebotomy is one way to explore healthcare work before committing to longer training like nursing.\""
+  ],
+  [
+   "\"You're still unsure about your direction. That's normal. Consider shadowing",
+   "\"It is fine to be curious without knowing yet. Consider shadowing"
+  ],
+  [
+   "<strong>Readiness Score: ${readinessCount}/8 (${readinessLevel})</strong><br>",
+   "<strong>${readinessCount} / 8</strong><br>"
+  ],
+  [
+   "\"You possess the skills and characteristics needed for success in phlebotomy. You're comfortable with the physical and emotional demands, you follow procedures carefully, and you have the reliability employers need.\"",
+   "\"Many of these activities sound comfortable to you, including the physical and emotional demands, following procedures carefully, and being reliable.\""
+  ],
+  [
+   "\"You have moderate readiness for phlebotomy. You have most of the key skills, but there may be one or two areas to work on. These can often be developed through training and practice.\"",
+   "\"Some activities sound comfortable; others may need a closer look. Skills like these can often be developed through training and practice.\""
+  ],
+  [
+   "\"You have some concerns about readiness for phlebotomy. This doesn't mean you can't do it, but there are genuine challenges you should address before moving forward. Talk with your counselor about these areas.\"",
+   "\"You have things to learn about. That is a normal part of exploring. Talk with your counselor about the activities that did not sound comfortable.\""
+  ],
+  [
+   "<strong>🎯 Excellent Fit!</strong><br>",
+   "<strong>🎯 Worth a closer look</strong><br>"
+  ],
+  [
+   "You show both strong motivation for healthcare work and high readiness for the demands of phlebotomy. You're well-positioned to succeed in this career. Your next step is to enroll in a training program and pursue national certification.",
+   "Many parts of phlebotomy appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route: enroll in a training program and pursue national certification."
+  ],
+  [
+   "<strong>✅ Good Fit</strong><br>",
+   "<strong>✅ Something to look into</strong><br>"
+  ],
+  [
+   "You have genuine interest in phlebotomy and the readiness skills needed to succeed. This could be a solid career choice for you. Take time to make sure it's the right path, and address any readiness concerns before starting.",
+   "Phlebotomy could be worth a closer look. One possible route: take time to learn more, and ask about any activities that did not sound comfortable before starting."
+  ],
+  [
+   "You have some interest, but there are also questions about your readiness or motivation. Before investing in training, take time to explore whether this is truly the right path for you.",
+   "Some parts of this work interest you, and you may have some questions. Before investing in training, take time to explore what the work is really like."
+  ],
+  [
+   "<strong>⚠️ Reconsider</strong><br>",
+   "<strong>💭 Keep exploring</strong><br>"
+  ],
+  [
+   "Your motivation or readiness scores suggest phlebotomy may not be the best fit for you right now. There are genuine concerns about whether you'd thrive in this work. Talk with your counselor about alternative career paths that better match your interests and abilities.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too. Talk with your counselor about other career paths that use your interests and strengths."
+  ],
+  [
+   "\"Talk with your counselor about your readiness concerns\"",
+   "\"Talk with your counselor about any activities that did not sound comfortable\""
+  ],
+  [
+   "\"Consider shadowing or interning with a phlebotomist to test your fit\"",
+   "\"Consider shadowing or interning with a phlebotomist to see what the work is like\""
+  ],
+  [
+   "\"Develop any skill areas where you scored lower (e.g., physical demands, early morning shifts)\"",
+   "\"Build skills in any areas that did not sound comfortable (e.g., physical demands, early morning shifts)\""
+  ],
+  [
+   "\"Address specific readiness concerns (physical demands, early starts, patient interaction)\"",
+   "\"Ask about the activities that did not sound comfortable (physical demands, early starts, patient interaction)\""
+  ],
+  [
+   "\"Clarify your motivation: are you drawn to the work, or to the job security?\"",
+   "\"Think about what draws you: the work, the job security, or both?\""
+  ],
+  [
+   "\"Explore alternative healthcare careers that might better match your interests\"",
+   "\"You can also look at other healthcare careers and compare them\""
+  ],
+  [
+   "\"Have a detailed conversation with your counselor about your concerns\"",
+   "\"Have a detailed conversation with your counselor about your questions\""
+  ],
+  [
+   "\"If you're still interested, consider addressing specific readiness concerns before pursuing phlebotomy\"",
+   "\"If you are still interested, learn more about the activities that did not sound comfortable\""
+  ],
+  [
+   "            // Calculate scores\n            let motivationScore = 0;\n            let motivationLevel = '';\n\n            if (motivation === 'healthcare') {\n                motivationScore = 9;\n                motivationLevel = 'Strong Healthcare Motivation';\n            } else if (motivation === 'pathway') {\n                motivationScore = 8;\n                motivationLevel = 'Strong (Strategic Pathway)';\n            } else if (motivation === 'practical') {\n                motivationScore = 6;\n                motivationLevel = 'Moderate (Practical Focus)';\n            } else if (motivation === 'family') {\n                motivationScore = 7;\n                motivationLevel = 'Moderate (Family Influence)';\n            } else if (motivation === 'exploring') {\n                motivationScore = 5;\n                motivationLevel = 'Exploratory';\n            } else {\n                motivationScore = 3;\n                motivationLevel = 'Uncertain';\n            }\n\n            let readinessLevel = '';\n            if (readinessCount >= 7) {\n                readinessLevel = 'High Readiness';\n            } else if (readinessCount >= 5) {\n                readinessLevel = 'Moderate Readiness';\n            } else {\n                readinessLevel = 'Lower Readiness';\n            }\n\n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 8 && readinessCount >= 7) {",
+   "if (readinessCount >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 6 && readinessCount >= 5) {",
+   "} else if (readinessCount >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5 || readinessCount >= 5) {",
+   "} else if (readinessCount >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s) { return String(s).replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; }); }\n\n        function generateReport() {"
+  ],
+  [
+   "<strong>Your Future Plans:</strong><br>\"${futurePlans}\"",
+   "<strong>Your Future Plans:</strong><br>\"${cfEsc(futurePlans)}\""
+  ],
+  [
+   "<p>Discover if a career in phlebotomy is right for you</p>",
+   "<p>Explore what a career in phlebotomy is like</p>"
+  ],
+  [
+   "<h2>Is Phlebotomy Right For You?</h2>",
+   "<h2>Exploring Phlebotomy</h2>"
+  ],
+  [
+   "<h3>Red Flags - This Might NOT Be For You If...</h3>",
+   "<h3>Look Closer If...</h3>"
+  ],
+  [
+   "<h3>Green Lights - This Might Be Great For You If...</h3>",
+   "<h3>This May Be Worth Exploring If...</h3>"
+  ]
+ ],
+ "physical-therapist-assistant": [
+  [
+   "<h2>Your Physical Therapist Assistant Assessment Results</h2>",
+   "<h2>Your Physical Therapist Assistant Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'help') motivationScore = 9;\n            else if (motivation === 'hands') motivationScore = 9;\n            else if (motivation === 'health') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>\n                <p>${motivationScore >= 8 ? 'Strong drive toward this career.' : motivationScore >= 6 ? 'Good interest, clarify your reasons.' : 'Uncertain. Explore more.'}</p>\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${cfEsc(document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim())}</em></p>\n                <p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : motivation === 'recommend' ? 'Ideas from other people can be a good place to start. Notice which parts interest you.' : motivation === 'explore' ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'You\\'re well-prepared.' : readinessScore >= 5 ? 'You have most key skills.' : 'Some gaps to address.'}</p>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "'You\\'re an excellent fit for physical therapy. You have the compassion, the physical capability, and the attention to detail. This is your career.'",
+   "'Many parts of physical therapy appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step.'"
+  ],
+  [
+   "'Physical therapy is a strong option. You have the motivation and most readiness factors. Apply to PTA programs.'",
+   "'Physical therapy could be worth a closer look. One possible route: look into accredited PTA programs.'"
+  ],
+  [
+   "'You could succeed in this field. Volunteer at a therapy clinic first to confirm this is the right fit.'",
+   "'Some parts of this work interest you. Volunteer at a therapy clinic to see the work up close.'"
+  ],
+  [
+   "'This might work, but explore other healthcare careers. Make sure you\\'re genuinely drawn to the hands-on patient care.'",
+   "'You can also look at other healthcare careers. Volunteering can show you how the hands-on patient care feels.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Look at other healthcare or helping professions.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare or helping careers too.'"
+  ],
+  [
+   "If you're patient, detail-oriented, and genuinely want to help people recover, this is a career that fits.",
+   "If you like being patient, paying attention to detail, and helping people recover, this career may be worth a closer look."
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 8 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        \n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "            if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "            // Comments are escaped inside generateReport with cfEsc."
+  ],
+  [
+   "<h2><span class=\"section-number\">10</span>Part 2: Are You Ready?</h2>",
+   "<h2><span class=\"section-number\">10</span>Part 2: Things You Could Try</h2>"
+  ]
+ ],
+ "radiographic-technology": [
+  [
+   "<p>Personalized Results & Recommendations</p>",
+   "<p>Personalized Results & Recommendations</p>\n                    <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "<h3>Your Motivation Score</h3>",
+   "<h3>What interests you</h3>"
+  ],
+  [
+   "<h3>Your Readiness Score</h3>",
+   "<h3>Activities that sound comfortable</h3>"
+  ],
+  [
+   "<h3>Your Overall Fit for Radiographic Technology</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "motivationScore = 9;\n                motivationLevel = 'Strong Healthcare Passion';",
+   "motivationLevel = 'Healthcare and helping people';"
+  ],
+  [
+   "motivationScore = 8;\n                motivationLevel = 'Strong (Strategic Pathway)';",
+   "motivationLevel = 'A step toward another healthcare career';"
+  ],
+  [
+   "motivationScore = 6;\n                motivationLevel = 'Moderate (Practical Focus)';",
+   "motivationLevel = 'Pay, benefits, and job security';"
+  ],
+  [
+   "motivationScore = 7;\n                motivationLevel = 'Moderate (Family Influence)';",
+   "motivationLevel = 'Family members in healthcare';"
+  ],
+  [
+   "motivationScore = 5;\n                motivationLevel = 'Exploratory';",
+   "motivationLevel = 'Exploring careers';"
+  ],
+  [
+   "motivationScore = 3;\n                motivationLevel = 'Uncertain';",
+   "motivationLevel = 'Still figuring it out';"
+  ],
+  [
+   "            let readinessLevel = '';\n            if (readinessCount >= 7) {\n                readinessLevel = 'High Readiness';\n            } else if (readinessCount >= 5) {\n                readinessLevel = 'Moderate Readiness';\n            } else {\n                readinessLevel = 'Lower Readiness';\n            }\n\n",
+   ""
+  ],
+  [
+   "<strong>Motivation Score: ${motivationScore}/10 (${motivationLevel})</strong><br>",
+   "<strong>You said: ${motivationLevel}</strong><br>"
+  ],
+  [
+   "You show strong, genuine interest in healthcare work and patient care. This is the best foundation for a sustainable career. Your passion for helping people will carry you through challenging days and stressful situations.",
+   "Healthcare work and patient care interest you. Caring about people can help carry you through challenging days and stressful situations."
+  ],
+  [
+   "This is excellent—radiography provides real healthcare experience",
+   "Radiography provides real healthcare experience"
+  ],
+  [
+   "That's a practical approach. Make sure you're also genuinely interested in the work itself—pure money motivation can lead to burnout in healthcare.",
+   "Pay matters. Look at the whole job too, including the hard parts."
+  ],
+  [
+   "Family influence has sparked your interest. That's a good connection, but make sure YOU genuinely want this career, not just that it's familiar to your family.",
+   "Family members in healthcare sparked your interest. That's a good connection. Think about which parts of the work interest you, too."
+  ],
+  [
+   "You're testing whether healthcare is right for you. That's smart—radiography is a great way",
+   "You're exploring whether healthcare work interests you. Radiography is a great way"
+  ],
+  [
+   "<strong>Readiness Score: ${readinessCount}/8 (${readinessLevel})</strong><br>",
+   "<strong>${readinessCount} / 8 activities sound comfortable to you</strong><br>"
+  ],
+  [
+   "You possess the skills and characteristics needed for success in radiography. You're detail-oriented, physically capable, willing to pursue certification, and have the reliability employers need.",
+   "Many of these activities sound comfortable to you. Talking with a radiographer can show you how they fit into a real workday."
+  ],
+  [
+   "You have moderate readiness for radiography. You have most of the key skills, but there may be one or two areas to work on. These can often be developed through training and practice.",
+   "Some activities sound comfortable; others may need a closer look. Many of these can be developed through training and practice."
+  ],
+  [
+   "You have some concerns about readiness for radiography. This doesn't mean you can't do it, but there are genuine challenges you should address before moving forward. Talk with your counselor about these areas.",
+   "You have things to learn about. That is a normal part of exploring. Talk with your counselor about these areas."
+  ],
+  [
+   "<strong>🎯 Excellent Fit!</strong><br>\n                    You show both strong motivation for healthcare work and high readiness for the demands of radiography. You're well-positioned to succeed in this career. Your next step is to enroll in a radiography program and pursue ARRT certification.",
+   "<strong>🎯 Many parts appeal to you</strong><br>\n                    Many parts of radiographic technology appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route is a radiography program and ARRT certification."
+  ],
+  [
+   "<strong>✅ Good Fit</strong><br>\n                    You have genuine interest in radiography and the readiness skills needed to succeed. This could be a solid career choice for you. Take time to make sure it's the right path, and address any readiness concerns before starting.",
+   "<strong>✅ Worth a closer look</strong><br>\n                    Radiographic technology could be worth a closer look. Some parts of the work interest you, and many activities sound comfortable. Take time to learn more, and look closely at any activities you were unsure about before starting."
+  ],
+  [
+   "<strong>🤔 Explore More</strong><br>\n                    You have some interest, but there are also questions about your readiness or motivation. Before investing in training, take time to explore whether this is truly the right path for you.",
+   "<strong>🤔 Explore More</strong><br>\n                    Some parts of this work interest you. Before investing in training, take time to learn more about the work and how it feels to you."
+  ],
+  [
+   "<strong>⚠️ Reconsider</strong><br>\n                    Your motivation or readiness scores suggest radiography may not be the best fit for you right now. There are genuine concerns about whether you'd thrive in this work. Talk with your counselor about alternative career paths that better match your interests and abilities.",
+   "<strong>💭 Keep Exploring</strong><br>\n                    You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too. Talk with your counselor about other career paths that match your interests."
+  ],
+  [
+   "\"Talk with your counselor about your readiness concerns\"",
+   "\"Talk with your counselor about the activities you were unsure about\""
+  ],
+  [
+   "\"Consider shadowing or doing a brief internship with a radiographer to test your fit\"",
+   "\"Consider shadowing or doing a brief internship with a radiographer to see the work up close\""
+  ],
+  [
+   "\"Develop any skill areas where you scored lower (physical demands, detailed procedures, early shifts)\"",
+   "\"Learn more about the activities you were unsure about (physical demands, detailed procedures, early shifts)\""
+  ],
+  [
+   "\"Address specific readiness concerns (physical demands, detailed procedures, patient interaction, radiation comfort)\"",
+   "\"Learn more about the activities you were unsure about (physical demands, detailed procedures, patient interaction, radiation comfort)\""
+  ],
+  [
+   "\"Clarify your motivation: are you drawn to the work, or to the job security and pay?\"",
+   "\"Think about what draws you: the work itself, the job security and pay, or both. All of these matter.\""
+  ],
+  [
+   "\"Explore alternative healthcare careers that might better match your interests (phlebotomy, ultrasound, nursing)\"",
+   "\"You can also look at other healthcare careers (phlebotomy, ultrasound, nursing)\""
+  ],
+  [
+   "\"Have a detailed conversation with your counselor about your concerns\"",
+   "\"Have a detailed conversation with your counselor about what you noticed\""
+  ],
+  [
+   "\"If you're still interested, consider addressing specific readiness concerns before pursuing radiography\"",
+   "\"If you're still interested, learn more about the activities you were unsure about before pursuing radiography\""
+  ],
+  [
+   "            let motivationScore = 0;\n",
+   ""
+  ],
+  [
+   "if (motivationScore >= 8 && readinessCount >= 7) {",
+   "if (readinessCount >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 6 && readinessCount >= 5) {",
+   "} else if (readinessCount >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5 || readinessCount >= 5) {",
+   "} else if (readinessCount >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        function generateReport() {"
+  ],
+  [
+   "\"${futurePlans}\"",
+   "\"${cfEsc(futurePlans)}\""
+  ],
+  [
+   "<p>Discover if a career in medical imaging is right for you</p>",
+   "<p>Explore what a career in medical imaging is really like</p>"
+  ],
+  [
+   "what training you'll need, and whether it might be a good career path for you.",
+   "what training you'll need, and what parts of the work interest you."
+  ],
+  [
+   "<li>Your personal fit for this career</li>",
+   "<li>What interests you about this career</li>"
+  ],
+  [
+   "<h2>Is Radiographic Technology Right For You?</h2>",
+   "<h2>Thinking About Radiographic Technology</h2>"
+  ],
+  [
+   "<h2>Your Readiness for Radiographic Technology</h2>",
+   "<h2>Everyday Activities in Radiographic Technology</h2>"
+  ],
+  [
+   "These questions help us understand whether you have the skills and characteristics that make successful radiographic technologists. Be honest!",
+   "These questions help you think about the everyday activities in this work. There are no wrong answers. Answer honestly."
+  ]
+ ],
+ "respiratory-therapist": [
+  [
+   "<h2>Your Respiratory Therapist Assessment Results</h2>",
+   "<h2>Your Respiratory Therapist Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'science') motivationScore = 9;\n            else if (motivation === 'critical') motivationScore = 9;\n            else if (motivation === 'tech') motivationScore = 8;\n            else if (motivation === 'save') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 6;\n            else motivationScore = 3;\n            \n            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>\n                <p>${motivationScore >= 8 ? 'Strong passion for respiratory therapy.' : motivationScore >= 6 ? 'Good interest, clarify your drive.' : 'Uncertain. Explore more.'}</p>\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${cfEsc(document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim())}</em></p>\n                <p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : motivation === 'recommend' ? 'Ideas from other people can be a good place to start. Notice which parts interest you.' : motivation === 'explore' ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'You\\'re well-prepared for this.' : readinessScore >= 5 ? 'You have most key skills.' : 'Some significant gaps exist.'}</p>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "'You\\'re an excellent fit for respiratory therapy. You have the scientific mind, the emotional resilience, and the technical aptitude. Pursue this.'",
+   "'Many parts of respiratory therapy appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step.'"
+  ],
+  [
+   "'Respiratory therapy is a strong option. You have the motivation and most readiness factors. Apply to programs.'",
+   "'Respiratory therapy could be worth a closer look. One possible route: look into accredited RT programs in ND and bordering states.'"
+  ],
+  [
+   "'You could succeed. Spend time observing RTs in an ICU first. See if critical care is truly your environment.'",
+   "'Some parts of this work interest you. Spend time observing RTs in an ICU to see what critical care is like.'"
+  ],
+  [
+   "'This might work, but explore other healthcare careers. Make sure you\\'re ready for ICU stress and shift work.'",
+   "'You can also look at other healthcare careers. Think about how ICU stress and shift work would fit your life.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Look at other healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare careers too.'"
+  ],
+  [
+   "Respiratory therapy is for people who thrive in critical care.",
+   "Respiratory therapy is critical care work."
+  ],
+  [
+   "If you have the science background, the emotional resilience, and the technical mind, this is a career that pays well and offers real purpose.",
+   "It takes science knowledge, emotional resilience, and a technical mind. It is a career that pays well and offers real purpose."
+  ],
+  [
+   "if (motivationScore >= 8 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 8 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        \n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "            if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "            // Comments are escaped inside generateReport with cfEsc."
+  ],
+  [
+   "<h2><span class=\"section-number\">10</span>Part 2: Are You Ready?</h2>",
+   "<h2><span class=\"section-number\">10</span>Part 2: Things You Could Try</h2>"
+  ]
+ ],
+ "rn": [
+  [
+   "<h2>Your RN Assessment Report</h2>",
+   "<h2>Your RN Assessment Report</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "<h3>Your Motivation Score</h3>",
+   "<h3>What interests you</h3>"
+  ],
+  [
+   "<h3>Your Readiness Score</h3>",
+   "<h3>Activities that sound comfortable</h3>"
+  ],
+  [
+   "<h3>Your Next Step</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "var motivationScore, motivationText;",
+   "var motivationText;"
+  ],
+  [
+   "motivationScore = 'Strong (8-10/10)';\n                ",
+   ""
+  ],
+  [
+   "motivationScore = 'Moderate (6-7/10)';\n                ",
+   ""
+  ],
+  [
+   "motivationScore = 'Low (3-5/10)';\n                ",
+   ""
+  ],
+  [
+   "var readinessScore, readinessText;",
+   "var readinessText;"
+  ],
+  [
+   "readinessScore = 'High (8-10/10)';\n                ",
+   ""
+  ],
+  [
+   "readinessScore = 'Moderate (6-7/10)';\n                ",
+   ""
+  ],
+  [
+   "readinessScore = 'Low (3-5/10)';\n                ",
+   ""
+  ],
+  [
+   "document.getElementById('motivationScore').textContent = 'Score: ' + motivationScore;",
+   "document.getElementById('motivationScore').textContent = 'You picked: ' + document.querySelector('label[for=\"' + motivation.id + '\"]').textContent.replace(/^[A-F]\\. /, '');"
+  ],
+  [
+   "document.getElementById('readinessScore').textContent = 'Score: ' + readinessScore;",
+   "document.getElementById('readinessScore').textContent = yesCount + ' / ' + readinessQuestions.length;"
+  ],
+  [
+   "'You have genuine reasons for pursuing RN. This strong motivation will help you complete the program and succeed in the demanding role.'",
+   "'This part of the work interests you. Reasons that matter to you can help you finish the program.'"
+  ],
+  [
+   "'Your motivation is solid. You are thinking strategically about your career path. Make sure you are ready for 2-4 years of school and clinical practice.'",
+   "'There is something here you may want to explore. You are thinking about your career path. Look at what 2-4 years of school and clinical practice will take, too.'"
+  ],
+  [
+   "'Money alone may not sustain you through 2-4 years of intensive RN training. RN school requires dedication to complex coursework, labs, and clinical rotations. Consider whether healthcare is truly right for you.'",
+   "'Pay matters. Look at the whole job too, including the hard parts. RN school takes 2-4 years of coursework, labs, and clinical rotations, so learn what those years are like.'"
+  ],
+  [
+   "'You understand the demands of RN training and work, and you feel ready. You are a strong candidate for an RN program. You have the skills to succeed.'",
+   "'Many of these activities sound comfortable to you. You know about the demands of RN training and work.'"
+  ],
+  [
+   "'You have some concerns about specific aspects of RN training or work. Think about the areas where you answered \"no.\" Can you develop those skills or work around them?'",
+   "'Some activities sound comfortable; others may need a closer look. Think about the areas where you answered \"no.\" These are skills people can build, or get support with.'"
+  ],
+  [
+   "'You have serious doubts about your readiness for RN work or training. Consider starting as a CNA or LPN first to build skills and confidence, then pursue RN later.'",
+   "'You have things to learn about. That is a normal part of exploring. One possible route: start as a CNA or LPN first to build skills and confidence, then look at RN later.'"
+  ],
+  [
+   "var recommendations = '';\n\n            if (motValue === 'money' && yesCount < 5) {\n                recommendations = '<div class=\"list-item\">RN might not be the best fit right now.</div><div class=\"list-item\">Consider starting as a CNA or LPN to explore healthcare first.</div><div class=\"list-item\">Talk to working RNs about the day-to-day reality and emotional demands.</div><div class=\"list-item\">Think about whether you want to be a nurse or just want a good paycheck.</div>';\n            } else if (motValue === 'strong' || motValue === 'family') {\n                recommendations = '<div class=\"list-item\">You have strong motivation for nursing.</div>';\n                if (yesCount >= 7) {\n                    recommendations += '<div class=\"list-item\">You are ready. Look at RN programs near you.</div><div class=\"list-item\">Ask about scholarships, tuition help, and employer support.</div><div class=\"list-item\">Choose between ADN (2 years, faster entry) or BSN (4 years, more advancement).</div><div class=\"list-item\">Consider starting within the next 6-12 months.</div>';\n                } else {\n                    recommendations += '<div class=\"list-item\">Think carefully about the areas where you have concerns.</div><div class=\"list-item\">Talk to working RNs about whether these are real barriers or manageable challenges.</div><div class=\"list-item\">Consider starting as LPN first, then bridging to RN if you want more independence.</div>';\n                }\n            } else if (motValue === 'pathway') {\n                recommendations = '<div class=\"list-item\">RN is the right goal for you.</div><div class=\"list-item\">If you are a CNA or LPN, ask about bridge programs to RN.</div><div class=\"list-item\">Many employers pay for tuition if you commit to working there after graduation.</div><div class=\"list-item\">Choose ADN for faster entry or BSN for better long-term advancement.</div>';\n            } else {\n                recommendations = '<div class=\"list-item\">You are still exploring, which is smart.</div><div class=\"list-item\">Work as a CNA or LPN for 1-2 years first.</div><div class=\"list-item\">Shadow working RNs to understand the role and demands.</div><div class=\"list-item\">Build your science skills and grades if needed.</div><div class=\"list-item\">Then commit to RN when you are certain.</div>';\n            }\n\n            ",
+   "var recommendations = '';\n\n            if (motValue === 'money') {\n                recommendations = '<div class=\"list-item\">Pay matters. Look at the whole job too, including the hard parts.</div><div class=\"list-item\">Think about which parts of nursing work interest you, besides the pay.</div><div class=\"list-item\">Talk to working RNs about the day-to-day reality and emotional demands.</div>';\n            } else if (motValue === 'strong' || motValue === 'family') {\n                recommendations = '<div class=\"list-item\">Nursing work interests you.</div>';\n            } else if (motValue === 'pathway') {\n                recommendations = '<div class=\"list-item\">RN work offers more independence and responsibility.</div><div class=\"list-item\">If you are a CNA or LPN, ask about bridge programs to RN.</div><div class=\"list-item\">Many employers pay for tuition if you commit to working there after graduation.</div>';\n            } else {\n                recommendations = '<div class=\"list-item\">You are still exploring. That is a normal place to be.</div><div class=\"list-item\">Shadow working RNs to understand the role and demands.</div>';\n            }\n\n            if (yesCount >= 7) {\n                recommendations += '<div class=\"list-item\">One possible route: look at RN programs near you.</div><div class=\"list-item\">Ask about scholarships, tuition help, and employer support.</div><div class=\"list-item\">Choose between ADN (2 years, faster entry) or BSN (4 years, more advancement).</div><div class=\"list-item\">Consider starting within the next 6-12 months.</div>';\n            } else if (yesCount >= 5) {\n                recommendations += '<div class=\"list-item\">Think about the areas where you said no.</div><div class=\"list-item\">Talk to working RNs about whether these are real barriers or manageable challenges.</div><div class=\"list-item\">Consider starting as LPN first, then bridging to RN if you want more independence.</div>';\n            } else {\n                recommendations += '<div class=\"list-item\">Consider working as a CNA or LPN for 1-2 years to explore healthcare first.</div><div class=\"list-item\">Shadow working RNs to understand the role and demands.</div><div class=\"list-item\">Build your science skills and grades if needed.</div><div class=\"list-item\">Then think about RN school when you feel sure.</div>';\n            }\n\n            "
+  ],
+  [
+   "var nextStep = '';\n\n            if (motValue === 'money' && yesCount < 5) {\n                nextStep = '<div class=\"report-content\">Consider a different career path. Healthcare nursing may not align with your goals or readiness.</div>';\n            } else if (yesCount >= 7) {\n                nextStep = '<div class=\"report-content\"><strong>YES - You are ready for RN training.</strong> You have the motivation and readiness. Start researching programs now.</div>';\n            } else if (yesCount >= 5 && motValue !== 'money') {\n                nextStep = '<div class=\"report-content\"><strong>MAYBE - You have potential.</strong> Address your concerns first. Talk to working RNs. Build your skills. Then apply to programs.</div>';\n            } else {\n                nextStep = '<div class=\"report-content\"><strong>THINK ABOUT IT - Start with CNA or LPN first.</strong> Get healthcare experience and build confidence before committing to 2-4 years of RN training.</div>';\n            }\n\n            ",
+   "var nextStep = '';\n\n            if (yesCount >= 7) {\n                nextStep = '<div class=\"report-content\">Many parts of RN work appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. One possible route: start researching programs now.</div>';\n            } else if (yesCount >= 5) {\n                nextStep = '<div class=\"report-content\">RN work could be worth a closer look. One possible route: ask about your questions first. Talk to working RNs. Build your skills. Then decide with your counselor whether to apply to programs.</div>';\n            } else {\n                nextStep = '<div class=\"report-content\">Some parts of this work interest you. One possible route: start with CNA or LPN work first. Get healthcare experience and build confidence before committing to 2-4 years of RN training.</div>';\n            }\n\n            "
+  ],
+  [
+   "This tool will help you decide if becoming a Registered Nurse is the right choice for you.",
+   "This tool will help you explore what Registered Nurse work is like."
+  ],
+  [
+   "<h3>RN is a good choice if:</h3>",
+   "<h3>RN may be worth exploring if:</h3>"
+  ],
+  [
+   "<li>You are ready for 2-4 years of focused study and clinical practice</li>",
+   "<li>You are open to 2-4 years of focused study and clinical practice</li>"
+  ],
+  [
+   "<h3>Think twice if:</h3>",
+   "<h3>Look closer if:</h3>"
+  ],
+  [
+   "Then decide what's right for you.",
+   "Then decide what you want to do next."
+  ],
+  [
+   "This will help you decide if becoming an RN is right for you.",
+   "This will help you explore what RN work is like."
+  ]
+ ],
+ "surgical-technologist": [
+  [
+   "<h2>Your Surgical Technologist Assessment Results</h2>",
+   "<h2>Your Surgical Technologist Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'critical') motivationScore = 10;\n            else if (motivation === 'trauma') motivationScore = 9;\n            else if (motivation === 'surgical') motivationScore = 8;\n            else if (motivation === 'salary') motivationScore = 7;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>\n                <p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Explore more.'}</p>\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${cfEsc(document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim())}</em></p>\n                <p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : motivation === 'recommend' ? 'Ideas from other people can be a good place to start. Notice which parts interest you.' : motivation === 'explore' ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "'You\\'re an excellent fit for surgical technology. You have the mental toughness and readiness. Apply now.'",
+   "'Many parts of surgical technology appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step.'"
+  ],
+  [
+   "'Surgical technology is a strong option. You have the motivation and most readiness factors. Pursue this.'",
+   "'Surgical technology could be worth a closer look. One possible route: research surgical tech programs in ND, and check program costs and financial aid.'"
+  ],
+  [
+   "'You could succeed, but some readiness gaps exist. Observe OR work first. See if reality matches expectations.'",
+   "'Some parts of this work interest you. Observe OR work first. See how the real work compares with what you expect.'"
+  ],
+  [
+   "'This might work, but explore other healthcare roles. Surgical tech is intense. Find your right fit.'",
+   "'You can also look at other healthcare roles. Surgical tech is intense, so comparing a few careers can help.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare careers too.'"
+  ],
+  [
+   "<li>Start application process if confident</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "Surgical technology is not for everyone.",
+   "Surgical technology is hard work."
+  ],
+  [
+   "But you must be sure this is right for you before committing. The OR isn\\'t a place for second-guessing.",
+   "Take time to learn about the work before you commit. Watching real OR work is a good way to do that."
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 8 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        \n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "            if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "            // Comments are escaped inside generateReport with cfEsc."
+  ],
+  [
+   "<h2><span class=\"section-number\">10</span>Part 2: Are You Ready?</h2>",
+   "<h2><span class=\"section-number\">10</span>Part 2: Things You Could Try</h2>"
+  ],
+  [
+   "and whether you're ready for it.</p>",
+   "and which parts of it interest you.</p>"
+  ]
+ ],
+ "veterinary-technologist": [
+  [
+   "<h2>Your Veterinary Technologist Assessment Results</h2>",
+   "<h2>Your Veterinary Technologist Assessment Results</h2>\n            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>"
+  ],
+  [
+   "            let motivationScore = 0;\n            if (motivation === 'animals') motivationScore = 10;\n            else if (motivation === 'healthcare') motivationScore = 8;\n            else if (motivation === 'hands-on') motivationScore = 7;\n            else if (motivation === 'salary') motivationScore = 6;\n            else if (motivation === 'recommend') motivationScore = 4;\n            else motivationScore = 3;\n            \n            let readinessLevel = '';\n            if (readinessScore >= 7) readinessLevel = 'Strong';\n            else if (readinessScore >= 5) readinessLevel = 'Moderate';\n            else readinessLevel = 'Low';\n            \n",
+   ""
+  ],
+  [
+   "<h3>Motivation Score: ${motivationScore} / 10</h3>\n                <p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, clarify.' : 'Uncertain. Explore more.'}</p>\n                <div class=\"score-bar\"><div class=\"score-fill\" style=\"width: ${motivationScore * 10}%\"></div></div>",
+   "<h3>What interests you</h3>\n                <p>You said: <em>${cfEsc(document.querySelector('input[name=\"motivation\"]:checked').parentNode.textContent.trim())}</em></p>\n                <p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : motivation === 'recommend' ? 'Ideas from other people can be a good place to start. Notice which parts interest you.' : motivation === 'explore' ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>"
+  ],
+  [
+   "<h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'You\\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>",
+   "<h3>Activities that sound comfortable: ${readinessScore} / 8</h3>\n                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>"
+  ],
+  [
+   "<h3>The Verdict</h3>",
+   "<h3>Something to explore</h3>"
+  ],
+  [
+   "'You\\'re an excellent fit for veterinary technology. True passion for animals + readiness. Apply to a program.'",
+   "'Many parts of veterinary technology appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step.'"
+  ],
+  [
+   "'Veterinary technology is a strong option for you. You have the motivation and most readiness factors.'",
+   "'Veterinary technology could be worth a closer look. One possible route: look into the NDSU Veterinary Technology program (Fargo) or an accredited online program.'"
+  ],
+  [
+   "'You could succeed in vet tech. Work at a clinic first to experience the reality before committing.'",
+   "'Some parts of this work interest you. Work at a clinic first to see the real work before committing.'"
+  ],
+  [
+   "'This might work, but explore other healthcare roles. Make sure your passion for animals is genuine.'",
+   "'You can also look at other healthcare roles. Time at a clinic can show you how you feel about the daily work with animals.'"
+  ],
+  [
+   "'This doesn\\'t seem like your best fit. Explore other healthcare careers.'",
+   "'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other healthcare careers too.'"
+  ],
+  [
+   "<li>Apply if confident this is your passion</li>",
+   "<li>Decide with your counselor whether to apply</li>"
+  ],
+  [
+   "If you can handle the emotional and physical demands, and your passion for animals is genuine, you\\'ll have a fulfilling career helping animals and their owners. But be certain before committing.",
+   "For people who choose to take on the emotional and physical demands, it can be a fulfilling career helping animals and their owners. Take time to learn about the work before committing."
+  ],
+  [
+   "if (motivationScore >= 9 && readinessScore >= 7) {",
+   "if (readinessScore >= 7) {"
+  ],
+  [
+   "} else if (motivationScore >= 8 && readinessScore >= 6) {",
+   "} else if (readinessScore >= 6) {"
+  ],
+  [
+   "} else if (motivationScore >= 7 && readinessScore >= 5) {",
+   "} else if (readinessScore >= 5) {"
+  ],
+  [
+   "} else if (motivationScore >= 5) {",
+   "} else if (readinessScore >= 3) {"
+  ],
+  [
+   "        function generateReport() {",
+   "        function cfEsc(s){return String(s).replace(/[&<>\"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c];});}\n        \n        function generateReport() {"
+  ],
+  [
+   "\"${comments}\"",
+   "\"${cfEsc(comments)}\""
+  ],
+  [
+   "            if (box) box.value = raw.replace(/[&<>\"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]; });",
+   "            // Comments are escaped inside generateReport with cfEsc."
+  ],
+  [
+   "<h2><span class=\"section-number\">10</span>Part 2: Are You Ready?</h2>",
+   "<h2><span class=\"section-number\">10</span>Part 2: Things You Could Try</h2>"
+  ],
+  [
+   "and whether it's your calling.</p>",
+   "and which parts of it interest you.</p>"
+  ]
+ ]
+}

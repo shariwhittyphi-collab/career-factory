@@ -591,7 +591,7 @@
             <h2><span class="section-number">1</span>Welcome</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section1')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section1')">&#128424;&#65039; Print this part</button></div>
             <p>Medical assistants are the backbone of healthcare offices and clinics. You'll do both clinical and administrative work.</p>
-            <p>This assessment will help you understand the job, what it takes to succeed, and whether it's right for you.</p>
+            <p>This assessment will help you understand the job, what it takes to succeed, and what parts of the work interest you.</p>
             <p><strong>This takes about 15 minutes.</strong></p>
             <div class="button-group">
                 <button class="btn-primary" onclick="nextSection()">Let's Start</button>
@@ -820,7 +820,7 @@
         
         <!-- Section 10: Readiness -->
         <div class="section" id="section10">
-            <h2><span class="section-number">10</span>Part 2: Are You Ready?</h2>
+            <h2><span class="section-number">10</span>Part 2: Things You Could Try</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section10')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section10')">&#128424;&#65039; Print this part</button></div>
             <div class="assessment-question">
                 <p>1. I'm comfortable with blood, needles, and bodily fluids.</p>
@@ -934,6 +934,7 @@
         <!-- Report -->
         <div class="section" id="report">
             <h2>Your Medical Assistant Assessment Results</h2>
+            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>
             <div class="report" id="reportContent"></div>
             <div class="button-group">
                 <button type="button" class="btn-secondary tool-btn" data-label="&#128266; Listen to my results" aria-pressed="false" onclick="listenReport(this)">&#128266; Listen to my results</button>
@@ -966,6 +967,7 @@
             document.getElementById('progress').textContent = 'Section ' + currentSection + ' of 11';
         }
         
+        function cfEsc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
         function generateReport() {
             const motivation = document.querySelector('input[name="motivation"]:checked').value;
             const readiness = [
@@ -983,47 +985,34 @@
             
             const readinessScore = readiness.filter(r => r === 'yes').length;
             
-            let motivationScore = 0;
-            if (motivation === 'patient') motivationScore = 10;
-            else if (motivation === 'entry') motivationScore = 9;
-            else if (motivation === 'variety') motivationScore = 8;
-            else if (motivation === 'salary') motivationScore = 6;
-            else if (motivation === 'suggest') motivationScore = 4;
-            else motivationScore = 3;
-            
-            let readinessLevel = '';
-            if (readinessScore >= 7) readinessLevel = 'Strong';
-            else if (readinessScore >= 5) readinessLevel = 'Moderate';
-            else readinessLevel = 'Low';
-            
             let recommendation = '';
-            if (motivationScore >= 8 && readinessScore >= 7) {
-                recommendation = 'You\'re well-suited for medical assisting. Apply to a program or start looking for MA positions. You have the motivation and readiness.';
-            } else if (motivationScore >= 7 && readinessScore >= 6) {
-                recommendation = 'Medical assisting could work for you. The variety and patient contact appeal to you. Make sure you can handle the pace and stand all day.';
-            } else if (motivationScore >= 6 && readinessScore >= 5) {
-                recommendation = 'You could do this work. Some uncertainties exist. Consider shadowing an MA or starting on-the-job. See if you still want it after observing.';
-            } else if (motivationScore >= 5) {
-                recommendation = 'Medical assisting might not be your best fit. Your motivation is mixed. Explore other healthcare entry points before committing.';
+            if (readinessScore >= 7) {
+                recommendation = 'Many parts of medical assisting appeal to you, and many of the activities sound comfortable. Talking with someone who does this work is a good next step. You can also look at training programs or MA job postings.';
+            } else if (readinessScore >= 6) {
+                recommendation = 'Medical assisting could be worth a closer look. One possible route: shadow an MA to see the variety and patient contact up close. Notice how the fast pace and standing all day feel to you.';
+            } else if (readinessScore >= 5) {
+                recommendation = 'Some parts of this work interest you. Consider shadowing an MA or starting on-the-job. See how you feel after watching the work up close.';
+            } else if (readinessScore >= 3) {
+                recommendation = 'Some parts of this work interest you. You can also look at other healthcare entry points and compare them before committing.';
             } else {
-                recommendation = 'This role doesn\'t seem right for you based on your answers. Look for different healthcare or non-healthcare careers.';
+                recommendation = 'You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too, in healthcare or outside it.';
             }
             
             const html = `
-                <h3>Motivation Score: ${motivationScore} / 10</h3>
-                <p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest, but clarify.' : 'Uncertain. Be clear first.'}</p>
-                <div class="score-bar"><div class="score-fill" style="width: ${motivationScore * 10}%"></div></div>
+                <h3>What interests you</h3>
+                <p>You said: <em>${document.querySelector('input[name="motivation"]:checked').parentElement.textContent.replace(/\s+/g, ' ').trim()}</em></p>
+                <p>${motivation === 'salary' ? 'Pay matters. Look at the whole job too, including the hard parts.' : (motivation === 'suggest' || motivation === 'recommend') ? 'Hearing about a career from someone else is a fine way to start. Notice which parts interest you.' : (motivation === 'explore' || motivation === 'unsure') ? 'It is fine to be curious without knowing yet.' : 'This part of the work interests you.'}</p>
                 
-                <h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>
-                <p>${readinessScore >= 7 ? 'You\'re ready.' : readinessScore >= 5 ? 'You have most skills.' : 'Some gaps exist.'}</p>
+                <h3>Activities that sound comfortable: ${readinessScore} / 8</h3>
+                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>
                 <div class="score-bar"><div class="score-fill" style="width: ${readinessScore * 12.5}%"></div></div>
                 
-                <h3>The Bottom Line</h3>
+                <h3>Something to explore</h3>
                 <p><strong>${recommendation}</strong></p>
                 
                 <h3>Your Timeline</h3>
                 <p><em>${future.replace(/_/g, ' ')}</em></p>
-                ${comments ? `<p><strong>Your thoughts:</strong> "${comments}"</p>` : ''}
+                ${comments ? `<p><strong>Your thoughts:</strong> "${cfEsc(comments)}"</p>` : ''}
                 
                 <h3>Next Actions</h3>
                 <ul style="margin-left: 1.5rem;">
@@ -1036,7 +1025,7 @@
                 </ul>
                 
                 <h3>Final Thoughts</h3>
-                <p>Medical assisting is a solid healthcare entry point. The job market is strong. The work is meaningful. You help people every day. But it\'s fast-paced, multitasking, standing-all-day work. Make sure you\'re ready for that before you commit. If you are, you\'ll do great.</p>
+                <p>Medical assisting is a solid healthcare entry point. The job market is strong. The work is meaningful. You help people every day. But it\'s fast-paced, multitasking, standing-all-day work. Think about how that kind of day would feel to you before you commit.</p>
             `;
             
             document.getElementById('reportContent').innerHTML = html;
@@ -1141,7 +1130,7 @@
             }
             clearAlert();
             var box = document.getElementById('comments'), raw = box ? box.value : '';
-            if (box) box.value = raw.replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });
+            // comments are escaped inside generateReport with cfEsc
             try { origReport(); } finally { if (box) box.value = raw; }
             var f = document.querySelector('input[name="future"]:checked');
             if (f && f.parentNode) {
@@ -1310,5 +1299,144 @@
          the source links above always show current data.</p>
     </aside>
 
+<!-- Career Factory fixes (October 2026) -->
+<style>
+/* Selected text-size button: always a solid fill with white text in the light theme
+   (two healthcare pages showed white text on a white background). */
+html:not([data-theme="dark"]) .a11y-bar button[aria-pressed="true"] {
+  background-color: #0b4f8a !important; border-color: #0b4f8a !important; color: #fff !important; }
+/* Light-blue controls get dark text in every dark path (manual or the computer's setting).
+   Background and text are set together so the pair is always readable (7.9:1). */
+html[data-theme="dark"] :is(.btn-primary, .section-number, .a11y-bar button[aria-pressed="true"], .tool-btn.speaking) {
+  background-color: #6cb4ff !important; border-color: #6cb4ff !important; color: #0b1b2e !important; }
+html[data-theme="dark"] .btn-primary:hover { background-color: #8cc4ff !important; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) :is(.btn-primary, .section-number, .a11y-bar button[aria-pressed="true"], .tool-btn.speaking) {
+    background-color: #6cb4ff !important; border-color: #6cb4ff !important; color: #0b1b2e !important; }
+  html:not([data-theme="light"]) .btn-primary:hover { background-color: #8cc4ff !important; }
+}
+/* Skip link: same readable colors in every theme, above the sticky career navigation. */
+.skip-link:focus { background: #0b4f8a !important; color: #fff !important; z-index: 10001 !important; }
+/* Text size grows headings, buttons and boxes too, not only body text. */
+html:has(body.text-large) { font-size: 115%; }
+html:has(body.text-xl) { font-size: 135%; }
+body.text-large, body.text-xl { font-size: 1rem; }
+/* Sources print dark on white from either theme. */
+@media print { .srcsec, .srcsec * { color: #000 !important; background: #fff !important; } .srcsec a { color: #0b4f8a !important; } }
+</style>
+<script>
+(function () {
+    var de = document.documentElement;
+    var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    var tb = document.getElementById('themeBtn');
+    // The theme button shows the real starting theme when the computer is in dark mode.
+    if (tb && !de.getAttribute('data-theme') && mq && mq.matches) { tb.innerHTML = '\u2600 Light mode'; tb.setAttribute('aria-pressed', 'true'); }
+    if (typeof window.toggleTheme === 'function') {
+        var tt = window.toggleTheme;
+        window.toggleTheme = function () { if (!de.getAttribute('data-theme')) de.setAttribute('data-theme', mq && mq.matches ? 'dark' : 'light'); tt(); };
+    }
+    // The skip link is the first thing a keyboard user reaches.
+    var sl = document.querySelector('.skip-link');
+    if (sl && document.body.firstElementChild !== sl) document.body.insertBefore(sl, document.body.firstChild);
+    // Printing one part clears itself when the print dialog closes.
+    window.addEventListener('afterprint', function () {
+        document.body.classList.remove('print-one');
+        var o = document.querySelectorAll('.print-me');
+        for (var i = 0; i < o.length; i++) o[i].classList.remove('print-me');
+    });
+
+    // ---- Missed questions: move to the first unanswered one. Works with every page style:
+    // the shared alert box, the healthcare pages' inline alert, and plain pop-up alerts.
+    function focusMissing(alertEl) {
+        var scope = document.querySelector('.section.active') || document;
+        var radios = scope.querySelectorAll('input[type=radio]');
+        var seen = {};
+        for (var i = 0; i < radios.length; i++) {
+            var n = radios[i].name;
+            if (seen[n]) continue;
+            seen[n] = 1;
+            if (!document.querySelector('input[name="' + n + '"]:checked')) {
+                var group = radios[i].closest('fieldset') || radios[i].closest('.question, .assessment-question') || radios[i].parentNode;
+                if (alertEl) {
+                    if (!alertEl.id) alertEl.id = 'cfAlert';
+                    group.setAttribute('aria-describedby', alertEl.id);
+                }
+                radios[i].focus();
+                if (document.activeElement !== radios[i]) { group.setAttribute('tabindex', '-1'); group.focus(); }
+                return true;
+            }
+        }
+        return false;
+    }
+    if (typeof window.alertMsg === 'function') {
+        var am = window.alertMsg;
+        window.alertMsg = function (msg) { am(msg); focusMissing(document.getElementById('alertBox')); };
+    }
+    if (window.MutationObserver) {
+        new MutationObserver(function (list) {
+            for (var i = 0; i < list.length; i++) for (var j = 0; j < list[i].addedNodes.length; j++) {
+                var nd = list[i].addedNodes[j];
+                if (nd.nodeType === 1 && nd.getAttribute('role') === 'alert' && nd.id !== 'alertBox') { focusMissing(nd); return; }
+            }
+        }).observe(document.body, { childList: true, subtree: true });
+    }
+    var nativeAlert = window.alert;
+    window.alert = function (msg) { nativeAlert.call(window, msg); focusMissing(null); };
+
+    // ---- Report: "Review my answers" goes back to the first question; Start Over clears answers.
+    function goToSectionEl(el) {
+        if (!el) return;
+        var num = el.id && /^section(\d+)$/.test(el.id) ? +el.id.replace('section', '') : (el.getAttribute('data-section') ? +el.getAttribute('data-section') : null);
+        if (typeof window.show === 'function' && el.id) {
+            try { if (num) currentSection = num; } catch (e) {}
+            window.show(el.id);
+        } else if (typeof window.goToSection === 'function' && el.id) {
+            window.goToSection(el.id);
+        } else if (typeof window.showSection === 'function' && num) {
+            window.showSection(num);
+        } else {
+            var all = document.querySelectorAll('.section');
+            for (var i = 0; i < all.length; i++) all[i].classList.remove('active');
+            el.classList.add('active');
+            try { if (num) currentSection = num; } catch (e) {}
+            window.scrollTo(0, 0);
+        }
+        if (typeof window.updateProgress === 'function') { try { window.updateProgress(); } catch (e) {} }
+        var h = el.querySelector('h2');
+        if (h) { if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1'); h.focus(); }
+    }
+    function firstQuestionSection() {
+        var q = document.querySelector('input[type=radio]');
+        return q && q.closest('.section, [data-section]');
+    }
+    function setupReview() {
+        var report = document.getElementById('report') || document.getElementById('reportSection');
+        if (!report || document.getElementById('reviewBtn')) return;
+        var first = report.querySelector('.button-group') || (report.querySelector('button') && report.querySelector('button').parentNode);
+        if (!first || !firstQuestionSection()) return;
+        var rb = document.createElement('button');
+        rb.type = 'button'; rb.id = 'reviewBtn'; rb.className = 'btn-secondary'; rb.textContent = 'Review my answers';
+        rb.onclick = function () { goToSectionEl(firstQuestionSection()); };
+        first.insertBefore(rb, first.firstChild);
+        var btns = report.querySelectorAll('button');
+        for (var k = 0; k < btns.length; k++) {
+            if ((btns[k].getAttribute('onclick') || '').indexOf('location.reload') > -1) {
+                btns[k].onclick = function () {
+                    var f = document.querySelectorAll('input[type=radio], input[type=checkbox]');
+                    for (var a = 0; a < f.length; a++) f[a].checked = false;
+                    var t = document.querySelectorAll('textarea, input[type=text]');
+                    for (var b = 0; b < t.length; b++) t[b].value = '';
+                    location.reload();
+                };
+            }
+        }
+    }
+    // Some pages draw their questions after loading, so try again once everything is ready.
+    setupReview();
+    document.addEventListener('DOMContentLoaded', setupReview);
+    window.addEventListener('load', setupReview);
+})();
+</script>
+<!-- /Career Factory fixes -->
 </body>
 </html>

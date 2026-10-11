@@ -744,7 +744,7 @@
             </div>
         </div>
         <div class="section" id="section10">
-            <h2 tabindex="-1"><span class="section-number" aria-hidden="true">10</span>Part 2: Are You Ready?</h2>
+            <h2 tabindex="-1"><span class="section-number" aria-hidden="true">10</span>Part 2: Things You Could Try</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section10')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section10')">&#128424;&#65039; Print this part</button></div>
             <div class="assessment-question">
                 <fieldset>
@@ -858,6 +858,7 @@
 
         <div class="section" id="report">
             <h2 tabindex="-1">Your Plumber, Pipefitter, and Steamfitter Assessment Results</h2>
+            <p>These answers are a conversation starter, not a test of ability or a prediction. You can learn skills, ask for support, and change your mind.</p>
             <div class="report" id="reportContent"></div>
             <div class="button-group">
                 <button type="button" class="btn-secondary tool-btn" data-label="&#128266; Listen to my results" aria-pressed="false" onclick="listenReport(this)">&#128266; Listen to my results</button>
@@ -905,7 +906,7 @@
             if (s === 'large' || s === 'xl') setTextSize(s);
         })();
 
-        const DATA = {"name": "Plumber, Pipefitter, and Steamfitter", "scores": {"love": 9, "hands": 9, "path": 8, "salary": 6, "recommend": 4, "explore": 3}, "motLabels": {"love": "I like building and fixing things that people need every day.", "hands": "I like hands-on work with tools.", "path": "I want to earn while I learn a licensed trade.", "salary": "The pay and job security appeal to me.", "recommend": "Someone suggested it to me.", "explore": "I am still exploring my options."}, "futureLabels": {"a": "Apply to a plumbing apprenticeship (union or contractor).", "b": "Enroll in the NDSCS Plumbing Certificate.", "c": "Get a helper job with a plumbing contractor.", "research": "Research programs and costs first.", "undecided": "Still deciding."}, "recs": ["You are an excellent fit for plumbing and pipefitting. You have the drive and the readiness. Pursue this.", "Plumbing and pipefitting is a strong option. Apply for an apprenticeship or the NDSCS certificate.", "You could do well here. Job shadow or talk to someone in plumbing and pipefitting first to see if the day-to-day work fits you.", "This might work, but look at related trades too, like HVAC, electrician, or welder.", "This does not seem like your best fit right now. Explore other career areas."], "nextSteps": ["Contact UA Local 300 or local plumbing contractors", "Look at the NDSCS Plumbing Certificate", "Learn the ND apprentice registration rules", "Ask your career counselor about help with tools and training", "Talk to a plumber about their day", "Brush up on basic math", "Look at ND job ads"], "finalWords": "Plumbers and pipefitters keep clean water flowing and industrial systems running. Apprenticeships let you earn while you learn, and licensed plumbers can run their own businesses. The work is physical, sometimes dirty, and emergencies happen. If you like hands-on work that people truly need, this is a steady trade.", "readinessItems": ["I am OK with dirty and wet work.", "I can work in tight spaces.", "I can lift heavy materials.", "I am OK with basic math and measuring.", "I can commit to a 4-year apprenticeship.", "I am OK with emergency or after-hours calls.", "I follow codes and rules carefully.", "I have a driver's license."]};
+        const DATA = {"name": "Plumber, Pipefitter, and Steamfitter", "scores": {"love": 9, "hands": 9, "path": 8, "salary": 6, "recommend": 4, "explore": 3}, "motLabels": {"love": "I like building and fixing things that people need every day.", "hands": "I like hands-on work with tools.", "path": "I want to earn while I learn a licensed trade.", "salary": "The pay and job security appeal to me.", "recommend": "Someone suggested it to me.", "explore": "I am still exploring my options."}, "futureLabels": {"a": "Apply to a plumbing apprenticeship (union or contractor).", "b": "Enroll in the NDSCS Plumbing Certificate.", "c": "Get a helper job with a plumbing contractor.", "research": "Research programs and costs first.", "undecided": "Still deciding."}, "recs": ["Many of the activities in plumbing and pipefitting sound comfortable to you. Talking with someone who does this work is a good next step.", "Most of these activities sound comfortable. Plumbing and pipefitting could be worth a closer look. One possible route: Apply for an apprenticeship or the NDSCS certificate.", "Some activities sound comfortable, and others may need a closer look. Job shadow or talk to someone in plumbing and pipefitting first to see if the day-to-day work fits you.", "Several activities did not sound comfortable yet, and that is useful to know. You can also look at related careers, like HVAC, electrician, or welder.", "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."], "nextSteps": ["Contact UA Local 300 or local plumbing contractors", "Look at the NDSCS Plumbing Certificate", "Learn the ND apprentice registration rules", "Ask your career counselor about help with tools and training", "Talk to a plumber about their day", "Brush up on basic math", "Look at ND job ads"], "finalWords": "Plumbers and pipefitters keep clean water flowing and industrial systems running. Apprenticeships let you earn while you learn, and licensed plumbers can run their own businesses. The work is physical, sometimes dirty, and emergencies happen. If you like hands-on work that people truly need, this is a steady trade.", "readinessItems": ["I am OK with dirty and wet work.", "I can work in tight spaces.", "I can lift heavy materials.", "I am OK with basic math and measuring.", "I can commit to a 4-year apprenticeship.", "I am OK with emergency or after-hours calls.", "I follow codes and rules carefully.", "I have a driver's license."]};
         let currentSection = 1;
 
         function show(id) {
@@ -975,30 +976,28 @@
             const readinessScore = readiness.filter(r => r === 'yes').length;
             const motivationScore = DATA.scores[motivation];
 
-            let readinessLevel = readinessScore >= 7 ? 'Strong' : readinessScore >= 5 ? 'Moderate' : 'Low';
 
             let recommendation;
-            if (motivationScore >= 8 && readinessScore >= 7) recommendation = DATA.recs[0];
-            else if (motivationScore >= 8 && readinessScore >= 6) recommendation = DATA.recs[1];
-            else if (motivationScore >= 7 && readinessScore >= 5) recommendation = DATA.recs[2];
-            else if (motivationScore >= 5) recommendation = DATA.recs[3];
+            if (readinessScore >= 7) recommendation = DATA.recs[0];
+            else if (readinessScore >= 6) recommendation = DATA.recs[1];
+            else if (readinessScore >= 5) recommendation = DATA.recs[2];
+            else if (readinessScore >= 3) recommendation = DATA.recs[3];
             else recommendation = DATA.recs[4];
 
             const toWork = [];
             readiness.forEach((r, i) => { if (r !== 'yes') toWork.push(DATA.readinessItems[i] + (r === 'unsure' ? ' (you said: unsure)' : ' (you said: no)')); });
 
             const html = `
-                <h3>Motivation Score: ${motivationScore} / 10</h3>
+                <h3>What interests you</h3>
                 <p>You said: <em>${esc(DATA.motLabels[motivation])}</em></p>
-                <p>${motivationScore >= 8 ? 'Strong motivation.' : motivationScore >= 6 ? 'Good interest. Get clear on what you want from this job.' : 'Not sure yet. Explore more before you spend money on training.'}</p>
-                <div class="score-bar"><div class="score-fill" style="width: ${motivationScore * 10}%"></div></div>
+                <p>${({salary: 'Pay and stability matter. Look at the whole job too, including the hard parts.', recommend: 'Someone thought of you for this work. It is worth finding out what you think.', explore: 'It is fine to be curious without knowing yet. Explore more before you spend money on training.'})[motivation] || 'This part of the work interests you.'}</p>
 
-                <h3>${readinessLevel} Readiness: ${readinessScore} / 8</h3>
-                <p>${readinessScore >= 7 ? 'You look ready.' : readinessScore >= 5 ? 'You have most of what it takes.' : 'Some gaps exist. That is OK. Now you know what to work on.'}</p>
+                <h3>Activities that sound comfortable: ${readinessScore} / 8</h3>
+                <p>${readinessScore >= 7 ? 'Many of these activities sound comfortable to you.' : readinessScore >= 5 ? 'Some activities sound comfortable; others may need a closer look.' : 'You have things to learn about. That is a normal part of exploring.'}</p>
                 <div class="score-bar"><div class="score-fill" style="width: ${readinessScore * 12.5}%"></div></div>
-                ${toWork.length ? '<p><strong>Things to work on or look into:</strong></p><ul style="margin-left: 1.5rem;">' + toWork.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>' : ''}
+                ${toWork.length ? '<p><strong>Things to ask about or try:</strong></p><ul style="margin-left: 1.5rem;">' + toWork.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>' : ''}
 
-                <h3>The Verdict</h3>
+                <h3>Something to explore</h3>
                 <p><strong>${recommendation}</strong></p>
 
                 <h3>Your Plan</h3>
@@ -1178,5 +1177,144 @@
          the source links above always show current data.</p>
     </aside>
 
+<!-- Career Factory fixes (October 2026) -->
+<style>
+/* Selected text-size button: always a solid fill with white text in the light theme
+   (two healthcare pages showed white text on a white background). */
+html:not([data-theme="dark"]) .a11y-bar button[aria-pressed="true"] {
+  background-color: #0b4f8a !important; border-color: #0b4f8a !important; color: #fff !important; }
+/* Light-blue controls get dark text in every dark path (manual or the computer's setting).
+   Background and text are set together so the pair is always readable (7.9:1). */
+html[data-theme="dark"] :is(.btn-primary, .section-number, .a11y-bar button[aria-pressed="true"], .tool-btn.speaking) {
+  background-color: #6cb4ff !important; border-color: #6cb4ff !important; color: #0b1b2e !important; }
+html[data-theme="dark"] .btn-primary:hover { background-color: #8cc4ff !important; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) :is(.btn-primary, .section-number, .a11y-bar button[aria-pressed="true"], .tool-btn.speaking) {
+    background-color: #6cb4ff !important; border-color: #6cb4ff !important; color: #0b1b2e !important; }
+  html:not([data-theme="light"]) .btn-primary:hover { background-color: #8cc4ff !important; }
+}
+/* Skip link: same readable colors in every theme, above the sticky career navigation. */
+.skip-link:focus { background: #0b4f8a !important; color: #fff !important; z-index: 10001 !important; }
+/* Text size grows headings, buttons and boxes too, not only body text. */
+html:has(body.text-large) { font-size: 115%; }
+html:has(body.text-xl) { font-size: 135%; }
+body.text-large, body.text-xl { font-size: 1rem; }
+/* Sources print dark on white from either theme. */
+@media print { .srcsec, .srcsec * { color: #000 !important; background: #fff !important; } .srcsec a { color: #0b4f8a !important; } }
+</style>
+<script>
+(function () {
+    var de = document.documentElement;
+    var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    var tb = document.getElementById('themeBtn');
+    // The theme button shows the real starting theme when the computer is in dark mode.
+    if (tb && !de.getAttribute('data-theme') && mq && mq.matches) { tb.innerHTML = '\u2600 Light mode'; tb.setAttribute('aria-pressed', 'true'); }
+    if (typeof window.toggleTheme === 'function') {
+        var tt = window.toggleTheme;
+        window.toggleTheme = function () { if (!de.getAttribute('data-theme')) de.setAttribute('data-theme', mq && mq.matches ? 'dark' : 'light'); tt(); };
+    }
+    // The skip link is the first thing a keyboard user reaches.
+    var sl = document.querySelector('.skip-link');
+    if (sl && document.body.firstElementChild !== sl) document.body.insertBefore(sl, document.body.firstChild);
+    // Printing one part clears itself when the print dialog closes.
+    window.addEventListener('afterprint', function () {
+        document.body.classList.remove('print-one');
+        var o = document.querySelectorAll('.print-me');
+        for (var i = 0; i < o.length; i++) o[i].classList.remove('print-me');
+    });
+
+    // ---- Missed questions: move to the first unanswered one. Works with every page style:
+    // the shared alert box, the healthcare pages' inline alert, and plain pop-up alerts.
+    function focusMissing(alertEl) {
+        var scope = document.querySelector('.section.active') || document;
+        var radios = scope.querySelectorAll('input[type=radio]');
+        var seen = {};
+        for (var i = 0; i < radios.length; i++) {
+            var n = radios[i].name;
+            if (seen[n]) continue;
+            seen[n] = 1;
+            if (!document.querySelector('input[name="' + n + '"]:checked')) {
+                var group = radios[i].closest('fieldset') || radios[i].closest('.question, .assessment-question') || radios[i].parentNode;
+                if (alertEl) {
+                    if (!alertEl.id) alertEl.id = 'cfAlert';
+                    group.setAttribute('aria-describedby', alertEl.id);
+                }
+                radios[i].focus();
+                if (document.activeElement !== radios[i]) { group.setAttribute('tabindex', '-1'); group.focus(); }
+                return true;
+            }
+        }
+        return false;
+    }
+    if (typeof window.alertMsg === 'function') {
+        var am = window.alertMsg;
+        window.alertMsg = function (msg) { am(msg); focusMissing(document.getElementById('alertBox')); };
+    }
+    if (window.MutationObserver) {
+        new MutationObserver(function (list) {
+            for (var i = 0; i < list.length; i++) for (var j = 0; j < list[i].addedNodes.length; j++) {
+                var nd = list[i].addedNodes[j];
+                if (nd.nodeType === 1 && nd.getAttribute('role') === 'alert' && nd.id !== 'alertBox') { focusMissing(nd); return; }
+            }
+        }).observe(document.body, { childList: true, subtree: true });
+    }
+    var nativeAlert = window.alert;
+    window.alert = function (msg) { nativeAlert.call(window, msg); focusMissing(null); };
+
+    // ---- Report: "Review my answers" goes back to the first question; Start Over clears answers.
+    function goToSectionEl(el) {
+        if (!el) return;
+        var num = el.id && /^section(\d+)$/.test(el.id) ? +el.id.replace('section', '') : (el.getAttribute('data-section') ? +el.getAttribute('data-section') : null);
+        if (typeof window.show === 'function' && el.id) {
+            try { if (num) currentSection = num; } catch (e) {}
+            window.show(el.id);
+        } else if (typeof window.goToSection === 'function' && el.id) {
+            window.goToSection(el.id);
+        } else if (typeof window.showSection === 'function' && num) {
+            window.showSection(num);
+        } else {
+            var all = document.querySelectorAll('.section');
+            for (var i = 0; i < all.length; i++) all[i].classList.remove('active');
+            el.classList.add('active');
+            try { if (num) currentSection = num; } catch (e) {}
+            window.scrollTo(0, 0);
+        }
+        if (typeof window.updateProgress === 'function') { try { window.updateProgress(); } catch (e) {} }
+        var h = el.querySelector('h2');
+        if (h) { if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1'); h.focus(); }
+    }
+    function firstQuestionSection() {
+        var q = document.querySelector('input[type=radio]');
+        return q && q.closest('.section, [data-section]');
+    }
+    function setupReview() {
+        var report = document.getElementById('report') || document.getElementById('reportSection');
+        if (!report || document.getElementById('reviewBtn')) return;
+        var first = report.querySelector('.button-group') || (report.querySelector('button') && report.querySelector('button').parentNode);
+        if (!first || !firstQuestionSection()) return;
+        var rb = document.createElement('button');
+        rb.type = 'button'; rb.id = 'reviewBtn'; rb.className = 'btn-secondary'; rb.textContent = 'Review my answers';
+        rb.onclick = function () { goToSectionEl(firstQuestionSection()); };
+        first.insertBefore(rb, first.firstChild);
+        var btns = report.querySelectorAll('button');
+        for (var k = 0; k < btns.length; k++) {
+            if ((btns[k].getAttribute('onclick') || '').indexOf('location.reload') > -1) {
+                btns[k].onclick = function () {
+                    var f = document.querySelectorAll('input[type=radio], input[type=checkbox]');
+                    for (var a = 0; a < f.length; a++) f[a].checked = false;
+                    var t = document.querySelectorAll('textarea, input[type=text]');
+                    for (var b = 0; b < t.length; b++) t[b].value = '';
+                    location.reload();
+                };
+            }
+        }
+    }
+    // Some pages draw their questions after loading, so try again once everything is ready.
+    setupReview();
+    document.addEventListener('DOMContentLoaded', setupReview);
+    window.addEventListener('load', setupReview);
+})();
+</script>
+<!-- /Career Factory fixes -->
 </body>
 </html>

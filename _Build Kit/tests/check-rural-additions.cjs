@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('ass
 const root=path.resolve(__dirname,'../..'),site=path.join(root,'Career Assessments Web');
 const careers=JSON.parse(fs.readFileSync(path.join(root,'_Build Kit/Rural Additions/careers.json'),'utf8'));
 const index=JSON.parse(fs.readFileSync(path.join(site,'search-index.json'),'utf8'));
-assert.equal(index.careers.length,195);
+assert.equal(index.careers.length,203);
 for(const c of index.careers)assert(fs.existsSync(path.join(site,c.url)),c.url);
 const members=new Set(JSON.parse(fs.readFileSync(path.join(site,'nd-in-demand.json'),'utf8')).careers.map(c=>c.url));
 for(const c of careers){
@@ -50,4 +50,4 @@ const opportunities=fs.readFileSync(path.join(site,'student-opportunities.html')
 for(const name of ['Gooseneck','RDO','Titan','Butler','Plains Ag'])assert(opportunities.includes(name));
 assert(opportunities.includes('October 4, 2026'));
 new vm.Script(fs.readFileSync(path.join(site,'student-opportunities.js'),'utf8'));
-console.log('PASS: 195 links; new careers unmarked; matching web/hub content; 2 images and 11 sections each; reflections, missing answers, plan-specific steps, escaped notes; light/dark and one-section print controller.');
+console.log('PASS: 203 links; new careers unmarked; matching web/hub content; 2 images and 11 sections each; reflections, missing answers, plan-specific steps, escaped notes; light/dark and one-section print controller.');

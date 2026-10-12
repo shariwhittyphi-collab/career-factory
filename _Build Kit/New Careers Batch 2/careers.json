@@ -1,0 +1,2920 @@
+[
+ {
+  "name": "Construction Laborer",
+  "slug": "construction-laborer",
+  "area": "skilled-trades",
+  "areaName": "Skilled Trades",
+  "soc": "47-2061.00",
+  "subtitle": "Doing the hands-on work that gets every building project done",
+  "images": [
+   "construction-laborer-1.jpg",
+   "construction-laborer-2.jpg"
+  ],
+  "alts": [
+   "A construction laborer levels gravel inside wooden forms at a building site.",
+   "A construction laborer carries a bundle of rebar across a job site."
+  ],
+  "wages": {
+   "p10": 18.75,
+   "p25": 21.96,
+   "p50": 23.59,
+   "p75": 29.17,
+   "p90": 34.23,
+   "p50a": 49070
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 5650,
+   "pct": 10,
+   "open": 480,
+   "from": 5150
+  },
+  "tags": [
+   "construction",
+   "outdoor",
+   "hands-on",
+   "concrete",
+   "physical",
+   "apprenticeship"
+  ],
+  "facets": [
+   "20-to-30",
+   "growing-fast",
+   "some-openings"
+  ],
+  "motivation": [
+   "I like physical work I can see at the end of the day.",
+   "I like working outside with a crew.",
+   "I want to start working without more school first."
+  ],
+  "readiness": [
+   "Lifting, carrying, and shoveling for much of a shift",
+   "Working outside in heat, cold, and wind",
+   "Following directions from a crew leader",
+   "Wearing a hard hat, safety glasses, and other gear all day",
+   "Learning to use tools like saws, compactors, and jackhammers",
+   "Getting up early and working long days in busy season",
+   "Measuring and marking where work goes",
+   "Speaking up when something looks unsafe"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a construction laborer about the work."
+   ],
+   [
+    "b",
+    "Look into a laborer apprenticeship."
+   ],
+   [
+    "c",
+    "Compare construction job ads near you."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask someone who works construction what a normal day is like.",
+   "Look at laborer job ads in your area and what they ask for.",
+   "Ask whether employers provide safety gear and training.",
+   "Ask about seasonal work, hours, and pay while learning."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask a laborer what tasks fill most of the day.",
+    "Ask what gear they wear and what new people find hard.",
+    "Notice whether outdoor, physical work sounds good to you."
+   ],
+   "b": [
+    "Search for construction apprenticeships at apprenticeship.gov.",
+    "Ask a contractor or union hall how apprentices apply.",
+    "Write down the age, school, and driver’s license rules."
+   ],
+   "c": [
+    "Read five job ads and mark what they require.",
+    "Compare pay, hours, and whether the work stops in winter.",
+    "Ask which employers train beginners."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Every road, school, and house starts with a crew doing the heavy, hands-on work. Construction laborers learn on the job and can grow into a skilled trade. Showing up ready and working safely matters more than knowing everything on day one.",
+  "group": "Construction Trades",
+  "hubGroup": "Construction Trades",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with someone who works on a construction crew is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a construction laborer.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/47-2061.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/47-2061.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/47-2061.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/47-2061.00?st=ND"
+   ],
+   [
+    "OSHA construction safety training",
+    "https://www.osha.gov/training/outreach/construction"
+   ]
+  ],
+  "sourceNote": "Openings and pay can change with the construction season and the economy.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Before a building goes up, someone digs, carries, levels, and cleans. That crew member is often a construction laborer.</p><p>This is physical, outdoor work on a team. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Construction Laborer?",
+    "<p>You do the hands-on work that keeps a construction project moving. You help skilled workers, run small machines, and keep the site safe and clean.</p>{{IMAGE0}}<ul><li>Load and unload materials and carry them where they are needed.</li><li>Dig, shovel, and level ground and gravel.</li><li>Help pour and finish concrete.</li><li>Run tools like compactors, saws, and jackhammers.</li><li>Signal equipment operators and direct traffic around the site.</li><li>Clean up to remove hazards.</li></ul><p><strong>The real picture:</strong> The work changes with each job. Roads, houses, farms, and oil field sites all need laborers, and in North Dakota much of the work is busiest from spring through fall.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every crew and job site is different.</p><ul><li>Early morning: Meet the crew, put on safety gear, and hear the plan for the day.</li><li>Morning: Unload a delivery of lumber and rebar and stack it where it goes.</li><li>Midday: Help set forms and spread gravel before a concrete pour.</li><li>Afternoon: Help finish the concrete and run a compactor.</li><li>Before leaving: Clean tools and pick up the site so it is safe overnight.</li></ul><p>Weather changes plans. Some days start before sunrise to beat the heat, and some jobs pause when it storms.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most people learn on the job.</strong> Many employers hire people with a high school diploma or GED, and some do not require one. Read the actual job ad.</p><ul><li><strong>On-the-job training:</strong> An experienced worker shows you the tools and safety rules.</li><li><strong>Apprenticeship:</strong> Some contractors and the Laborers’ union offer construction craft laborer apprenticeships, where you are paid while you learn.</li><li><strong>Safety training:</strong> Many employers ask for or provide OSHA 10-hour safety training.</li><li><strong>Optional classes:</strong> North Dakota schools offering construction trades programs include Turtle Mountain College in Belcourt and Sitting Bull College in Fort Yates. Compare cost, length, and schedule.</li></ul><p><strong>Paying for training:</strong> In an apprenticeship you are paid while you learn, and pay usually rises as you complete hours. For classes or a certificate, start with financial aid, scholarships, and grants. Ask employers whether they help pay. Ask your career counselor about other help, such as WIOA, a federal program that can help some people pay for job training. Ask before you enroll.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>North Dakota does not license construction laborers. Building contractors need a state contractor license, but that is the employer’s job, not yours. Ask each employer what you need to start.</p><ul><li>Ability to lift and carry heavy materials, or ask about the job’s physical demands.</li><li>Steel-toed boots and some basic gear; ask what the employer provides.</li><li>A driver’s license and reliable ride to job sites that move.</li><li>Safety training, which many employers provide.</li><li>Drug testing for some employers.</li></ul><p><strong>Before you begin:</strong> Ask who trains new workers and what safety gear you will be given.</p><p>Ask about written instructions, a buddy on your first jobs, extra practice time, or other support that helps you learn and work safely.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota construction laborer pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$23.59 an hour ($49,070 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $21.96 and $29.17 an hour.</li><li>1 in 10 earned less than $18.75 an hour, and 1 in 10 earned more than $34.23.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 5,150 of these jobs in 2024. The state projects about 5,650 in 2034, a change of +10%. That works out to about 480 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Building contractors, road and bridge crews, oil field and energy projects, farms, and cities and counties.</p><p><strong>Work setting:</strong> Outdoor job sites in all kinds of weather. Many jobs are full time in busy season, with early starts and some long days.</p><p><strong>Compare an offer:</strong> Ask about base pay, overtime, winter work, travel pay, benefits, and what safety gear is provided.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Experienced laborer:</strong> Run more equipment and take on harder tasks.</li><li><strong>A skilled trade:</strong> Many laborers move into carpentry, concrete finishing, pipe laying, or equipment operation.</li><li><strong>Crew leader or foreman:</strong> Lead a crew as experience grows.</li><li><strong>Construction manager:</strong> With experience and sometimes more school, plan and run whole projects.</li></ul><p>Ask people on the crew which paths are open where you live.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Seeing a project rise because of your work.</li><li>Working outside with a crew.</li><li>Starting without a degree and learning on the job.</li><li>Many paths into skilled trades.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Hard physical work that can be tough on your body over time.</li><li>Weather, including North Dakota winters.</li><li>Seasonal layoffs or long days in busy season.</li><li>Travel to job sites far from home.</li></ul><p>North Dakota projects about 10% growth in these jobs from 2024 to 2034, with about 480 openings a year.</p><p><strong>A question for yourself:</strong> Does physical work on a team, outside, sound like a good fit for you?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Forklift Operator",
+  "slug": "forklift-operator",
+  "area": "jobs-you-can-start-now",
+  "areaName": "Jobs You Can Start Now",
+  "soc": "53-7051.00",
+  "subtitle": "Moving and stacking loads safely in warehouses, plants, and yards",
+  "images": [
+   "forklift-operator-1.jpg",
+   "forklift-operator-2.jpg"
+  ],
+  "alts": [
+   "A forklift operator lifts a wrapped pallet onto a warehouse rack.",
+   "A forklift operator kneels to inspect a forklift tire before a shift."
+  ],
+  "wages": {
+   "p10": 19.58,
+   "p25": 21.65,
+   "p50": 23.68,
+   "p75": 27.07,
+   "p90": 30.14,
+   "p50a": 49260
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 1060,
+   "pct": 7,
+   "open": 100,
+   "from": 990
+  },
+  "tags": [
+   "warehouse",
+   "forklift",
+   "equipment",
+   "shipping",
+   "manufacturing",
+   "hands-on"
+  ],
+  "facets": [
+   "20-to-30",
+   "steady",
+   "some-openings"
+  ],
+  "motivation": [
+   "I like driving and running equipment.",
+   "I like work with a clear goal for each shift.",
+   "I want to start working without more school first."
+  ],
+  "readiness": [
+   "Driving a machine carefully in tight spaces",
+   "Checking a machine for problems before each shift",
+   "Paying close attention to people walking nearby",
+   "Following safety rules exactly, every time",
+   "Reading order numbers and labels to find the right load",
+   "Working in a warehouse that may be hot, cold, or noisy",
+   "Sitting and climbing on and off a machine all day",
+   "Asking for help when a load looks unsafe"
+  ],
+  "future": [
+   [
+    "a",
+    "Ask a forklift operator what the job is like."
+   ],
+   [
+    "b",
+    "Ask employers how they train and certify operators."
+   ],
+   [
+    "c",
+    "Compare warehouse job ads near you."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask someone who works in a warehouse what a shift looks like.",
+   "Look at forklift and warehouse job ads in your area.",
+   "Ask how employers train new operators.",
+   "Ask about shifts, pay, and support while learning."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what a normal shift looks like and how busy it gets.",
+    "Ask what new operators find hard.",
+    "Notice whether steady equipment work sounds good to you."
+   ],
+   "b": [
+    "Ask employers whether they train new hires on a forklift.",
+    "Ask how long training lasts and how you are evaluated.",
+    "Write down which employers train beginners."
+   ],
+   "c": [
+    "Read five job ads and mark what they require.",
+    "Compare day, night, and weekend shifts.",
+    "Compare pay, benefits, and how each employer trains."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Everything on a store shelf or a factory line was moved by someone along the way. Forklift operators keep goods moving safely. Careful driving and paying attention to people around you matter most, and employers train you to the safety rules.",
+  "group": "Warehouse, Factory and Driving",
+  "recs": [
+   "Many of these activities sound comfortable to you. Asking a forklift operator about their shift is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a forklift operator.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/53-7051.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/53-7051.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/53-7051.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/53-7051.00?st=ND"
+   ],
+   [
+    "OSHA powered industrial truck rules (29 CFR 1910.178)",
+    "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.178"
+   ]
+  ],
+  "sourceNote": "Pay figures are for industrial truck and tractor operators, which includes forklift operators.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Pallets of food, parts, and supplies move through North Dakota warehouses every day. Forklift operators move them.</p><p>This job mixes careful driving, safety, and steady work. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Forklift Operator?",
+    "<p>You drive a forklift or similar machine to load, move, and stack materials. You work in warehouses, factories, lumber yards, and shipping docks.</p>{{IMAGE0}}<ul><li>Inspect the forklift before each shift.</li><li>Load and unload trucks and rail cars.</li><li>Move pallets to the right shelf or work area.</li><li>Check labels and order numbers so the right load goes to the right place.</li><li>Watch for people and obstacles while driving.</li><li>Record what was moved, sometimes with a handheld scanner.</li></ul><p><strong>The real picture:</strong> Some jobs are mostly driving. In others, you also pick orders, wrap pallets, and help on the dock.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every warehouse runs on its own schedule.</p><ul><li>Start of shift: Walk around the forklift and check tires, forks, horn, and brakes.</li><li>Morning: Unload two trucks and put pallets away on high racks.</li><li>Midday: Move materials to the production line as they are needed.</li><li>Afternoon: Load outgoing orders onto trucks in the right order.</li><li>End of shift: Park and charge or fuel the forklift and report any problems.</li></ul><p>Busy days can feel fast. Safety always comes before speed.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most people learn on the job.</strong> Many employers hire people with a high school diploma or GED, and some do not require one.</p><ul><li><strong>Employer training:</strong> Federal safety rules require each operator to finish training and an evaluation before driving on their own. The training mixes classroom learning, hands-on practice, and a driving test at work.</li><li><strong>Start nearby:</strong> A warehouse, stocker, or material mover job can lead to forklift work.</li><li><strong>Refreshers:</strong> Operators are evaluated again at least every three years, or after an accident or near miss.</li></ul><p>There is no state forklift license. A card from a class somewhere else does not replace your employer’s own training and evaluation, so ask before paying for a class.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>Requirements depend on the employer. Ask what you need to start.</p><ul><li>Completion of the employer’s forklift training and evaluation.</li><li>Good eyesight, hearing, and attention to people nearby.</li><li>Ability to climb on and off the machine and sometimes lift boxes.</li><li>Willingness to work shifts, which may include nights or weekends.</li><li>Drug testing for some employers.</li></ul><p><strong>Before you begin:</strong> Ask who trains new operators and how much practice time you get.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota forklift operator pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$23.68 an hour ($49,260 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $21.65 and $27.07 an hour.</li><li>1 in 10 earned less than $19.58 an hour, and 1 in 10 earned more than $30.14.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 990 of these jobs in 2024. The state projects about 1,060 in 2034, a change of +7%. That works out to about 100 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Warehouses, distribution centers, factories, grain and farm supply businesses, lumber yards, and shipping companies.</p><p><strong>Work setting:</strong> Usually indoors in a warehouse or plant, sometimes in outdoor yards. Shifts may include nights and weekends.</p><p><strong>Compare an offer:</strong> Ask about base pay, shift pay, overtime, benefits, and how the employer trains and evaluates operators.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Experienced operator:</strong> Drive other equipment, such as reach trucks or loaders.</li><li><strong>Lead or trainer:</strong> Train new operators and lead a shift.</li><li><strong>Warehouse or shipping supervisor:</strong> Run a dock or a whole shift.</li><li><strong>Truck driving:</strong> Some operators go on to earn a commercial driver’s license.</li></ul><p>Ask your employer which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Running equipment instead of lifting everything by hand.</li><li>Clear tasks with a finish line each shift.</li><li>Starting without a degree.</li><li>Jobs in many industries.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Hot, cold, or noisy warehouses.</li><li>Night or weekend shifts.</li><li>Pressure to move fast.</li><li>The risk of accidents if safety rules are not followed.</li></ul><p>North Dakota projects about 7% growth in these jobs from 2024 to 2034, with about 100 openings a year.</p><p><strong>A question for yourself:</strong> Do careful, steady driving and safety rules sound like a good fit for you?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Maintenance and Repair Worker",
+  "slug": "maintenance-and-repair-worker",
+  "area": "skilled-trades",
+  "areaName": "Skilled Trades",
+  "soc": "49-9071.00",
+  "subtitle": "Fixing a little of everything so buildings and machines keep working",
+  "images": [
+   "maintenance-repair-worker-1.jpg",
+   "maintenance-repair-worker-2.jpg"
+  ],
+  "alts": [
+   "A maintenance worker replaces a faucet part under a sink.",
+   "A maintenance worker on a stepladder changes a ceiling light fixture in a school hallway."
+  ],
+  "wages": {
+   "p10": 17.44,
+   "p25": 20.06,
+   "p50": 23.96,
+   "p75": 28.68,
+   "p90": 32.91,
+   "p50a": 49840
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 3980,
+   "pct": 8,
+   "open": 380,
+   "from": 3680
+  },
+  "tags": [
+   "maintenance",
+   "repair",
+   "building",
+   "tools",
+   "hands-on",
+   "troubleshooting"
+  ],
+  "facets": [
+   "20-to-30",
+   "steady",
+   "some-openings"
+  ],
+  "motivation": [
+   "I like figuring out why something does not work.",
+   "I like using tools and fixing things.",
+   "I like a job where every day is a little different."
+  ],
+  "readiness": [
+   "Figuring out why something stopped working",
+   "Using hand and power tools",
+   "Climbing ladders and working in tight spaces",
+   "Reading a manual or a simple drawing",
+   "Doing small plumbing, painting, and carpentry jobs",
+   "Talking with tenants, staff, or students about a problem",
+   "Keeping a list of work orders and finishing them",
+   "Knowing when a job needs a licensed electrician or plumber"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a maintenance worker about their day."
+   ],
+   [
+    "b",
+    "Take a class in a basic repair skill."
+   ],
+   [
+    "c",
+    "Compare maintenance job ads near you."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a building or plant maintenance worker what a normal day is like.",
+   "Look at maintenance job ads in your area.",
+   "Notice which skills the ads list most.",
+   "Ask about training, pay, and support while learning."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what kinds of repairs come up most.",
+    "Ask what they wish they had learned first.",
+    "Notice whether a mix of repairs sounds good to you."
+   ],
+   "b": [
+    "Look for a short class in basic plumbing, electrical safety, or HVAC.",
+    "Practice small repairs at home with someone experienced.",
+    "Write down the tools you can already use."
+   ],
+   "c": [
+    "Compare jobs at schools, apartments, hospitals, and factories.",
+    "Compare pay, hours, and on-call duty.",
+    "Ask which employers train beginners."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Schools, apartments, hospitals, and plants all need someone who keeps things working. Maintenance workers learn many skills over time, one repair at a time. Curiosity and careful, safe work matter most.",
+  "group": "Industrial & Electrical Repair",
+  "hubGroup": "Industrial & Electrical Repair",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a maintenance worker is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a maintenance and repair worker.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/49-9071.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/49-9071.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/49-9071.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/49-9071.00?st=ND"
+   ],
+   [
+    "North Dakota electrical licensing law (NDCC 43-09)",
+    "https://ndlegis.gov/cencode/t43c09.pdf"
+   ]
+  ],
+  "sourceNote": "Pay figures are for general maintenance and repair workers.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>A leaky faucet, a broken door, a light that will not come on. Someone has to fix them, and in many buildings that person is the maintenance worker.</p><p>This job mixes many small trades. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Maintenance and Repair Worker?",
+    "<p>You keep buildings, equipment, and grounds in working order. You do routine upkeep and fix problems as they come up.</p>{{IMAGE0}}<ul><li>Do routine upkeep, like changing filters, belts, and fluids.</li><li>Find out why something stopped working.</li><li>Repair doors, locks, fixtures, and drywall.</li><li>Do small plumbing and painting jobs.</li><li>Order parts and supplies.</li><li>Keep records of the work you finished.</li></ul><p><strong>The real picture:</strong> A school job, an apartment job, and a factory job are very different. Some work is mostly building repairs; some is mostly machines.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every building has its own list.</p><ul><li>Morning: Check the work orders and plan the route.</li><li>Later: Replace a faucet part and fix a sticking door.</li><li>Midday: Change air filters in the heating system.</li><li>Afternoon: Answer an urgent call about a leak.</li><li>Before leaving: Write down what was finished and order a part for tomorrow.</li></ul><p>Plans change when something urgent breaks. Some jobs include being on call.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Many people learn on the job,</strong> often after a high school diploma or GED. Many employers like to see a certificate or experience in a trade.</p><ul><li><strong>On-the-job training:</strong> An experienced worker teaches the building’s systems.</li><li><strong>Apprenticeship:</strong> Building and industrial maintenance apprenticeships pay you while you learn.</li><li><strong>Short classes:</strong> Courses in HVAC, plumbing basics, or electrical safety can help you get hired.</li><li><strong>Start nearby:</strong> Janitor, groundskeeper, or helper jobs can lead to maintenance work.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>There is no general state license for maintenance work. Some tasks are licensed: in North Dakota, electrical wiring work needs a state electrical license, and plumbing has its own rules. Ask exactly what your job will include.</p><ul><li>Comfort with hand and power tools.</li><li>Ability to climb ladders, lift, and work in tight spaces, or ask about the physical demands.</li><li>A driver’s license for jobs that cover several buildings.</li><li>A background check for jobs in schools or health care.</li></ul><p><strong>Before you begin:</strong> Ask which repairs you will do yourself and which go to licensed trades.</p><p>Ask about written instructions, a buddy on your first jobs, extra practice time, or other support that helps you learn and work safely.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota maintenance and repair worker pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$23.96 an hour ($49,840 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $20.06 and $28.68 an hour.</li><li>1 in 10 earned less than $17.44 an hour, and 1 in 10 earned more than $32.91.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 3,680 of these jobs in 2024. The state projects about 3,980 in 2034, a change of +8%. That works out to about 380 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Schools, apartment buildings, hospitals and clinics, factories, hotels, and cities and counties.</p><p><strong>Work setting:</strong> Inside and outside buildings, often moving from task to task. Some jobs include on-call or weekend duty.</p><p><strong>Compare an offer:</strong> Ask about base pay, on-call pay, overtime, benefits, and whether the employer pays for classes.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Lead maintenance worker:</strong> Take on harder repairs and train others.</li><li><strong>Facilities supervisor or manager:</strong> Run maintenance for a building or campus.</li><li><strong>A licensed trade:</strong> Electrician, plumber, or HVAC technician through an apprenticeship.</li><li><strong>Industrial maintenance:</strong> Specialize in factory machines.</li></ul><p>Ask people where you work which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Fixing things and seeing them work again.</li><li>A different mix of tasks every day.</li><li>Jobs in almost every town.</li><li>Skills you can use at home, too.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>On-call duty, nights, or weekend emergencies.</li><li>Dirty, cramped, or hot spaces.</li><li>Lifting and climbing.</li><li>Many people asking for help at once.</li></ul><p>North Dakota projects about 8% growth in these jobs from 2024 to 2034, with about 380 openings a year.</p><p><strong>A question for yourself:</strong> Do you enjoy figuring out and fixing a little of everything?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Painter",
+  "slug": "painter",
+  "area": "skilled-trades",
+  "areaName": "Skilled Trades",
+  "soc": "47-2141.00",
+  "subtitle": "Preparing and painting walls, buildings, and structures with care",
+  "images": [
+   "painter-1.jpg",
+   "painter-2.jpg"
+  ],
+  "alts": [
+   "A painter rolls gray paint onto a living-room wall.",
+   "A painter brushes paint along window trim from a short scaffold."
+  ],
+  "wages": {
+   "p10": 17.71,
+   "p25": 22.75,
+   "p50": 26.38,
+   "p75": 29.16,
+   "p90": 37.64,
+   "p50a": 54870
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 640,
+   "pct": 5,
+   "open": 50,
+   "from": 610
+  },
+  "tags": [
+   "painting",
+   "construction",
+   "hands-on",
+   "detail",
+   "indoor",
+   "outdoor"
+  ],
+  "facets": [
+   "20-to-30",
+   "steady",
+   "few-openings"
+  ],
+  "motivation": [
+   "I like careful work that looks good when it is done.",
+   "I like using my hands.",
+   "I like seeing a big change by the end of a job."
+  ],
+  "readiness": [
+   "Taping, covering, and protecting floors and furniture",
+   "Scraping, sanding, and patching before painting",
+   "Working on ladders and scaffolding",
+   "Painting straight, clean edges",
+   "Standing, reaching, and bending for much of the day",
+   "Wearing a mask or respirator when needed",
+   "Talking with customers about colors and plans",
+   "Asking how to handle old paint that may contain lead"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a painter about the work."
+   ],
+   [
+    "b",
+    "Practice prep and painting on a small project."
+   ],
+   [
+    "c",
+    "Compare painting job ads and apprenticeships."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a painter what a normal day is like.",
+   "Look at painter job ads in your area.",
+   "Ask about safety gear and ladder training.",
+   "Ask about pay, seasons, and support while learning."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask how much of the job is prep work.",
+    "Ask what new painters find hard.",
+    "Notice whether careful, detailed work sounds good to you."
+   ],
+   "b": [
+    "Help paint a room with someone experienced.",
+    "Practice taping and cutting in a straight edge.",
+    "Notice how long good prep takes."
+   ],
+   "c": [
+    "Read job ads from painting contractors.",
+    "Search for painter apprenticeships at apprenticeship.gov.",
+    "Compare pay, hours, and winter work."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "A good paint job protects a building and makes people proud of it. Painters learn on the job, one careful step at a time. Patient prep work and safety matter as much as the painting itself.",
+  "group": "Construction Trades",
+  "hubGroup": "Construction Trades",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a painter is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a painter.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/47-2141.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/47-2141.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/47-2141.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/47-2141.00?st=ND"
+   ],
+   [
+    "North Dakota lead-safe renovation information — ND Department of Environmental Quality",
+    "https://deq.nd.gov/WM/Lead/renovation.aspx"
+   ]
+  ],
+  "sourceNote": "Pay figures are for construction and maintenance painters.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Fresh paint changes how a room or building feels. Behind every clean edge is a painter who did careful prep work first.</p><p>This job mixes detail, patience, and physical work. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Painter?",
+    "<p>You prepare and paint walls, ceilings, trim, and outside surfaces of homes and buildings.</p>{{IMAGE0}}<ul><li>Cover floors and furniture and tape off edges.</li><li>Fill cracks and holes, then sand and scrape.</li><li>Apply primer, paint, and stain with brushes, rollers, or sprayers.</li><li>Set up ladders and scaffolding safely.</li><li>Read work orders and match colors.</li><li>Clean up tools and the work area.</li></ul><p><strong>The real picture:</strong> Much of the job is preparation. Painting outside is seasonal in North Dakota, while inside work goes on all year.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every job is different.</p><ul><li>Morning: Move furniture, lay drop cloths, and tape trim.</li><li>Later: Patch holes and sand the walls smooth.</li><li>Midday: Prime the patched spots.</li><li>Afternoon: Cut in edges with a brush and roll the walls.</li><li>Before leaving: Clean brushes and rollers and check the work in good light.</li></ul><p>Some days are spent high on a ladder outside. Others are quiet indoor work.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most painters learn on the job.</strong> Many employers hire people with a high school diploma or GED, and some do not require one.</p><ul><li><strong>On-the-job training:</strong> An experienced painter teaches prep, tools, and safety.</li><li><strong>Apprenticeship:</strong> Painter apprenticeships pay you while you learn.</li><li><strong>Safety training:</strong> Ladder, scaffold, and respirator training are common.</li><li><strong>Lead-safe training:</strong> Work on homes built before 1978 follows federal lead-safe rules, and the company must be certified. Workers are trained in lead-safe work practices.</li></ul><p><strong>Paying for training:</strong> In an apprenticeship you are paid while you learn, and pay usually rises as you complete hours. For classes or a certificate, start with financial aid, scholarships, and grants. Ask employers whether they help pay. Ask your career counselor about other help, such as WIOA, a federal program that can help some people pay for job training. Ask before you enroll.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>North Dakota does not license painters. Painting contractors need a state contractor license for larger jobs, and that is the employer’s responsibility. Ask what you need to start.</p><ul><li>Ability to climb ladders, stand, and reach for long periods, or ask about the physical demands.</li><li>Comfort wearing a mask or respirator when needed.</li><li>A driver’s license for travel to job sites.</li><li>Lead-safe training if the employer works on older homes.</li></ul><p><strong>Before you begin:</strong> Ask who trains new painters and what safety gear is provided.</p><p>Ask about written instructions, a buddy on your first jobs, extra practice time, or other support that helps you learn and work safely.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota painter pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$26.38 an hour ($54,870 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $22.75 and $29.16 an hour.</li><li>1 in 10 earned less than $17.71 an hour, and 1 in 10 earned more than $37.64.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 610 of these jobs in 2024. The state projects about 640 in 2034, a change of +5%. That works out to about 50 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Painting contractors, building contractors, schools and hospitals, property managers, and self-employment.</p><p><strong>Work setting:</strong> Inside homes and buildings, and outside on ladders and scaffolding. Outdoor work is seasonal.</p><p><strong>Compare an offer:</strong> Ask about base pay, winter work, overtime, benefits, and what safety gear is provided.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Experienced painter:</strong> Take on spraying, special finishes, or commercial jobs.</li><li><strong>Crew leader:</strong> Lead a painting crew.</li><li><strong>Estimator:</strong> Measure jobs and figure costs.</li><li><strong>Your own business:</strong> Some painters start their own company, which needs a contractor license and insurance.</li></ul><p>Ask painters near you which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>A clear before and after.</li><li>Careful, detailed hands-on work.</li><li>Starting without a degree.</li><li>Inside work in winter and outside work in summer.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Ladders and heights.</li><li>Paint fumes, dust, and old lead paint.</li><li>Slow seasons and layoffs.</li><li>Standing and reaching all day.</li></ul><p>North Dakota projects about 5% growth in these jobs from 2024 to 2034, with about 50 openings a year.</p><p><strong>A question for yourself:</strong> Does patient, careful work that looks good when it is done sound like you?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Roofer",
+  "slug": "roofer",
+  "area": "skilled-trades",
+  "areaName": "Skilled Trades",
+  "soc": "47-2181.00",
+  "subtitle": "Building and repairing the roofs that keep weather out",
+  "images": [
+   "roofer-1.jpg",
+   "roofer-2.jpg"
+  ],
+  "alts": [
+   "A roofer in a safety harness nails shingles on a house roof.",
+   "A roofer rolls out underlayment on a flat commercial roof."
+  ],
+  "wages": {
+   "p10": 22.14,
+   "p25": 23.08,
+   "p50": 28.72,
+   "p75": 34.68,
+   "p90": 42.0,
+   "p50a": 59740
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 380,
+   "pct": 9,
+   "open": 30,
+   "from": 350
+  },
+  "tags": [
+   "roofing",
+   "construction",
+   "outdoor",
+   "heights",
+   "hands-on",
+   "physical"
+  ],
+  "facets": [
+   "20-to-30",
+   "steady",
+   "few-openings"
+  ],
+  "motivation": [
+   "I like physical work outside.",
+   "I am comfortable with heights.",
+   "I like seeing a job finished at the end of the day."
+  ],
+  "readiness": [
+   "Working on a roof, high above the ground",
+   "Wearing a safety harness and tying off",
+   "Carrying heavy bundles up ladders",
+   "Working in summer heat and wind",
+   "Kneeling and bending for long stretches",
+   "Cutting shingles and metal to fit",
+   "Working fast with a crew while staying safe",
+   "Saying no to unsafe work"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a roofer about the work."
+   ],
+   [
+    "b",
+    "Learn about fall protection and roofing apprenticeships."
+   ],
+   [
+    "c",
+    "Compare roofing job ads near you."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a roofer what a normal day is like.",
+   "Look at roofing job ads in your area.",
+   "Ask how employers train new roofers to work safely at heights.",
+   "Ask about the season, pay, and winter work."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what the hardest part of the job is.",
+    "Ask what safety gear the crew uses.",
+    "Notice whether heights and heat sound okay to you."
+   ],
+   "b": [
+    "Search for roofer apprenticeships at apprenticeship.gov.",
+    "Ask employers whether they provide fall-protection training.",
+    "Write down what each program requires."
+   ],
+   "c": [
+    "Read five roofing job ads.",
+    "Compare pay, season length, and winter work.",
+    "Ask which employers train beginners."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "A good roof protects everything under it, and North Dakota weather keeps roofers busy. Roofers learn on the job with a crew. Working safely at heights matters more than anything else.",
+  "group": "Construction Trades",
+  "hubGroup": "Construction Trades",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a roofer is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a roofer.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/47-2181.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/47-2181.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/47-2181.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/47-2181.00?st=ND"
+   ],
+   [
+    "North Dakota contractor licensing law (NDCC 43-07)",
+    "https://ndlegis.gov/cencode/t43c07.pdf"
+   ],
+   [
+    "North Dakota residential roofing contractor law (NDCC 26.1-39.2)",
+    "https://ndlegis.gov/cencode/t26-1c39-2.pdf"
+   ]
+  ],
+  "sourceNote": "Openings and pay can change with the weather and the construction season.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Hail, wind, and snow are hard on roofs. Roofers build and repair them so homes and businesses stay dry.</p><p>This is physical work at heights, usually outside. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Roofer?",
+    "<p>You install, repair, and replace roofs on houses and other buildings.</p>{{IMAGE0}}<ul><li>Tear off old roofing and clear the work area.</li><li>Lay underlayment and waterproofing.</li><li>Install shingles, metal, or flat-roof systems.</li><li>Cut and fit shingles and flashing around chimneys and vents.</li><li>Inspect roofs for damage.</li><li>Clean up nails and debris.</li></ul><p><strong>The real picture:</strong> Work depends on the season and the weather. After a hailstorm, crews can be very busy.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every crew works differently.</p><ul><li>Early morning: Set up ladders, anchors, and harnesses before the heat.</li><li>Morning: Tear off old shingles and load them into a dumpster.</li><li>Midday: Lay new underlayment and flashing.</li><li>Afternoon: Nail down new shingles row by row.</li><li>Before leaving: Clean up nails with a magnet and cover any open areas.</li></ul><p>Rain or high wind can stop work for the day.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most roofers learn on the job.</strong> Many employers hire people with a high school diploma or GED, and some do not require one.</p><ul><li><strong>On-the-job training:</strong> An experienced roofer teaches tools, materials, and safe work at heights.</li><li><strong>Apprenticeship:</strong> Roofer apprenticeships pay you while you learn.</li><li><strong>Fall protection:</strong> Training in harnesses, anchors, and ladder safety is part of the job.</li></ul><p><strong>Paying for training:</strong> In an apprenticeship you are paid while you learn, and pay usually rises as you complete hours. For classes or a certificate, start with financial aid, scholarships, and grants. Ask employers whether they help pay. Ask your career counselor about other help, such as WIOA, a federal program that can help some people pay for job training. Ask before you enroll.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>North Dakota does not license individual roofers. Roofing contractors need a state contractor license for jobs over $4,000, with proof of insurance and workers’ compensation coverage. State law also bars roofing contractors from promising to cover a customer’s insurance deductible.</p><ul><li>Comfort working at heights.</li><li>Ability to lift and carry heavy bundles, or ask about the physical demands.</li><li>A driver’s license and a reliable ride to job sites.</li><li>Fall-protection training, which employers should provide.</li></ul><p><strong>Before you begin:</strong> Ask how the crew protects workers from falls.</p><p>Ask about written instructions, a buddy on your first jobs, extra practice time, or other support that helps you learn and work safely.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota roofer pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$28.72 an hour ($59,740 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $23.08 and $34.68 an hour.</li><li>1 in 10 earned less than $22.14 an hour, and 1 in 10 earned more than $42.00.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 350 of these jobs in 2024. The state projects about 380 in 2034, a change of +9%. That works out to about 30 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Roofing contractors, general contractors, and self-employment.</p><p><strong>Work setting:</strong> Outdoors on roofs, in heat and wind. Work is seasonal, with long days after storms.</p><p><strong>Compare an offer:</strong> Ask about base pay, season length, winter work, overtime, benefits, and safety training.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Experienced roofer:</strong> Work on metal, flat, or specialty roofs.</li><li><strong>Crew leader or foreman:</strong> Run a crew.</li><li><strong>Estimator or inspector:</strong> Measure roofs and plan jobs.</li><li><strong>Your own business:</strong> With a contractor license and insurance.</li></ul><p>Ask roofers near you which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Outdoor, active work with a crew.</li><li>Finishing a whole roof in a few days.</li><li>Starting without a degree.</li><li>Pay that rises with skill.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Heights and the risk of falls.</li><li>Hot sun and hard physical work.</li><li>Seasonal work and winter layoffs.</li><li>Busy stretches after storms.</li></ul><p>North Dakota projects about 9% growth in these jobs from 2024 to 2034, with about 30 openings a year.</p><p><strong>A question for yourself:</strong> Do heights and hard outdoor work sound like something you would enjoy?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Sheet Metal Worker",
+  "slug": "sheet-metal-worker",
+  "area": "skilled-trades",
+  "areaName": "Skilled Trades",
+  "soc": "47-2211.00",
+  "subtitle": "Building and installing ductwork, roofs, and metal parts for buildings",
+  "images": [
+   "sheet-metal-worker-1.jpg",
+   "sheet-metal-worker-2.jpg"
+  ],
+  "alts": [
+   "A sheet metal worker bends steel on a shop brake to form ductwork.",
+   "A sheet metal worker on a lift fastens round ductwork near a ceiling."
+  ],
+  "wages": {
+   "p10": 23.11,
+   "p25": 23.51,
+   "p50": 31.34,
+   "p75": 38.91,
+   "p90": 40.74,
+   "p50a": 65180
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 420,
+   "pct": 6,
+   "open": 30,
+   "from": 390
+  },
+  "tags": [
+   "sheet metal",
+   "HVAC",
+   "construction",
+   "apprenticeship",
+   "fabrication",
+   "hands-on"
+  ],
+  "facets": [
+   "30-plus",
+   "steady",
+   "few-openings"
+  ],
+  "motivation": [
+   "I like building things out of metal.",
+   "I like math I can use with my hands.",
+   "I want to earn pay while I learn a trade."
+  ],
+  "readiness": [
+   "Measuring and doing math for cuts and bends",
+   "Reading drawings and plans",
+   "Cutting, bending, and joining metal",
+   "Working on lifts and ladders",
+   "Wearing gloves, glasses, and hearing protection",
+   "Lifting and fitting heavy duct sections",
+   "Going to classes while working an apprenticeship",
+   "Asking a journeyworker when you are not sure"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a sheet metal worker or apprentice."
+   ],
+   [
+    "b",
+    "Look into the sheet metal apprenticeship."
+   ],
+   [
+    "c",
+    "Compare sheet metal and HVAC job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a sheet metal worker what a normal day is like.",
+   "Look up the sheet metal apprenticeship for North and South Dakota.",
+   "Brush up on measuring and basic math.",
+   "Ask about pay while learning."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask whether they work mostly in a shop or on job sites.",
+    "Ask what apprentices learn first.",
+    "Notice whether metal work sounds good to you."
+   ],
+   "b": [
+    "Read the apprenticeship requirements for age, school, and physical fitness.",
+    "Ask how pay rises as you finish hours.",
+    "Write down the application steps."
+   ],
+   "c": [
+    "Read ads from HVAC and sheet metal contractors.",
+    "Compare shop work and field work.",
+    "Compare pay, benefits, and training."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Heating and cooling systems, roofs, and gutters all depend on sheet metal work. It is a skilled trade you can learn through a paid apprenticeship. Careful measuring and safe work matter most.",
+  "group": "Construction Trades",
+  "hubGroup": "Construction Trades",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a sheet metal apprentice is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a sheet metal worker.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/47-2211.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/47-2211.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/47-2211.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/47-2211.00?st=ND"
+   ],
+   [
+    "Sheet Metal Workers JATC of North & South Dakota — apprenticeship information (ND CTE)",
+    "https://www.cte.nd.gov/sites/www/files/documents/Students/ApprenticeshipOpportunity_JATC_SheetMetal.pdf"
+   ]
+  ],
+  "sourceNote": "Apprentice pay usually starts below these figures and rises as you complete hours.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>The ducts that carry warm air through a school in January were built and installed by sheet metal workers.</p><p>This trade mixes math, metal, and building. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Sheet Metal Worker?",
+    "<p>You make and install products from thin metal, such as heating and cooling ducts, roof flashing, and gutters.</p>{{IMAGE0}}<ul><li>Read drawings and measure carefully.</li><li>Cut, bend, and shape metal in a shop.</li><li>Join seams by riveting, welding, or soldering.</li><li>Install ducts in buildings, often from lifts.</li><li>Install metal roofing and flashing.</li><li>Repair and maintain systems.</li></ul><p><strong>The real picture:</strong> Some days are in a fabrication shop. Others are on a construction site.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every job site is different.</p><ul><li>Morning: Review the drawings with the crew.</li><li>Later: Cut and bend sheet metal into duct sections in the shop.</li><li>Midday: Load sections and take them to the job site.</li><li>Afternoon: Hang and fasten ductwork from a scissor lift.</li><li>Before leaving: Clean up scraps and mark tomorrow’s start point.</li></ul><p>Apprentices also spend some evenings or blocks of time in class.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most sheet metal workers learn through an apprenticeship.</strong> You work for pay during the day and take classes.</p><ul><li><strong>North and South Dakota apprenticeship:</strong> The Sheet Metal Workers’ joint apprenticeship program has training in Bismarck and Minot and in Fargo and Grand Forks. Applicants must be at least 18 with a high school diploma or GED. Applications are taken year round.</li><li><strong>Pay while learning:</strong> Apprentice pay rises in steps as you finish work hours, until you reach full journeyworker pay.</li><li><strong>Other routes:</strong> Some HVAC contractors train helpers on the job.</li></ul><p><strong>Paying for training:</strong> In an apprenticeship you are paid while you learn, and pay usually rises as you complete hours. For classes or a certificate, start with financial aid, scholarships, and grants. Ask employers whether they help pay. Ask your career counselor about other help, such as WIOA, a federal program that can help some people pay for job training. Ask before you enroll.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>North Dakota does not have a separate state license for sheet metal workers. Contractors need a state contractor license. Ask employers what they require.</p><ul><li>Age 18 or older and a high school diploma or GED for the apprenticeship.</li><li>Basic math and measuring skills.</li><li>Ability to lift, climb, and work on lifts, or ask about the physical demands.</li><li>A driver’s license for travel to job sites.</li></ul><p><strong>Before you begin:</strong> Ask how apprentices are supported in class and on the job.</p><p>Ask about written instructions, a buddy on your first jobs, extra practice time, or other support that helps you learn and work safely.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota sheet metal worker pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$31.34 an hour ($65,180 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $23.51 and $38.91 an hour.</li><li>1 in 10 earned less than $23.11 an hour, and 1 in 10 earned more than $40.74.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 390 of these jobs in 2024. The state projects about 420 in 2034, a change of +6%. That works out to about 30 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> HVAC and sheet metal contractors, roofing contractors, and manufacturers.</p><p><strong>Work setting:</strong> Fabrication shops and construction sites, sometimes on lifts. Mostly full time.</p><p><strong>Compare an offer:</strong> Ask about apprentice pay steps, overtime, benefits, and class schedules.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Journeyworker:</strong> Finish the apprenticeship and earn full trade pay.</li><li><strong>Foreman:</strong> Lead crews on big projects.</li><li><strong>Specialist:</strong> HVAC testing and balancing, architectural metal, or welding.</li><li><strong>Estimator or project manager:</strong> Plan jobs with experience.</li></ul><p>Ask people in the trade which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Paid training instead of school debt.</li><li>Building real things from flat metal.</li><li>Strong pay for experienced workers.</li><li>A mix of shop and job-site work.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Sharp edges, noise, and lifting.</li><li>Heights and lifts.</li><li>Travel to job sites.</li><li>Several years of apprenticeship before full pay.</li></ul><p>North Dakota projects about 6% growth in these jobs from 2024 to 2034, with about 30 openings a year.</p><p><strong>A question for yourself:</strong> Does building with metal while you earn and learn sound good to you?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Butcher and Meat Cutter",
+  "slug": "butcher-and-meat-cutter",
+  "area": "jobs-you-can-start-now",
+  "areaName": "Jobs You Can Start Now",
+  "soc": "51-3021.00",
+  "subtitle": "Cutting, trimming, and packaging meat in stores and processing plants",
+  "images": [
+   "meat-processing-worker-1.jpg",
+   "meat-processing-worker-2.jpg"
+  ],
+  "alts": [
+   "A meat cutter in a mesh glove trims a cut of beef on a steel table.",
+   "A meat cutter packages trimmed cuts on a processing line."
+  ],
+  "wages": {
+   "p10": 10.76,
+   "p25": 17.37,
+   "p50": 19.27,
+   "p75": 22.75,
+   "p90": 27.48,
+   "p50a": 40080
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 590,
+   "pct": 1,
+   "open": 70,
+   "note": "The job counts are rounded to the nearest 10, so the small change does not show in them.",
+   "from": 590
+  },
+  "tags": [
+   "meat",
+   "food",
+   "grocery",
+   "hands-on",
+   "knife skills",
+   "agriculture"
+  ],
+  "facets": [
+   "under-20",
+   "flat",
+   "few-openings"
+  ],
+  "motivation": [
+   "I like working with my hands.",
+   "I like food and how it is prepared.",
+   "I want to start working without more school first."
+  ],
+  "readiness": [
+   "Using sharp knives and saws carefully",
+   "Working in a cold room for much of a shift",
+   "Standing at a table or line for long stretches",
+   "Following food safety and cleaning rules exactly",
+   "Wearing gloves, a hairnet, and protective gear",
+   "Lifting boxes and large cuts of meat",
+   "Helping customers who ask for special cuts",
+   "Asking for help when you are not sure how to cut something"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a butcher or meat cutter."
+   ],
+   [
+    "b",
+    "Look into a meat cutting certificate."
+   ],
+   [
+    "c",
+    "Compare grocery and processing job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a meat counter worker what a normal day is like.",
+   "Look at butcher and meat cutter job ads in your area.",
+   "Ask how employers teach knife safety.",
+   "Ask about pay, hours, and support while learning."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what new workers learn first.",
+    "Ask how cold the work area is and how long shifts are.",
+    "Notice whether this kind of hands-on food work sounds good to you."
+   ],
+   "b": [
+    "Read about the meat cutting programs at NDSCS in Wahpeton and Dickinson State University.",
+    "Compare length, cost, and hands-on time.",
+    "Ask whether employers prefer a certificate."
+   ],
+   "c": [
+    "Compare grocery store, locker plant, and processing plant jobs.",
+    "Compare pay, shifts, and benefits.",
+    "Ask which employers train beginners."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "North Dakota raises a lot of livestock, and someone has to prepare that meat safely for families. Many butchers learn on the job, and a short certificate can help. Careful knife work and strict cleanliness matter most.",
+  "group": "Food and Restaurants",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a butcher or meat cutter is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a butcher and meat cutter.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/51-3021.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/51-3021.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/51-3021.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/51-3021.00?st=ND"
+   ],
+   [
+    "North Dakota Meat and Poultry Inspection Program — ND Department of Agriculture",
+    "https://www.ndda.nd.gov/divisions/grain-livestock/meat-inspection"
+   ]
+  ],
+  "sourceNote": "Pay figures are for butchers and meat cutters. Workers on processing plant lines may be counted under a different job title.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>The steaks, roasts, and ground beef at a grocery store or a local locker plant were cut and wrapped by butchers and meat cutters.</p><p>This job mixes knife skills, food safety, and steady hands-on work. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Butcher and Meat Cutter?",
+    "<p>You cut, trim, and package meat so it is ready to sell and cook. You work at grocery store meat counters, local meat markets and locker plants, and processing plants.</p>{{IMAGE0}}<ul><li>Cut, trim, bone, and grind meat.</li><li>Wrap, weigh, and label packages.</li><li>Prepare special cuts that customers order.</li><li>Check meat when it arrives and store it properly.</li><li>Set up the display case so it looks good.</li><li>Clean and sanitize tools and work areas.</li></ul><p><strong>The real picture:</strong> A small-town meat market, a grocery store, and a large plant are very different jobs. Plants often have one task on a line; small shops do a bit of everything.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every shop runs differently.</p><ul><li>Morning: Put on protective gear, check deliveries, and plan the day’s cuts.</li><li>Later: Cut steaks and roasts and grind beef.</li><li>Midday: Wrap, weigh, and label packages for the case.</li><li>Afternoon: Prepare a custom order and help customers at the counter.</li><li>Before leaving: Clean and sanitize every surface and tool.</li></ul><p>Fall hunting season and holidays can bring busy stretches.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most people learn on the job.</strong> Many employers hire people with a high school diploma or GED. Training can take from a few weeks to about a year.</p><ul><li><strong>On-the-job training:</strong> An experienced cutter teaches knife safety, cuts, and food safety.</li><li><strong>Short certificate:</strong> North Dakota State College of Science in Wahpeton and Dickinson State University offer meat cutting certificates.</li><li><strong>Start nearby:</strong> A meat department clerk or packaging job can lead to cutting.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>We did not find a North Dakota license for individual butchers. Meat processing businesses are licensed and inspected by the North Dakota Department of Agriculture. Ask each employer what you need to start.</p><ul><li>Food safety training, which employers often provide.</li><li>Comfort working in cold rooms.</li><li>Ability to stand and lift for long periods, or ask about the physical demands.</li><li>Willingness to wear protective gear like mesh gloves.</li></ul><p><strong>Before you begin:</strong> Ask how the employer teaches knife safety and how much practice time you get.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota butcher and meat cutter pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$19.27 an hour ($40,080 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $17.37 and $22.75 an hour.</li><li>1 in 10 earned less than $10.76 an hour, and 1 in 10 earned more than $27.48.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 590 of these jobs in 2024. The state projects about 590 in 2034, a change of +1%. That works out to about 70 openings a year, mostly from people who retire or change jobs.</li></ul><p>The job counts are rounded to the nearest 10, so the small change does not show in them.</p><p><strong>Where people work:</strong> Grocery stores, meat markets and locker plants, and meat processing plants.</p><p><strong>Work setting:</strong> Cold, clean work rooms and store counters. Many jobs include weekends.</p><p><strong>Compare an offer:</strong> Ask about base pay, shifts, benefits, and how the employer trains new cutters.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Experienced meat cutter:</strong> Handle custom and specialty cuts.</li><li><strong>Meat department manager:</strong> Run a store’s meat counter.</li><li><strong>Lead or supervisor:</strong> Lead a line in a processing plant.</li><li><strong>Your own shop:</strong> Some butchers run a local meat market or locker plant.</li></ul><p>Ask people in the trade which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Hands-on work with a clear result.</li><li>Learning a craft that people value.</li><li>Starting without a degree.</li><li>Jobs in many towns.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Cold work areas.</li><li>Sharp tools and the risk of cuts.</li><li>Repetitive motions that can strain hands and wrists.</li><li>Weekend and holiday hours.</li></ul><p>North Dakota projects the number of these jobs to stay about the same from 2024 to 2034, with about 70 openings a year.</p><p><strong>A question for yourself:</strong> Does careful, hands-on food work sound like a good fit for you?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Production Supervisor",
+  "slug": "production-supervisor",
+  "area": "management",
+  "areaName": "Management",
+  "soc": "51-1011.00",
+  "subtitle": "Leading the people on a factory or plant floor to work safely and well",
+  "images": [
+   "production-supervisor-1.jpg",
+   "production-supervisor-2.jpg"
+  ],
+  "alts": [
+   "A production supervisor reviews a chart on a tablet with a machine operator.",
+   "A production supervisor leads a start-of-shift meeting with workers."
+  ],
+  "wages": {
+   "p10": 25.21,
+   "p25": 29.18,
+   "p50": 36.71,
+   "p75": 42.94,
+   "p90": 62.11,
+   "p50a": 76350
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 1840,
+   "pct": 7,
+   "open": 180,
+   "from": 1730
+  },
+  "tags": [
+   "manufacturing",
+   "supervisor",
+   "leadership",
+   "production",
+   "safety",
+   "plant"
+  ],
+  "facets": [
+   "30-plus",
+   "steady",
+   "some-openings"
+  ],
+  "motivation": [
+   "I like leading a team.",
+   "I like solving problems that keep work moving.",
+   "I want to grow from the plant floor into leadership."
+  ],
+  "readiness": [
+   "Leading a short meeting at the start of a shift",
+   "Giving clear directions and feedback",
+   "Solving problems when a machine or schedule goes wrong",
+   "Checking that people follow safety rules",
+   "Keeping records of hours, output, and quality",
+   "Working out a conflict between two workers",
+   "Walking the plant floor for much of a shift",
+   "Asking for help from other departments"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a production supervisor."
+   ],
+   [
+    "b",
+    "Take on a lead role at work."
+   ],
+   [
+    "c",
+    "Look into supervision classes."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a supervisor how they moved into leadership.",
+   "Look at production supervisor job ads in your area.",
+   "Ask your employer about lead or trainer roles.",
+   "Ask about pay, shifts, and leadership training."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what a normal shift looks like.",
+    "Ask what was hardest when they started leading people.",
+    "Notice whether leading a team sounds good to you."
+   ],
+   "b": [
+    "Offer to train a new coworker.",
+    "Ask to help with safety meetings.",
+    "Write down what you learn about leading people."
+   ],
+   "c": [
+    "Read about the operations management and supervision programs at Bismarck State College and the University of North Dakota.",
+    "Compare short courses and degrees.",
+    "Ask whether your employer pays for classes."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Every factory shift needs someone who keeps people safe, work moving, and quality high. Many supervisors started on the floor themselves. Clear communication and fairness matter as much as knowing the machines.",
+  "group": "Plants, Projects and Science",
+  "hubGroup": "Plants, Projects and Science",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a production supervisor is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a production supervisor.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/51-1011.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/51-1011.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/51-1011.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/51-1011.00?st=ND"
+   ]
+  ],
+  "sourceNote": "Pay figures are for first-line supervisors of production and operating workers.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>When a plant runs well, someone is making sure the right people are on the right jobs, safely. That person is the production supervisor.</p><p>This job mixes leadership, problem solving, and the plant floor. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Production Supervisor?",
+    "<p>You lead a team of production workers in a factory or plant. You plan the work, keep people safe, and solve problems during the shift.</p>{{IMAGE0}}<ul><li>Plan schedules and assign jobs to meet production goals.</li><li>Enforce safety and cleanliness rules.</li><li>Check products and equipment for problems.</li><li>Keep records of hours, output, and quality.</li><li>Train new workers and give feedback.</li><li>Work with maintenance, shipping, and other departments.</li></ul><p><strong>The real picture:</strong> You are responsible for both people and numbers. Some days are calm; others bring breakdowns and short staffing.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every plant runs on its own schedule.</p><ul><li>Start of shift: Lead a short huddle about safety, goals, and staffing.</li><li>Morning: Walk the floor and check that each line is running.</li><li>Midday: Work with maintenance to fix a machine that went down.</li><li>Afternoon: Coach a new worker and review quality checks.</li><li>End of shift: Record output and pass notes to the next supervisor.</li></ul><p>Plants that run around the clock need supervisors on every shift.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Many supervisors start on the floor.</strong> About a third of people in this job say a high school diploma is what it needs, along with experience. Some employers want college classes or a degree.</p><ul><li><strong>Grow from within:</strong> Machine operators and assemblers often become leads, then supervisors.</li><li><strong>Leadership training:</strong> Many employers offer supervisor training.</li><li><strong>Optional education:</strong> Bismarck State College and the University of North Dakota offer operations management and supervision programs.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>No state license is needed. Requirements depend on the employer. Ask what you need.</p><ul><li>Experience in production or a related job.</li><li>Knowledge of safety rules for the plant.</li><li>Comfort with computers for schedules and reports.</li><li>Willingness to work shifts, which may include nights or weekends.</li></ul><p><strong>Before you begin:</strong> Ask what leadership training and support new supervisors get.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota production supervisor pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$36.71 an hour ($76,350 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $29.18 and $42.94 an hour.</li><li>1 in 10 earned less than $25.21 an hour, and 1 in 10 earned more than $62.11.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 1,730 of these jobs in 2024. The state projects about 1,840 in 2034, a change of +7%. That works out to about 180 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Food processing plants, equipment manufacturers, energy and ethanol plants, and other factories.</p><p><strong>Work setting:</strong> Plant floors and offices. Shifts may include nights and weekends.</p><p><strong>Compare an offer:</strong> Ask about base pay, shift pay, bonuses, benefits, and leadership training.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Senior supervisor:</strong> Lead several lines or a whole shift.</li><li><strong>Production or plant manager:</strong> Run the whole operation.</li><li><strong>Safety or quality specialist:</strong> Focus on one area you enjoy.</li><li><strong>Training:</strong> Teach new workers and leads.</li></ul><p>Ask leaders where you work which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Leading and helping people grow.</li><li>Solving problems on the spot.</li><li>Strong pay that grows with experience.</li><li>A path from the floor into management.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Pressure from goals and deadlines.</li><li>Handling conflicts and discipline.</li><li>Night, weekend, or rotating shifts.</li><li>Being called when something breaks.</li></ul><p>North Dakota projects about 7% growth in these jobs from 2024 to 2034, with about 180 openings a year.</p><p><strong>A question for yourself:</strong> Does leading a team on a busy plant floor sound good to you?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Correctional Officer",
+  "slug": "correctional-officer",
+  "area": "social-services",
+  "areaName": "Social Services and Public Safety",
+  "soc": "33-3012.00",
+  "subtitle": "Keeping jails and prisons safe for staff and the people who live there",
+  "images": [
+   "correctional-officer-1.jpg",
+   "correctional-officer-2.jpg"
+  ],
+  "alts": [
+   "A correctional officer watches a grid of camera views at a control desk.",
+   "A correctional officer walks a corridor carrying a radio."
+  ],
+  "wages": {
+   "p10": 22.88,
+   "p25": 23.77,
+   "p50": 25.22,
+   "p75": 29.39,
+   "p90": 30.23,
+   "p50a": 52460
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 1000,
+   "pct": -6,
+   "open": 90,
+   "from": 1070
+  },
+  "tags": [
+   "corrections",
+   "public safety",
+   "law enforcement",
+   "security",
+   "shift work",
+   "communication"
+  ],
+  "facets": [
+   "20-to-30",
+   "declining",
+   "few-openings"
+  ],
+  "motivation": [
+   "I want to help keep people safe.",
+   "I like clear rules and structure.",
+   "I want a job with paid training and benefits."
+  ],
+  "readiness": [
+   "Following strict rules and procedures every time",
+   "Staying calm when someone is angry or upset",
+   "Talking respectfully with people from many backgrounds",
+   "Watching closely and noticing small changes",
+   "Writing clear reports about what happened",
+   "Working nights, weekends, or holidays",
+   "Standing and walking for much of a shift",
+   "Calling for backup instead of handling everything alone"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a correctional officer about the work."
+   ],
+   [
+    "b",
+    "Learn about state and county hiring."
+   ],
+   [
+    "c",
+    "Compare corrections job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask someone who works in corrections what a normal shift is like.",
+   "Look at state and county correctional officer job ads.",
+   "Ask how new officers are trained and supported.",
+   "Ask about shifts, pay, and benefits."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what surprised them most when they started.",
+    "Ask how they handle stress after a hard shift.",
+    "Notice whether this kind of structured, people-focused work sounds right."
+   ],
+   "b": [
+    "Read the ND Department of Corrections and Rehabilitation careers page.",
+    "Look at county jail job postings near you.",
+    "Write down the age, background check, and training steps."
+   ],
+   "c": [
+    "Compare state prisons and county jails.",
+    "Compare pay, shifts, and benefits.",
+    "Ask about training length and support for new officers."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Correctional officers keep a facility safe and orderly, and the way they treat people matters to everyone inside. North Dakota hires people with a high school diploma and pays them while they train. Calm, fair, respectful communication is the most important skill.",
+  "group": "Public Safety",
+  "hubGroup": "Public Safety",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a correctional officer is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a correctional officer.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/33-3012.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/33-3012.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/33-3012.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/33-3012.00?st=ND"
+   ],
+   [
+    "ND Department of Corrections and Rehabilitation — careers",
+    "https://www.docr.nd.gov/careers"
+   ],
+   [
+    "North Dakota correctional facility law (NDCC 12-44.1)",
+    "https://ndlegis.gov/cencode/t12c44-1.pdf"
+   ]
+  ],
+  "sourceNote": "Pay figures are for correctional officers and jailers.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Inside every jail and prison, officers keep things safe and running, around the clock. They also shape the daily lives of the people who live there.</p><p>This job mixes security, structure, and people skills. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Correctional Officer?",
+    "<p>You keep order and safety in a jail or prison. You supervise residents, follow security procedures, and respond when something goes wrong.</p>{{IMAGE0}}<ul><li>Supervise residents during daily activities.</li><li>Count residents and check locks, doors, and gates.</li><li>Search areas for items that are not allowed.</li><li>Screen visitors and control entrances.</li><li>Write reports about incidents and daily activity.</li><li>Help residents get to programs, meals, and appointments.</li></ul><p><strong>The real picture:</strong> Most of the job is talking, watching, and following routines. Being fair and consistent prevents many problems.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every facility runs on its own schedule.</p><ul><li>Start of shift: Get a briefing from the officers going off duty.</li><li>Morning: Do a count and walk a housing unit.</li><li>Midday: Supervise meals and movement to programs.</li><li>Afternoon: Watch cameras at a control station and screen visitors.</li><li>End of shift: Write reports and brief the next shift.</li></ul><p>Most shifts are routine, and some are tense. Officers work as a team and call for help when needed.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>A high school diploma or GED is what most jobs ask for.</strong> The North Dakota Department of Corrections and Rehabilitation says it trains new officers and pays them while they train.</p><ul><li><strong>Paid training:</strong> New officers learn security, communication, first aid, and how to calm tense situations.</li><li><strong>County jails:</strong> North Dakota law requires jail staff who work directly with residents to complete training approved by the state Peace Officer Standards and Training board.</li><li><strong>Optional education:</strong> Minot State University offers a corrections and criminal justice program.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>Requirements depend on the employer. Ask each one what you need.</p><ul><li>A high school diploma or GED.</li><li>A minimum age; county jails often require age 18, and some employers require 21.</li><li>A background check, drug test, and sometimes a physical or fitness test.</li><li>Completion of the employer’s training program.</li><li>Willingness to work rotating shifts, including nights and holidays.</li></ul><p><strong>Before you begin:</strong> Ask how long training lasts and what support new officers get, including help after a hard shift.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota correctional officer pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$25.22 an hour ($52,460 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $23.77 and $29.39 an hour.</li><li>1 in 10 earned less than $22.88 an hour, and 1 in 10 earned more than $30.23.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 1,070 of these jobs in 2024. The state projects about 1,000 in 2034, a change of -6%. That works out to about 90 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> State prisons run by the ND Department of Corrections and Rehabilitation, county and regional jails, and juvenile facilities.</p><p><strong>Work setting:</strong> Inside secure facilities, with rotating shifts around the clock.</p><p><strong>Compare an offer:</strong> Ask about base pay, shift pay, overtime, benefits, retirement, and paid training.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Senior officer or trainer:</strong> Train new staff.</li><li><strong>Sergeant, lieutenant, or supervisor:</strong> Lead a shift.</li><li><strong>Case manager or programs:</strong> Help residents prepare to return to the community.</li><li><strong>Related careers:</strong> Probation officer, police officer, or 911 dispatcher.</li></ul><p>Ask officers where you would work which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Paid training and steady public-sector benefits.</li><li>Clear rules and teamwork.</li><li>Starting with a high school diploma.</li><li>A chance to treat people with dignity in a hard place.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Stress and exposure to conflict.</li><li>Nights, weekends, holidays, and mandatory overtime.</li><li>The emotional weight of the work.</li><li>Support for officers’ mental health.</li></ul><p>North Dakota projects about a 6% drop in these jobs from 2024 to 2034, but there are still about 90 openings a year as people retire or change jobs.</p><p><strong>A question for yourself:</strong> Can you see yourself staying calm, fair, and steady in a structured, sometimes tense place?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Substance Abuse Counselor",
+  "slug": "substance-abuse-counselor",
+  "area": "social-services",
+  "areaName": "Social Services and Public Safety",
+  "soc": "21-1011.00",
+  "subtitle": "Helping people work toward recovery from alcohol and drug problems",
+  "images": [
+   "substance-abuse-counselor-1.jpg",
+   "substance-abuse-counselor-2.jpg"
+  ],
+  "alts": [
+   "A counselor listens to a client in a calm counseling office.",
+   "A counselor leads a small group discussion in a community room."
+  ],
+  "wages": {
+   "p10": 20.8,
+   "p25": 26.66,
+   "p50": 33.0,
+   "p75": 37.17,
+   "p90": 41.65,
+   "p50a": 68630
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 1500,
+   "pct": 20,
+   "open": 130,
+   "from": 1260
+  },
+  "tags": [
+   "counseling",
+   "addiction",
+   "recovery",
+   "mental health",
+   "helping",
+   "license"
+  ],
+  "facets": [
+   "30-plus",
+   "growing-fast",
+   "some-openings"
+  ],
+  "motivation": [
+   "I want to help people through hard times.",
+   "I am a good listener.",
+   "I want a career with a license and room to grow."
+  ],
+  "readiness": [
+   "Listening closely without judging",
+   "Talking with people who are struggling or upset",
+   "Leading a group conversation",
+   "Writing careful notes and treatment plans",
+   "Keeping what people share private",
+   "Setting healthy limits with clients",
+   "Studying for a license exam after college",
+   "Asking a supervisor for help with a hard situation"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a substance abuse counselor."
+   ],
+   [
+    "b",
+    "Look into addiction counseling programs."
+   ],
+   [
+    "c",
+    "Learn the North Dakota license steps."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a counselor what a normal week is like.",
+   "Look at addiction counseling programs in North Dakota.",
+   "Read the license steps on the ND Board of Addiction Counseling Examiners site.",
+   "Ask about pay and support during clinical training."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what drew them to the work.",
+    "Ask how they take care of themselves.",
+    "Notice whether this kind of work sounds right for you."
+   ],
+   "b": [
+    "Compare programs at Minot State University, the University of Mary, and Nueta Hidatsa Sahnish College.",
+    "Ask about cost, length, and online options.",
+    "Ask how each program arranges clinical training."
+   ],
+   "c": [
+    "Read the coursework, clinical training, and exam requirements.",
+    "Write down questions for the board or a school advisor.",
+    "Ask a counselor how long the process took them."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Recovery changes lives, families, and whole communities, and North Dakota needs more counselors to help. The path takes college, supervised training, and a state license. Patience, honesty, and respect for each person matter most.",
+  "group": "Helping People and Families",
+  "hubGroup": "Helping People and Families",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a licensed addiction counselor is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a substance abuse counselor.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/21-1011.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/21-1011.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/21-1011.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/21-1011.00?st=ND"
+   ],
+   [
+    "ND Board of Addiction Counseling Examiners — clinical training",
+    "https://www.ndbace.org/training-continuing-education/clinical-training/"
+   ],
+   [
+    "North Dakota addiction counselor law (NDCC 43-45)",
+    "https://ndlegis.gov/cencode/t43c45.pdf"
+   ]
+  ],
+  "sourceNote": "Pay and outlook figures are for substance abuse, behavioral disorder, and mental health counselors as one group.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>When someone decides to change their relationship with alcohol or drugs, a counselor is often part of that journey.</p><p>This career mixes listening, planning, and hope. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Substance Abuse Counselor?",
+    "<p>You help people who struggle with alcohol, drugs, or other addictive behaviors. You meet with people one-on-one and in groups, and you work with their families and other providers.</p>{{IMAGE0}}<ul><li>Meet with clients to understand their needs and goals.</li><li>Write treatment plans with each person.</li><li>Lead individual and group sessions.</li><li>Track progress and adjust plans.</li><li>Work with doctors, nurses, social workers, and courts.</li><li>Step in to help when someone is in crisis.</li></ul><p><strong>The real picture:</strong> Recovery is rarely a straight line. Counselors celebrate progress and keep going through setbacks.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every program works differently.</p><ul><li>Morning: Review notes and meet with the team about new clients.</li><li>Later: Meet one-on-one with two clients.</li><li>Midday: Lead a group session.</li><li>Afternoon: Update treatment plans and call a client’s doctor.</li><li>Before leaving: Finish notes and plan tomorrow.</li></ul><p>Some days are hopeful and others are heavy. Supervision and teamwork help counselors keep going.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>This career takes college and a state license.</strong> North Dakota licensed addiction counselors complete board-approved college coursework, at least 960 hours of supervised clinical training, and a national exam.</p><ul><li><strong>North Dakota programs:</strong> Minot State University and the University of Mary offer bachelor’s programs in addiction counseling. Nueta Hidatsa Sahnish College in New Town offers an associate program.</li><li><strong>Clinical training:</strong> You practice under supervision in an approved program.</li><li><strong>Another route:</strong> Licensed professional counselors in North Dakota need a master’s degree in counseling; some also treat addiction.</li><li><strong>Start nearby:</strong> Recovery support, peer support, or human service assistant jobs can be a first step.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>To practice as a licensed addiction counselor in North Dakota, you need a license from the North Dakota Board of Addiction Counseling Examiners. Confirm the exact education rules with the board before you choose a program.</p><ul><li>Board-approved college coursework.</li><li>At least 960 hours of supervised clinical training.</li><li>Passing the board-approved exam.</li><li>A background check for most jobs.</li><li>Continuing education to keep the license.</li></ul><p><strong>Before you begin:</strong> Ask schools how they help students find clinical training placements.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota substance abuse counselor pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$33.00 an hour ($68,630 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $26.66 and $37.17 an hour.</li><li>1 in 10 earned less than $20.80 an hour, and 1 in 10 earned more than $41.65.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 1,260 of these jobs in 2024. The state projects about 1,500 in 2034, a change of +20%. That works out to about 130 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Treatment centers, hospitals, human service centers, tribal health programs, correctional facilities, and private practices.</p><p><strong>Work setting:</strong> Offices and group rooms, sometimes with evening hours. Some counselors work by video.</p><p><strong>Compare an offer:</strong> Ask about base pay, supervision for your license, caseload size, benefits, and help with continuing education.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Experienced counselor:</strong> Specialize in youth, families, or co-occurring mental health needs.</li><li><strong>Clinical supervisor:</strong> Train and supervise new counselors.</li><li><strong>Program director:</strong> Lead a treatment program.</li><li><strong>More education:</strong> A master’s degree can lead to a professional counselor license.</li></ul><p>Ask counselors near you which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Helping people rebuild their lives.</li><li>Strong demand in North Dakota.</li><li>A licensed profession with room to grow.</li><li>Teamwork with other helpers.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Emotional weight and burnout.</li><li>Lots of paperwork.</li><li>Clients who relapse or stop coming.</li><li>Years of school and training before full licensure.</li></ul><p>North Dakota projects about 20% growth in these jobs from 2024 to 2034, with about 130 openings a year.</p><p><strong>A question for yourself:</strong> Can you listen without judging and keep caring when change is slow?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Psychiatric Technician",
+  "slug": "psychiatric-technician",
+  "area": "healthcare",
+  "areaName": "Healthcare",
+  "soc": "29-2053.00",
+  "subtitle": "Supporting the daily care of people in mental health treatment",
+  "images": [
+   "psychiatric-technician-1.jpg",
+   "psychiatric-technician-2.jpg"
+  ],
+  "alts": [
+   "A psychiatric technician walks calmly beside a patient down a hospital hallway.",
+   "A psychiatric technician records observations at a nurses’ station."
+  ],
+  "wages": {
+   "p10": 18.44,
+   "p25": 18.9,
+   "p50": 19.21,
+   "p75": 22.39,
+   "p90": 26.81,
+   "p50a": 39960
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 240,
+   "pct": 16,
+   "open": 20,
+   "from": 210
+  },
+  "tags": [
+   "mental health",
+   "healthcare",
+   "patient care",
+   "hospital",
+   "helping",
+   "behavioral health"
+  ],
+  "facets": [
+   "under-20",
+   "growing-fast",
+   "few-openings"
+  ],
+  "motivation": [
+   "I want to help people during hard times.",
+   "I stay calm when others are upset.",
+   "I want to work in healthcare without years of school first."
+  ],
+  "readiness": [
+   "Talking calmly with someone who is upset or confused",
+   "Noticing small changes in how a person acts",
+   "Helping with daily care like meals and hygiene",
+   "Taking vital signs like pulse and blood pressure",
+   "Writing clear notes about what you saw",
+   "Following safety plans exactly",
+   "Working nights, weekends, or holidays",
+   "Asking a nurse for help right away when something changes"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a psychiatric technician or mental health worker."
+   ],
+   [
+    "b",
+    "Look into a mental health technician program."
+   ],
+   [
+    "c",
+    "Compare hospital and treatment center job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask someone who works in behavioral health what a shift is like.",
+   "Read about the program at Williston State College.",
+   "Look at mental health technician job ads.",
+   "Ask about training, shifts, and support."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what the best and hardest parts are.",
+    "Ask how the team keeps everyone safe.",
+    "Notice whether this kind of care sounds right for you."
+   ],
+   "b": [
+    "Read about the psychiatric and mental health technician certificate and associate degree at Williston State College.",
+    "Compare cost and length.",
+    "Ask whether employers train on the job."
+   ],
+   "c": [
+    "Compare hospitals, treatment centers, and residential programs.",
+    "Compare pay, shifts, and benefits.",
+    "Ask what de-escalation training they provide."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "People in mental health treatment need steady, kind care every day. Psychiatric technicians provide much of it, side by side with nurses and therapists. Patience, calm, and respect matter most.",
+  "group": "Therapy & Rehabilitation",
+  "hubGroup": "Therapy & Rehabilitation",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with someone who works on a behavioral health unit is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a psychiatric technician.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/29-2053.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/29-2053.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/29-2053.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/29-2053.00?st=ND"
+   ]
+  ],
+  "sourceNote": "Many similar jobs use other titles, such as mental health technician or direct care associate, and may be counted under other job groups.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>On a mental health unit, technicians spend more time with patients than almost anyone else on the team.</p><p>This job mixes caregiving, observation, and calm communication. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Psychiatric Technician?",
+    "<p>You care for people who are getting treatment for mental illness or developmental disabilities. You work under nurses and doctors as part of a team.</p>{{IMAGE0}}<ul><li>Help patients with daily care and activities.</li><li>Watch for changes in mood or behavior and report them.</li><li>Take vital signs.</li><li>Encourage social, work, and recreation skills.</li><li>Help lead group activities as directed.</li><li>Help keep everyone safe using approved calming techniques.</li></ul><p><strong>The real picture:</strong> Job titles vary. You may see mental health technician, behavioral health technician, or direct care associate.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every unit runs on its own schedule.</p><ul><li>Start of shift: Hear a report on each patient from the last shift.</li><li>Morning: Help with breakfast and check vital signs.</li><li>Midday: Help lead a group activity.</li><li>Afternoon: Spend time talking with patients and watching for changes.</li><li>End of shift: Write notes and report to the nurse.</li></ul><p>Most of the day is steady and caring. Sometimes a patient becomes very upset, and the team works together to keep everyone safe.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Paths vary.</strong> Some employers hire people with a high school diploma and train them; others want a certificate or college classes.</p><ul><li><strong>North Dakota program:</strong> Williston State College offers a psychiatric and mental health services technician certificate and associate degree.</li><li><strong>On-the-job training:</strong> Employers teach safety, de-escalation, and their own procedures.</li><li><strong>Start nearby:</strong> Certified nurse aide or direct support professional jobs can lead to this work.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>We did not find a North Dakota license for psychiatric technicians. Requirements depend on the employer. Ask each one what you need.</p><ul><li>A high school diploma or GED, and sometimes a certificate.</li><li>CPR certification and de-escalation training.</li><li>A background check.</li><li>Willingness to work shifts, including nights and weekends.</li></ul><p><strong>Before you begin:</strong> Ask what safety training you get and how staff support each other after a hard shift.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota psychiatric technician pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$19.21 an hour ($39,960 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $18.90 and $22.39 an hour.</li><li>1 in 10 earned less than $18.44 an hour, and 1 in 10 earned more than $26.81.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 210 of these jobs in 2024. The state projects about 240 in 2034, a change of +16%. That works out to about 20 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Hospitals with behavioral health units, the State Hospital and other state facilities, residential treatment centers, and group homes.</p><p><strong>Work setting:</strong> Hospital units and treatment facilities, with shifts around the clock.</p><p><strong>Compare an offer:</strong> Ask about base pay, shift pay, benefits, safety training, and help paying for nursing school.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Lead technician:</strong> Train new staff.</li><li><strong>Nursing:</strong> Many technicians go on to become LPNs or RNs.</li><li><strong>Counseling or social work:</strong> With more college.</li><li><strong>Activities or recreation therapy:</strong> Focus on groups and activities.</li></ul><p>Ask people on your unit which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Making a real difference in someone’s hardest days.</li><li>Teamwork with nurses and therapists.</li><li>A way into healthcare.</li><li>Learning a lot about mental health.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Emotional stress.</li><li>The risk of being hurt when a patient is very upset.</li><li>Nights, weekends, and holidays.</li><li>Pay that starts lower than some healthcare jobs.</li></ul><p>North Dakota projects about 16% growth in these jobs from 2024 to 2034, with about 20 openings a year.</p><p><strong>A question for yourself:</strong> Can you stay calm and kind with someone who is having a very hard day?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Social and Human Service Assistant",
+  "slug": "social-and-human-service-assistant",
+  "area": "social-services",
+  "areaName": "Social Services and Public Safety",
+  "soc": "21-1093.00",
+  "subtitle": "Connecting people with the services and support they need",
+  "images": [
+   "human-service-assistant-1.jpg",
+   "human-service-assistant-2.jpg"
+  ],
+  "alts": [
+   "A human service assistant helps a client fill out a form at an agency desk.",
+   "A human service assistant loads groceries into a client’s car at a food pantry."
+  ],
+  "wages": {
+   "p10": 17.92,
+   "p25": 18.88,
+   "p50": 22.24,
+   "p75": 26.1,
+   "p90": 31.81,
+   "p50a": 46260
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 1490,
+   "pct": 12,
+   "open": 160,
+   "from": 1330
+  },
+  "tags": [
+   "human services",
+   "case management",
+   "community",
+   "helping",
+   "social work",
+   "nonprofit"
+  ],
+  "facets": [
+   "20-to-30",
+   "growing-fast",
+   "some-openings"
+  ],
+  "motivation": [
+   "I want to help people get what they need.",
+   "I like solving practical problems.",
+   "I want to work in my community."
+  ],
+  "readiness": [
+   "Helping someone fill out forms and applications",
+   "Explaining services in plain words",
+   "Listening to people who are stressed or upset",
+   "Keeping careful records",
+   "Keeping what people share private",
+   "Calling other agencies to find help",
+   "Driving to visit people at home or in the community",
+   "Asking a supervisor when a situation is beyond your role"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with someone who works at a community agency."
+   ],
+   [
+    "b",
+    "Volunteer with a local program."
+   ],
+   [
+    "c",
+    "Look into human services classes."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask someone at a community agency what a normal day is like.",
+   "Look at human service job ads in your area.",
+   "Volunteer at a food pantry, shelter, or community program.",
+   "Ask about training, pay, and support."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what kinds of problems people bring in.",
+    "Ask what new staff find hard.",
+    "Notice whether this work sounds good to you."
+   ],
+   "b": [
+    "Find a local program that needs volunteers.",
+    "Notice how staff talk with people.",
+    "Write down what you enjoyed."
+   ],
+   "c": [
+    "Compare human services programs at North Dakota colleges.",
+    "Compare cost, length, and online options.",
+    "Ask whether employers help pay for classes."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "When people need food, housing, or help getting services, human service assistants help them find a way. Many start with a certificate or associate degree and grow from there. Respect, patience, and follow-through matter most.",
+  "group": "Helping People and Families",
+  "hubGroup": "Helping People and Families",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with someone who works at a community agency is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a social and human service assistant.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/21-1093.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/21-1093.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/21-1093.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/21-1093.00?st=ND"
+   ]
+  ],
+  "sourceNote": "Pay figures are for social and human service assistants.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Applying for help can be confusing and stressful. Human service assistants help people find their way through it.</p><p>This job mixes helping, organizing, and problem solving. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Social and Human Service Assistant?",
+    "<p>You help people get services like food, housing, health care, and job help. You often work alongside social workers and case managers.</p>{{IMAGE0}}<ul><li>Meet with people to learn what they need.</li><li>Help fill out applications and gather papers.</li><li>Connect people with programs and agencies.</li><li>Keep records and write reports.</li><li>Visit people at home or in the community.</li><li>Follow up to see how things are going.</li></ul><p><strong>The real picture:</strong> Job titles vary: case aide, family support worker, outreach worker, or program assistant.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every agency is different.</p><ul><li>Morning: Check messages and meet with a supervisor about new cases.</li><li>Later: Help a family apply for food assistance.</li><li>Midday: Help at the food pantry.</li><li>Afternoon: Call agencies to find housing help for a client.</li><li>Before leaving: Update case notes.</li></ul><p>Some days you see quick wins. Other problems take weeks to solve.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Paths vary.</strong> Some employers want a bachelor’s degree, and others hire people with an associate degree, some college, or experience.</p><ul><li><strong>North Dakota programs:</strong> Human services programs are offered at Bismarck State College, United Tribes Technical College, the University of Mary, Valley City State University, Nueta Hidatsa Sahnish College, Turtle Mountain College, Sitting Bull College, and Rasmussen University in Fargo.</li><li><strong>On-the-job training:</strong> Agencies teach their programs and record systems.</li><li><strong>Start nearby:</strong> Volunteering or front-desk work at an agency can open the door.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>We did not find a North Dakota license for this job. Requirements depend on the employer. Ask what you need.</p><ul><li>A high school diploma, and often some college or a degree.</li><li>A background check.</li><li>A driver’s license for home and community visits.</li><li>Comfort with computers and record keeping.</li></ul><p><strong>Before you begin:</strong> Ask about caseload size and how supervisors support new staff.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota social and human service assistant pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$22.24 an hour ($46,260 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $18.88 and $26.10 an hour.</li><li>1 in 10 earned less than $17.92 an hour, and 1 in 10 earned more than $31.81.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 1,330 of these jobs in 2024. The state projects about 1,490 in 2034, a change of +12%. That works out to about 160 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Human service zones and county agencies, nonprofits, tribal programs, shelters, and community action agencies.</p><p><strong>Work setting:</strong> Offices, homes, and community settings. Some jobs include evenings.</p><p><strong>Compare an offer:</strong> Ask about base pay, caseload, mileage pay, benefits, and help paying for school.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Case manager:</strong> Handle more complex cases.</li><li><strong>Social worker:</strong> With a social work degree and license.</li><li><strong>Program coordinator:</strong> Run a community program.</li><li><strong>Specialist:</strong> Focus on youth, older adults, housing, or disability services.</li></ul><p>Ask people in your agency which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Helping your own community.</li><li>Seeing problems get solved.</li><li>Many kinds of agencies to choose from.</li><li>Growing demand in North Dakota.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Heavy caseloads and paperwork.</li><li>Stress from people’s hard situations.</li><li>Pay that may start modest.</li><li>Rules that limit what you can do.</li></ul><p>North Dakota projects about 12% growth in these jobs from 2024 to 2034, with about 160 openings a year.</p><p><strong>A question for yourself:</strong> Do you enjoy solving practical problems so people get the help they need?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Community Health Worker",
+  "slug": "community-health-worker",
+  "area": "social-services",
+  "areaName": "Social Services and Public Safety",
+  "soc": "21-1094.00",
+  "subtitle": "Helping neighbors understand their health and find care",
+  "images": [
+   "community-health-worker-1.jpg",
+   "community-health-worker-2.jpg"
+  ],
+  "alts": [
+   "A community health worker goes over a handout with a client at a kitchen table.",
+   "A community health worker hands out pamphlets at a community health fair."
+  ],
+  "wages": {
+   "p10": 21.54,
+   "p25": 22.18,
+   "p50": 28.66,
+   "p75": 35.33,
+   "p90": 36.64,
+   "p50a": 59610
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 100,
+   "pct": 10,
+   "open": 10,
+   "from": 90
+  },
+  "tags": [
+   "health",
+   "community",
+   "outreach",
+   "public health",
+   "helping",
+   "education"
+  ],
+  "facets": [
+   "20-to-30",
+   "growing-fast",
+   "few-openings"
+  ],
+  "motivation": [
+   "I want to help people in my community stay healthy.",
+   "I like talking with people.",
+   "I want to connect people with care."
+  ],
+  "readiness": [
+   "Talking with people in their homes and in the community",
+   "Explaining health information in plain words",
+   "Listening to people’s worries and goals",
+   "Helping people make and keep appointments",
+   "Keeping careful records",
+   "Keeping health information private",
+   "Driving to visits around town or the county",
+   "Knowing when to refer someone to a nurse or doctor"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a community health worker."
+   ],
+   [
+    "b",
+    "Learn about North Dakota CHW certification."
+   ],
+   [
+    "c",
+    "Look at CHW and outreach job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask a community health worker what a normal week is like.",
+   "Read about North Dakota’s CHW certification.",
+   "Look at community health and outreach job ads.",
+   "Ask about training and support."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask who they help and how.",
+    "Ask what training helped them most.",
+    "Notice whether this work sounds right for you."
+   ],
+   "b": [
+    "Read the four certification pathways on the ND Health and Human Services site.",
+    "Find a CHW training program.",
+    "Ask employers whether they require certification."
+   ],
+   "c": [
+    "Compare public health, clinic, and tribal health jobs.",
+    "Compare pay, travel, and hours.",
+    "Ask which employers train new workers."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Community health workers are trusted helpers who bridge the gap between people and health care. North Dakota now certifies them, which helps pay for their services. Trust, respect, and knowing your community matter most.",
+  "group": "Helping People and Families",
+  "hubGroup": "Helping People and Families",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a community health worker is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a community health worker.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/21-1094.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/21-1094.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/21-1094.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/21-1094.00?st=ND"
+   ],
+   [
+    "North Dakota community health worker certification — ND Health and Human Services",
+    "https://www.hhs.nd.gov/regulation-licensure-and-certification/comm-hlth-worker"
+   ]
+  ],
+  "sourceNote": "Pay figures are for community health workers. Few workers are counted in North Dakota, so figures may change a lot from year to year.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Sometimes the most helpful health worker is someone from the neighborhood who knows how to explain things and where to find help.</p><p>This job mixes outreach, education, and support. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Community Health Worker?",
+    "<p>You help people understand their health and connect with care and services. You often work in the community you come from.</p>{{IMAGE0}}<ul><li>Visit people at home or meet them in the community.</li><li>Explain health information in plain words.</li><li>Help people manage conditions like diabetes day to day.</li><li>Connect people with clinics and services.</li><li>Follow up to see how things are going.</li><li>Keep records of visits.</li></ul><p><strong>The real picture:</strong> Titles vary, such as community health representative, outreach worker, or patient navigator.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every program works differently.</p><ul><li>Morning: Plan home visits and check messages.</li><li>Later: Visit a client to talk about managing blood sugar.</li><li>Midday: Help another client schedule a clinic visit and find a ride.</li><li>Afternoon: Staff a table at a community event.</li><li>Before leaving: Record visits and plan follow-ups.</li></ul><p>Much of the day is spent on the road and with people, not at a desk.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>North Dakota began certifying community health workers in October 2025.</strong> Certification creates a way for North Dakota Medicaid to pay for their services.</p><ul><li><strong>Certification pathways:</strong> A CHW training program plus a 200-hour internship; Indian Health Service community health representative training; 1,000 hours of supervised CHW work within three years; or certification from another state.</li><li><strong>College:</strong> Some employers want a degree in public health or a related field. North Dakota options include UND, NDSU, Dickinson State University, the University of Jamestown, and Turtle Mountain College.</li><li><strong>On-the-job training:</strong> Employers teach their programs and community resources.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>Ask each employer whether they require North Dakota CHW certification. Certified CHWs renew with 12 hours of continuing education, including 2 on legal and ethical topics.</p><ul><li>Strong ties to the community you will serve.</li><li>A driver’s license and reliable car for visits.</li><li>A background check.</li><li>Comfort keeping health information private.</li></ul><p><strong>Before you begin:</strong> Ask how the employer trains and supervises CHWs.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota community health worker pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$28.66 an hour ($59,610 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $22.18 and $35.33 an hour.</li><li>1 in 10 earned less than $21.54 an hour, and 1 in 10 earned more than $36.64.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 90 of these jobs in 2024. The state projects about 100 in 2034, a change of +10%. That works out to about 10 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Public health units, clinics and hospitals, tribal health programs, and nonprofits.</p><p><strong>Work setting:</strong> Homes, community places, and offices, with a lot of driving.</p><p><strong>Compare an offer:</strong> Ask about base pay, mileage, whether the job is grant funded, benefits, and training.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Senior CHW or team lead:</strong> Train and support new CHWs.</li><li><strong>Health educator:</strong> With more education.</li><li><strong>Nursing or social work:</strong> Many CHWs go on to college.</li><li><strong>Program coordinator:</strong> Run a community health program.</li></ul><p>Ask people in public health near you which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Helping your own community.</li><li>Time out with people instead of at a desk.</li><li>A growing field with new certification.</li><li>Seeing people get healthier.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Few jobs in some areas.</li><li>Travel and mileage.</li><li>Jobs that depend on grant funding.</li><li>The emotional weight of people’s struggles.</li></ul><p>North Dakota projects about 10% growth in these jobs from 2024 to 2034. It is a small field, with about 10 openings a year.</p><p><strong>A question for yourself:</strong> Would you like to be the trusted person who helps neighbors find care?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "911 Dispatcher",
+  "slug": "911-dispatcher",
+  "area": "social-services",
+  "areaName": "Social Services and Public Safety",
+  "soc": "43-5031.00",
+  "subtitle": "Answering emergency calls and sending help where it is needed",
+  "images": [
+   "dispatcher-1.jpg",
+   "dispatcher-2.jpg"
+  ],
+  "alts": [
+   "A 911 dispatcher wearing a headset types at a console with several monitors.",
+   "A 911 dispatcher speaks into a headset while keying a radio."
+  ],
+  "wages": {
+   "p10": 22.97,
+   "p25": 23.88,
+   "p50": 28.82,
+   "p75": 29.45,
+   "p90": 30.37,
+   "p50a": 59940
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 320,
+   "pct": 6,
+   "open": 30,
+   "from": 300
+  },
+  "tags": [
+   "911",
+   "dispatch",
+   "public safety",
+   "emergency",
+   "communication",
+   "computer"
+  ],
+  "facets": [
+   "20-to-30",
+   "steady",
+   "few-openings"
+  ],
+  "motivation": [
+   "I want to help people in an emergency.",
+   "I stay calm under pressure.",
+   "I like fast-paced work with a computer and phone."
+  ],
+  "readiness": [
+   "Staying calm when a caller is panicking",
+   "Asking clear questions quickly",
+   "Typing while listening and talking",
+   "Following a script and set procedures",
+   "Keeping track of several things at once",
+   "Working nights, weekends, and holidays",
+   "Sitting at a console for a long shift",
+   "Asking a coworker for help on a hard call"
+  ],
+  "future": [
+   [
+    "a",
+    "Ask a 911 dispatcher about the work."
+   ],
+   [
+    "b",
+    "Learn the hiring steps for a dispatch center."
+   ],
+   [
+    "c",
+    "Practice typing and multitasking."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask whether your local dispatch center offers sit-alongs or tours.",
+   "Look at dispatcher job ads in North Dakota.",
+   "Practice typing for speed and accuracy.",
+   "Ask about training, shifts, and support."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what a normal shift is like.",
+    "Ask how they cope after a hard call.",
+    "Notice whether this work sounds right for you."
+   ],
+   "b": [
+    "Read job postings and write down the background check, hearing, and drug screening steps.",
+    "Ask how long training lasts.",
+    "Ask whether they train in emergency medical dispatch."
+   ],
+   "c": [
+    "Take a free typing test online.",
+    "Practice listening and typing at the same time.",
+    "Write down what was hard."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "When someone calls 911, the dispatcher is the first person who helps. North Dakota dispatch centers train new hires, including how to give medical instructions. A calm voice and clear thinking matter most.",
+  "group": "Public Safety",
+  "hubGroup": "Public Safety",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a 911 dispatcher is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a 911 dispatcher.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/43-5031.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/43-5031.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/43-5031.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/43-5031.00?st=ND"
+   ],
+   [
+    "North Dakota 911 law, including dispatcher requirements (NDCC 57-40.6)",
+    "https://ndlegis.gov/cencode/t57c40-6.pdf"
+   ]
+  ],
+  "sourceNote": "Pay figures are for public safety telecommunicators. Outlook figures are for police, fire, and ambulance dispatchers.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>The first voice people hear in an emergency belongs to a 911 dispatcher.</p><p>This job mixes calm communication, quick thinking, and teamwork. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a 911 Dispatcher?",
+    "<p>You answer emergency and non-emergency calls and send police, fire, and ambulance crews where they are needed.</p>{{IMAGE0}}<ul><li>Answer calls and find out where the caller is.</li><li>Ask questions to learn what is happening.</li><li>Decide which calls are most urgent.</li><li>Send the right crews by radio and computer.</li><li>Give callers instructions until help arrives.</li><li>Record details of every call.</li></ul><p><strong>The real picture:</strong> Many calls are not emergencies. Some are frightening. Dispatchers handle both, often at the same time.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every center is different.</p><ul><li>Start of shift: Get a briefing on what is happening in the area.</li><li>Morning: Handle a car crash call and send crews.</li><li>Midday: Answer non-emergency calls and track units by radio.</li><li>Afternoon: Give a caller medical instructions until the ambulance arrives.</li><li>End of shift: Finish records and brief the next dispatcher.</li></ul><p>Quiet stretches can change in seconds.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Most centers hire people with a high school diploma or GED and train them.</strong></p><ul><li><strong>Required training:</strong> North Dakota law requires each 911 center to give dispatchers initial and ongoing training.</li><li><strong>Medical instructions:</strong> Dispatchers who give medical instructions before help arrives must finish an approved emergency medical dispatch course.</li><li><strong>On the job:</strong> New dispatchers train with an experienced dispatcher before working alone.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>North Dakota sets hiring rules for 911 centers. Ask each center for its full list.</p><ul><li>Fingerprinting and a nationwide background check, with no felony conviction.</li><li>Drug screening and a hearing test before hiring.</li><li>Initial and ongoing training from the center.</li><li>An emergency medical dispatch course to give medical instructions.</li><li>Willingness to work rotating 24/7 shifts.</li></ul><p><strong>Before you begin:</strong> Ask how the center supports dispatchers after hard calls.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota 911 dispatcher pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$28.82 an hour ($59,940 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $23.88 and $29.45 an hour.</li><li>1 in 10 earned less than $22.97 an hour, and 1 in 10 earned more than $30.37.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 300 of these jobs in 2024. The state projects about 320 in 2034, a change of +6%. That works out to about 30 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> City and county 911 centers, state radio, and some hospitals and ambulance services.</p><p><strong>Work setting:</strong> Dispatch centers with computers and radios, staffed 24 hours a day.</p><p><strong>Compare an offer:</strong> Ask about base pay, shift pay, overtime, benefits, and support after hard calls.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Senior dispatcher or trainer:</strong> Train new dispatchers.</li><li><strong>Shift supervisor:</strong> Lead a team.</li><li><strong>911 center manager:</strong> Run a dispatch center.</li><li><strong>Related careers:</strong> EMT, firefighter, or police officer.</li></ul><p>Ask dispatchers near you which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Helping people at the most important moment.</li><li>Teamwork with first responders.</li><li>Paid training and steady public jobs.</li><li>Fast-paced, never-boring work.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Stress and upsetting calls.</li><li>Nights, weekends, holidays, and overtime.</li><li>Long shifts at a console.</li><li>Support for dispatchers’ mental health.</li></ul><p>North Dakota projects about 6% growth in these jobs from 2024 to 2034, with about 30 openings a year.</p><p><strong>A question for yourself:</strong> Can you stay calm and clear when someone else is in crisis?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Recreation Worker",
+  "slug": "recreation-worker",
+  "area": "jobs-you-can-start-now",
+  "areaName": "Jobs You Can Start Now",
+  "soc": "39-9032.00",
+  "subtitle": "Leading activities, games, and programs that help people have fun and stay active",
+  "images": [
+   "recreation-worker-1.jpg",
+   "recreation-worker-2.jpg"
+  ],
+  "alts": [
+   "A recreation worker sets up cones and balls on a park field.",
+   "A recreation worker leads a chair exercise class for older adults."
+  ],
+  "wages": {
+   "p10": 10.7,
+   "p25": 14.61,
+   "p50": 17.94,
+   "p75": 22.69,
+   "p90": 25.96,
+   "p50a": 37310
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 1040,
+   "pct": 8,
+   "open": 210,
+   "from": 960
+  },
+  "tags": [
+   "recreation",
+   "parks",
+   "activities",
+   "youth",
+   "seniors",
+   "sports"
+  ],
+  "facets": [
+   "under-20",
+   "steady",
+   "some-openings"
+  ],
+  "motivation": [
+   "I like helping people have fun.",
+   "I like being active.",
+   "I want a job with people instead of a desk."
+  ],
+  "readiness": [
+   "Leading a game or activity for a group",
+   "Explaining rules clearly and patiently",
+   "Keeping a group safe and on track",
+   "Being active and on your feet",
+   "Working with children, teens, or older adults",
+   "Giving first aid if someone gets hurt",
+   "Working evenings, weekends, or summers",
+   "Asking a supervisor for help with a difficult situation"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a recreation worker."
+   ],
+   [
+    "b",
+    "Volunteer at a park, camp, or senior center."
+   ],
+   [
+    "c",
+    "Look at seasonal recreation job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask someone at a park district or senior center about their job.",
+   "Look at recreation job ads in your area.",
+   "Ask about CPR and first aid training.",
+   "Ask about hours, seasons, and pay."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what a normal day is like.",
+    "Ask what groups they enjoy most.",
+    "Notice whether this work sounds fun to you."
+   ],
+   "b": [
+    "Volunteer with a youth sports program, camp, or senior activity.",
+    "Notice what parts you enjoyed.",
+    "Write down what you learned."
+   ],
+   "c": [
+    "Read seasonal job ads for summer programs.",
+    "Compare part-time and full-time jobs.",
+    "Ask which require CPR or lifeguard training."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Parks, camps, and community centers help people of every age stay active and connected. Many recreation workers start part time. Energy, patience, and keeping people safe matter most.",
+  "group": "Care, Safety and Investigation",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with a recreation worker is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a recreation worker.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/39-9032.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/39-9032.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/39-9032.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/39-9032.00?st=ND"
+   ]
+  ],
+  "sourceNote": "Pay figures include many part-time and seasonal workers.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>Summer programs, community events, and senior center classes all need someone to plan the fun and keep it safe.</p><p>This job mixes activity, leadership, and people skills. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Recreation Worker?",
+    "<p>You plan and lead activities like sports, games, crafts, and fitness classes in parks, camps, and community centers.</p>{{IMAGE0}}<ul><li>Set up equipment and spaces.</li><li>Lead games, sports, crafts, and classes.</li><li>Plan activities that fit each group.</li><li>Enforce safety rules.</li><li>Give first aid when needed.</li><li>Keep attendance and supply records.</li></ul><p><strong>The real picture:</strong> Many jobs are part time or seasonal. Full-time jobs often involve more planning and leadership.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every program is different.</p><ul><li>Morning: Set up the field for a youth soccer program.</li><li>Later: Lead drills and games.</li><li>Midday: Lead a chair exercise class at the senior center.</li><li>Afternoon: Plan next week’s activities.</li><li>Before leaving: Put away equipment and write down attendance.</li></ul><p>Weather and turnout can change the plan.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Many part-time jobs need only a high school diploma, and some take teens.</strong> Full-time jobs often want a college degree in recreation or a related field.</p><ul><li><strong>On-the-job training:</strong> Employers teach their programs and safety rules.</li><li><strong>Certifications:</strong> CPR and first aid are common. Pool jobs need lifeguard certification.</li><li><strong>Start nearby:</strong> Volunteering or summer camp jobs build experience.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>We did not find a North Dakota license for recreation workers. Requirements depend on the employer. Ask what you need.</p><ul><li>CPR and first aid certification.</li><li>A background check for work with children or vulnerable adults.</li><li>Ability to be active and on your feet.</li><li>Willingness to work evenings, weekends, or summers.</li></ul><p><strong>Before you begin:</strong> Ask what training is provided and how staff handle emergencies.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota recreation worker pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$17.94 an hour ($37,310 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $14.61 and $22.69 an hour.</li><li>1 in 10 earned less than $10.70 an hour, and 1 in 10 earned more than $25.96.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 960 of these jobs in 2024. The state projects about 1,040 in 2034, a change of +8%. That works out to about 210 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Park districts, cities, YMCAs, camps, senior centers, nursing homes, and after-school programs.</p><p><strong>Work setting:</strong> Parks, gyms, camps, and community centers. Many jobs are part time or seasonal.</p><p><strong>Compare an offer:</strong> Ask about hourly pay, hours per week, season length, and whether full-time work is available.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Program leader:</strong> Plan and run whole programs.</li><li><strong>Recreation coordinator:</strong> Lead staff and budgets.</li><li><strong>Recreation therapy:</strong> With a degree, help people heal through activities.</li><li><strong>Parks and recreation manager:</strong> Run a park district.</li></ul><p>Ask your supervisor which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>Fun, active work.</li><li>Making a difference for kids or older adults.</li><li>Starting part time without a degree.</li><li>Summer jobs outdoors.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Lower pay in many part-time jobs.</li><li>Seasonal work.</li><li>Evenings and weekends.</li><li>Managing behavior in large groups.</li></ul><p>North Dakota projects about 8% growth in these jobs from 2024 to 2034, with about 210 openings a year.</p><p><strong>A question for yourself:</strong> Do you enjoy leading activities and helping others have a good time?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ },
+ {
+  "name": "Library Technician",
+  "slug": "library-technician",
+  "area": "education",
+  "areaName": "Education",
+  "soc": "25-4031.00",
+  "subtitle": "Helping people find books, information, and computers at the library",
+  "images": [
+   "library-technician-1.jpg",
+   "library-technician-2.jpg"
+  ],
+  "alts": [
+   "A library technician scans returned books at a circulation desk.",
+   "A library technician reshelves books from a cart in a quiet aisle."
+  ],
+  "wages": {
+   "p10": 16.78,
+   "p25": 17.45,
+   "p50": 18.87,
+   "p75": 21.87,
+   "p90": 24.08,
+   "p50a": 39240
+  },
+  "proj": {
+   "y0": 2024,
+   "y1": 2034,
+   "to": 410,
+   "pct": 1,
+   "open": 70,
+   "from": 400
+  },
+  "tags": [
+   "library",
+   "books",
+   "customer service",
+   "computer",
+   "organizing",
+   "education"
+  ],
+  "facets": [
+   "under-20",
+   "flat",
+   "few-openings"
+  ],
+  "motivation": [
+   "I like books and organizing information.",
+   "I like helping people find what they need.",
+   "I want a calm indoor job."
+  ],
+  "readiness": [
+   "Helping people at a front desk",
+   "Putting books in exact order",
+   "Learning a library computer system",
+   "Helping someone use a computer or printer",
+   "Answering questions politely and patiently",
+   "Pushing carts and reaching high and low shelves",
+   "Working some evenings or Saturdays",
+   "Asking a librarian when you are not sure"
+  ],
+  "future": [
+   [
+    "a",
+    "Talk with a library worker."
+   ],
+   [
+    "b",
+    "Volunteer at a library."
+   ],
+   [
+    "c",
+    "Look at library job ads."
+   ],
+   [
+    "research",
+    "Learn more before applying."
+   ],
+   [
+    "undecided",
+    "Keep exploring. I do not have a plan yet."
+   ]
+  ],
+  "nextSteps": [
+   "Ask library staff what their day is like.",
+   "Look at library assistant and technician job ads.",
+   "Practice basic computer and customer service skills.",
+   "Ask about training, pay, and hours."
+  ],
+  "futureSteps": {
+   "a": [
+    "Ask what tasks fill most of the day.",
+    "Ask what new staff learn first.",
+    "Notice whether library work sounds right for you."
+   ],
+   "b": [
+    "Ask your local library about volunteering.",
+    "Help with shelving or events.",
+    "Write down what you enjoyed."
+   ],
+   "c": [
+    "Compare public, school, and college library jobs.",
+    "Compare pay, hours, and benefits.",
+    "Ask which require college classes."
+   ],
+   "research": [
+    "Read the O*NET page in the Sources list at the bottom of this page.",
+    "Compare two or three training programs or job ads.",
+    "Write down questions to bring to your career counselor."
+   ],
+   "undecided": [
+    "Browse another career that sounds interesting.",
+    "Write down one thing you liked about this job and one thing you did not.",
+    "Talk with your career counselor about what you noticed."
+   ]
+  },
+  "final": "Libraries help people learn, apply for jobs, and find a quiet place to read. Library technicians keep everything organized and help people use it. Patience and careful organizing matter most.",
+  "group": "Libraries and Learning Support",
+  "hubGroup": "Libraries and Learning Support",
+  "recs": [
+   "Many of these activities sound comfortable to you. Talking with library staff is a useful next step.",
+   "Most of these activities sound comfortable. Ask how an employer trains someone new as a library technician.",
+   "Some activities sound comfortable, and others may need a closer look. Talking with someone who does the work can help.",
+   "Several activities did not sound comfortable yet, and that is useful to know. You can explore this alongside other careers.",
+   "You do not need a clear answer yet. Look back at the parts that interested you, and compare a few other careers too."
+  ],
+  "sources": [
+   [
+    "O*NET OnLine — occupation information",
+    "https://www.onetonline.org/link/summary/25-4031.00"
+   ],
+   [
+    "North Dakota pay — BLS May 2025, via O*NET",
+    "https://www.onetonline.org/link/localwages/25-4031.00?st=ND"
+   ],
+   [
+    "North Dakota outlook — Projections Central 2024–2034, via O*NET",
+    "https://www.onetonline.org/link/localtrends/25-4031.00?st=ND"
+   ],
+   [
+    "North Dakota schools and programs — via O*NET",
+    "https://www.onetonline.org/link/localtraining/25-4031.00?st=ND"
+   ]
+  ],
+  "sourceNote": "Pay figures are for library technicians. Some libraries use the title library assistant.",
+  "sections": [
+   [
+    "Welcome",
+    "<p>From story time to job applications, libraries help whole communities. Library technicians keep them running.</p><p>This job mixes organizing, computers, and customer service. Explore what it feels like before deciding whether it interests you.</p><p><strong>Go at your pace.</strong> The short questions at the end are for reflection. There are no right or wrong answers.</p>"
+   ],
+   [
+    "What is a Library Technician?",
+    "<p>You help librarians run the library. You check materials in and out, help visitors, and keep everything organized.</p>{{IMAGE0}}<ul><li>Check books and other materials in and out.</li><li>Answer simple questions and help people find things.</li><li>Help visitors use computers, printers, and online resources.</li><li>Process new books and materials.</li><li>Sort and shelve materials.</li><li>Help with programs and events.</li></ul><p><strong>The real picture:</strong> Titles vary, such as library assistant, library associate, or circulation clerk.</p>"
+   ],
+   [
+    "A Day in the Life",
+    "{{IMAGE1}}<p><strong>One possible day:</strong> Every library is different.</p><ul><li>Morning: Check in returned books and sort them.</li><li>Later: Help visitors at the front desk.</li><li>Midday: Help someone print a job application.</li><li>Afternoon: Shelve books and process new arrivals.</li><li>Before leaving: Tidy the shelves and set up for an evening program.</li></ul><p>Some hours are quiet. Others are busy with families and students.</p>"
+   ],
+   [
+    "How You Learn the Job",
+    "<p><strong>Paths vary.</strong> Some libraries hire people with a high school diploma; others want an associate degree, a certificate, or a bachelor’s degree.</p><ul><li><strong>On-the-job training:</strong> Libraries teach their computer system and procedures.</li><li><strong>Online programs:</strong> Library technician certificates and associate degrees are offered online by colleges in other states.</li><li><strong>Start nearby:</strong> Library page or volunteer roles can open the door.</li></ul><p><strong>Paying for training:</strong></p><ol><li>Start with financial aid, scholarships, and grants. The school's financial aid office can help.</li><li>Ask employers whether they help pay for training.</li><li>Ask for the full cost, including books, fees, travel, and a computer.</li><li>Ask your career counselor about other help, such as WIOA. WIOA is a federal program that can help some people pay for job training. Ask before you enroll.</li></ol><p>Employer help with school may come with a promise to keep working there. Read the terms first.</p>"
+   ],
+   [
+    "Training and Employer Requirements",
+    "<p>We did not find a North Dakota license for library technicians. Requirements depend on the employer. Ask what you need.</p><ul><li>Comfort with computers and careful organizing.</li><li>Friendly, patient customer service.</li><li>A background check for school libraries.</li><li>Ability to push carts and reach shelves, or ask about the physical demands.</li></ul><p><strong>Before you begin:</strong> Ask how new staff are trained.</p><p>Ask about written instructions, an accessible workstation, extra practice time, or other support that helps you learn and do the work well.</p>"
+   ],
+   [
+    "Pay and Job Outlook",
+    "<p><strong>North Dakota library technician pay — May 2025:</strong></p><ul><li>Middle pay: <strong>$18.87 an hour ($39,240 a year)</strong>. Half of workers earned more and half earned less.</li><li>Half of workers earned between $17.45 and $21.87 an hour.</li><li>1 in 10 earned less than $16.78 an hour, and 1 in 10 earned more than $24.08.</li><li>These numbers show what workers earned. They are not a promise of what a new worker will start at.</li><li>North Dakota had about 400 of these jobs in 2024. The state projects about 410 in 2034, a change of +1%. That works out to about 70 openings a year, mostly from people who retire or change jobs.</li></ul><p><strong>Where people work:</strong> Public libraries, school libraries, colleges and universities, and the State Library.</p><p><strong>Work setting:</strong> Library front desks, shelves, and workrooms. Some jobs include evenings and Saturdays.</p><p><strong>Compare an offer:</strong> Ask about hourly pay, hours per week, benefits, and training.</p>"
+   ],
+   [
+    "Where This Can Lead",
+    "<ul><li><strong>Senior technician:</strong> Handle cataloging or interlibrary loans.</li><li><strong>Branch or department supervisor:</strong> Lead staff.</li><li><strong>Librarian:</strong> With a master’s degree in library science.</li><li><strong>School library aide:</strong> Work with students.</li></ul><p>Ask library staff which paths are open.</p>"
+   ],
+   [
+    "The Real Talk",
+    "<p><strong>Things you might like:</strong></p><ul><li>A calm, organized place to work.</li><li>Helping people learn.</li><li>Being around books and information.</li><li>Steady public jobs.</li></ul><p><strong>Things to ask about:</strong></p><ul><li>Modest pay.</li><li>Part-time jobs and evening or weekend hours.</li><li>Few openings.</li><li>Visitors who need a lot of patience.</li></ul><p>North Dakota projects the number of these jobs to stay about the same from 2024 to 2034, with about 70 openings a year.</p><p><strong>A question for yourself:</strong> Do you enjoy organizing things and helping people find what they need?</p>"
+   ]
+  ],
+  "part2Intro": "<p>For each activity, choose whether it sounds comfortable to try. You do not need these skills already, and you can ask for support.</p>"
+ }
+]

@@ -1,14 +1,14 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert/strict');
 const root=path.resolve(__dirname,'../..'),site=path.join(root,'Career Assessments Web');
-const careers=JSON.parse(fs.readFileSync(path.join(root,'_Build Kit/New Careers October 2026/careers.json'),'utf8'));
+const careers=['New Careers October 2026','New Careers Batch 2'].map(k=>path.join(root,'_Build Kit',k,'careers.json')).filter(f=>fs.existsSync(f)).flatMap(f=>JSON.parse(fs.readFileSync(f,'utf8')));
 const index=JSON.parse(fs.readFileSync(path.join(site,'search-index.json'),'utf8'));
-assert.equal(index.careers.length,203);
+assert.equal(index.careers.length,index.totalCareers);
 for(const c of index.careers)assert(fs.existsSync(path.join(site,c.url)),c.url);
 const members=new Set(JSON.parse(fs.readFileSync(path.join(site,'nd-in-demand.json'),'utf8')).careers.map(c=>c.url));
 for(const c of careers){
  const url=c.area+'/'+c.slug+'.html',raw=fs.readFileSync(path.join(site,url),'utf8');
  assert(!members.has(url),'new specialty must not silently acquire a list marker');
- const HUBS={'jobs-you-can-start-now':'Jobs_You_Can_Start_Now_Career_Assessments.html','healthcare':'Healthcare_Career_Assessments.html','education':'Education_Career_Assessments.html','business-finance':'Business_and_Finance_Career_Assessments.html'};
+ const HUBS={'jobs-you-can-start-now':'Jobs_You_Can_Start_Now_Career_Assessments.html','healthcare':'Healthcare_Career_Assessments.html','education':'Education_Career_Assessments.html','business-finance':'Business_and_Finance_Career_Assessments.html','skilled-trades':'Skilled_Trades_Career_Assessments.html','management':'Management_Career_Assessments.html','social-services':'Social_Services_Career_Assessments.html'};
  const hub=fs.readFileSync(path.join(root,HUBS[c.area]),'utf8');
  assert(hub.slice(0,hub.indexOf('var ASSESSMENTS_DATA')).includes("openAssessment('"+c.name+" Career Assessment')"),'hub menu card');
  const area=fs.readFileSync(path.join(site,c.area,'index.html'),'utf8');assert(area.includes('href="'+c.slug+'.html"'),'area menu card');
@@ -51,4 +51,4 @@ for(const c of careers){
   }
  }
 }
-console.log('PASS: 203 links; '+careers.length+' new careers unmarked; menu cards, search entries, matching web/hub content; 2 images and 11 sections each; reflections, missing answers, plan-specific steps, escaped notes; light/dark and one-section print controller.');
+console.log('PASS: '+index.careers.length+' links; '+careers.length+' new careers unmarked; menu cards, search entries, matching web/hub content; 2 images and 11 sections each; reflections, missing answers, plan-specific steps, escaped notes; light/dark and one-section print controller.');

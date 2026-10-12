@@ -1,7 +1,7 @@
 # Career Factory — Careers to Explore
 
 Explore real careers at your own pace, including North Dakota in-demand occupations
-and other careers worth learning about. **203 careers across 12 areas.**
+and other careers worth learning about. **219 careers across 12 areas.**
 The homepage marks verified members of the July 2026 ND list with an ND In-Demand badge.
 Unmarked careers remain available to explore.
 
@@ -33,19 +33,19 @@ being sold a career.
 
 | Area | Careers |
 |---|---|
-| Skilled Trades | 31 |
-| Healthcare | 32 |
+| Skilled Trades | 36 |
+| Healthcare | 33 |
 | Business and Finance | 25 |
 | Tech | 18 |
 | Architecture and Engineering | 16 |
-| Education | 16 |
-| Management | 14 |
-| Social Services | 8 |
+| Education | 17 |
+| Management | 15 |
+| Social Services | 13 |
 | Science | 8 |
 | Transportation | 5 |
 | Arts, Legal and Sales | 4 |
-| Jobs You Can Start Now | 26 |
-| **Total** | **203** |
+| Jobs You Can Start Now | 29 |
+| **Total** | **219** |
 
 ### Two formats, same content
 

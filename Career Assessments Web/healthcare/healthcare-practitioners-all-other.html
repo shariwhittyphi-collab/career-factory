@@ -513,6 +513,15 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light, #eef4fb); border-left: 4px solid var(--accent-blue, #1f5fa8); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark, #1a1a1a); }
+        .enroll-note strong { color: var(--text-dark, #1a1a1a); }
+        .enroll-headsup { margin: 0 0 14px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup, body.dark-mode .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        html[data-theme="dark"] .enroll-note, [data-contrast="dark"] .enroll-note, body.dark-mode .enroll-note { background: #1e2a3a; color: #e8eef6; }
+        html[data-theme="dark"] .enroll-note strong, [data-contrast="dark"] .enroll-note strong, body.dark-mode .enroll-note strong, html[data-theme="dark"] .enroll-headsup strong, [data-contrast="dark"] .enroll-headsup strong { color: inherit; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -621,6 +630,8 @@
         <div class="section" id="section4">
             <h2 tabindex="-1"><span class="section-number" aria-hidden="true">4</span>Training in North Dakota</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section4')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section4')">&#128424;&#65039; Print this part</button></div>
+            <div class="enroll-headsup">Heads up: the North Dakota part of this path is the easy part. The four-year universities admit on a regular freshman application with a 2.5 to 2.75 high school grade average and a set of core high school classes, and none require the ACT or SAT; the two-year colleges are open admission. The hard gates come later and out of state: naturopathic medical schools and orthoptic fellowships are competitive, want strong science grades and patient-contact experience, and the naturopathic license in North Dakota is granted only to graduates of a four-year, full-time, in-person accredited school who pass both parts of the national exam.</div>
+
             <p><strong>There is no program for this bucket. Both named jobs require training you cannot get in North Dakota.</strong> This is the hard fact. Naturopathic medical schools accredited by the national council are all outside North Dakota, and there is no accredited orthoptic fellowship program in North Dakota, South Dakota, or Montana. Both jobs also start with a four-year degree, which you can absolutely get here. Plan on doing your undergraduate work in North Dakota and then leaving for the professional training.</p>
             <!-- CHADWICK IMAGE (training): optional extra picture -->
             <div class="img-slot" data-image="training"></div>
@@ -632,15 +643,29 @@
             </ul>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
-                <li>University of North Dakota (Grand Forks) — bachelor's degrees in biology, biomedical sciences, and the pre-health sciences. The usual undergraduate foundation for either path — und.edu</li>
-                <li>North Dakota State University (Fargo) — bachelor's degrees in biological sciences and health-related fields — ndsu.edu</li>
-                <li>Minot State University (Minot) — B.S. Biology and pre-professional health tracks — minotstateu.edu</li>
-                <li>University of Mary (Bismarck) — health sciences bachelor's degrees — umary.edu</li>
-                <li>Bismarck State College and ND State College of Science — two-year transfer work in biology and chemistry that moves to a four-year school and costs far less to start — bismarckstate.edu, ndscs.edu</li>
-                <li>Orthoptic fellowship: no accredited program in North Dakota, South Dakota, or Montana. The nearest are the University of Minnesota and Mayo Clinic in Minnesota — americanorthopticcouncil.org</li>
-                <li>Naturopathic medical school: no school in North Dakota. The accredited list is kept by the Council on Naturopathic Medical Education, and the ND Board of Medicine will only accept a license applicant from one of them — ndbom.org/practitioners/naturopaths</li>
+                <li>University of North Dakota (Grand Forks) — bachelor's degrees in biology, biomedical sciences, and the pre-health sciences. The usual undergraduate foundation for either path — und.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Regular admission: 14 high school core units (waived at age 25+), recommended 2.75 grade average, no ACT/SAT needed.</div>
+                </li>
+                <li>North Dakota State University (Fargo) — bachelor's degrees in biological sciences and health-related fields — ndsu.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Regular admission: 14 high school core classes, recommended 2.75 grade average, test-optional.</div>
+                </li>
+                <li>Minot State University (Minot) — B.S. Biology and pre-professional health tracks — minotstateu.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Regular admission: 2.5 high school grade average and 13 core units, test-optional.</div>
+                </li>
+                <li>University of Mary (Bismarck) — health sciences bachelor's degrees — umary.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Regular admission with college-prep classes; about a 2.5 grade average for automatic admission, test scores optional.</div>
+                </li>
+                <li>Bismarck State College and ND State College of Science — two-year transfer work in biology and chemistry that moves to a four-year school and costs far less to start — bismarckstate.edu, ndscs.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Open admission; placement tests decide which math and English you start in.</div>
+                </li>
+                <li>Orthoptic fellowship: no accredited program in North Dakota, South Dakota, or Montana. The nearest are the University of Minnesota and Mayo Clinic in Minnesota — americanorthopticcouncil.org
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> A completed bachelor's degree is required before you can apply; fellowships are competitive and out of state.</div>
+                </li>
+                <li>Naturopathic medical school: no school in North Dakota. The accredited list is kept by the Council on Naturopathic Medical Education, and the ND Board of Medicine will only accept a license applicant from one of them — ndbom.org/practitioners/naturopaths
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> North Dakota licenses only graduates of a four-year, full-time, in-person accredited naturopathic school who pass both parts of the national exam; a bachelor's degree with science prerequisites comes first.</div>
+                </li>
             </ul>
-            <p><strong>Before You Start:</strong> A high school diploma or GED and strong science and math. Both routes start with a competitive four-year degree, so grades matter from the first semester. Get real patient contact early, through a clinic job or volunteering, because every program asks about it.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Heads up</em> box in the training section; entry rules change, so confirm them with the school before you apply. A high school diploma or GED and strong science and math. Both routes start with a competitive four-year degree, so grades matter from the first semester. Get real patient contact early, through a clinic job or volunteering, because every program asks about it.</p>
             <p><strong>Tip:</strong> Start with financial aid and scholarships. Fill out the FAFSA, ask the school’s financial aid office what you qualify for, and ask an employer whether they help pay for school. That is where the money starts. After that, a career counselor or Job Service North Dakota may be able to help with what is left over, like tuition, books, a laptop, or exam fees. What can be paid for depends on the program and on your own situation, so ask before you enroll rather than after. Worth asking about specifically: two-year degrees that train you for a job, like civil engineering technology, land surveying, mechatronics, electronics, or instrumentation. North Dakota two-year colleges also cost far less than a university. Ask about paid summer internships too — engineering firms, plants, and survey crews hire students while they are still in school.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>
@@ -1168,6 +1193,8 @@
             <dt>Education and training</dt>
             <dd><a href="https://www.onetonline.org/link/localtraining/29-1299.00?st=ND" target="_blank" rel="noopener">North Dakota schools that train Healthcare Practitioner (Other Roles)s</a> &mdash; colleges and programs in this state, with how many people finished recently. From the U.S. Department of Labor, using federal college data (IPEDS).</dd>
 
+            <dt>Program entry requirements</dt>
+            <dd>Read on the schools&rsquo; and boards&rsquo; own pages on Oct. 13, 2026: <a href="https://und.edu/admissions/freshmen/apply.html" target="_blank" rel="noopener">University of North Dakota (Grand Forks): Bachelor's degrees in biology, biomedical sciences and pre-h</a>; <a href="https://www.ndsu.edu/admission/first-year" target="_blank" rel="noopener">North Dakota State University (Fargo): Bachelor's degrees in biological sciences and health fields</a>; <a href="https://www.minotstateu.edu/enroll/freshman/admissions-reqs.shtml" target="_blank" rel="noopener">Minot State University: B.S. Biology and pre-professional health tracks</a>; <a href="https://www.umary.edu/admission-aid/undergraduate-admissions/admission-requirements/incoming-freshman" target="_blank" rel="noopener">University of Mary (Bismarck): Health sciences bachelor's degrees</a>; <a href="https://www.ndbom.org/practitioners/naturopaths/apply/" target="_blank" rel="noopener">North Dakota Board of Medicine (naturopath licensing): Naturopathic Doctor license</a>. Rules change each year, so confirm with the school.</dd>
             <dt>More career exploration</dt>
             <dd><a href="https://secure.ruready.nd.gov/Career_Planning/_default.aspx" target="_blank" rel="noopener">RUReady.ND.gov career planning</a> &mdash; North Dakota&rsquo;s own career and college planning site. An account may be required.</dd>
         </dl>

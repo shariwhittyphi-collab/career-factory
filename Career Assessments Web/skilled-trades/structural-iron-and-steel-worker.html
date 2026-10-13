@@ -511,6 +511,13 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light); border-left: 4px solid var(--accent-blue); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark); }
+        .enroll-note strong { color: var(--text-dark); }
+        .enroll-headsup { margin: 0 0 12px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -630,11 +637,15 @@
             </ul>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
-                <li>Iron Workers Local 512 (Bismarck training center) — North Dakota Statewide Ironworkers JATC registered apprenticeship (ironworkers512.com)</li>
-                <li>ND State College of Science (Wahpeton) — Building Construction Technology, AAS, includes steel erection and pre-engineered metal buildings (ndscs.edu)</li>
+                <li>Iron Workers Local 512 (Bismarck training center) — North Dakota Statewide Ironworkers JATC registered apprenticeship (ironworkers512.com)
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> You must be 18 and legally allowed to work in the U.S. You book an appointment and apply in person at the Bismarck training center, pass a written test, and pass a drug screen (the union's rule). You need reliable transportation to job sites.</div>
+                </li>
+                <li>ND State College of Science (Wahpeton) — Building Construction Technology, AAS, includes steel erection and pre-engineered metal buildings (ndscs.edu)
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> You start in the fall or spring. The program coordinator may ask for entrance tests and an interview. You buy your own tools and a specific laptop.</div>
+                </li>
                 <li>Steel erection and construction companies — helper jobs and on-the-job training</li>
             </ul>
-            <p><strong>Before You Start:</strong> Age 18 or older. High school diploma or GED. Valid driver's license and a reliable vehicle. Must pass a drug test. Apprentices buy their own tools (about $200 to $650) and pay dues and class fees.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Before you can enroll</em> notes above; entry rules change, so confirm them with the school before you apply. Age 18 or older. High school diploma or GED. Valid driver's license and a reliable vehicle. Must pass a drug test. Apprentices buy their own tools (about $200 to $650) and pay dues and class fees.</p>
             <p><strong>Tip:</strong> Start with financial aid, scholarships, and any help an employer offers — that is where the money starts. After that, ask a career counselor or Job Service North Dakota whether WIOA or other programs can help with what is left over, like training, tools, work boots, or exam fees. What can be paid for depends on the program and on your own situation, so ask before you sign up rather than after. Registered apprenticeships let you earn a paycheck while you learn — see jobsnd.com/job-seeker/apprenticeships for ND programs.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>
@@ -1160,6 +1171,8 @@
             <dt>Education and training</dt>
             <dd><a href="https://www.onetonline.org/link/localtraining/47-2221.00?st=ND" target="_blank" rel="noopener">North Dakota schools that train Structural Iron and Steel Workers</a> &mdash; colleges and programs in this state, with how many people finished recently. From the U.S. Department of Labor, using federal college data (IPEDS).</dd>
 
+                        <dt>Program entry requirements</dt>
+            <dd>Read on the schools&rsquo; own pages on Oct. 13, 2026: <a href="https://hirevets.shrm.org/jobs/ironworkers-local-512-north-dakota-accepting-applications/65eb794ac1f3ee002e7519f5" target="_blank" rel="noopener">Iron Workers Local 512 / ND Statewide Ironworkers JATC: Registered apprenticeship</a>; <a href="https://catalog.ndscs.edu/node/1902" target="_blank" rel="noopener">North Dakota State College of Science: Building Construction Technology, AAS</a>. Rules change each year, so confirm with the school.</dd>
             <dt>More career exploration</dt>
             <dd><a href="https://secure.ruready.nd.gov/Career_Planning/_default.aspx" target="_blank" rel="noopener">RUReady.ND.gov career planning</a> &mdash; North Dakota&rsquo;s own career and college planning site. An account may be required.</dd>
         </dl>

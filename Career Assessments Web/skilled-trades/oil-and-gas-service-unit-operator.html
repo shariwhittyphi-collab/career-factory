@@ -511,6 +511,13 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light); border-left: 4px solid var(--accent-blue); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark); }
+        .enroll-note strong { color: var(--text-dark); }
+        .enroll-headsup { margin: 0 0 12px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -633,7 +640,7 @@
                 <li>Williston State College (Williston) — Petroleum Technology & Automation, AAS (62 credits), certificate (31 credits), or short certificate</li>
                 <li>TrainND Northwest (Williston State College) — SafeLand and H2S safety classes</li>
             </ul>
-            <p><strong>Before You Start:</strong> Usually 18+. A valid driver's license; a CDL is often required. Drug testing. Physical fitness.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Before you can enroll</em> notes above; entry rules change, so confirm them with the school before you apply. Usually 18+. A valid driver's license; a CDL is often required. Drug testing. Physical fitness.</p>
             <p><strong>Tip:</strong> Start with financial aid, scholarships, and any help an employer offers — that is where the money starts. After that, ask a career counselor or Job Service North Dakota whether WIOA or other programs can help with what is left over, like training, tools, work boots, or exam fees. What can be paid for depends on the program and on your own situation, so ask before you sign up rather than after. Registered apprenticeships let you earn a paycheck while you learn — see jobsnd.com/job-seeker/apprenticeships for ND programs.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>

@@ -511,6 +511,13 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light); border-left: 4px solid var(--accent-blue); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark); }
+        .enroll-note strong { color: var(--text-dark); }
+        .enroll-headsup { margin: 0 0 12px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -628,13 +635,18 @@
                 <li><strong>Associate degree (2 years):</strong> Deeper training and better job options. Some programs are ASE-accredited.</li>
                 <li><strong>Registered apprenticeship:</strong> Earn while you learn at a shop (NDSCS's ApprenticeshipND lists automotive options).</li>
             </ul>
+            <div class="enroll-headsup">Heads up: the three-year Master Technician degree is only open after you finish a two-year automotive or diesel program, and depends on open seats.</div>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
-                <li>ND State College of Science (Wahpeton) — Automotive Technology, AAS or certificate; stackable certificates; 3-year Automotive and Diesel Master Technician AAS</li>
-                <li>Bismarck State College (Bismarck) — Automotive Technology, AAS with stackable certificates; ASE MAST accredited; toolbox provided through the Dean D. Gunsch Toolbox Program</li>
+                <li>ND State College of Science (Wahpeton) — Automotive Technology, AAS or certificate; stackable certificates; 3-year Automotive and Diesel Master Technician AAS
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> You must have a specific laptop, and expect to buy a professional tool set in your first year. The three-year Master Technician degree is a separate add-on: you finish the automotive or diesel program first, and getting in depends on open seats.</div>
+                </li>
+                <li>Bismarck State College (Bismarck) — Automotive Technology, AAS with stackable certificates; ASE MAST accredited; toolbox provided through the Dean D. Gunsch Toolbox Program
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Seats are limited, and admission is in the fall only, so apply early. You must have your own tool set, books and sturdy work shoes by the third week (the college lends you a toolbox), and you buy shop shirts. The college lists good color vision as a requirement.</div>
+                </li>
                 <li>United Tribes Technical College (Bismarck) — Automotive Technology, AAS or diploma; ASE accredited</li>
             </ul>
-            <p><strong>Before You Start:</strong> High school diploma or GED is usually expected. A valid driver's license is needed to test drive vehicles. Many programs require you to buy your own tool set.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Before you can enroll</em> notes above; entry rules change, so confirm them with the school before you apply. High school diploma or GED is usually expected. A valid driver's license is needed to test drive vehicles. Many programs require you to buy your own tool set.</p>
             <p><strong>Tip:</strong> Start with financial aid, scholarships, and any help an employer offers — that is where the money starts. After that, ask a career counselor or Job Service North Dakota whether WIOA or other programs can help with what is left over, like training, tools, work boots, or exam fees. What can be paid for depends on the program and on your own situation, so ask before you sign up rather than after. Registered apprenticeships let you earn a paycheck while you learn — see jobsnd.com/job-seeker/apprenticeships for ND programs.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>
@@ -1159,6 +1171,8 @@
             <dt>Education and training</dt>
             <dd><a href="https://www.onetonline.org/link/localtraining/49-3023.00?st=ND" target="_blank" rel="noopener">North Dakota schools that train Automotive Service Technicians</a> &mdash; colleges and programs in this state, with how many people finished recently. From the U.S. Department of Labor, using federal college data (IPEDS).</dd>
 
+                        <dt>Program entry requirements</dt>
+            <dd>Read on the schools&rsquo; own pages on Oct. 13, 2026: <a href="https://catalog.ndscs.edu/automotive-technology/associate-in-applied-science/automotive-technology" target="_blank" rel="noopener">North Dakota State College of Science (Wahpeton): Automotive Technology AAS (69 credits); Automotive and Diesel Master T</a>; <a href="https://bismarckstate.edu/academics/programs/autotech/" target="_blank" rel="noopener">Bismarck State College: Automotive Technology — AAS; Program Certificates (Electrical/Chassis </a>. Rules change each year, so confirm with the school.</dd>
             <dt>More career exploration</dt>
             <dd><a href="https://secure.ruready.nd.gov/Career_Planning/_default.aspx" target="_blank" rel="noopener">RUReady.ND.gov career planning</a> &mdash; North Dakota&rsquo;s own career and college planning site. An account may be required.</dd>
         </dl>

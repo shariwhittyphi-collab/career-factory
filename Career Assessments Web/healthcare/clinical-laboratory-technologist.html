@@ -511,6 +511,15 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light, #eef4fb); border-left: 4px solid var(--accent-blue, #1f5fa8); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark, #1a1a1a); }
+        .enroll-note strong { color: var(--text-dark, #1a1a1a); }
+        .enroll-headsup { margin: 0 0 14px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup, body.dark-mode .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        html[data-theme="dark"] .enroll-note, [data-contrast="dark"] .enroll-note, body.dark-mode .enroll-note { background: #1e2a3a; color: #e8eef6; }
+        html[data-theme="dark"] .enroll-note strong, [data-contrast="dark"] .enroll-note strong, body.dark-mode .enroll-note strong, html[data-theme="dark"] .enroll-headsup strong, [data-contrast="dark"] .enroll-headsup strong { color: inherit; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -620,6 +629,8 @@
         <div class="section" id="section4">
             <h2 tabindex="-1"><span class="section-number" aria-hidden="true">4</span>Training in North Dakota</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section4')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section4')">&#128424;&#65039; Print this part</button></div>
+            <div class="enroll-headsup">Heads up: lab programs in North Dakota have a second application after you get into the college, and the clinical part is competitive and usually off campus. Bismarck State's two-year technician program has limited seats, fills on a first-come basis, and sends you to a hospital lab (possibly in another city or Montana) for a 22-week rotation after you pass a background check, drug screen and immunization review. The four-year programs want roughly a 2.8 grade point average or better in chemistry and biology before they let you into the final hospital year, and that year is a full-time, unpaid 40-hour week. You also need a national certification exam and a state license before you can work.</div>
+
             <p><strong>North Dakota requires a state license.</strong> You need a college program plus a national certification exam, then an ND license. There are two levels.</p>
             <!-- CHADWICK IMAGE (training): Students in a college lab practicing with pipettes and test tubes. -->
             <div class="img-slot" data-image="training"></div>
@@ -631,13 +642,23 @@
             </ul>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
-                <li>Bismarck State College (Bismarck) — Medical Laboratory Technician AAS; NAACLS-accredited; 22-week clinical rotation; 97% first-time exam pass rate since 1978</li>
-                <li>University of North Dakota (Grand Forks or online) — B.S. in Medical Laboratory Science; also online MLT-to-MLS</li>
-                <li>North Dakota State University (Fargo) — Medical Laboratory Science major</li>
-                <li>Minot State University (Minot) — B.S. in Medical Laboratory Science</li>
-                <li>University of Jamestown (Jamestown) — Medical Laboratory Science, with a clinical year at an affiliated site</li>
+                <li>Bismarck State College (Bismarck) — Medical Laboratory Technician AAS; NAACLS-accredited; 22-week clinical rotation; 97% first-time exam pass rate since 1978
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Separate program application (fall start, due August 1, limited seats, apply early), 2.0 GPA, meeting with program staff. Before the clinical rotation: background check, drug screen and immunizations at your own cost.</div>
+                </li>
+                <li>University of North Dakota (Grand Forks or online) — B.S. in Medical Laboratory Science; also online MLT-to-MLS
+                    <div class="enroll-note"><strong>Before you can enroll in the professional program:</strong> Separate application and deadline, prerequisite sciences with a C or better, cumulative GPA above 2.8, and a criminal background check. The online option is only for people who are already certified lab technicians.</div>
+                </li>
+                <li>North Dakota State University (Fargo) — Medical Laboratory Science major
+                    <div class="enroll-note"><strong>Before you can enroll in the hospital year:</strong> Selective application with interview, references and background check after three years of coursework; the hospital year is full-time, unpaid, and may be in Fargo or out of state.</div>
+                </li>
+                <li>Minot State University (Minot) — B.S. in Medical Laboratory Science
+                    <div class="enroll-note"><strong>Before the clinical year:</strong> Cumulative GPA of at least 2.80, no more than one D in math/science prerequisites, and an advisor recommendation; the 12-month internship is at a hospital arranged through UND.</div>
+                </li>
+                <li>University of Jamestown (Jamestown) — Medical Laboratory Science, with a clinical year at an affiliated site
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Entry gates for the clinical year are not posted on the program page; ask the program and expect the same GPA and background check rules as UND's affiliated clinical sites.</div>
+                </li>
             </ul>
-            <p><strong>Before You Start:</strong> High school diploma or GED. High school biology, chemistry, and algebra are strongly recommended. Background check, immunizations, and drug screen are required before clinicals. Normal color vision is important for reading tests.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Heads up</em> box in the training section; entry rules change, so confirm them with the school before you apply. High school diploma or GED. High school biology, chemistry, and algebra are strongly recommended. Background check, immunizations, and drug screen are required before clinicals. Normal color vision is important for reading tests.</p>
             <p><strong>Tip:</strong> Start with financial aid, scholarships, and any help an employer offers — that is where the money starts. After that, ask a career counselor or Job Service North Dakota whether WIOA or other programs can help with what is left over, like tuition, exam fees, scrubs, or books. What can be paid for depends on the program and on your own situation, so ask before you sign up rather than after. Some ND hospitals also help pay for training if you agree to work for them afterward.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>
@@ -1163,6 +1184,8 @@
             <dt>Education and training</dt>
             <dd><a href="https://www.onetonline.org/link/localtraining/29-2011.00?st=ND" target="_blank" rel="noopener">North Dakota schools that train Clinical Laboratory Technologists</a> &mdash; colleges and programs in this state, with how many people finished recently. From the U.S. Department of Labor, using federal college data (IPEDS).</dd>
 
+            <dt>Program entry requirements</dt>
+            <dd>Read on the schools&rsquo; and boards&rsquo; own pages on Oct. 13, 2026: <a href="https://bismarckstate.edu/academics/programs/MedicalLaboratoryTechnician/" target="_blank" rel="noopener">Bismarck State College (Bismarck): Medical Laboratory Technician (MLT) AAS, NAACLS-accredited</a>; <a href="https://und.edu/programs/medical-laboratory-science-bs/requirements.html" target="_blank" rel="noopener">University of North Dakota (Grand Forks or online): B.S. in Medical Laboratory Science; online MLT-to-MLS and ca</a>; <a href="https://www.ndsu.edu/alliedsciences/programs/mls" target="_blank" rel="noopener">North Dakota State University (Fargo): Medical Laboratory Science major (3 years at NDSU + 11-12 mo</a>; <a href="https://catalog.minotstateu.edu/undergraduate/academicprograms/medicallabscience/" target="_blank" rel="noopener">Minot State University (Minot): B.S. in Medical Laboratory Science (3 years at Minot State +</a>; <a href="https://www.uj.edu/academics/programs/medical-laboratory-science/" target="_blank" rel="noopener">University of Jamestown (Jamestown): Medical Laboratory Science (3 or 4 years at UJ + 12 months o</a>; <a href="https://www.fusionmedstaff.com/licenses/laboratory/north-dakota/" target="_blank" rel="noopener">North Dakota Board of Clinical Laboratory Practice (state licensing board): State license for MLT and MLS</a>. Rules change each year, so confirm with the school.</dd>
             <dt>More career exploration</dt>
             <dd><a href="https://secure.ruready.nd.gov/Career_Planning/_default.aspx" target="_blank" rel="noopener">RUReady.ND.gov career planning</a> &mdash; North Dakota&rsquo;s own career and college planning site. An account may be required.</dd>
         </dl>

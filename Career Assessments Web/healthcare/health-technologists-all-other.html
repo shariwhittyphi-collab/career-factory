@@ -513,6 +513,15 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light, #eef4fb); border-left: 4px solid var(--accent-blue, #1f5fa8); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark, #1a1a1a); }
+        .enroll-note strong { color: var(--text-dark, #1a1a1a); }
+        .enroll-headsup { margin: 0 0 14px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup, body.dark-mode .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        html[data-theme="dark"] .enroll-note, [data-contrast="dark"] .enroll-note, body.dark-mode .enroll-note { background: #1e2a3a; color: #e8eef6; }
+        html[data-theme="dark"] .enroll-note strong, [data-contrast="dark"] .enroll-note strong, body.dark-mode .enroll-note strong, html[data-theme="dark"] .enroll-headsup strong, [data-contrast="dark"] .enroll-headsup strong { color: inherit; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -621,6 +630,8 @@
         <div class="section" id="section4">
             <h2 tabindex="-1"><span class="section-number" aria-hidden="true">4</span>Training in North Dakota</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section4')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section4')">&#128424;&#65039; Print this part</button></div>
+            <div class="enroll-headsup">Heads up: there is no entrance exam for the general two-year health degrees that feed these jobs — you need a high school diploma or GED, an application fee, proof of measles vaccination and, at the universities, roughly a 2.5 to 2.75 high school grade point average. The catch comes later: the specific health programs (dental, EMS, nursing, sonography) have their own selective applications, and clinics that hire and train ophthalmic or patient-service staff will usually run a background check and ask for immunizations before your first day. Neurodiagnostic training means moving to Minnesota, where Mayo's program takes only eight students a year, requires an associate degree or partner-college enrollment, a 2.8 grade point average and an interview.</div>
+
             <p><strong>There is no program for this bucket. Most of these jobs are learned on the job, then credentialed.</strong> This is the good news in an otherwise messy category. Ophthalmic technician work and patient representative work are usually learned on the job in a clinic, and the credential comes later. That means you can get hired without paying for a long program first. Neurodiagnostic work is different — the accredited programs are all out of state, and the nearest one is at Mayo Clinic in Minnesota.</p>
             <!-- CHADWICK IMAGE (training): optional extra picture -->
             <div class="img-slot" data-image="training"></div>
@@ -632,15 +643,25 @@
             </ul>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
-                <li>Bismarck State College (Bismarck) — health science and allied health programs, plus the general education that transfers into any health degree — bismarckstate.edu</li>
-                <li>ND State College of Science (Wahpeton and Fargo) — health and health information programs — ndscs.edu</li>
-                <li>Lake Region State College (Devils Lake) — allied health and transfer programs — lrsc.edu</li>
-                <li>Minot State University and University of North Dakota — four-year health sciences degrees for people who want to go further later — minotstateu.edu, und.edu</li>
-                <li>Neurodiagnostic technology: no accredited program in North Dakota, South Dakota, or Montana. The nearest is Mayo Clinic in Minnesota, a 24-month certificate or associate degree — aset.org/neurodiagnostic-schools</li>
+                <li>Bismarck State College (Bismarck) — health science and allied health programs, plus the general education that transfers into any health degree — bismarckstate.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Open to anyone with a high school diploma or GED (application fee, MMR vaccination); the specific health programs have separate, selective applications.</div>
+                </li>
+                <li>ND State College of Science (Wahpeton and Fargo) — health and health information programs — ndscs.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Open admission with a diploma or GED and proof of immunization; dental, EMS, nursing, OTA and pharmacy tech programs need a separate program application and sometimes an employer sponsor.</div>
+                </li>
+                <li>Lake Region State College (Devils Lake) — allied health and transfer programs — lrsc.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Open admission with a diploma or GED, application fee and MMR/meningitis vaccination for on-campus students.</div>
+                </li>
+                <li>Minot State University and University of North Dakota — four-year health sciences degrees for people who want to go further later — minotstateu.edu, und.edu
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Minot State wants a 2.5 high school GPA and 13 core courses; UND recommends a 2.75 GPA and 14 core courses; neither requires the ACT or SAT.</div>
+                </li>
+                <li>Neurodiagnostic technology: no accredited program in North Dakota, South Dakota, or Montana. The nearest is Mayo Clinic in Minnesota, a 24-month certificate or associate degree — aset.org/neurodiagnostic-schools
+                    <div class="enroll-note"><strong>Before you can enroll at Mayo:</strong> An associate degree (or enrollment at its partner college), a 2.8 GPA with recent math and science, age 18, U.S. citizenship or permanent residency, and an interview; apply January 1 - April 1; only eight seats a year.</div>
+                </li>
                 <li>Ophthalmic technician work: North Dakota has no dedicated program, and clinics here generally train their own. Call the eye clinics in Bismarck, Fargo, Grand Forks, and Minot and ask whether they hire and train assistants</li>
                 <li>Patient representative work: no program needed. Clinics and hospitals train you. A health information or business two-year degree helps you move up</li>
             </ul>
-            <p><strong>Before You Start:</strong> High school diploma or GED. A steady, calm way with nervous people, and the patience to explain the same thing three times without sighing. Careful hands and careful records. Most of these jobs need a background check and immunizations before you start.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Heads up</em> box in the training section; entry rules change, so confirm them with the school before you apply. High school diploma or GED. A steady, calm way with nervous people, and the patience to explain the same thing three times without sighing. Careful hands and careful records. Most of these jobs need a background check and immunizations before you start.</p>
             <p><strong>Tip:</strong> Start with financial aid and scholarships. Fill out the FAFSA, ask the school’s financial aid office what you qualify for, and ask an employer whether they help pay for school. That is where the money starts. After that, a career counselor or Job Service North Dakota may be able to help with what is left over, like tuition, books, a laptop, or exam fees. What can be paid for depends on the program and on your own situation, so ask before you enroll rather than after. Worth asking about specifically: two-year degrees that train you for a job, like civil engineering technology, land surveying, mechatronics, electronics, or instrumentation. North Dakota two-year colleges also cost far less than a university. Ask about paid summer internships too — engineering firms, plants, and survey crews hire students while they are still in school.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>
@@ -1167,6 +1188,8 @@
             <dt>Education and training</dt>
             <dd><a href="https://www.onetonline.org/link/localtraining/29-2099.00?st=ND" target="_blank" rel="noopener">North Dakota schools that train Health Technologist (Other Roles)s</a> &mdash; colleges and programs in this state, with how many people finished recently. From the U.S. Department of Labor, using federal college data (IPEDS).</dd>
 
+            <dt>Program entry requirements</dt>
+            <dd>Read on the schools&rsquo; and boards&rsquo; own pages on Oct. 13, 2026: <a href="https://bismarckstate.edu/admissions/howtoapply/new/" target="_blank" rel="noopener">Bismarck State College (Bismarck): General college admission (health science / allied health an</a>; <a href="https://ndscs.edu/admissions-aid/apply-to-ndscs/" target="_blank" rel="noopener">North Dakota State College of Science (Wahpeton and Fargo): General college admission (health and health information pro</a>; <a href="https://www.lrsc.edu/application-process" target="_blank" rel="noopener">Lake Region State College (Devils Lake): General college admission (allied health and transfer progra</a>; <a href="https://www.minotstateu.edu/enroll/freshman/admissions-reqs.shtml" target="_blank" rel="noopener">Minot State University (Minot): General first-year admission (four-year health sciences degr</a>; <a href="https://und.edu/admissions/freshmen/index.html" target="_blank" rel="noopener">University of North Dakota (Grand Forks): General first-year admission (four-year health sciences degr</a>; <a href="https://college.mayo.edu/academics/health-sciences-education/clinical-neurophysiology-technology-program-minnesota/how-to-apply/" target="_blank" rel="noopener">Mayo Clinic College of Medicine and Science (Rochester, Minnesota) — out of state: Clinical Neurophysiology (neurodiagnostic) Technology Progra</a>. Rules change each year, so confirm with the school.</dd>
             <dt>More career exploration</dt>
             <dd><a href="https://secure.ruready.nd.gov/Career_Planning/_default.aspx" target="_blank" rel="noopener">RUReady.ND.gov career planning</a> &mdash; North Dakota&rsquo;s own career and college planning site. An account may be required.</dd>
         </dl>

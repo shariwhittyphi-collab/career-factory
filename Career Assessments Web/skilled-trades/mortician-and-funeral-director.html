@@ -511,6 +511,13 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light); border-left: 4px solid var(--accent-blue); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark); }
+        .enroll-note strong { color: var(--text-dark); }
+        .enroll-headsup { margin: 0 0 12px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -627,14 +634,21 @@
                 <li><strong>Mortuary science program:</strong> University of Minnesota (nearest) or accredited distance programs.</li>
                 <li><strong>Internship:</strong> At least 25 embalmings and 10 funerals under a licensed ND funeral practitioner.</li>
             </ul>
+            <div class="enroll-headsup">Heads up: North Dakota has no mortuary program; you take prerequisite classes here, then must transfer to an out-of-state program with its own application.</div>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
                 <li>No mortuary science program in North Dakota</li>
-                <li>North Dakota State University (Fargo) — pre-mortuary coursework</li>
-                <li>University of Minnesota (Minneapolis) — Mortuary Science</li>
-                <li>ABFSE-accredited programs with distance learning (several states)</li>
+                <li>North Dakota State University (Fargo) — pre-mortuary coursework
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> This is only the first step. NDSU does not give you a mortuary degree; you take about 26 credits here, then transfer to an out-of-state mortuary program and apply to it separately. Each course must be passed with a C or better, and transfer usually takes 60 credits and a 2.5 GPA.</div>
+                </li>
+                <li>University of Minnesota (Minneapolis) — Mortuary Science
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> You need at least 26 college credits with a 2.0 GPA or better before you can apply. You apply separately through the Common App for Transfer and write two short essays. Applications received December 2 to June 1 are for fall; June 2 to December 1 are for spring.</div>
+                </li>
+                <li>ABFSE-accredited programs with distance learning (several states)
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Each school sets its own entry rules, and every program still requires some labs on campus. Before you enroll, make sure the school is allowed to teach students who live in North Dakota.</div>
+                </li>
             </ul>
-            <p><strong>Before You Start:</strong> High school diploma or GED. At least 60 semester credits of college. Emotional strength and compassion.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Before you can enroll</em> notes above; entry rules change, so confirm them with the school before you apply. High school diploma or GED. At least 60 semester credits of college. Emotional strength and compassion.</p>
             <p><strong>Tip:</strong> Start with financial aid, scholarships, and any help an employer offers — that is where the money starts. After that, ask a career counselor or Job Service North Dakota whether WIOA or other programs can help with what is left over, like training, tools, work boots, or exam fees. What can be paid for depends on the program and on your own situation, so ask before you sign up rather than after. Registered apprenticeships let you earn a paycheck while you learn — see jobsnd.com/job-seeker/apprenticeships for ND programs.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>
@@ -1156,6 +1170,8 @@
             <dt>Education and training</dt>
             <dd><a href="https://www.onetonline.org/link/localtraining/39-4031.00?st=ND" target="_blank" rel="noopener">North Dakota schools that train Mortician and Funeral Directors</a> &mdash; colleges and programs in this state, with how many people finished recently. From the U.S. Department of Labor, using federal college data (IPEDS).</dd>
 
+                        <dt>Program entry requirements</dt>
+            <dd>Read on the schools&rsquo; own pages on Oct. 13, 2026: <a href="https://ndsu.edu/prehealth_programs/pre_health_careers/mortuary_science" target="_blank" rel="noopener">North Dakota State University (Fargo): Pre-Mortuary Science advising track (not a major: 'Pre-Mortuary Scienc</a>; <a href="https://med.umn.edu/mortuaryscience/education-training/admissions" target="_blank" rel="noopener">University of Minnesota – Twin Cities (Program of Mortuary Science): Bachelor of Science in Mortuary Science</a>; <a href="https://www.abfse.org/html/dir-learning.html" target="_blank" rel="noopener">Various (ABFSE directory): 25 ABFSE-accredited programs offering more than 50% of the program onl</a>. Rules change each year, so confirm with the school.</dd>
             <dt>More career exploration</dt>
             <dd><a href="https://secure.ruready.nd.gov/Career_Planning/_default.aspx" target="_blank" rel="noopener">RUReady.ND.gov career planning</a> &mdash; North Dakota&rsquo;s own career and college planning site. An account may be required.</dd>
         </dl>

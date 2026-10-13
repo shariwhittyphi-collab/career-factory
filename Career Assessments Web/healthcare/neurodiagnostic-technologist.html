@@ -511,6 +511,15 @@
             body.print-one .srcsec.print-me h2 { color: #0b4f8a !important; }
             body.print-one .srcsec.print-me a { color: #000 !important; }
         }
+    
+        /* Before-you-can-enroll notes (Oct. 13, 2026) */
+        .enroll-note { margin: 6px 0 2px; padding: 8px 12px; background: var(--accent-light, #eef4fb); border-left: 4px solid var(--accent-blue, #1f5fa8); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: var(--text-dark, #1a1a1a); }
+        .enroll-note strong { color: var(--text-dark, #1a1a1a); }
+        .enroll-headsup { margin: 0 0 14px; padding: 10px 14px; background: #fff4e5; border: 1px solid #f0b86e; border-left: 5px solid #c25e00; border-radius: 8px; color: #1a1a1a; font-size: 0.98rem; line-height: 1.55; }
+        html[data-theme="dark"] .enroll-headsup, [data-contrast="dark"] .enroll-headsup, body.dark-mode .enroll-headsup { background: #3a2a10; border-color: #8a5a1a; color: #f3e9d8; }
+        html[data-theme="dark"] .enroll-note, [data-contrast="dark"] .enroll-note, body.dark-mode .enroll-note { background: #1e2a3a; color: #e8eef6; }
+        html[data-theme="dark"] .enroll-note strong, [data-contrast="dark"] .enroll-note strong, body.dark-mode .enroll-note strong, html[data-theme="dark"] .enroll-headsup strong, [data-contrast="dark"] .enroll-headsup strong { color: inherit; }
+        @media print { .enroll-note, .enroll-headsup { background: #fff !important; color: #000 !important; border-color: #000 !important; } }
     </style>
 <style>
 .dvr-nav{position:sticky;top:0;z-index:9999;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#0b4f8a;color:#fff;font:600 15px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2)}
@@ -619,6 +628,8 @@
         <div class="section" id="section4">
             <h2 tabindex="-1"><span class="section-number" aria-hidden="true">4</span>Training in North Dakota</h2>
             <div class="tool-row" role="group" aria-label="Section tools"><button type="button" class="tool-btn" data-label="&#128266; Listen" aria-pressed="false" onclick="listenSection(this,'section4')">&#128266; Listen</button><button type="button" class="tool-btn" onclick="printSection('section4')">&#128424;&#65039; Print this part</button></div>
+            <div class="enroll-headsup">Heads up: no North Dakota school trains neurodiagnostic technologists, so your two real options are an out-of-state program (often online classes with clinical hours you must arrange at a local hospital) or getting hired into a hospital that trains on the job. Both depend on a hospital neurology department agreeing to take you, and any clinical placement will require a background check and immunizations. Ask the hospital before you pay for a program whether they will host your clinical hours.</div>
+
             <p><strong>No North Dakota program was found for this career.</strong> Training is through accredited neurodiagnostic programs in other states (some hybrid or online), or on-the-job training at a hospital followed by a national credential.</p>
             <!-- CHADWICK IMAGE (training): A student practicing electrode placement on a mannequin head. -->
             <div class="img-slot" data-image="training"></div>
@@ -630,11 +641,15 @@
             </ul>
             <p><strong>Where to Train in North Dakota:</strong></p>
             <ul>
-                <li>No ND program found — look at CAAHEP-accredited neurodiagnostic programs (some offer online coursework with local clinicals)</li>
-                <li>Ask ND hospital neurology departments (Sanford, Essentia, CHI St. Alexius, Altru, Trinity) about on-the-job training</li>
+                <li>No ND program found — look at CAAHEP-accredited neurodiagnostic programs (some offer online coursework with local clinicals)
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Hybrid programs usually require you to line up your own clinical site at a local hospital before or soon after admission, plus a background check and immunizations.</div>
+                </li>
+                <li>Ask ND hospital neurology departments (Sanford, Essentia, CHI St. Alexius, Altru, Trinity) about on-the-job training
+                    <div class="enroll-note"><strong>Before you can enroll:</strong> Hospital trainee positions typically require a background check, immunizations and often prior healthcare experience.</div>
+                </li>
                 <li>See ASET – The Neurodiagnostic Society for a program list</li>
             </ul>
-            <p><strong>Before You Start:</strong> High school diploma or GED. Anatomy, physiology, and medical terminology help. Background check and immunizations for clinical work.</p>
+            <p><strong>Before You Start:</strong> Read the <em>Heads up</em> box in the training section; entry rules change, so confirm them with the school before you apply. High school diploma or GED. Anatomy, physiology, and medical terminology help. Background check and immunizations for clinical work.</p>
             <p><strong>Tip:</strong> Start with financial aid, scholarships, and any help an employer offers — that is where the money starts. After that, ask a career counselor or Job Service North Dakota whether WIOA or other programs can help with what is left over, like tuition, exam fees, or supplies. What can be paid for depends on the program and on your own situation, so ask before you sign up rather than after. Some ND employers also help pay for training if you agree to work for them afterward.</p>
             <div class="button-group">
                 <button class="btn-secondary" onclick="prevSection()">Back</button>

@@ -1414,5 +1414,30 @@ body.text-large, body.text-xl { font-size: 1rem; }
 })();
 </script>
 <!-- /Career Factory fixes -->
+<script id="career-factory-theme-sync">
+/* Keep the older healthcare contrast controls aligned with the site's theme. */
+(function(){
+ function init(){
+  var buttons=document.querySelectorAll('.toolbar-button[data-contrast]');
+  if(!buttons.length)return;
+  function sync(mode){
+   mode=mode==='dark'?'dark':'light';
+   document.documentElement.setAttribute('data-theme',mode);
+   document.body.setAttribute('data-contrast',mode);
+   for(var i=0;i<buttons.length;i++){
+    var on=buttons[i].getAttribute('data-contrast')===mode;
+    buttons[i].classList.toggle('active',on);buttons[i].setAttribute('aria-pressed',String(on));
+   }
+   try{localStorage.setItem('theme',mode);}catch(e){}
+  }
+  var saved;try{saved=localStorage.getItem('theme');}catch(e){}
+  sync(saved==='dark'||saved==='light'?saved:window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  for(var i=0;i<buttons.length;i++)buttons[i].addEventListener('click',function(){sync(this.getAttribute('data-contrast'));});
+  window.addEventListener('pageshow',function(){try{var m=localStorage.getItem('theme');if(m)sync(m);}catch(e){}});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+</script>
 </body>
 </html>

@@ -54,7 +54,21 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px;b
 @media (forced-colors:active){.area.soon{opacity:1}}
 @media (prefers-reduced-motion:reduce){.area{transition:none}.area:hover{transform:none}}
 </style>
-<link rel="stylesheet" href="../a11y-controls.css"><script src="../a11y-controls.js" defer></script></head>
+<link rel="stylesheet" href="../a11y-controls.css"><script src="../a11y-controls.js" defer></script><style id="career-factory-area-theme">
+@media screen{
+:root,:root[data-theme="light"]{--bg:#f8f6ef;--card:#fffefa;--ink:#203b35;--muted:#596961;--line:#c8cdbd;--accent:#244d43;--accent-2:#244d43;--head-ink:#fff8ec;--orange:#a94425;color-scheme:light;}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#182923;--card:#22362d;--ink:#eeeede;--muted:#bac8bb;--line:#627665;--accent:#bfdaad;--accent-2:#244d43;--head-ink:#fff8ec;--orange:#f09b73;color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#182923;--card:#22362d;--ink:#eeeede;--muted:#bac8bb;--line:#627665;--accent:#bfdaad;--accent-2:#244d43;--head-ink:#fff8ec;--orange:#f09b73;color-scheme:dark;}
+header{border-radius:16px;border-top:4px solid #b74e2a;}
+header h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;}
+.field-title{color:var(--accent)!important;filter:none!important;}
+.field-header{border-color:var(--line)!important;}
+.career-card{border-radius:12px;}
+.a11y-bar button[aria-pressed="true"]{background:var(--accent-2);color:var(--head-ink);border-color:var(--accent-2);}
+}
+
+</style>
+</head>
 <body>
 <a class="reader-skip" href="#main">Skip to careers</a>
 <div class="a11y-bar" role="group" aria-label="Reading options">
